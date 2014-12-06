@@ -334,13 +334,13 @@ public class VectorRegisterE extends VectorRegisterD {
     }
 
     /** extract the 13-vector into the given output array starting at the given offset */
-    public void extract13(final double[] output, int offset) {
+    public void extract_13(final double[] output, int offset) {
         output[offset + 0] = x_13;
         output[offset + 1] = y_13;
     }
 
     /** inject the given input starting at the given offset into the 13-vector */
-    public void inject13(final double[] input, int offset) {
+    public void inject_13(final double[] input, int offset) {
         x_13 = input[offset + 0];
         y_13 = input[offset + 1];
     }
@@ -4363,12 +4363,23 @@ public class VectorRegisterE extends VectorRegisterD {
     }
 
     /** is the 13-vector the origin */
-    public boolean isZero_13() {
+    public boolean is_13_zero() {
         double d = 0.0;
         d += x_13 * x_13;
         d += y_13 * y_13;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 13 vector */
+    public double angle_13() {
+        return Math.atan2(y_13, x_13);
+    }
+
+    /** set the 13 vector to the complex number corresponding to the given angle */
+    public void set_13_by_angle(double theta) {
+        x_13 = Math.cos(theta);
+        y_13 = Math.sin(theta);
     }
 }

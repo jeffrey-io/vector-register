@@ -262,13 +262,13 @@ public class VectorRegisterB extends VectorRegisterA {
     }
 
     /** extract the 10-vector into the given output array starting at the given offset */
-    public void extract10(final double[] output, int offset) {
+    public void extract_10(final double[] output, int offset) {
         output[offset + 0] = x_10;
         output[offset + 1] = y_10;
     }
 
     /** inject the given input starting at the given offset into the 10-vector */
-    public void inject10(final double[] input, int offset) {
+    public void inject_10(final double[] input, int offset) {
         x_10 = input[offset + 0];
         y_10 = input[offset + 1];
     }
@@ -2743,12 +2743,23 @@ public class VectorRegisterB extends VectorRegisterA {
     }
 
     /** is the 10-vector the origin */
-    public boolean isZero_10() {
+    public boolean is_10_zero() {
         double d = 0.0;
         d += x_10 * x_10;
         d += y_10 * y_10;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 10 vector */
+    public double angle_10() {
+        return Math.atan2(y_10, x_10);
+    }
+
+    /** set the 10 vector to the complex number corresponding to the given angle */
+    public void set_10_by_angle(double theta) {
+        x_10 = Math.cos(theta);
+        y_10 = Math.sin(theta);
     }
 }

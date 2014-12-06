@@ -286,13 +286,13 @@ public class VectorRegisterC extends VectorRegisterB {
     }
 
     /** extract the 11-vector into the given output array starting at the given offset */
-    public void extract11(final double[] output, int offset) {
+    public void extract_11(final double[] output, int offset) {
         output[offset + 0] = x_11;
         output[offset + 1] = y_11;
     }
 
     /** inject the given input starting at the given offset into the 11-vector */
-    public void inject11(final double[] input, int offset) {
+    public void inject_11(final double[] input, int offset) {
         x_11 = input[offset + 0];
         y_11 = input[offset + 1];
     }
@@ -3241,12 +3241,23 @@ public class VectorRegisterC extends VectorRegisterB {
     }
 
     /** is the 11-vector the origin */
-    public boolean isZero_11() {
+    public boolean is_11_zero() {
         double d = 0.0;
         d += x_11 * x_11;
         d += y_11 * y_11;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 11 vector */
+    public double angle_11() {
+        return Math.atan2(y_11, x_11);
+    }
+
+    /** set the 11 vector to the complex number corresponding to the given angle */
+    public void set_11_by_angle(double theta) {
+        x_11 = Math.cos(theta);
+        y_11 = Math.sin(theta);
     }
 }

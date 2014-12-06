@@ -214,13 +214,13 @@ public class VectorRegister9 extends VectorRegister8 {
     }
 
     /** extract the 8-vector into the given output array starting at the given offset */
-    public void extract8(final double[] output, int offset) {
+    public void extract_8(final double[] output, int offset) {
         output[offset + 0] = x_8;
         output[offset + 1] = y_8;
     }
 
     /** inject the given input starting at the given offset into the 8-vector */
-    public void inject8(final double[] input, int offset) {
+    public void inject_8(final double[] input, int offset) {
         x_8 = input[offset + 0];
         y_8 = input[offset + 1];
     }
@@ -1873,12 +1873,23 @@ public class VectorRegister9 extends VectorRegister8 {
     }
 
     /** is the 8-vector the origin */
-    public boolean isZero_8() {
+    public boolean is_8_zero() {
         double d = 0.0;
         d += x_8 * x_8;
         d += y_8 * y_8;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 8 vector */
+    public double angle_8() {
+        return Math.atan2(y_8, x_8);
+    }
+
+    /** set the 8 vector to the complex number corresponding to the given angle */
+    public void set_8_by_angle(double theta) {
+        x_8 = Math.cos(theta);
+        y_8 = Math.sin(theta);
     }
 }

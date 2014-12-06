@@ -70,13 +70,13 @@ public class VectorRegister3 extends VectorRegister2 {
     }
 
     /** extract the 2-vector into the given output array starting at the given offset */
-    public void extract2(final double[] output, int offset) {
+    public void extract_2(final double[] output, int offset) {
         output[offset + 0] = x_2;
         output[offset + 1] = y_2;
     }
 
     /** inject the given input starting at the given offset into the 2-vector */
-    public void inject2(final double[] input, int offset) {
+    public void inject_2(final double[] input, int offset) {
         x_2 = input[offset + 0];
         y_2 = input[offset + 1];
     }
@@ -271,12 +271,23 @@ public class VectorRegister3 extends VectorRegister2 {
     }
 
     /** is the 2-vector the origin */
-    public boolean isZero_2() {
+    public boolean is_2_zero() {
         double d = 0.0;
         d += x_2 * x_2;
         d += y_2 * y_2;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 2 vector */
+    public double angle_2() {
+        return Math.atan2(y_2, x_2);
+    }
+
+    /** set the 2 vector to the complex number corresponding to the given angle */
+    public void set_2_by_angle(double theta) {
+        x_2 = Math.cos(theta);
+        y_2 = Math.sin(theta);
     }
 }

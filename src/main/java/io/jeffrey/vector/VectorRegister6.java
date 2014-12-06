@@ -142,13 +142,13 @@ public class VectorRegister6 extends VectorRegister5 {
     }
 
     /** extract the 5-vector into the given output array starting at the given offset */
-    public void extract5(final double[] output, int offset) {
+    public void extract_5(final double[] output, int offset) {
         output[offset + 0] = x_5;
         output[offset + 1] = y_5;
     }
 
     /** inject the given input starting at the given offset into the 5-vector */
-    public void inject5(final double[] input, int offset) {
+    public void inject_5(final double[] input, int offset) {
         x_5 = input[offset + 0];
         y_5 = input[offset + 1];
     }
@@ -883,12 +883,23 @@ public class VectorRegister6 extends VectorRegister5 {
     }
 
     /** is the 5-vector the origin */
-    public boolean isZero_5() {
+    public boolean is_5_zero() {
         double d = 0.0;
         d += x_5 * x_5;
         d += y_5 * y_5;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 5 vector */
+    public double angle_5() {
+        return Math.atan2(y_5, x_5);
+    }
+
+    /** set the 5 vector to the complex number corresponding to the given angle */
+    public void set_5_by_angle(double theta) {
+        x_5 = Math.cos(theta);
+        y_5 = Math.sin(theta);
     }
 }

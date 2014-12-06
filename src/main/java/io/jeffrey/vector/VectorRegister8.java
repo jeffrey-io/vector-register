@@ -190,13 +190,13 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** extract the 7-vector into the given output array starting at the given offset */
-    public void extract7(final double[] output, int offset) {
+    public void extract_7(final double[] output, int offset) {
         output[offset + 0] = x_7;
         output[offset + 1] = y_7;
     }
 
     /** inject the given input starting at the given offset into the 7-vector */
-    public void inject7(final double[] input, int offset) {
+    public void inject_7(final double[] input, int offset) {
         x_7 = input[offset + 0];
         y_7 = input[offset + 1];
     }
@@ -1501,12 +1501,23 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** is the 7-vector the origin */
-    public boolean isZero_7() {
+    public boolean is_7_zero() {
         double d = 0.0;
         d += x_7 * x_7;
         d += y_7 * y_7;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 7 vector */
+    public double angle_7() {
+        return Math.atan2(y_7, x_7);
+    }
+
+    /** set the 7 vector to the complex number corresponding to the given angle */
+    public void set_7_by_angle(double theta) {
+        x_7 = Math.cos(theta);
+        y_7 = Math.sin(theta);
     }
 }

@@ -166,13 +166,13 @@ public class VectorRegister7 extends VectorRegister6 {
     }
 
     /** extract the 6-vector into the given output array starting at the given offset */
-    public void extract6(final double[] output, int offset) {
+    public void extract_6(final double[] output, int offset) {
         output[offset + 0] = x_6;
         output[offset + 1] = y_6;
     }
 
     /** inject the given input starting at the given offset into the 6-vector */
-    public void inject6(final double[] input, int offset) {
+    public void inject_6(final double[] input, int offset) {
         x_6 = input[offset + 0];
         y_6 = input[offset + 1];
     }
@@ -1171,12 +1171,23 @@ public class VectorRegister7 extends VectorRegister6 {
     }
 
     /** is the 6-vector the origin */
-    public boolean isZero_6() {
+    public boolean is_6_zero() {
         double d = 0.0;
         d += x_6 * x_6;
         d += y_6 * y_6;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 6 vector */
+    public double angle_6() {
+        return Math.atan2(y_6, x_6);
+    }
+
+    /** set the 6 vector to the complex number corresponding to the given angle */
+    public void set_6_by_angle(double theta) {
+        x_6 = Math.cos(theta);
+        y_6 = Math.sin(theta);
     }
 }

@@ -94,13 +94,13 @@ public class VectorRegister4 extends VectorRegister3 {
     }
 
     /** extract the 3-vector into the given output array starting at the given offset */
-    public void extract3(final double[] output, int offset) {
+    public void extract_3(final double[] output, int offset) {
         output[offset + 0] = x_3;
         output[offset + 1] = y_3;
     }
 
     /** inject the given input starting at the given offset into the 3-vector */
-    public void inject3(final double[] input, int offset) {
+    public void inject_3(final double[] input, int offset) {
         x_3 = input[offset + 0];
         y_3 = input[offset + 1];
     }
@@ -433,12 +433,23 @@ public class VectorRegister4 extends VectorRegister3 {
     }
 
     /** is the 3-vector the origin */
-    public boolean isZero_3() {
+    public boolean is_3_zero() {
         double d = 0.0;
         d += x_3 * x_3;
         d += y_3 * y_3;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 3 vector */
+    public double angle_3() {
+        return Math.atan2(y_3, x_3);
+    }
+
+    /** set the 3 vector to the complex number corresponding to the given angle */
+    public void set_3_by_angle(double theta) {
+        x_3 = Math.cos(theta);
+        y_3 = Math.sin(theta);
     }
 }

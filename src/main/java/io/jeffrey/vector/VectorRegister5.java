@@ -118,13 +118,13 @@ public class VectorRegister5 extends VectorRegister4 {
     }
 
     /** extract the 4-vector into the given output array starting at the given offset */
-    public void extract4(final double[] output, int offset) {
+    public void extract_4(final double[] output, int offset) {
         output[offset + 0] = x_4;
         output[offset + 1] = y_4;
     }
 
     /** inject the given input starting at the given offset into the 4-vector */
-    public void inject4(final double[] input, int offset) {
+    public void inject_4(final double[] input, int offset) {
         x_4 = input[offset + 0];
         y_4 = input[offset + 1];
     }
@@ -637,12 +637,23 @@ public class VectorRegister5 extends VectorRegister4 {
     }
 
     /** is the 4-vector the origin */
-    public boolean isZero_4() {
+    public boolean is_4_zero() {
         double d = 0.0;
         d += x_4 * x_4;
         d += y_4 * y_4;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 4 vector */
+    public double angle_4() {
+        return Math.atan2(y_4, x_4);
+    }
+
+    /** set the 4 vector to the complex number corresponding to the given angle */
+    public void set_4_by_angle(double theta) {
+        x_4 = Math.cos(theta);
+        y_4 = Math.sin(theta);
     }
 }

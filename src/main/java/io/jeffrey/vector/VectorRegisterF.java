@@ -358,13 +358,13 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** extract the 14-vector into the given output array starting at the given offset */
-    public void extract14(final double[] output, int offset) {
+    public void extract_14(final double[] output, int offset) {
         output[offset + 0] = x_14;
         output[offset + 1] = y_14;
     }
 
     /** inject the given input starting at the given offset into the 14-vector */
-    public void inject14(final double[] input, int offset) {
+    public void inject_14(final double[] input, int offset) {
         x_14 = input[offset + 0];
         y_14 = input[offset + 1];
     }
@@ -4987,12 +4987,23 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** is the 14-vector the origin */
-    public boolean isZero_14() {
+    public boolean is_14_zero() {
         double d = 0.0;
         d += x_14 * x_14;
         d += y_14 * y_14;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 14 vector */
+    public double angle_14() {
+        return Math.atan2(y_14, x_14);
+    }
+
+    /** set the 14 vector to the complex number corresponding to the given angle */
+    public void set_14_by_angle(double theta) {
+        x_14 = Math.cos(theta);
+        y_14 = Math.sin(theta);
     }
 }

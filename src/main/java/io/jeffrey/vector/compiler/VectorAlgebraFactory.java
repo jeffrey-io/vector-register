@@ -99,7 +99,7 @@ public class VectorAlgebraFactory {
      */
     private void writeZeros() {
         for (int k = 0; k < N; k++) {
-            if (start("zeroOut", s(k))) {
+            if (start("zero_out_", s(k))) {
                 println();
                 tab();
                 println("/** set the " + k + "-vector to the (0,0) */");
@@ -120,7 +120,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** extract the " + k + "-vector into the given output array starting at the given offset */");
-                println("public void extract", s(k), "(final double[] output, int offset) {");
+                println("public void extract_", s(k), "(final double[] output, int offset) {");
                 tab();
                 println("output[offset + 0] = ", atX(k), ";");
                 println("output[offset + 1] = ", atY(k), ";");
@@ -137,7 +137,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** inject the given input starting at the given offset into the " + k + "-vector */");
-                println("public void inject", s(k), "(final double[] input, int offset) {");
+                println("public void inject_", s(k), "(final double[] input, int offset) {");
                 tab();
                 println(atX(k), " = input[offset + 0];");
                 println(atY(k), " = input[offset + 1];");
@@ -191,7 +191,7 @@ public class VectorAlgebraFactory {
             for (int j = 0; j < N; j++) {
                 if (k == j)
                     continue;
-                if (start("complex_mult", "_", s(j), "_", s(k))) {
+                if (start("complex_mult_", "_", s(j), "_", s(k))) {
                     println();
                     tab();
                     println("/** multiply via complex numbers the " + k + " and " + j + " together and store the result to the " + k + " vector */");
@@ -338,11 +338,11 @@ public class VectorAlgebraFactory {
 
     private void writeIsZero() {
         for (int k = 0; k < N; k++) {
-            if (start("isZero_", "_", s(k))) {
+            if (start("is_", s(k), "_zero")) {
                 println();
                 tab();
                 println("/** is the " + k + "-vector the origin */");
-                println("public boolean isZero_", s(k), "() {");
+                println("public boolean is_", s(k), "_zero() {");
                 tab();
                 println("double d = 0.0;");
                 println("d += ", atX(k), " * ", atX(k), ";");
@@ -387,6 +387,39 @@ public class VectorAlgebraFactory {
         }
     }
 
+    private void writeAngleOf() {
+        for (int k = 0; k < N; k++) {
+            if (start("angle_", s(k))) {
+                println();
+                tab();
+                println("/** return the angle (via atan2) of the ", s(k), " vector */");
+                println("public double angle_", s(k), "() {");
+                tab();
+                println("return Math.atan2(", atY(k), ", ", atX(k), ");");
+                untab();
+                println("}");
+                untab();
+            }
+        }
+    }
+
+    private void writeSetByAngle() {
+        for (int k = 0; k < N; k++) {
+            if (start("setByAngle", "_", s(k))) {
+                println();
+                tab();
+                println("/** set the ", s(k), " vector to the complex number corresponding to the given angle */");
+                println("public void set_", s(k), "_by_angle(double theta) {");
+                tab();
+                println(atX(k), " = Math.cos(theta);");
+                println(atY(k), " = Math.sin(theta);");
+                untab();
+                println("}");
+                untab();
+            }
+        }
+    }
+
     private void write() {
         writeFieldsAndConstructor();
         writeSetters();
@@ -405,6 +438,8 @@ public class VectorAlgebraFactory {
         writeMatrixMath();
         writeMatrixInverse();
         writeIsZero();
+        writeAngleOf();
+        writeSetByAngle();
     }
 
     public static void main(String[] args) throws Exception {

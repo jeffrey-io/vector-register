@@ -238,13 +238,13 @@ public class VectorRegisterA extends VectorRegister9 {
     }
 
     /** extract the 9-vector into the given output array starting at the given offset */
-    public void extract9(final double[] output, int offset) {
+    public void extract_9(final double[] output, int offset) {
         output[offset + 0] = x_9;
         output[offset + 1] = y_9;
     }
 
     /** inject the given input starting at the given offset into the 9-vector */
-    public void inject9(final double[] input, int offset) {
+    public void inject_9(final double[] input, int offset) {
         x_9 = input[offset + 0];
         y_9 = input[offset + 1];
     }
@@ -2287,12 +2287,23 @@ public class VectorRegisterA extends VectorRegister9 {
     }
 
     /** is the 9-vector the origin */
-    public boolean isZero_9() {
+    public boolean is_9_zero() {
         double d = 0.0;
         d += x_9 * x_9;
         d += y_9 * y_9;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 9 vector */
+    public double angle_9() {
+        return Math.atan2(y_9, x_9);
+    }
+
+    /** set the 9 vector to the complex number corresponding to the given angle */
+    public void set_9_by_angle(double theta) {
+        x_9 = Math.cos(theta);
+        y_9 = Math.sin(theta);
     }
 }

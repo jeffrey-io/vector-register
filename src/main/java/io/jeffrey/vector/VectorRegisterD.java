@@ -310,13 +310,13 @@ public class VectorRegisterD extends VectorRegisterC {
     }
 
     /** extract the 12-vector into the given output array starting at the given offset */
-    public void extract12(final double[] output, int offset) {
+    public void extract_12(final double[] output, int offset) {
         output[offset + 0] = x_12;
         output[offset + 1] = y_12;
     }
 
     /** inject the given input starting at the given offset into the 12-vector */
-    public void inject12(final double[] input, int offset) {
+    public void inject_12(final double[] input, int offset) {
         x_12 = input[offset + 0];
         y_12 = input[offset + 1];
     }
@@ -3781,12 +3781,23 @@ public class VectorRegisterD extends VectorRegisterC {
     }
 
     /** is the 12-vector the origin */
-    public boolean isZero_12() {
+    public boolean is_12_zero() {
         double d = 0.0;
         d += x_12 * x_12;
         d += y_12 * y_12;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 12 vector */
+    public double angle_12() {
+        return Math.atan2(y_12, x_12);
+    }
+
+    /** set the 12 vector to the complex number corresponding to the given angle */
+    public void set_12_by_angle(double theta) {
+        x_12 = Math.cos(theta);
+        y_12 = Math.sin(theta);
     }
 }

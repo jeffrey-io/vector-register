@@ -63,25 +63,25 @@ public class VectorRegister2 {
     }
 
     /** extract the 0-vector into the given output array starting at the given offset */
-    public void extract0(final double[] output, int offset) {
+    public void extract_0(final double[] output, int offset) {
         output[offset + 0] = x_0;
         output[offset + 1] = y_0;
     }
 
     /** extract the 1-vector into the given output array starting at the given offset */
-    public void extract1(final double[] output, int offset) {
+    public void extract_1(final double[] output, int offset) {
         output[offset + 0] = x_1;
         output[offset + 1] = y_1;
     }
 
     /** inject the given input starting at the given offset into the 0-vector */
-    public void inject0(final double[] input, int offset) {
+    public void inject_0(final double[] input, int offset) {
         x_0 = input[offset + 0];
         y_0 = input[offset + 1];
     }
 
     /** inject the given input starting at the given offset into the 1-vector */
-    public void inject1(final double[] input, int offset) {
+    public void inject_1(final double[] input, int offset) {
         x_1 = input[offset + 0];
         y_1 = input[offset + 1];
     }
@@ -219,7 +219,7 @@ public class VectorRegister2 {
     }
 
     /** is the 0-vector the origin */
-    public boolean isZero_0() {
+    public boolean is_0_zero() {
         double d = 0.0;
         d += x_0 * x_0;
         d += y_0 * y_0;
@@ -229,12 +229,34 @@ public class VectorRegister2 {
     }
 
     /** is the 1-vector the origin */
-    public boolean isZero_1() {
+    public boolean is_1_zero() {
         double d = 0.0;
         d += x_1 * x_1;
         d += y_1 * y_1;
         if (Math.abs(d) < ZERO_LIMIT)
             return true;
         return false;
+    }
+
+    /** return the angle (via atan2) of the 0 vector */
+    public double angle_0() {
+        return Math.atan2(y_0, x_0);
+    }
+
+    /** return the angle (via atan2) of the 1 vector */
+    public double angle_1() {
+        return Math.atan2(y_1, x_1);
+    }
+
+    /** set the 0 vector to the complex number corresponding to the given angle */
+    public void set_0_by_angle(double theta) {
+        x_0 = Math.cos(theta);
+        y_0 = Math.sin(theta);
+    }
+
+    /** set the 1 vector to the complex number corresponding to the given angle */
+    public void set_1_by_angle(double theta) {
+        x_1 = Math.cos(theta);
+        y_1 = Math.sin(theta);
     }
 }
