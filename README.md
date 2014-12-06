@@ -46,3 +46,5 @@ Implementing the above classes with a simple vector addition, if you attempt to 
 | Vector2D | 8 ms |
 | VectorRegister2 | 8 ms |
 | inline | 7 ms |
+
+Clearly, writing unclean code is faster than doing clean code (at least, in Java).
