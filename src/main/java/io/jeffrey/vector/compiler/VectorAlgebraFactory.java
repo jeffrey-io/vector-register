@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 public class VectorAlgebraFactory {
     private static final String TAB = "    ";
-    private final PrintStream   NEVERTALKTOME;
+    private final PrintStream   output;
     private final int           N;
     private int                 tabbing;
 
@@ -17,7 +17,7 @@ public class VectorAlgebraFactory {
     private final HashSet<String> definedFunctions;
 
     private VectorAlgebraFactory(PrintStream out, int N, HashSet<String> definedFunctions) {
-        this.NEVERTALKTOME = out;
+        this.output = out;
         this.N = N;
         this.tabbing = 0;
         this.definedFunctions = definedFunctions;
@@ -43,12 +43,16 @@ public class VectorAlgebraFactory {
     }
 
     private void println(String... values) {
-        for (int k = 0; k < tabbing; k++)
-            NEVERTALKTOME.print(TAB);
-        for (String value : values) {
-            NEVERTALKTOME.print(value);
+        if (values.length == 0) {
+            output.println();
+            return;
         }
-        NEVERTALKTOME.println();
+        for (int k = 0; k < tabbing; k++)
+            output.print(TAB);
+        for (String value : values) {
+            output.print(value);
+        }
+        output.println();
     }
 
     private String s(int x) {
@@ -63,11 +67,20 @@ public class VectorAlgebraFactory {
         return "y_" + k;
     }
 
+    /**
+     * write out the new fields, and write out a constructor to zero out the new fields
+     */
     private void writeFieldsAndConstructor() {
         tab();
         for (int k = N == 2 ? 0 : N - 1; k < N; k++) {
-            println("public double " + atX(k) + ";");
-            println("public double " + atY(k) + ";");
+            if (N == 2) {
+                println("public double                 " + atX(k) + ";");
+                println("public double                 " + atY(k) + ";");
+            } else {
+                println("public double " + atX(k) + ";");
+                println("public double " + atY(k) + ";");
+
+            }
         }
         println();
         println("public VectorRegister", hexify(N), "() {");
@@ -81,6 +94,9 @@ public class VectorAlgebraFactory {
         untab();
     }
 
+    /**
+     * write out functions to zero out specific zeros
+     */
     private void writeZeros() {
         for (int k = 0; k < N; k++) {
             if (start("zeroOut", s(k))) {
@@ -106,8 +122,25 @@ public class VectorAlgebraFactory {
                 println("/** extract the " + k + "-vector into the given output array starting at the given offset */");
                 println("public void extract", s(k), "(final double[] output, int offset) {");
                 tab();
-                println("output[offset+0]=", atX(k), ";");
-                println("output[offset+1]=", atY(k), ";");
+                println("output[offset + 0] = ", atX(k), ";");
+                println("output[offset + 1] = ", atY(k), ";");
+                untab();
+                println("}");
+                untab();
+            }
+        }
+    }
+
+    private void writeInjectors() {
+        for (int k = 0; k < N; k++) {
+            if (start("inject", s(k))) {
+                println();
+                tab();
+                println("/** inject the given input starting at the given offset into the " + k + "-vector */");
+                println("public void inject", s(k), "(final double[] input, int offset) {");
+                tab();
+                println(atX(k), " = input[offset + 0];");
+                println(atY(k), " = input[offset + 1];");
                 untab();
                 println("}");
                 untab();
@@ -143,9 +176,30 @@ public class VectorAlgebraFactory {
                     println("/** " + docName + " the " + k + " and " + j + " together and store the result to the " + k + " vector */");
                     println("public void ", name, "_", s(j), "_", how, "_" + s(k), "() {");
                     tab();
-                    println(atX(k), op, "=", atX(j), ";");
-                    println(atY(k), op, "=", atY(j), ";");
+                    println(atX(k), " ", op, "= ", atX(j), ";");
+                    println(atY(k), " ", op, "= ", atY(j), ";");
+                    untab();
+                    println("}");
+                    untab();
+                }
+            }
+        }
+    }
 
+    private void writeComplexMultiply() {
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < N; j++) {
+                if (k == j)
+                    continue;
+                if (start("complex_mult", "_", s(j), "_", s(k))) {
+                    println();
+                    tab();
+                    println("/** multiply via complex numbers the " + k + " and " + j + " together and store the result to the " + k + " vector */");
+                    println("public void complex_mult", s(j), "_", s(k), "() {");
+                    tab();
+                    println("double t = ", atX(k), " * ", atX(j), " - ", atY(k), " * ", atY(j), ";");
+                    println(atY(k), " = ", atX(k), " * ", atY(j), " + ", atY(k), " * ", atX(j), ";");
+                    println(atX(k), " = t;");
                     untab();
                     println("}");
                     untab();
@@ -165,8 +219,8 @@ public class VectorAlgebraFactory {
                     println("/** copy the " + j + " vector into the " + k + " vector */");
                     println("public void copy_from_", s(j), "_to_", s(k), "() {");
                     tab();
-                    println(atX(k), "=", atX(j), ";");
-                    println(atY(k), "=", atY(j), ";");
+                    println(atX(k), " = ", atX(j), ";");
+                    println(atY(k), " = ", atY(j), ";");
                     untab();
                     println("}");
                     untab();
@@ -188,7 +242,7 @@ public class VectorAlgebraFactory {
                         println("public void transform_" + v + "_by_" + k + "_" + j + "() {");
                         tab();
                         println("double t = ", atX(k), " * ", atX(v), " + ", atX(j), " * ", atY(v), ";");
-                        println(atY(v), "=", atY(k), " * ", atX(v), " + ", atY(j), " * ", atY(v), ";");
+                        println(atY(v), " = ", atY(k), " * ", atX(v), " + ", atY(j), " * ", atY(v), ";");
                         println(atX(v), " = t;");
                         untab();
                         println("}");
@@ -210,9 +264,12 @@ public class VectorAlgebraFactory {
                     println("/** invert the 2x2 matrix formed by vector " + k + " and vector " + j + " where the vectors are columns */");
                     println("public boolean invert_" + k + "_" + j + "() {");
                     tab();
-                    println("double t =", atX(k), ";");
-                    println("double invdet = ", atX(k), "*", atY(j), "-", atY(k), "*", atX(j), ";");
-                    println("if(Math.abs(invdet) < ZERO_LIMIT) return false;");
+                    println("double t = ", atX(k), ";");
+                    println("double invdet = ", atX(k), " * ", atY(j), " - ", atY(k), " * ", atX(j), ";");
+                    println("if (Math.abs(invdet) < ZERO_LIMIT)");
+                    tab();
+                    println("return false;");
+                    untab();
                     println("invdet = 1.0 / invdet;");
                     println(atX(j), " *= -1 * invdet;");
                     println(atY(k), " *= -1 * invdet;");
@@ -235,8 +292,8 @@ public class VectorAlgebraFactory {
                 println("/** " + docName + " vector " + k + " by the given scalar */");
                 println("public void ", name, "_", s(k), "_by(double s) {");
                 tab();
-                println(atX(k), op, "= s;");
-                println(atY(k), op, "= s;");
+                println(atX(k), " ", op, "= s;");
+                println(atY(k), " ", op, "= s;");
                 untab();
                 println("}");
                 untab();
@@ -269,8 +326,8 @@ public class VectorAlgebraFactory {
                 println("public double length_", s(k), "() {");
                 tab();
                 println("double d = 0.0;");
-                println("d += ", atX(k), "*", atX(k), ";");
-                println("d += ", atY(k), "*", atY(k), ";");
+                println("d += ", atX(k), " * ", atX(k), ";");
+                println("d += ", atY(k), " * ", atY(k), ";");
                 println("return Math.sqrt(d);");
                 untab();
                 println("}");
@@ -288,9 +345,12 @@ public class VectorAlgebraFactory {
                 println("public boolean isZero_", s(k), "() {");
                 tab();
                 println("double d = 0.0;");
-                println("d += ", atX(k), "*", atX(k), ";");
-                println("d += ", atY(k), "*", atY(k), ";");
-                println("if(Math.abs(d) < ZERO_LIMIT) return true;");
+                println("d += ", atX(k), " * ", atX(k), ";");
+                println("d += ", atY(k), " * ", atY(k), ";");
+                println("if (Math.abs(d) < ZERO_LIMIT)");
+                tab();
+                println("return true;");
+                untab();
                 println("return false;");
                 untab();
                 println("}");
@@ -309,9 +369,12 @@ public class VectorAlgebraFactory {
                 println("public boolean normalize_", s(k), "() {");
                 tab();
                 println("double d = 0.0;");
-                println("d += ", atX(k), "*", atX(k), ";");
-                println("d += ", atY(k), "*", atY(k), ";");
-                println("if(Math.abs(d) < ZERO_LIMIT) return false;");
+                println("d += ", atX(k), " * ", atX(k), ";");
+                println("d += ", atY(k), " * ", atY(k), ";");
+                println("if (Math.abs(d) < ZERO_LIMIT)");
+                tab();
+                println("return false;");
+                untab();
                 println("d = Math.sqrt(d);");
                 println("d = 1.0 / d;");
                 println(atX(k), " *= d;");
@@ -331,10 +394,12 @@ public class VectorAlgebraFactory {
         writeZeros();
         writeCopies();
         writeExtractors();
+        writeInjectors();
         writeBinaryOp("sub", "-", "from", "subtract");
         writeScalarOp("mult", "*", "multiply");
         writeScalarOp("div", "*", "divide");
         writeConj();
+        writeComplexMultiply();
         writeLengths();
         writeNormalizers();
         writeMatrixMath();

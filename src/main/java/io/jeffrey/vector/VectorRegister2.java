@@ -2,11 +2,11 @@ package io.jeffrey.vector;
 
 public class VectorRegister2 {
     protected static final double ZERO_LIMIT = 5.421010862427522E-20;
-    public double x_0;
-    public double y_0;
-    public double x_1;
-    public double y_1;
-    
+    public double                 x_0;
+    public double                 y_0;
+    public double                 x_1;
+    public double                 y_1;
+
     public VectorRegister2() {
         x_0 = 0.0;
         y_0 = 0.0;
@@ -28,14 +28,14 @@ public class VectorRegister2 {
 
     /** add the 0 and 1 together and store the result to the 0 vector */
     public void add_1_to_0() {
-        x_0+=x_1;
-        y_0+=y_1;
+        x_0 += x_1;
+        y_0 += y_1;
     }
 
     /** add the 1 and 0 together and store the result to the 1 vector */
     public void add_0_to_1() {
-        x_1+=x_0;
-        y_1+=y_0;
+        x_1 += x_0;
+        y_1 += y_0;
     }
 
     /** set the 0-vector to the (0,0) */
@@ -52,62 +52,74 @@ public class VectorRegister2 {
 
     /** copy the 1 vector into the 0 vector */
     public void copy_from_1_to_0() {
-        x_0=x_1;
-        y_0=y_1;
+        x_0 = x_1;
+        y_0 = y_1;
     }
 
     /** copy the 0 vector into the 1 vector */
     public void copy_from_0_to_1() {
-        x_1=x_0;
-        y_1=y_0;
+        x_1 = x_0;
+        y_1 = y_0;
     }
 
     /** extract the 0-vector into the given output array starting at the given offset */
     public void extract0(final double[] output, int offset) {
-        output[offset+0]=x_0;
-        output[offset+1]=y_0;
+        output[offset + 0] = x_0;
+        output[offset + 1] = y_0;
     }
 
     /** extract the 1-vector into the given output array starting at the given offset */
     public void extract1(final double[] output, int offset) {
-        output[offset+0]=x_1;
-        output[offset+1]=y_1;
+        output[offset + 0] = x_1;
+        output[offset + 1] = y_1;
+    }
+
+    /** inject the given input starting at the given offset into the 0-vector */
+    public void inject0(final double[] input, int offset) {
+        x_0 = input[offset + 0];
+        y_0 = input[offset + 1];
+    }
+
+    /** inject the given input starting at the given offset into the 1-vector */
+    public void inject1(final double[] input, int offset) {
+        x_1 = input[offset + 0];
+        y_1 = input[offset + 1];
     }
 
     /** subtract the 0 and 1 together and store the result to the 0 vector */
     public void sub_1_from_0() {
-        x_0-=x_1;
-        y_0-=y_1;
+        x_0 -= x_1;
+        y_0 -= y_1;
     }
 
     /** subtract the 1 and 0 together and store the result to the 1 vector */
     public void sub_0_from_1() {
-        x_1-=x_0;
-        y_1-=y_0;
+        x_1 -= x_0;
+        y_1 -= y_0;
     }
 
     /** multiply vector 0 by the given scalar */
     public void mult_0_by(double s) {
-        x_0*= s;
-        y_0*= s;
+        x_0 *= s;
+        y_0 *= s;
     }
 
     /** multiply vector 1 by the given scalar */
     public void mult_1_by(double s) {
-        x_1*= s;
-        y_1*= s;
+        x_1 *= s;
+        y_1 *= s;
     }
 
     /** divide vector 0 by the given scalar */
     public void div_0_by(double s) {
-        x_0*= s;
-        y_0*= s;
+        x_0 *= s;
+        y_0 *= s;
     }
 
     /** divide vector 1 by the given scalar */
     public void div_1_by(double s) {
-        x_1*= s;
-        y_1*= s;
+        x_1 *= s;
+        y_1 *= s;
     }
 
     /** treat vector 0 as a complex number and conjugate it */
@@ -120,28 +132,43 @@ public class VectorRegister2 {
         y_1 *= -1;
     }
 
+    /** multiply via complex numbers the 0 and 1 together and store the result to the 0 vector */
+    public void complex_mult1_0() {
+        double t = x_0 * x_1 - y_0 * y_1;
+        y_0 = x_0 * y_1 + y_0 * x_1;
+        x_0 = t;
+    }
+
+    /** multiply via complex numbers the 1 and 0 together and store the result to the 1 vector */
+    public void complex_mult0_1() {
+        double t = x_1 * x_0 - y_1 * y_0;
+        y_1 = x_1 * y_0 + y_1 * x_0;
+        x_1 = t;
+    }
+
     /** compute and return the length of vector 0 */
     public double length_0() {
         double d = 0.0;
-        d += x_0*x_0;
-        d += y_0*y_0;
+        d += x_0 * x_0;
+        d += y_0 * y_0;
         return Math.sqrt(d);
     }
 
     /** compute and return the length of vector 1 */
     public double length_1() {
         double d = 0.0;
-        d += x_1*x_1;
-        d += y_1*y_1;
+        d += x_1 * x_1;
+        d += y_1 * y_1;
         return Math.sqrt(d);
     }
 
     /** normalize the 0-vector if it is not the origin */
     public boolean normalize_0() {
         double d = 0.0;
-        d += x_0*x_0;
-        d += y_0*y_0;
-        if(Math.abs(d) < ZERO_LIMIT) return false;
+        d += x_0 * x_0;
+        d += y_0 * y_0;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return false;
         d = Math.sqrt(d);
         d = 1.0 / d;
         x_0 *= d;
@@ -152,9 +179,10 @@ public class VectorRegister2 {
     /** normalize the 1-vector if it is not the origin */
     public boolean normalize_1() {
         double d = 0.0;
-        d += x_1*x_1;
-        d += y_1*y_1;
-        if(Math.abs(d) < ZERO_LIMIT) return false;
+        d += x_1 * x_1;
+        d += y_1 * y_1;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return false;
         d = Math.sqrt(d);
         d = 1.0 / d;
         x_1 *= d;
@@ -164,9 +192,10 @@ public class VectorRegister2 {
 
     /** invert the 2x2 matrix formed by vector 0 and vector 1 where the vectors are columns */
     public boolean invert_0_1() {
-        double t =x_0;
-        double invdet = x_0*y_1-y_0*x_1;
-        if(Math.abs(invdet) < ZERO_LIMIT) return false;
+        double t = x_0;
+        double invdet = x_0 * y_1 - y_0 * x_1;
+        if (Math.abs(invdet) < ZERO_LIMIT)
+            return false;
         invdet = 1.0 / invdet;
         x_1 *= -1 * invdet;
         y_0 *= -1 * invdet;
@@ -177,9 +206,10 @@ public class VectorRegister2 {
 
     /** invert the 2x2 matrix formed by vector 1 and vector 0 where the vectors are columns */
     public boolean invert_1_0() {
-        double t =x_1;
-        double invdet = x_1*y_0-y_1*x_0;
-        if(Math.abs(invdet) < ZERO_LIMIT) return false;
+        double t = x_1;
+        double invdet = x_1 * y_0 - y_1 * x_0;
+        if (Math.abs(invdet) < ZERO_LIMIT)
+            return false;
         invdet = 1.0 / invdet;
         x_0 *= -1 * invdet;
         y_1 *= -1 * invdet;
@@ -191,18 +221,20 @@ public class VectorRegister2 {
     /** is the 0-vector the origin */
     public boolean isZero_0() {
         double d = 0.0;
-        d += x_0*x_0;
-        d += y_0*y_0;
-        if(Math.abs(d) < ZERO_LIMIT) return true;
+        d += x_0 * x_0;
+        d += y_0 * y_0;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return true;
         return false;
     }
 
     /** is the 1-vector the origin */
     public boolean isZero_1() {
         double d = 0.0;
-        d += x_1*x_1;
-        d += y_1*y_1;
-        if(Math.abs(d) < ZERO_LIMIT) return true;
+        d += x_1 * x_1;
+        d += y_1 * y_1;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return true;
         return false;
     }
 }
