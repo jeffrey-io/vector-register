@@ -10,7 +10,7 @@ public class VectorRegister4 extends VectorRegister3 {
     }
 
     /** set the 3-vector to the given (x,y) */
-    public void set3(double x, double y) {
+    public void set_3(double x, double y) {
         x_3 = x;
         y_3 = y;
     }
@@ -52,7 +52,7 @@ public class VectorRegister4 extends VectorRegister3 {
     }
 
     /** set the 3-vector to the (0,0) */
-    public void zeroOut3() {
+    public void zero_out_3() {
         x_3 = 0.0;
         y_3 = 0.0;
     }

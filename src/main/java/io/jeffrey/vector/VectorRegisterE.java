@@ -10,7 +10,7 @@ public class VectorRegisterE extends VectorRegisterD {
     }
 
     /** set the 13-vector to the given (x,y) */
-    public void set13(double x, double y) {
+    public void set_13(double x, double y) {
         x_13 = x;
         y_13 = y;
     }
@@ -172,7 +172,7 @@ public class VectorRegisterE extends VectorRegisterD {
     }
 
     /** set the 13-vector to the (0,0) */
-    public void zeroOut13() {
+    public void zero_out_13() {
         x_13 = 0.0;
         y_13 = 0.0;
     }

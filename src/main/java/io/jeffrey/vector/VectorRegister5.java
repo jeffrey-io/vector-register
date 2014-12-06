@@ -10,7 +10,7 @@ public class VectorRegister5 extends VectorRegister4 {
     }
 
     /** set the 4-vector to the given (x,y) */
-    public void set4(double x, double y) {
+    public void set_4(double x, double y) {
         x_4 = x;
         y_4 = y;
     }
@@ -64,7 +64,7 @@ public class VectorRegister5 extends VectorRegister4 {
     }
 
     /** set the 4-vector to the (0,0) */
-    public void zeroOut4() {
+    public void zero_out_4() {
         x_4 = 0.0;
         y_4 = 0.0;
     }

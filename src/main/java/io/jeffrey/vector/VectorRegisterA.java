@@ -10,7 +10,7 @@ public class VectorRegisterA extends VectorRegister9 {
     }
 
     /** set the 9-vector to the given (x,y) */
-    public void set9(double x, double y) {
+    public void set_9(double x, double y) {
         x_9 = x;
         y_9 = y;
     }
@@ -124,7 +124,7 @@ public class VectorRegisterA extends VectorRegister9 {
     }
 
     /** set the 9-vector to the (0,0) */
-    public void zeroOut9() {
+    public void zero_out_9() {
         x_9 = 0.0;
         y_9 = 0.0;
     }

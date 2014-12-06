@@ -10,7 +10,7 @@ public class VectorRegister9 extends VectorRegister8 {
     }
 
     /** set the 8-vector to the given (x,y) */
-    public void set8(double x, double y) {
+    public void set_8(double x, double y) {
         x_8 = x;
         y_8 = y;
     }
@@ -112,7 +112,7 @@ public class VectorRegister9 extends VectorRegister8 {
     }
 
     /** set the 8-vector to the (0,0) */
-    public void zeroOut8() {
+    public void zero_out_8() {
         x_8 = 0.0;
         y_8 = 0.0;
     }

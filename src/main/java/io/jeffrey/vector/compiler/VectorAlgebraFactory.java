@@ -103,7 +103,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** set the " + k + "-vector to the (0,0) */");
-                println("public void zeroOut", s(k), "() {");
+                println("public void zero_out_", s(k), "() {");
                 tab();
                 println(atX(k) + " = 0.0;");
                 println(atY(k) + " = 0.0;");
@@ -154,7 +154,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** set the " + k + "-vector to the given (x,y) */");
-                println("public void set", s(k), "(double x, double y) {");
+                println("public void set_", s(k), "(double x, double y) {");
                 tab();
                 println(atX(k), " = x;");
                 println(atY(k), " = y;");

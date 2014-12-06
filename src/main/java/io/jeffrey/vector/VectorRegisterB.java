@@ -10,7 +10,7 @@ public class VectorRegisterB extends VectorRegisterA {
     }
 
     /** set the 10-vector to the given (x,y) */
-    public void set10(double x, double y) {
+    public void set_10(double x, double y) {
         x_10 = x;
         y_10 = y;
     }
@@ -136,7 +136,7 @@ public class VectorRegisterB extends VectorRegisterA {
     }
 
     /** set the 10-vector to the (0,0) */
-    public void zeroOut10() {
+    public void zero_out_10() {
         x_10 = 0.0;
         y_10 = 0.0;
     }

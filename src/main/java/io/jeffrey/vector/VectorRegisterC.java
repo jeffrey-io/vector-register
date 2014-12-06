@@ -10,7 +10,7 @@ public class VectorRegisterC extends VectorRegisterB {
     }
 
     /** set the 11-vector to the given (x,y) */
-    public void set11(double x, double y) {
+    public void set_11(double x, double y) {
         x_11 = x;
         y_11 = y;
     }
@@ -148,7 +148,7 @@ public class VectorRegisterC extends VectorRegisterB {
     }
 
     /** set the 11-vector to the (0,0) */
-    public void zeroOut11() {
+    public void zero_out_11() {
         x_11 = 0.0;
         y_11 = 0.0;
     }

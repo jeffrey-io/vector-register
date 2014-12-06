@@ -10,7 +10,7 @@ public class VectorRegisterD extends VectorRegisterC {
     }
 
     /** set the 12-vector to the given (x,y) */
-    public void set12(double x, double y) {
+    public void set_12(double x, double y) {
         x_12 = x;
         y_12 = y;
     }
@@ -160,7 +160,7 @@ public class VectorRegisterD extends VectorRegisterC {
     }
 
     /** set the 12-vector to the (0,0) */
-    public void zeroOut12() {
+    public void zero_out_12() {
         x_12 = 0.0;
         y_12 = 0.0;
     }

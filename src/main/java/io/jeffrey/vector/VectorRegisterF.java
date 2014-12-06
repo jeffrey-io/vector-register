@@ -10,7 +10,7 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** set the 14-vector to the given (x,y) */
-    public void set14(double x, double y) {
+    public void set_14(double x, double y) {
         x_14 = x;
         y_14 = y;
     }
@@ -184,7 +184,7 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** set the 14-vector to the (0,0) */
-    public void zeroOut14() {
+    public void zero_out_14() {
         x_14 = 0.0;
         y_14 = 0.0;
     }

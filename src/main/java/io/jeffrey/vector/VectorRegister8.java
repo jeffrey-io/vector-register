@@ -10,7 +10,7 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** set the 7-vector to the given (x,y) */
-    public void set7(double x, double y) {
+    public void set_7(double x, double y) {
         x_7 = x;
         y_7 = y;
     }
@@ -100,7 +100,7 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** set the 7-vector to the (0,0) */
-    public void zeroOut7() {
+    public void zero_out_7() {
         x_7 = 0.0;
         y_7 = 0.0;
     }

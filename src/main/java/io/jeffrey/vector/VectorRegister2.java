@@ -15,13 +15,13 @@ public class VectorRegister2 {
     }
 
     /** set the 0-vector to the given (x,y) */
-    public void set0(double x, double y) {
+    public void set_0(double x, double y) {
         x_0 = x;
         y_0 = y;
     }
 
     /** set the 1-vector to the given (x,y) */
-    public void set1(double x, double y) {
+    public void set_1(double x, double y) {
         x_1 = x;
         y_1 = y;
     }
@@ -39,13 +39,13 @@ public class VectorRegister2 {
     }
 
     /** set the 0-vector to the (0,0) */
-    public void zeroOut0() {
+    public void zero_out_0() {
         x_0 = 0.0;
         y_0 = 0.0;
     }
 
     /** set the 1-vector to the (0,0) */
-    public void zeroOut1() {
+    public void zero_out_1() {
         x_1 = 0.0;
         y_1 = 0.0;
     }
