@@ -48,3 +48,14 @@ Implementing the above classes with a simple vector addition, if you attempt to 
 | inline | 7 ms |
 
 Clearly, writing unclean code is faster than doing clean code (at least, in Java).
+
+## Features
+
+* Addition and subtractions between vectors
+* scalar multiplication of a vector
+* dot products
+* matrix transforms
+* matrix inverse
+* complex number conjugate
+
+... more to come as it gets some polish
