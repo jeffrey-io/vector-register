@@ -186,6 +186,26 @@ public class VectorAlgebraFactory {
         }
     }
 
+    private void writeDotProduct() {
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < N; j++) {
+                if (k == j)
+                    continue;
+                if (start("dot_", s(j), "_", s(k))) {
+                    println();
+                    tab();
+                    println("/** return the dot product between the " + k + " and " + j + " vectors */");
+                    println("public double ", "dot_", s(j), "_", s(k), "() {");
+                    tab();
+                    println("return ", atX(k), " * ", atX(j), " + ", atY(k), " * ", atY(j), ";");
+                    untab();
+                    println("}");
+                    untab();
+                }
+            }
+        }
+    }
+
     private void writeComplexMultiply() {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
@@ -420,26 +440,79 @@ public class VectorAlgebraFactory {
         }
     }
 
+    private void writeSetMatrix() {
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < N; j++) {
+                if (k == j)
+                    continue;
+                if (start("writeMatrix", "_", s(k), "_", s(j))) {
+                    println();
+                    tab();
+                    println("/** set the matrixed form by the ", s(k), " vector and ", s(j), " vector (by column) */");
+                    println("public void set_matrix_", s(k), "_", s(j), "(double x0, double y0, double x1, double y1) {");
+                    tab();
+                    println(atX(k), " = x0;");
+                    println(atY(k), " = y0;");
+                    println(atX(j), " = x1;");
+                    println(atY(j), " = y1;");
+                    untab();
+                    println("}");
+                    untab();
+                }
+            }
+        }
+    }
+
     private void write() {
         writeFieldsAndConstructor();
         writeSetters();
-        writeBinaryOp("add", "+", "to", "add");
         writeZeros();
         writeCopies();
         writeExtractors();
         writeInjectors();
+        writeIsZero();
+
+        writeAngleOf();
+        writeSetByAngle();
+
+        writeBinaryOp("add", "+", "to", "add");
         writeBinaryOp("sub", "-", "from", "subtract");
         writeScalarOp("mult", "*", "multiply");
         writeScalarOp("div", "*", "divide");
+        writeDotProduct();
+
         writeConj();
         writeComplexMultiply();
+
         writeLengths();
         writeNormalizers();
+
+        writeSetMatrix();
         writeMatrixMath();
         writeMatrixInverse();
-        writeIsZero();
-        writeAngleOf();
-        writeSetByAngle();
+        writeMatrixTranspose();
+    }
+
+    private void writeMatrixTranspose() {
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < N; j++) {
+                if (k == j)
+                    continue;
+                if (start("transpose_" + k + "_" + j)) {
+                    println();
+                    tab();
+                    println("/** transpose the matrix formed by vector " + k + " and vector " + j + " where the vectors are columns */");
+                    println("public void transpose_" + k + "_" + j + "() {");
+                    tab();
+                    println("double t = ", atY(k), ";");
+                    println(atY(k), " = ", atX(j), ";");
+                    println(atX(j), " = t;");
+                    untab();
+                    println("}");
+                    untab();
+                }
+            }
+        }
     }
 
     public static void main(String[] args) throws Exception {

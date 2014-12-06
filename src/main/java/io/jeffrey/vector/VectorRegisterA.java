@@ -15,114 +15,6 @@ public class VectorRegisterA extends VectorRegister9 {
         y_9 = y;
     }
 
-    /** add the 0 and 9 together and store the result to the 0 vector */
-    public void add_9_to_0() {
-        x_0 += x_9;
-        y_0 += y_9;
-    }
-
-    /** add the 1 and 9 together and store the result to the 1 vector */
-    public void add_9_to_1() {
-        x_1 += x_9;
-        y_1 += y_9;
-    }
-
-    /** add the 2 and 9 together and store the result to the 2 vector */
-    public void add_9_to_2() {
-        x_2 += x_9;
-        y_2 += y_9;
-    }
-
-    /** add the 3 and 9 together and store the result to the 3 vector */
-    public void add_9_to_3() {
-        x_3 += x_9;
-        y_3 += y_9;
-    }
-
-    /** add the 4 and 9 together and store the result to the 4 vector */
-    public void add_9_to_4() {
-        x_4 += x_9;
-        y_4 += y_9;
-    }
-
-    /** add the 5 and 9 together and store the result to the 5 vector */
-    public void add_9_to_5() {
-        x_5 += x_9;
-        y_5 += y_9;
-    }
-
-    /** add the 6 and 9 together and store the result to the 6 vector */
-    public void add_9_to_6() {
-        x_6 += x_9;
-        y_6 += y_9;
-    }
-
-    /** add the 7 and 9 together and store the result to the 7 vector */
-    public void add_9_to_7() {
-        x_7 += x_9;
-        y_7 += y_9;
-    }
-
-    /** add the 8 and 9 together and store the result to the 8 vector */
-    public void add_9_to_8() {
-        x_8 += x_9;
-        y_8 += y_9;
-    }
-
-    /** add the 9 and 0 together and store the result to the 9 vector */
-    public void add_0_to_9() {
-        x_9 += x_0;
-        y_9 += y_0;
-    }
-
-    /** add the 9 and 1 together and store the result to the 9 vector */
-    public void add_1_to_9() {
-        x_9 += x_1;
-        y_9 += y_1;
-    }
-
-    /** add the 9 and 2 together and store the result to the 9 vector */
-    public void add_2_to_9() {
-        x_9 += x_2;
-        y_9 += y_2;
-    }
-
-    /** add the 9 and 3 together and store the result to the 9 vector */
-    public void add_3_to_9() {
-        x_9 += x_3;
-        y_9 += y_3;
-    }
-
-    /** add the 9 and 4 together and store the result to the 9 vector */
-    public void add_4_to_9() {
-        x_9 += x_4;
-        y_9 += y_4;
-    }
-
-    /** add the 9 and 5 together and store the result to the 9 vector */
-    public void add_5_to_9() {
-        x_9 += x_5;
-        y_9 += y_5;
-    }
-
-    /** add the 9 and 6 together and store the result to the 9 vector */
-    public void add_6_to_9() {
-        x_9 += x_6;
-        y_9 += y_6;
-    }
-
-    /** add the 9 and 7 together and store the result to the 9 vector */
-    public void add_7_to_9() {
-        x_9 += x_7;
-        y_9 += y_7;
-    }
-
-    /** add the 9 and 8 together and store the result to the 9 vector */
-    public void add_8_to_9() {
-        x_9 += x_8;
-        y_9 += y_8;
-    }
-
     /** set the 9-vector to the (0,0) */
     public void zero_out_9() {
         x_9 = 0.0;
@@ -249,6 +141,135 @@ public class VectorRegisterA extends VectorRegister9 {
         y_9 = input[offset + 1];
     }
 
+    /** is the 9-vector the origin */
+    public boolean is_9_zero() {
+        double d = 0.0;
+        d += x_9 * x_9;
+        d += y_9 * y_9;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
+    /** return the angle (via atan2) of the 9 vector */
+    public double angle_9() {
+        return Math.atan2(y_9, x_9);
+    }
+
+    /** set the 9 vector to the complex number corresponding to the given angle */
+    public void set_9_by_angle(double theta) {
+        x_9 = Math.cos(theta);
+        y_9 = Math.sin(theta);
+    }
+
+    /** add the 0 and 9 together and store the result to the 0 vector */
+    public void add_9_to_0() {
+        x_0 += x_9;
+        y_0 += y_9;
+    }
+
+    /** add the 1 and 9 together and store the result to the 1 vector */
+    public void add_9_to_1() {
+        x_1 += x_9;
+        y_1 += y_9;
+    }
+
+    /** add the 2 and 9 together and store the result to the 2 vector */
+    public void add_9_to_2() {
+        x_2 += x_9;
+        y_2 += y_9;
+    }
+
+    /** add the 3 and 9 together and store the result to the 3 vector */
+    public void add_9_to_3() {
+        x_3 += x_9;
+        y_3 += y_9;
+    }
+
+    /** add the 4 and 9 together and store the result to the 4 vector */
+    public void add_9_to_4() {
+        x_4 += x_9;
+        y_4 += y_9;
+    }
+
+    /** add the 5 and 9 together and store the result to the 5 vector */
+    public void add_9_to_5() {
+        x_5 += x_9;
+        y_5 += y_9;
+    }
+
+    /** add the 6 and 9 together and store the result to the 6 vector */
+    public void add_9_to_6() {
+        x_6 += x_9;
+        y_6 += y_9;
+    }
+
+    /** add the 7 and 9 together and store the result to the 7 vector */
+    public void add_9_to_7() {
+        x_7 += x_9;
+        y_7 += y_9;
+    }
+
+    /** add the 8 and 9 together and store the result to the 8 vector */
+    public void add_9_to_8() {
+        x_8 += x_9;
+        y_8 += y_9;
+    }
+
+    /** add the 9 and 0 together and store the result to the 9 vector */
+    public void add_0_to_9() {
+        x_9 += x_0;
+        y_9 += y_0;
+    }
+
+    /** add the 9 and 1 together and store the result to the 9 vector */
+    public void add_1_to_9() {
+        x_9 += x_1;
+        y_9 += y_1;
+    }
+
+    /** add the 9 and 2 together and store the result to the 9 vector */
+    public void add_2_to_9() {
+        x_9 += x_2;
+        y_9 += y_2;
+    }
+
+    /** add the 9 and 3 together and store the result to the 9 vector */
+    public void add_3_to_9() {
+        x_9 += x_3;
+        y_9 += y_3;
+    }
+
+    /** add the 9 and 4 together and store the result to the 9 vector */
+    public void add_4_to_9() {
+        x_9 += x_4;
+        y_9 += y_4;
+    }
+
+    /** add the 9 and 5 together and store the result to the 9 vector */
+    public void add_5_to_9() {
+        x_9 += x_5;
+        y_9 += y_5;
+    }
+
+    /** add the 9 and 6 together and store the result to the 9 vector */
+    public void add_6_to_9() {
+        x_9 += x_6;
+        y_9 += y_6;
+    }
+
+    /** add the 9 and 7 together and store the result to the 9 vector */
+    public void add_7_to_9() {
+        x_9 += x_7;
+        y_9 += y_7;
+    }
+
+    /** add the 9 and 8 together and store the result to the 9 vector */
+    public void add_8_to_9() {
+        x_9 += x_8;
+        y_9 += y_8;
+    }
+
     /** subtract the 0 and 9 together and store the result to the 0 vector */
     public void sub_9_from_0() {
         x_0 -= x_9;
@@ -367,6 +388,96 @@ public class VectorRegisterA extends VectorRegister9 {
     public void div_9_by(double s) {
         x_9 *= s;
         y_9 *= s;
+    }
+
+    /** return the dot product between the 0 and 9 vectors */
+    public double dot_9_0() {
+        return x_0 * x_9 + y_0 * y_9;
+    }
+
+    /** return the dot product between the 1 and 9 vectors */
+    public double dot_9_1() {
+        return x_1 * x_9 + y_1 * y_9;
+    }
+
+    /** return the dot product between the 2 and 9 vectors */
+    public double dot_9_2() {
+        return x_2 * x_9 + y_2 * y_9;
+    }
+
+    /** return the dot product between the 3 and 9 vectors */
+    public double dot_9_3() {
+        return x_3 * x_9 + y_3 * y_9;
+    }
+
+    /** return the dot product between the 4 and 9 vectors */
+    public double dot_9_4() {
+        return x_4 * x_9 + y_4 * y_9;
+    }
+
+    /** return the dot product between the 5 and 9 vectors */
+    public double dot_9_5() {
+        return x_5 * x_9 + y_5 * y_9;
+    }
+
+    /** return the dot product between the 6 and 9 vectors */
+    public double dot_9_6() {
+        return x_6 * x_9 + y_6 * y_9;
+    }
+
+    /** return the dot product between the 7 and 9 vectors */
+    public double dot_9_7() {
+        return x_7 * x_9 + y_7 * y_9;
+    }
+
+    /** return the dot product between the 8 and 9 vectors */
+    public double dot_9_8() {
+        return x_8 * x_9 + y_8 * y_9;
+    }
+
+    /** return the dot product between the 9 and 0 vectors */
+    public double dot_0_9() {
+        return x_9 * x_0 + y_9 * y_0;
+    }
+
+    /** return the dot product between the 9 and 1 vectors */
+    public double dot_1_9() {
+        return x_9 * x_1 + y_9 * y_1;
+    }
+
+    /** return the dot product between the 9 and 2 vectors */
+    public double dot_2_9() {
+        return x_9 * x_2 + y_9 * y_2;
+    }
+
+    /** return the dot product between the 9 and 3 vectors */
+    public double dot_3_9() {
+        return x_9 * x_3 + y_9 * y_3;
+    }
+
+    /** return the dot product between the 9 and 4 vectors */
+    public double dot_4_9() {
+        return x_9 * x_4 + y_9 * y_4;
+    }
+
+    /** return the dot product between the 9 and 5 vectors */
+    public double dot_5_9() {
+        return x_9 * x_5 + y_9 * y_5;
+    }
+
+    /** return the dot product between the 9 and 6 vectors */
+    public double dot_6_9() {
+        return x_9 * x_6 + y_9 * y_6;
+    }
+
+    /** return the dot product between the 9 and 7 vectors */
+    public double dot_7_9() {
+        return x_9 * x_7 + y_9 * y_7;
+    }
+
+    /** return the dot product between the 9 and 8 vectors */
+    public double dot_8_9() {
+        return x_9 * x_8 + y_9 * y_8;
     }
 
     /** treat vector 9 as a complex number and conjugate it */
@@ -520,6 +631,150 @@ public class VectorRegisterA extends VectorRegister9 {
         x_9 *= d;
         y_9 *= d;
         return true;
+    }
+
+    /** set the matrixed form by the 0 vector and 9 vector (by column) */
+    public void set_matrix_0_9(double x0, double y0, double x1, double y1) {
+        x_0 = x0;
+        y_0 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 1 vector and 9 vector (by column) */
+    public void set_matrix_1_9(double x0, double y0, double x1, double y1) {
+        x_1 = x0;
+        y_1 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 2 vector and 9 vector (by column) */
+    public void set_matrix_2_9(double x0, double y0, double x1, double y1) {
+        x_2 = x0;
+        y_2 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 3 vector and 9 vector (by column) */
+    public void set_matrix_3_9(double x0, double y0, double x1, double y1) {
+        x_3 = x0;
+        y_3 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 4 vector and 9 vector (by column) */
+    public void set_matrix_4_9(double x0, double y0, double x1, double y1) {
+        x_4 = x0;
+        y_4 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 5 vector and 9 vector (by column) */
+    public void set_matrix_5_9(double x0, double y0, double x1, double y1) {
+        x_5 = x0;
+        y_5 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 6 vector and 9 vector (by column) */
+    public void set_matrix_6_9(double x0, double y0, double x1, double y1) {
+        x_6 = x0;
+        y_6 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 7 vector and 9 vector (by column) */
+    public void set_matrix_7_9(double x0, double y0, double x1, double y1) {
+        x_7 = x0;
+        y_7 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 9 vector (by column) */
+    public void set_matrix_8_9(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 0 vector (by column) */
+    public void set_matrix_9_0(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_0 = x1;
+        y_0 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 1 vector (by column) */
+    public void set_matrix_9_1(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_1 = x1;
+        y_1 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 2 vector (by column) */
+    public void set_matrix_9_2(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_2 = x1;
+        y_2 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 3 vector (by column) */
+    public void set_matrix_9_3(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_3 = x1;
+        y_3 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 4 vector (by column) */
+    public void set_matrix_9_4(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_4 = x1;
+        y_4 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 5 vector (by column) */
+    public void set_matrix_9_5(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_5 = x1;
+        y_5 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 6 vector (by column) */
+    public void set_matrix_9_6(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_6 = x1;
+        y_6 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 7 vector (by column) */
+    public void set_matrix_9_7(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_7 = x1;
+        y_7 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 8 vector (by column) */
+    public void set_matrix_9_8(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_8 = x1;
+        y_8 = y1;
     }
 
     /** transform the 9 vector by the matrixed formed by the 0 and 1 vectors as columns */
@@ -2286,24 +2541,129 @@ public class VectorRegisterA extends VectorRegister9 {
         return true;
     }
 
-    /** is the 9-vector the origin */
-    public boolean is_9_zero() {
-        double d = 0.0;
-        d += x_9 * x_9;
-        d += y_9 * y_9;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
+    /** transpose the matrix formed by vector 0 and vector 9 where the vectors are columns */
+    public void transpose_0_9() {
+        double t = y_0;
+        y_0 = x_9;
+        x_9 = t;
     }
 
-    /** return the angle (via atan2) of the 9 vector */
-    public double angle_9() {
-        return Math.atan2(y_9, x_9);
+    /** transpose the matrix formed by vector 1 and vector 9 where the vectors are columns */
+    public void transpose_1_9() {
+        double t = y_1;
+        y_1 = x_9;
+        x_9 = t;
     }
 
-    /** set the 9 vector to the complex number corresponding to the given angle */
-    public void set_9_by_angle(double theta) {
-        x_9 = Math.cos(theta);
-        y_9 = Math.sin(theta);
+    /** transpose the matrix formed by vector 2 and vector 9 where the vectors are columns */
+    public void transpose_2_9() {
+        double t = y_2;
+        y_2 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 3 and vector 9 where the vectors are columns */
+    public void transpose_3_9() {
+        double t = y_3;
+        y_3 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 4 and vector 9 where the vectors are columns */
+    public void transpose_4_9() {
+        double t = y_4;
+        y_4 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 5 and vector 9 where the vectors are columns */
+    public void transpose_5_9() {
+        double t = y_5;
+        y_5 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 6 and vector 9 where the vectors are columns */
+    public void transpose_6_9() {
+        double t = y_6;
+        y_6 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 7 and vector 9 where the vectors are columns */
+    public void transpose_7_9() {
+        double t = y_7;
+        y_7 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 9 where the vectors are columns */
+    public void transpose_8_9() {
+        double t = y_8;
+        y_8 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 0 where the vectors are columns */
+    public void transpose_9_0() {
+        double t = y_9;
+        y_9 = x_0;
+        x_0 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 1 where the vectors are columns */
+    public void transpose_9_1() {
+        double t = y_9;
+        y_9 = x_1;
+        x_1 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 2 where the vectors are columns */
+    public void transpose_9_2() {
+        double t = y_9;
+        y_9 = x_2;
+        x_2 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 3 where the vectors are columns */
+    public void transpose_9_3() {
+        double t = y_9;
+        y_9 = x_3;
+        x_3 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 4 where the vectors are columns */
+    public void transpose_9_4() {
+        double t = y_9;
+        y_9 = x_4;
+        x_4 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 5 where the vectors are columns */
+    public void transpose_9_5() {
+        double t = y_9;
+        y_9 = x_5;
+        x_5 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 6 where the vectors are columns */
+    public void transpose_9_6() {
+        double t = y_9;
+        y_9 = x_6;
+        x_6 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 7 where the vectors are columns */
+    public void transpose_9_7() {
+        double t = y_9;
+        y_9 = x_7;
+        x_7 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 8 where the vectors are columns */
+    public void transpose_9_8() {
+        double t = y_9;
+        y_9 = x_8;
+        x_8 = t;
     }
 }

@@ -15,174 +15,6 @@ public class VectorRegisterF extends VectorRegisterE {
         y_14 = y;
     }
 
-    /** add the 0 and 14 together and store the result to the 0 vector */
-    public void add_14_to_0() {
-        x_0 += x_14;
-        y_0 += y_14;
-    }
-
-    /** add the 1 and 14 together and store the result to the 1 vector */
-    public void add_14_to_1() {
-        x_1 += x_14;
-        y_1 += y_14;
-    }
-
-    /** add the 2 and 14 together and store the result to the 2 vector */
-    public void add_14_to_2() {
-        x_2 += x_14;
-        y_2 += y_14;
-    }
-
-    /** add the 3 and 14 together and store the result to the 3 vector */
-    public void add_14_to_3() {
-        x_3 += x_14;
-        y_3 += y_14;
-    }
-
-    /** add the 4 and 14 together and store the result to the 4 vector */
-    public void add_14_to_4() {
-        x_4 += x_14;
-        y_4 += y_14;
-    }
-
-    /** add the 5 and 14 together and store the result to the 5 vector */
-    public void add_14_to_5() {
-        x_5 += x_14;
-        y_5 += y_14;
-    }
-
-    /** add the 6 and 14 together and store the result to the 6 vector */
-    public void add_14_to_6() {
-        x_6 += x_14;
-        y_6 += y_14;
-    }
-
-    /** add the 7 and 14 together and store the result to the 7 vector */
-    public void add_14_to_7() {
-        x_7 += x_14;
-        y_7 += y_14;
-    }
-
-    /** add the 8 and 14 together and store the result to the 8 vector */
-    public void add_14_to_8() {
-        x_8 += x_14;
-        y_8 += y_14;
-    }
-
-    /** add the 9 and 14 together and store the result to the 9 vector */
-    public void add_14_to_9() {
-        x_9 += x_14;
-        y_9 += y_14;
-    }
-
-    /** add the 10 and 14 together and store the result to the 10 vector */
-    public void add_14_to_10() {
-        x_10 += x_14;
-        y_10 += y_14;
-    }
-
-    /** add the 11 and 14 together and store the result to the 11 vector */
-    public void add_14_to_11() {
-        x_11 += x_14;
-        y_11 += y_14;
-    }
-
-    /** add the 12 and 14 together and store the result to the 12 vector */
-    public void add_14_to_12() {
-        x_12 += x_14;
-        y_12 += y_14;
-    }
-
-    /** add the 13 and 14 together and store the result to the 13 vector */
-    public void add_14_to_13() {
-        x_13 += x_14;
-        y_13 += y_14;
-    }
-
-    /** add the 14 and 0 together and store the result to the 14 vector */
-    public void add_0_to_14() {
-        x_14 += x_0;
-        y_14 += y_0;
-    }
-
-    /** add the 14 and 1 together and store the result to the 14 vector */
-    public void add_1_to_14() {
-        x_14 += x_1;
-        y_14 += y_1;
-    }
-
-    /** add the 14 and 2 together and store the result to the 14 vector */
-    public void add_2_to_14() {
-        x_14 += x_2;
-        y_14 += y_2;
-    }
-
-    /** add the 14 and 3 together and store the result to the 14 vector */
-    public void add_3_to_14() {
-        x_14 += x_3;
-        y_14 += y_3;
-    }
-
-    /** add the 14 and 4 together and store the result to the 14 vector */
-    public void add_4_to_14() {
-        x_14 += x_4;
-        y_14 += y_4;
-    }
-
-    /** add the 14 and 5 together and store the result to the 14 vector */
-    public void add_5_to_14() {
-        x_14 += x_5;
-        y_14 += y_5;
-    }
-
-    /** add the 14 and 6 together and store the result to the 14 vector */
-    public void add_6_to_14() {
-        x_14 += x_6;
-        y_14 += y_6;
-    }
-
-    /** add the 14 and 7 together and store the result to the 14 vector */
-    public void add_7_to_14() {
-        x_14 += x_7;
-        y_14 += y_7;
-    }
-
-    /** add the 14 and 8 together and store the result to the 14 vector */
-    public void add_8_to_14() {
-        x_14 += x_8;
-        y_14 += y_8;
-    }
-
-    /** add the 14 and 9 together and store the result to the 14 vector */
-    public void add_9_to_14() {
-        x_14 += x_9;
-        y_14 += y_9;
-    }
-
-    /** add the 14 and 10 together and store the result to the 14 vector */
-    public void add_10_to_14() {
-        x_14 += x_10;
-        y_14 += y_10;
-    }
-
-    /** add the 14 and 11 together and store the result to the 14 vector */
-    public void add_11_to_14() {
-        x_14 += x_11;
-        y_14 += y_11;
-    }
-
-    /** add the 14 and 12 together and store the result to the 14 vector */
-    public void add_12_to_14() {
-        x_14 += x_12;
-        y_14 += y_12;
-    }
-
-    /** add the 14 and 13 together and store the result to the 14 vector */
-    public void add_13_to_14() {
-        x_14 += x_13;
-        y_14 += y_13;
-    }
-
     /** set the 14-vector to the (0,0) */
     public void zero_out_14() {
         x_14 = 0.0;
@@ -369,6 +201,195 @@ public class VectorRegisterF extends VectorRegisterE {
         y_14 = input[offset + 1];
     }
 
+    /** is the 14-vector the origin */
+    public boolean is_14_zero() {
+        double d = 0.0;
+        d += x_14 * x_14;
+        d += y_14 * y_14;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
+    /** return the angle (via atan2) of the 14 vector */
+    public double angle_14() {
+        return Math.atan2(y_14, x_14);
+    }
+
+    /** set the 14 vector to the complex number corresponding to the given angle */
+    public void set_14_by_angle(double theta) {
+        x_14 = Math.cos(theta);
+        y_14 = Math.sin(theta);
+    }
+
+    /** add the 0 and 14 together and store the result to the 0 vector */
+    public void add_14_to_0() {
+        x_0 += x_14;
+        y_0 += y_14;
+    }
+
+    /** add the 1 and 14 together and store the result to the 1 vector */
+    public void add_14_to_1() {
+        x_1 += x_14;
+        y_1 += y_14;
+    }
+
+    /** add the 2 and 14 together and store the result to the 2 vector */
+    public void add_14_to_2() {
+        x_2 += x_14;
+        y_2 += y_14;
+    }
+
+    /** add the 3 and 14 together and store the result to the 3 vector */
+    public void add_14_to_3() {
+        x_3 += x_14;
+        y_3 += y_14;
+    }
+
+    /** add the 4 and 14 together and store the result to the 4 vector */
+    public void add_14_to_4() {
+        x_4 += x_14;
+        y_4 += y_14;
+    }
+
+    /** add the 5 and 14 together and store the result to the 5 vector */
+    public void add_14_to_5() {
+        x_5 += x_14;
+        y_5 += y_14;
+    }
+
+    /** add the 6 and 14 together and store the result to the 6 vector */
+    public void add_14_to_6() {
+        x_6 += x_14;
+        y_6 += y_14;
+    }
+
+    /** add the 7 and 14 together and store the result to the 7 vector */
+    public void add_14_to_7() {
+        x_7 += x_14;
+        y_7 += y_14;
+    }
+
+    /** add the 8 and 14 together and store the result to the 8 vector */
+    public void add_14_to_8() {
+        x_8 += x_14;
+        y_8 += y_14;
+    }
+
+    /** add the 9 and 14 together and store the result to the 9 vector */
+    public void add_14_to_9() {
+        x_9 += x_14;
+        y_9 += y_14;
+    }
+
+    /** add the 10 and 14 together and store the result to the 10 vector */
+    public void add_14_to_10() {
+        x_10 += x_14;
+        y_10 += y_14;
+    }
+
+    /** add the 11 and 14 together and store the result to the 11 vector */
+    public void add_14_to_11() {
+        x_11 += x_14;
+        y_11 += y_14;
+    }
+
+    /** add the 12 and 14 together and store the result to the 12 vector */
+    public void add_14_to_12() {
+        x_12 += x_14;
+        y_12 += y_14;
+    }
+
+    /** add the 13 and 14 together and store the result to the 13 vector */
+    public void add_14_to_13() {
+        x_13 += x_14;
+        y_13 += y_14;
+    }
+
+    /** add the 14 and 0 together and store the result to the 14 vector */
+    public void add_0_to_14() {
+        x_14 += x_0;
+        y_14 += y_0;
+    }
+
+    /** add the 14 and 1 together and store the result to the 14 vector */
+    public void add_1_to_14() {
+        x_14 += x_1;
+        y_14 += y_1;
+    }
+
+    /** add the 14 and 2 together and store the result to the 14 vector */
+    public void add_2_to_14() {
+        x_14 += x_2;
+        y_14 += y_2;
+    }
+
+    /** add the 14 and 3 together and store the result to the 14 vector */
+    public void add_3_to_14() {
+        x_14 += x_3;
+        y_14 += y_3;
+    }
+
+    /** add the 14 and 4 together and store the result to the 14 vector */
+    public void add_4_to_14() {
+        x_14 += x_4;
+        y_14 += y_4;
+    }
+
+    /** add the 14 and 5 together and store the result to the 14 vector */
+    public void add_5_to_14() {
+        x_14 += x_5;
+        y_14 += y_5;
+    }
+
+    /** add the 14 and 6 together and store the result to the 14 vector */
+    public void add_6_to_14() {
+        x_14 += x_6;
+        y_14 += y_6;
+    }
+
+    /** add the 14 and 7 together and store the result to the 14 vector */
+    public void add_7_to_14() {
+        x_14 += x_7;
+        y_14 += y_7;
+    }
+
+    /** add the 14 and 8 together and store the result to the 14 vector */
+    public void add_8_to_14() {
+        x_14 += x_8;
+        y_14 += y_8;
+    }
+
+    /** add the 14 and 9 together and store the result to the 14 vector */
+    public void add_9_to_14() {
+        x_14 += x_9;
+        y_14 += y_9;
+    }
+
+    /** add the 14 and 10 together and store the result to the 14 vector */
+    public void add_10_to_14() {
+        x_14 += x_10;
+        y_14 += y_10;
+    }
+
+    /** add the 14 and 11 together and store the result to the 14 vector */
+    public void add_11_to_14() {
+        x_14 += x_11;
+        y_14 += y_11;
+    }
+
+    /** add the 14 and 12 together and store the result to the 14 vector */
+    public void add_12_to_14() {
+        x_14 += x_12;
+        y_14 += y_12;
+    }
+
+    /** add the 14 and 13 together and store the result to the 14 vector */
+    public void add_13_to_14() {
+        x_14 += x_13;
+        y_14 += y_13;
+    }
+
     /** subtract the 0 and 14 together and store the result to the 0 vector */
     public void sub_14_from_0() {
         x_0 -= x_14;
@@ -547,6 +568,146 @@ public class VectorRegisterF extends VectorRegisterE {
     public void div_14_by(double s) {
         x_14 *= s;
         y_14 *= s;
+    }
+
+    /** return the dot product between the 0 and 14 vectors */
+    public double dot_14_0() {
+        return x_0 * x_14 + y_0 * y_14;
+    }
+
+    /** return the dot product between the 1 and 14 vectors */
+    public double dot_14_1() {
+        return x_1 * x_14 + y_1 * y_14;
+    }
+
+    /** return the dot product between the 2 and 14 vectors */
+    public double dot_14_2() {
+        return x_2 * x_14 + y_2 * y_14;
+    }
+
+    /** return the dot product between the 3 and 14 vectors */
+    public double dot_14_3() {
+        return x_3 * x_14 + y_3 * y_14;
+    }
+
+    /** return the dot product between the 4 and 14 vectors */
+    public double dot_14_4() {
+        return x_4 * x_14 + y_4 * y_14;
+    }
+
+    /** return the dot product between the 5 and 14 vectors */
+    public double dot_14_5() {
+        return x_5 * x_14 + y_5 * y_14;
+    }
+
+    /** return the dot product between the 6 and 14 vectors */
+    public double dot_14_6() {
+        return x_6 * x_14 + y_6 * y_14;
+    }
+
+    /** return the dot product between the 7 and 14 vectors */
+    public double dot_14_7() {
+        return x_7 * x_14 + y_7 * y_14;
+    }
+
+    /** return the dot product between the 8 and 14 vectors */
+    public double dot_14_8() {
+        return x_8 * x_14 + y_8 * y_14;
+    }
+
+    /** return the dot product between the 9 and 14 vectors */
+    public double dot_14_9() {
+        return x_9 * x_14 + y_9 * y_14;
+    }
+
+    /** return the dot product between the 10 and 14 vectors */
+    public double dot_14_10() {
+        return x_10 * x_14 + y_10 * y_14;
+    }
+
+    /** return the dot product between the 11 and 14 vectors */
+    public double dot_14_11() {
+        return x_11 * x_14 + y_11 * y_14;
+    }
+
+    /** return the dot product between the 12 and 14 vectors */
+    public double dot_14_12() {
+        return x_12 * x_14 + y_12 * y_14;
+    }
+
+    /** return the dot product between the 13 and 14 vectors */
+    public double dot_14_13() {
+        return x_13 * x_14 + y_13 * y_14;
+    }
+
+    /** return the dot product between the 14 and 0 vectors */
+    public double dot_0_14() {
+        return x_14 * x_0 + y_14 * y_0;
+    }
+
+    /** return the dot product between the 14 and 1 vectors */
+    public double dot_1_14() {
+        return x_14 * x_1 + y_14 * y_1;
+    }
+
+    /** return the dot product between the 14 and 2 vectors */
+    public double dot_2_14() {
+        return x_14 * x_2 + y_14 * y_2;
+    }
+
+    /** return the dot product between the 14 and 3 vectors */
+    public double dot_3_14() {
+        return x_14 * x_3 + y_14 * y_3;
+    }
+
+    /** return the dot product between the 14 and 4 vectors */
+    public double dot_4_14() {
+        return x_14 * x_4 + y_14 * y_4;
+    }
+
+    /** return the dot product between the 14 and 5 vectors */
+    public double dot_5_14() {
+        return x_14 * x_5 + y_14 * y_5;
+    }
+
+    /** return the dot product between the 14 and 6 vectors */
+    public double dot_6_14() {
+        return x_14 * x_6 + y_14 * y_6;
+    }
+
+    /** return the dot product between the 14 and 7 vectors */
+    public double dot_7_14() {
+        return x_14 * x_7 + y_14 * y_7;
+    }
+
+    /** return the dot product between the 14 and 8 vectors */
+    public double dot_8_14() {
+        return x_14 * x_8 + y_14 * y_8;
+    }
+
+    /** return the dot product between the 14 and 9 vectors */
+    public double dot_9_14() {
+        return x_14 * x_9 + y_14 * y_9;
+    }
+
+    /** return the dot product between the 14 and 10 vectors */
+    public double dot_10_14() {
+        return x_14 * x_10 + y_14 * y_10;
+    }
+
+    /** return the dot product between the 14 and 11 vectors */
+    public double dot_11_14() {
+        return x_14 * x_11 + y_14 * y_11;
+    }
+
+    /** return the dot product between the 14 and 12 vectors */
+    public double dot_12_14() {
+        return x_14 * x_12 + y_14 * y_12;
+    }
+
+    /** return the dot product between the 14 and 13 vectors */
+    public double dot_13_14() {
+        return x_14 * x_13 + y_14 * y_13;
     }
 
     /** treat vector 14 as a complex number and conjugate it */
@@ -770,6 +931,230 @@ public class VectorRegisterF extends VectorRegisterE {
         x_14 *= d;
         y_14 *= d;
         return true;
+    }
+
+    /** set the matrixed form by the 0 vector and 14 vector (by column) */
+    public void set_matrix_0_14(double x0, double y0, double x1, double y1) {
+        x_0 = x0;
+        y_0 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 1 vector and 14 vector (by column) */
+    public void set_matrix_1_14(double x0, double y0, double x1, double y1) {
+        x_1 = x0;
+        y_1 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 2 vector and 14 vector (by column) */
+    public void set_matrix_2_14(double x0, double y0, double x1, double y1) {
+        x_2 = x0;
+        y_2 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 3 vector and 14 vector (by column) */
+    public void set_matrix_3_14(double x0, double y0, double x1, double y1) {
+        x_3 = x0;
+        y_3 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 4 vector and 14 vector (by column) */
+    public void set_matrix_4_14(double x0, double y0, double x1, double y1) {
+        x_4 = x0;
+        y_4 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 5 vector and 14 vector (by column) */
+    public void set_matrix_5_14(double x0, double y0, double x1, double y1) {
+        x_5 = x0;
+        y_5 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 6 vector and 14 vector (by column) */
+    public void set_matrix_6_14(double x0, double y0, double x1, double y1) {
+        x_6 = x0;
+        y_6 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 7 vector and 14 vector (by column) */
+    public void set_matrix_7_14(double x0, double y0, double x1, double y1) {
+        x_7 = x0;
+        y_7 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 14 vector (by column) */
+    public void set_matrix_8_14(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 9 vector and 14 vector (by column) */
+    public void set_matrix_9_14(double x0, double y0, double x1, double y1) {
+        x_9 = x0;
+        y_9 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 10 vector and 14 vector (by column) */
+    public void set_matrix_10_14(double x0, double y0, double x1, double y1) {
+        x_10 = x0;
+        y_10 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 11 vector and 14 vector (by column) */
+    public void set_matrix_11_14(double x0, double y0, double x1, double y1) {
+        x_11 = x0;
+        y_11 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 12 vector and 14 vector (by column) */
+    public void set_matrix_12_14(double x0, double y0, double x1, double y1) {
+        x_12 = x0;
+        y_12 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 13 vector and 14 vector (by column) */
+    public void set_matrix_13_14(double x0, double y0, double x1, double y1) {
+        x_13 = x0;
+        y_13 = y0;
+        x_14 = x1;
+        y_14 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 0 vector (by column) */
+    public void set_matrix_14_0(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_0 = x1;
+        y_0 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 1 vector (by column) */
+    public void set_matrix_14_1(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_1 = x1;
+        y_1 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 2 vector (by column) */
+    public void set_matrix_14_2(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_2 = x1;
+        y_2 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 3 vector (by column) */
+    public void set_matrix_14_3(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_3 = x1;
+        y_3 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 4 vector (by column) */
+    public void set_matrix_14_4(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_4 = x1;
+        y_4 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 5 vector (by column) */
+    public void set_matrix_14_5(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_5 = x1;
+        y_5 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 6 vector (by column) */
+    public void set_matrix_14_6(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_6 = x1;
+        y_6 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 7 vector (by column) */
+    public void set_matrix_14_7(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_7 = x1;
+        y_7 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 8 vector (by column) */
+    public void set_matrix_14_8(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 9 vector (by column) */
+    public void set_matrix_14_9(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_9 = x1;
+        y_9 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 10 vector (by column) */
+    public void set_matrix_14_10(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_10 = x1;
+        y_10 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 11 vector (by column) */
+    public void set_matrix_14_11(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_11 = x1;
+        y_11 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 12 vector (by column) */
+    public void set_matrix_14_12(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_12 = x1;
+        y_12 = y1;
+    }
+
+    /** set the matrixed form by the 14 vector and 13 vector (by column) */
+    public void set_matrix_14_13(double x0, double y0, double x1, double y1) {
+        x_14 = x0;
+        y_14 = y0;
+        x_13 = x1;
+        y_13 = y1;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 1 vectors as columns */
@@ -4986,24 +5371,199 @@ public class VectorRegisterF extends VectorRegisterE {
         return true;
     }
 
-    /** is the 14-vector the origin */
-    public boolean is_14_zero() {
-        double d = 0.0;
-        d += x_14 * x_14;
-        d += y_14 * y_14;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
+    /** transpose the matrix formed by vector 0 and vector 14 where the vectors are columns */
+    public void transpose_0_14() {
+        double t = y_0;
+        y_0 = x_14;
+        x_14 = t;
     }
 
-    /** return the angle (via atan2) of the 14 vector */
-    public double angle_14() {
-        return Math.atan2(y_14, x_14);
+    /** transpose the matrix formed by vector 1 and vector 14 where the vectors are columns */
+    public void transpose_1_14() {
+        double t = y_1;
+        y_1 = x_14;
+        x_14 = t;
     }
 
-    /** set the 14 vector to the complex number corresponding to the given angle */
-    public void set_14_by_angle(double theta) {
-        x_14 = Math.cos(theta);
-        y_14 = Math.sin(theta);
+    /** transpose the matrix formed by vector 2 and vector 14 where the vectors are columns */
+    public void transpose_2_14() {
+        double t = y_2;
+        y_2 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 3 and vector 14 where the vectors are columns */
+    public void transpose_3_14() {
+        double t = y_3;
+        y_3 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 4 and vector 14 where the vectors are columns */
+    public void transpose_4_14() {
+        double t = y_4;
+        y_4 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 5 and vector 14 where the vectors are columns */
+    public void transpose_5_14() {
+        double t = y_5;
+        y_5 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 6 and vector 14 where the vectors are columns */
+    public void transpose_6_14() {
+        double t = y_6;
+        y_6 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 7 and vector 14 where the vectors are columns */
+    public void transpose_7_14() {
+        double t = y_7;
+        y_7 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 14 where the vectors are columns */
+    public void transpose_8_14() {
+        double t = y_8;
+        y_8 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 9 and vector 14 where the vectors are columns */
+    public void transpose_9_14() {
+        double t = y_9;
+        y_9 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 10 and vector 14 where the vectors are columns */
+    public void transpose_10_14() {
+        double t = y_10;
+        y_10 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 11 and vector 14 where the vectors are columns */
+    public void transpose_11_14() {
+        double t = y_11;
+        y_11 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 12 and vector 14 where the vectors are columns */
+    public void transpose_12_14() {
+        double t = y_12;
+        y_12 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 13 and vector 14 where the vectors are columns */
+    public void transpose_13_14() {
+        double t = y_13;
+        y_13 = x_14;
+        x_14 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 0 where the vectors are columns */
+    public void transpose_14_0() {
+        double t = y_14;
+        y_14 = x_0;
+        x_0 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 1 where the vectors are columns */
+    public void transpose_14_1() {
+        double t = y_14;
+        y_14 = x_1;
+        x_1 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 2 where the vectors are columns */
+    public void transpose_14_2() {
+        double t = y_14;
+        y_14 = x_2;
+        x_2 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 3 where the vectors are columns */
+    public void transpose_14_3() {
+        double t = y_14;
+        y_14 = x_3;
+        x_3 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 4 where the vectors are columns */
+    public void transpose_14_4() {
+        double t = y_14;
+        y_14 = x_4;
+        x_4 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 5 where the vectors are columns */
+    public void transpose_14_5() {
+        double t = y_14;
+        y_14 = x_5;
+        x_5 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 6 where the vectors are columns */
+    public void transpose_14_6() {
+        double t = y_14;
+        y_14 = x_6;
+        x_6 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 7 where the vectors are columns */
+    public void transpose_14_7() {
+        double t = y_14;
+        y_14 = x_7;
+        x_7 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 8 where the vectors are columns */
+    public void transpose_14_8() {
+        double t = y_14;
+        y_14 = x_8;
+        x_8 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 9 where the vectors are columns */
+    public void transpose_14_9() {
+        double t = y_14;
+        y_14 = x_9;
+        x_9 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 10 where the vectors are columns */
+    public void transpose_14_10() {
+        double t = y_14;
+        y_14 = x_10;
+        x_10 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 11 where the vectors are columns */
+    public void transpose_14_11() {
+        double t = y_14;
+        y_14 = x_11;
+        x_11 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 12 where the vectors are columns */
+    public void transpose_14_12() {
+        double t = y_14;
+        y_14 = x_12;
+        x_12 = t;
+    }
+
+    /** transpose the matrix formed by vector 14 and vector 13 where the vectors are columns */
+    public void transpose_14_13() {
+        double t = y_14;
+        y_14 = x_13;
+        x_13 = t;
     }
 }

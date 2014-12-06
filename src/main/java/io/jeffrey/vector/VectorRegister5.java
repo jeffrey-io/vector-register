@@ -15,54 +15,6 @@ public class VectorRegister5 extends VectorRegister4 {
         y_4 = y;
     }
 
-    /** add the 0 and 4 together and store the result to the 0 vector */
-    public void add_4_to_0() {
-        x_0 += x_4;
-        y_0 += y_4;
-    }
-
-    /** add the 1 and 4 together and store the result to the 1 vector */
-    public void add_4_to_1() {
-        x_1 += x_4;
-        y_1 += y_4;
-    }
-
-    /** add the 2 and 4 together and store the result to the 2 vector */
-    public void add_4_to_2() {
-        x_2 += x_4;
-        y_2 += y_4;
-    }
-
-    /** add the 3 and 4 together and store the result to the 3 vector */
-    public void add_4_to_3() {
-        x_3 += x_4;
-        y_3 += y_4;
-    }
-
-    /** add the 4 and 0 together and store the result to the 4 vector */
-    public void add_0_to_4() {
-        x_4 += x_0;
-        y_4 += y_0;
-    }
-
-    /** add the 4 and 1 together and store the result to the 4 vector */
-    public void add_1_to_4() {
-        x_4 += x_1;
-        y_4 += y_1;
-    }
-
-    /** add the 4 and 2 together and store the result to the 4 vector */
-    public void add_2_to_4() {
-        x_4 += x_2;
-        y_4 += y_2;
-    }
-
-    /** add the 4 and 3 together and store the result to the 4 vector */
-    public void add_3_to_4() {
-        x_4 += x_3;
-        y_4 += y_3;
-    }
-
     /** set the 4-vector to the (0,0) */
     public void zero_out_4() {
         x_4 = 0.0;
@@ -129,6 +81,75 @@ public class VectorRegister5 extends VectorRegister4 {
         y_4 = input[offset + 1];
     }
 
+    /** is the 4-vector the origin */
+    public boolean is_4_zero() {
+        double d = 0.0;
+        d += x_4 * x_4;
+        d += y_4 * y_4;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
+    /** return the angle (via atan2) of the 4 vector */
+    public double angle_4() {
+        return Math.atan2(y_4, x_4);
+    }
+
+    /** set the 4 vector to the complex number corresponding to the given angle */
+    public void set_4_by_angle(double theta) {
+        x_4 = Math.cos(theta);
+        y_4 = Math.sin(theta);
+    }
+
+    /** add the 0 and 4 together and store the result to the 0 vector */
+    public void add_4_to_0() {
+        x_0 += x_4;
+        y_0 += y_4;
+    }
+
+    /** add the 1 and 4 together and store the result to the 1 vector */
+    public void add_4_to_1() {
+        x_1 += x_4;
+        y_1 += y_4;
+    }
+
+    /** add the 2 and 4 together and store the result to the 2 vector */
+    public void add_4_to_2() {
+        x_2 += x_4;
+        y_2 += y_4;
+    }
+
+    /** add the 3 and 4 together and store the result to the 3 vector */
+    public void add_4_to_3() {
+        x_3 += x_4;
+        y_3 += y_4;
+    }
+
+    /** add the 4 and 0 together and store the result to the 4 vector */
+    public void add_0_to_4() {
+        x_4 += x_0;
+        y_4 += y_0;
+    }
+
+    /** add the 4 and 1 together and store the result to the 4 vector */
+    public void add_1_to_4() {
+        x_4 += x_1;
+        y_4 += y_1;
+    }
+
+    /** add the 4 and 2 together and store the result to the 4 vector */
+    public void add_2_to_4() {
+        x_4 += x_2;
+        y_4 += y_2;
+    }
+
+    /** add the 4 and 3 together and store the result to the 4 vector */
+    public void add_3_to_4() {
+        x_4 += x_3;
+        y_4 += y_3;
+    }
+
     /** subtract the 0 and 4 together and store the result to the 0 vector */
     public void sub_4_from_0() {
         x_0 -= x_4;
@@ -187,6 +208,46 @@ public class VectorRegister5 extends VectorRegister4 {
     public void div_4_by(double s) {
         x_4 *= s;
         y_4 *= s;
+    }
+
+    /** return the dot product between the 0 and 4 vectors */
+    public double dot_4_0() {
+        return x_0 * x_4 + y_0 * y_4;
+    }
+
+    /** return the dot product between the 1 and 4 vectors */
+    public double dot_4_1() {
+        return x_1 * x_4 + y_1 * y_4;
+    }
+
+    /** return the dot product between the 2 and 4 vectors */
+    public double dot_4_2() {
+        return x_2 * x_4 + y_2 * y_4;
+    }
+
+    /** return the dot product between the 3 and 4 vectors */
+    public double dot_4_3() {
+        return x_3 * x_4 + y_3 * y_4;
+    }
+
+    /** return the dot product between the 4 and 0 vectors */
+    public double dot_0_4() {
+        return x_4 * x_0 + y_4 * y_0;
+    }
+
+    /** return the dot product between the 4 and 1 vectors */
+    public double dot_1_4() {
+        return x_4 * x_1 + y_4 * y_1;
+    }
+
+    /** return the dot product between the 4 and 2 vectors */
+    public double dot_2_4() {
+        return x_4 * x_2 + y_4 * y_2;
+    }
+
+    /** return the dot product between the 4 and 3 vectors */
+    public double dot_3_4() {
+        return x_4 * x_3 + y_4 * y_3;
     }
 
     /** treat vector 4 as a complex number and conjugate it */
@@ -270,6 +331,70 @@ public class VectorRegister5 extends VectorRegister4 {
         x_4 *= d;
         y_4 *= d;
         return true;
+    }
+
+    /** set the matrixed form by the 0 vector and 4 vector (by column) */
+    public void set_matrix_0_4(double x0, double y0, double x1, double y1) {
+        x_0 = x0;
+        y_0 = y0;
+        x_4 = x1;
+        y_4 = y1;
+    }
+
+    /** set the matrixed form by the 1 vector and 4 vector (by column) */
+    public void set_matrix_1_4(double x0, double y0, double x1, double y1) {
+        x_1 = x0;
+        y_1 = y0;
+        x_4 = x1;
+        y_4 = y1;
+    }
+
+    /** set the matrixed form by the 2 vector and 4 vector (by column) */
+    public void set_matrix_2_4(double x0, double y0, double x1, double y1) {
+        x_2 = x0;
+        y_2 = y0;
+        x_4 = x1;
+        y_4 = y1;
+    }
+
+    /** set the matrixed form by the 3 vector and 4 vector (by column) */
+    public void set_matrix_3_4(double x0, double y0, double x1, double y1) {
+        x_3 = x0;
+        y_3 = y0;
+        x_4 = x1;
+        y_4 = y1;
+    }
+
+    /** set the matrixed form by the 4 vector and 0 vector (by column) */
+    public void set_matrix_4_0(double x0, double y0, double x1, double y1) {
+        x_4 = x0;
+        y_4 = y0;
+        x_0 = x1;
+        y_0 = y1;
+    }
+
+    /** set the matrixed form by the 4 vector and 1 vector (by column) */
+    public void set_matrix_4_1(double x0, double y0, double x1, double y1) {
+        x_4 = x0;
+        y_4 = y0;
+        x_1 = x1;
+        y_1 = y1;
+    }
+
+    /** set the matrixed form by the 4 vector and 2 vector (by column) */
+    public void set_matrix_4_2(double x0, double y0, double x1, double y1) {
+        x_4 = x0;
+        y_4 = y0;
+        x_2 = x1;
+        y_2 = y1;
+    }
+
+    /** set the matrixed form by the 4 vector and 3 vector (by column) */
+    public void set_matrix_4_3(double x0, double y0, double x1, double y1) {
+        x_4 = x0;
+        y_4 = y0;
+        x_3 = x1;
+        y_3 = y1;
     }
 
     /** transform the 4 vector by the matrixed formed by the 0 and 1 vectors as columns */
@@ -636,24 +761,59 @@ public class VectorRegister5 extends VectorRegister4 {
         return true;
     }
 
-    /** is the 4-vector the origin */
-    public boolean is_4_zero() {
-        double d = 0.0;
-        d += x_4 * x_4;
-        d += y_4 * y_4;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
+    /** transpose the matrix formed by vector 0 and vector 4 where the vectors are columns */
+    public void transpose_0_4() {
+        double t = y_0;
+        y_0 = x_4;
+        x_4 = t;
     }
 
-    /** return the angle (via atan2) of the 4 vector */
-    public double angle_4() {
-        return Math.atan2(y_4, x_4);
+    /** transpose the matrix formed by vector 1 and vector 4 where the vectors are columns */
+    public void transpose_1_4() {
+        double t = y_1;
+        y_1 = x_4;
+        x_4 = t;
     }
 
-    /** set the 4 vector to the complex number corresponding to the given angle */
-    public void set_4_by_angle(double theta) {
-        x_4 = Math.cos(theta);
-        y_4 = Math.sin(theta);
+    /** transpose the matrix formed by vector 2 and vector 4 where the vectors are columns */
+    public void transpose_2_4() {
+        double t = y_2;
+        y_2 = x_4;
+        x_4 = t;
+    }
+
+    /** transpose the matrix formed by vector 3 and vector 4 where the vectors are columns */
+    public void transpose_3_4() {
+        double t = y_3;
+        y_3 = x_4;
+        x_4 = t;
+    }
+
+    /** transpose the matrix formed by vector 4 and vector 0 where the vectors are columns */
+    public void transpose_4_0() {
+        double t = y_4;
+        y_4 = x_0;
+        x_0 = t;
+    }
+
+    /** transpose the matrix formed by vector 4 and vector 1 where the vectors are columns */
+    public void transpose_4_1() {
+        double t = y_4;
+        y_4 = x_1;
+        x_1 = t;
+    }
+
+    /** transpose the matrix formed by vector 4 and vector 2 where the vectors are columns */
+    public void transpose_4_2() {
+        double t = y_4;
+        y_4 = x_2;
+        x_2 = t;
+    }
+
+    /** transpose the matrix formed by vector 4 and vector 3 where the vectors are columns */
+    public void transpose_4_3() {
+        double t = y_4;
+        y_4 = x_3;
+        x_3 = t;
     }
 }

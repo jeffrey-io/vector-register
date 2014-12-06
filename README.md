@@ -51,11 +51,27 @@ Clearly, writing unclean code is faster than doing clean code (at least, in Java
 
 ## Features
 
-* Addition and subtractions between vectors
-* scalar multiplication of a vector
-* dot products
-* matrix transforms
-* matrix inverse
-* complex number conjugate
-
-... more to come as it gets some polish
+* IO Operations
+** set
+** zero vector
+** copy vector
+** extract vector from an array
+** inject vector into an array
+** construct unit vector from angle
+* Properties
+** is vector the origin/zero vector
+** length of the vector
+** angle of vector
+* Vector Operations
+** addition and subtraction between vectors
+** scalar multiplication of a vector
+** dot products
+** normalize vector to unit length
+* Complex Numbers
+** multiply
+** conjugate
+* Matrix Operations
+** set matrix
+** transform vector by matrix
+** inverse
+** tranpose

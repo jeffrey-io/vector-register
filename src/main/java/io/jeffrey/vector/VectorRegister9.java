@@ -15,102 +15,6 @@ public class VectorRegister9 extends VectorRegister8 {
         y_8 = y;
     }
 
-    /** add the 0 and 8 together and store the result to the 0 vector */
-    public void add_8_to_0() {
-        x_0 += x_8;
-        y_0 += y_8;
-    }
-
-    /** add the 1 and 8 together and store the result to the 1 vector */
-    public void add_8_to_1() {
-        x_1 += x_8;
-        y_1 += y_8;
-    }
-
-    /** add the 2 and 8 together and store the result to the 2 vector */
-    public void add_8_to_2() {
-        x_2 += x_8;
-        y_2 += y_8;
-    }
-
-    /** add the 3 and 8 together and store the result to the 3 vector */
-    public void add_8_to_3() {
-        x_3 += x_8;
-        y_3 += y_8;
-    }
-
-    /** add the 4 and 8 together and store the result to the 4 vector */
-    public void add_8_to_4() {
-        x_4 += x_8;
-        y_4 += y_8;
-    }
-
-    /** add the 5 and 8 together and store the result to the 5 vector */
-    public void add_8_to_5() {
-        x_5 += x_8;
-        y_5 += y_8;
-    }
-
-    /** add the 6 and 8 together and store the result to the 6 vector */
-    public void add_8_to_6() {
-        x_6 += x_8;
-        y_6 += y_8;
-    }
-
-    /** add the 7 and 8 together and store the result to the 7 vector */
-    public void add_8_to_7() {
-        x_7 += x_8;
-        y_7 += y_8;
-    }
-
-    /** add the 8 and 0 together and store the result to the 8 vector */
-    public void add_0_to_8() {
-        x_8 += x_0;
-        y_8 += y_0;
-    }
-
-    /** add the 8 and 1 together and store the result to the 8 vector */
-    public void add_1_to_8() {
-        x_8 += x_1;
-        y_8 += y_1;
-    }
-
-    /** add the 8 and 2 together and store the result to the 8 vector */
-    public void add_2_to_8() {
-        x_8 += x_2;
-        y_8 += y_2;
-    }
-
-    /** add the 8 and 3 together and store the result to the 8 vector */
-    public void add_3_to_8() {
-        x_8 += x_3;
-        y_8 += y_3;
-    }
-
-    /** add the 8 and 4 together and store the result to the 8 vector */
-    public void add_4_to_8() {
-        x_8 += x_4;
-        y_8 += y_4;
-    }
-
-    /** add the 8 and 5 together and store the result to the 8 vector */
-    public void add_5_to_8() {
-        x_8 += x_5;
-        y_8 += y_5;
-    }
-
-    /** add the 8 and 6 together and store the result to the 8 vector */
-    public void add_6_to_8() {
-        x_8 += x_6;
-        y_8 += y_6;
-    }
-
-    /** add the 8 and 7 together and store the result to the 8 vector */
-    public void add_7_to_8() {
-        x_8 += x_7;
-        y_8 += y_7;
-    }
-
     /** set the 8-vector to the (0,0) */
     public void zero_out_8() {
         x_8 = 0.0;
@@ -225,6 +129,123 @@ public class VectorRegister9 extends VectorRegister8 {
         y_8 = input[offset + 1];
     }
 
+    /** is the 8-vector the origin */
+    public boolean is_8_zero() {
+        double d = 0.0;
+        d += x_8 * x_8;
+        d += y_8 * y_8;
+        if (Math.abs(d) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
+    /** return the angle (via atan2) of the 8 vector */
+    public double angle_8() {
+        return Math.atan2(y_8, x_8);
+    }
+
+    /** set the 8 vector to the complex number corresponding to the given angle */
+    public void set_8_by_angle(double theta) {
+        x_8 = Math.cos(theta);
+        y_8 = Math.sin(theta);
+    }
+
+    /** add the 0 and 8 together and store the result to the 0 vector */
+    public void add_8_to_0() {
+        x_0 += x_8;
+        y_0 += y_8;
+    }
+
+    /** add the 1 and 8 together and store the result to the 1 vector */
+    public void add_8_to_1() {
+        x_1 += x_8;
+        y_1 += y_8;
+    }
+
+    /** add the 2 and 8 together and store the result to the 2 vector */
+    public void add_8_to_2() {
+        x_2 += x_8;
+        y_2 += y_8;
+    }
+
+    /** add the 3 and 8 together and store the result to the 3 vector */
+    public void add_8_to_3() {
+        x_3 += x_8;
+        y_3 += y_8;
+    }
+
+    /** add the 4 and 8 together and store the result to the 4 vector */
+    public void add_8_to_4() {
+        x_4 += x_8;
+        y_4 += y_8;
+    }
+
+    /** add the 5 and 8 together and store the result to the 5 vector */
+    public void add_8_to_5() {
+        x_5 += x_8;
+        y_5 += y_8;
+    }
+
+    /** add the 6 and 8 together and store the result to the 6 vector */
+    public void add_8_to_6() {
+        x_6 += x_8;
+        y_6 += y_8;
+    }
+
+    /** add the 7 and 8 together and store the result to the 7 vector */
+    public void add_8_to_7() {
+        x_7 += x_8;
+        y_7 += y_8;
+    }
+
+    /** add the 8 and 0 together and store the result to the 8 vector */
+    public void add_0_to_8() {
+        x_8 += x_0;
+        y_8 += y_0;
+    }
+
+    /** add the 8 and 1 together and store the result to the 8 vector */
+    public void add_1_to_8() {
+        x_8 += x_1;
+        y_8 += y_1;
+    }
+
+    /** add the 8 and 2 together and store the result to the 8 vector */
+    public void add_2_to_8() {
+        x_8 += x_2;
+        y_8 += y_2;
+    }
+
+    /** add the 8 and 3 together and store the result to the 8 vector */
+    public void add_3_to_8() {
+        x_8 += x_3;
+        y_8 += y_3;
+    }
+
+    /** add the 8 and 4 together and store the result to the 8 vector */
+    public void add_4_to_8() {
+        x_8 += x_4;
+        y_8 += y_4;
+    }
+
+    /** add the 8 and 5 together and store the result to the 8 vector */
+    public void add_5_to_8() {
+        x_8 += x_5;
+        y_8 += y_5;
+    }
+
+    /** add the 8 and 6 together and store the result to the 8 vector */
+    public void add_6_to_8() {
+        x_8 += x_6;
+        y_8 += y_6;
+    }
+
+    /** add the 8 and 7 together and store the result to the 8 vector */
+    public void add_7_to_8() {
+        x_8 += x_7;
+        y_8 += y_7;
+    }
+
     /** subtract the 0 and 8 together and store the result to the 0 vector */
     public void sub_8_from_0() {
         x_0 -= x_8;
@@ -331,6 +352,86 @@ public class VectorRegister9 extends VectorRegister8 {
     public void div_8_by(double s) {
         x_8 *= s;
         y_8 *= s;
+    }
+
+    /** return the dot product between the 0 and 8 vectors */
+    public double dot_8_0() {
+        return x_0 * x_8 + y_0 * y_8;
+    }
+
+    /** return the dot product between the 1 and 8 vectors */
+    public double dot_8_1() {
+        return x_1 * x_8 + y_1 * y_8;
+    }
+
+    /** return the dot product between the 2 and 8 vectors */
+    public double dot_8_2() {
+        return x_2 * x_8 + y_2 * y_8;
+    }
+
+    /** return the dot product between the 3 and 8 vectors */
+    public double dot_8_3() {
+        return x_3 * x_8 + y_3 * y_8;
+    }
+
+    /** return the dot product between the 4 and 8 vectors */
+    public double dot_8_4() {
+        return x_4 * x_8 + y_4 * y_8;
+    }
+
+    /** return the dot product between the 5 and 8 vectors */
+    public double dot_8_5() {
+        return x_5 * x_8 + y_5 * y_8;
+    }
+
+    /** return the dot product between the 6 and 8 vectors */
+    public double dot_8_6() {
+        return x_6 * x_8 + y_6 * y_8;
+    }
+
+    /** return the dot product between the 7 and 8 vectors */
+    public double dot_8_7() {
+        return x_7 * x_8 + y_7 * y_8;
+    }
+
+    /** return the dot product between the 8 and 0 vectors */
+    public double dot_0_8() {
+        return x_8 * x_0 + y_8 * y_0;
+    }
+
+    /** return the dot product between the 8 and 1 vectors */
+    public double dot_1_8() {
+        return x_8 * x_1 + y_8 * y_1;
+    }
+
+    /** return the dot product between the 8 and 2 vectors */
+    public double dot_2_8() {
+        return x_8 * x_2 + y_8 * y_2;
+    }
+
+    /** return the dot product between the 8 and 3 vectors */
+    public double dot_3_8() {
+        return x_8 * x_3 + y_8 * y_3;
+    }
+
+    /** return the dot product between the 8 and 4 vectors */
+    public double dot_4_8() {
+        return x_8 * x_4 + y_8 * y_4;
+    }
+
+    /** return the dot product between the 8 and 5 vectors */
+    public double dot_5_8() {
+        return x_8 * x_5 + y_8 * y_5;
+    }
+
+    /** return the dot product between the 8 and 6 vectors */
+    public double dot_6_8() {
+        return x_8 * x_6 + y_8 * y_6;
+    }
+
+    /** return the dot product between the 8 and 7 vectors */
+    public double dot_7_8() {
+        return x_8 * x_7 + y_8 * y_7;
     }
 
     /** treat vector 8 as a complex number and conjugate it */
@@ -470,6 +571,134 @@ public class VectorRegister9 extends VectorRegister8 {
         x_8 *= d;
         y_8 *= d;
         return true;
+    }
+
+    /** set the matrixed form by the 0 vector and 8 vector (by column) */
+    public void set_matrix_0_8(double x0, double y0, double x1, double y1) {
+        x_0 = x0;
+        y_0 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 1 vector and 8 vector (by column) */
+    public void set_matrix_1_8(double x0, double y0, double x1, double y1) {
+        x_1 = x0;
+        y_1 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 2 vector and 8 vector (by column) */
+    public void set_matrix_2_8(double x0, double y0, double x1, double y1) {
+        x_2 = x0;
+        y_2 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 3 vector and 8 vector (by column) */
+    public void set_matrix_3_8(double x0, double y0, double x1, double y1) {
+        x_3 = x0;
+        y_3 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 4 vector and 8 vector (by column) */
+    public void set_matrix_4_8(double x0, double y0, double x1, double y1) {
+        x_4 = x0;
+        y_4 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 5 vector and 8 vector (by column) */
+    public void set_matrix_5_8(double x0, double y0, double x1, double y1) {
+        x_5 = x0;
+        y_5 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 6 vector and 8 vector (by column) */
+    public void set_matrix_6_8(double x0, double y0, double x1, double y1) {
+        x_6 = x0;
+        y_6 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 7 vector and 8 vector (by column) */
+    public void set_matrix_7_8(double x0, double y0, double x1, double y1) {
+        x_7 = x0;
+        y_7 = y0;
+        x_8 = x1;
+        y_8 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 0 vector (by column) */
+    public void set_matrix_8_0(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_0 = x1;
+        y_0 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 1 vector (by column) */
+    public void set_matrix_8_1(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_1 = x1;
+        y_1 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 2 vector (by column) */
+    public void set_matrix_8_2(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_2 = x1;
+        y_2 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 3 vector (by column) */
+    public void set_matrix_8_3(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_3 = x1;
+        y_3 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 4 vector (by column) */
+    public void set_matrix_8_4(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_4 = x1;
+        y_4 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 5 vector (by column) */
+    public void set_matrix_8_5(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_5 = x1;
+        y_5 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 6 vector (by column) */
+    public void set_matrix_8_6(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_6 = x1;
+        y_6 = y1;
+    }
+
+    /** set the matrixed form by the 8 vector and 7 vector (by column) */
+    public void set_matrix_8_7(double x0, double y0, double x1, double y1) {
+        x_8 = x0;
+        y_8 = y0;
+        x_7 = x1;
+        y_7 = y1;
     }
 
     /** transform the 8 vector by the matrixed formed by the 0 and 1 vectors as columns */
@@ -1872,24 +2101,115 @@ public class VectorRegister9 extends VectorRegister8 {
         return true;
     }
 
-    /** is the 8-vector the origin */
-    public boolean is_8_zero() {
-        double d = 0.0;
-        d += x_8 * x_8;
-        d += y_8 * y_8;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
+    /** transpose the matrix formed by vector 0 and vector 8 where the vectors are columns */
+    public void transpose_0_8() {
+        double t = y_0;
+        y_0 = x_8;
+        x_8 = t;
     }
 
-    /** return the angle (via atan2) of the 8 vector */
-    public double angle_8() {
-        return Math.atan2(y_8, x_8);
+    /** transpose the matrix formed by vector 1 and vector 8 where the vectors are columns */
+    public void transpose_1_8() {
+        double t = y_1;
+        y_1 = x_8;
+        x_8 = t;
     }
 
-    /** set the 8 vector to the complex number corresponding to the given angle */
-    public void set_8_by_angle(double theta) {
-        x_8 = Math.cos(theta);
-        y_8 = Math.sin(theta);
+    /** transpose the matrix formed by vector 2 and vector 8 where the vectors are columns */
+    public void transpose_2_8() {
+        double t = y_2;
+        y_2 = x_8;
+        x_8 = t;
+    }
+
+    /** transpose the matrix formed by vector 3 and vector 8 where the vectors are columns */
+    public void transpose_3_8() {
+        double t = y_3;
+        y_3 = x_8;
+        x_8 = t;
+    }
+
+    /** transpose the matrix formed by vector 4 and vector 8 where the vectors are columns */
+    public void transpose_4_8() {
+        double t = y_4;
+        y_4 = x_8;
+        x_8 = t;
+    }
+
+    /** transpose the matrix formed by vector 5 and vector 8 where the vectors are columns */
+    public void transpose_5_8() {
+        double t = y_5;
+        y_5 = x_8;
+        x_8 = t;
+    }
+
+    /** transpose the matrix formed by vector 6 and vector 8 where the vectors are columns */
+    public void transpose_6_8() {
+        double t = y_6;
+        y_6 = x_8;
+        x_8 = t;
+    }
+
+    /** transpose the matrix formed by vector 7 and vector 8 where the vectors are columns */
+    public void transpose_7_8() {
+        double t = y_7;
+        y_7 = x_8;
+        x_8 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 0 where the vectors are columns */
+    public void transpose_8_0() {
+        double t = y_8;
+        y_8 = x_0;
+        x_0 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 1 where the vectors are columns */
+    public void transpose_8_1() {
+        double t = y_8;
+        y_8 = x_1;
+        x_1 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 2 where the vectors are columns */
+    public void transpose_8_2() {
+        double t = y_8;
+        y_8 = x_2;
+        x_2 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 3 where the vectors are columns */
+    public void transpose_8_3() {
+        double t = y_8;
+        y_8 = x_3;
+        x_3 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 4 where the vectors are columns */
+    public void transpose_8_4() {
+        double t = y_8;
+        y_8 = x_4;
+        x_4 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 5 where the vectors are columns */
+    public void transpose_8_5() {
+        double t = y_8;
+        y_8 = x_5;
+        x_5 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 6 where the vectors are columns */
+    public void transpose_8_6() {
+        double t = y_8;
+        y_8 = x_6;
+        x_6 = t;
+    }
+
+    /** transpose the matrix formed by vector 8 and vector 7 where the vectors are columns */
+    public void transpose_8_7() {
+        double t = y_8;
+        y_8 = x_7;
+        x_7 = t;
     }
 }
