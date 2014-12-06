@@ -40,6 +40,7 @@ If one looks at a VectorRegister$N, then $N is the number of vectors provided. T
 Implementing the above classes with a simple vector addition, if you attempt to take the sum the same vector ten million times, then the performance would be:
 
 | Implementation | Time |
+| -------------- | ---- |
 | ImmutableVector2D | 40 ms |
 | Vector | 60 ms |
 | Vector2D | 8 ms |
