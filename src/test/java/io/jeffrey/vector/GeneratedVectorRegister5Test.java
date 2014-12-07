@@ -189,6 +189,10 @@ public class GeneratedVectorRegister5Test extends CommonVectorTestingBase {
         x.add_0_to_4();
         assertEquals(7, x.x_4);
         assertEquals(12, x.y_4);
+        x.sub_0_from_4();
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        assertEquals(6+2*10,x.dot_0_4());
         x.set_4(1,2);
         x.set_4(3,5);
         x.mult_4_by(4);
@@ -200,6 +204,10 @@ public class GeneratedVectorRegister5Test extends CommonVectorTestingBase {
         x.add_1_to_4();
         assertEquals(7, x.x_4);
         assertEquals(12, x.y_4);
+        x.sub_1_from_4();
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        assertEquals(6+2*10,x.dot_1_4());
         x.set_4(1,2);
         x.set_4(3,5);
         x.mult_4_by(4);
@@ -211,6 +219,10 @@ public class GeneratedVectorRegister5Test extends CommonVectorTestingBase {
         x.add_2_to_4();
         assertEquals(7, x.x_4);
         assertEquals(12, x.y_4);
+        x.sub_2_from_4();
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        assertEquals(6+2*10,x.dot_2_4());
         x.set_4(1,2);
         x.set_4(3,5);
         x.mult_4_by(4);
@@ -222,6 +234,51 @@ public class GeneratedVectorRegister5Test extends CommonVectorTestingBase {
         x.add_3_to_4();
         assertEquals(7, x.x_4);
         assertEquals(12, x.y_4);
+        x.sub_3_from_4();
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        assertEquals(6+2*10,x.dot_3_4());
+        x.set_4(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_4() throws Exception {
+        final VectorRegister5 x = new VectorRegister5();
+        x.set_4(3,5);
+        assertEquals(3, x.x_4);
+        assertEquals(5, x.y_4);
+        x.conjugate_4();
+        assertEquals(3, x.x_4);
+        assertEquals(-5, x.y_4);
+    }
+
+    @Test
+    public void testCOMPLEX4() throws Exception {
+        final VectorRegister5 x = new VectorRegister5();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.complex_mult_0_4();
+        assertEquals(3-10, x.x_4);
+        assertEquals(5+6, x.y_4);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.complex_mult_1_4();
+        assertEquals(3-10, x.x_4);
+        assertEquals(5+6, x.y_4);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.complex_mult_2_4();
+        assertEquals(3-10, x.x_4);
+        assertEquals(5+6, x.y_4);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.complex_mult_3_4();
+        assertEquals(3-10, x.x_4);
+        assertEquals(5+6, x.y_4);
         x.set_4(1,2);
     }
 }

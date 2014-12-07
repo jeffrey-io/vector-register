@@ -391,98 +391,98 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** multiply via complex numbers the 0 and 7 together and store the result to the 0 vector */
-    public void complex_mult7_0() {
+    public void complex_mult_7_0() {
         final double t = x_0 * x_7 - y_0 * y_7;
         y_0 = x_0 * y_7 + y_0 * x_7;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 7 together and store the result to the 1 vector */
-    public void complex_mult7_1() {
+    public void complex_mult_7_1() {
         final double t = x_1 * x_7 - y_1 * y_7;
         y_1 = x_1 * y_7 + y_1 * x_7;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 7 together and store the result to the 2 vector */
-    public void complex_mult7_2() {
+    public void complex_mult_7_2() {
         final double t = x_2 * x_7 - y_2 * y_7;
         y_2 = x_2 * y_7 + y_2 * x_7;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 7 together and store the result to the 3 vector */
-    public void complex_mult7_3() {
+    public void complex_mult_7_3() {
         final double t = x_3 * x_7 - y_3 * y_7;
         y_3 = x_3 * y_7 + y_3 * x_7;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 7 together and store the result to the 4 vector */
-    public void complex_mult7_4() {
+    public void complex_mult_7_4() {
         final double t = x_4 * x_7 - y_4 * y_7;
         y_4 = x_4 * y_7 + y_4 * x_7;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 7 together and store the result to the 5 vector */
-    public void complex_mult7_5() {
+    public void complex_mult_7_5() {
         final double t = x_5 * x_7 - y_5 * y_7;
         y_5 = x_5 * y_7 + y_5 * x_7;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 7 together and store the result to the 6 vector */
-    public void complex_mult7_6() {
+    public void complex_mult_7_6() {
         final double t = x_6 * x_7 - y_6 * y_7;
         y_6 = x_6 * y_7 + y_6 * x_7;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 7 and 0 together and store the result to the 7 vector */
-    public void complex_mult0_7() {
+    public void complex_mult_0_7() {
         final double t = x_7 * x_0 - y_7 * y_0;
         y_7 = x_7 * y_0 + y_7 * x_0;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 1 together and store the result to the 7 vector */
-    public void complex_mult1_7() {
+    public void complex_mult_1_7() {
         final double t = x_7 * x_1 - y_7 * y_1;
         y_7 = x_7 * y_1 + y_7 * x_1;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 2 together and store the result to the 7 vector */
-    public void complex_mult2_7() {
+    public void complex_mult_2_7() {
         final double t = x_7 * x_2 - y_7 * y_2;
         y_7 = x_7 * y_2 + y_7 * x_2;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 3 together and store the result to the 7 vector */
-    public void complex_mult3_7() {
+    public void complex_mult_3_7() {
         final double t = x_7 * x_3 - y_7 * y_3;
         y_7 = x_7 * y_3 + y_7 * x_3;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 4 together and store the result to the 7 vector */
-    public void complex_mult4_7() {
+    public void complex_mult_4_7() {
         final double t = x_7 * x_4 - y_7 * y_4;
         y_7 = x_7 * y_4 + y_7 * x_4;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 5 together and store the result to the 7 vector */
-    public void complex_mult5_7() {
+    public void complex_mult_5_7() {
         final double t = x_7 * x_5 - y_7 * y_5;
         y_7 = x_7 * y_5 + y_7 * x_5;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 6 together and store the result to the 7 vector */
-    public void complex_mult6_7() {
+    public void complex_mult_6_7() {
         final double t = x_7 * x_6 - y_7 * y_6;
         y_7 = x_7 * y_6 + y_7 * x_6;
         x_7 = t;

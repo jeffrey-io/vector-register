@@ -254,6 +254,10 @@ public class GeneratedVectorRegister2Test extends CommonVectorTestingBase {
         x.add_1_to_0();
         assertEquals(7, x.x_0);
         assertEquals(12, x.y_0);
+        x.sub_1_from_0();
+        assertEquals(6, x.x_0);
+        assertEquals(10, x.y_0);
+        assertEquals(6+2*10,x.dot_1_0());
         x.set_0(1,2);
     }
 
@@ -272,6 +276,56 @@ public class GeneratedVectorRegister2Test extends CommonVectorTestingBase {
         x.add_0_to_1();
         assertEquals(7, x.x_1);
         assertEquals(12, x.y_1);
+        x.sub_0_from_1();
+        assertEquals(6, x.x_1);
+        assertEquals(10, x.y_1);
+        assertEquals(6+2*10,x.dot_0_1());
+        x.set_1(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_0() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_0(3,5);
+        assertEquals(3, x.x_0);
+        assertEquals(5, x.y_0);
+        x.conjugate_0();
+        assertEquals(3, x.x_0);
+        assertEquals(-5, x.y_0);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_1() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_1(3,5);
+        assertEquals(3, x.x_1);
+        assertEquals(5, x.y_1);
+        x.conjugate_1();
+        assertEquals(3, x.x_1);
+        assertEquals(-5, x.y_1);
+    }
+
+    @Test
+    public void testCOMPLEX0() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_0(3,5);
+        x.complex_mult_1_0();
+        assertEquals(3-10, x.x_0);
+        assertEquals(5+6, x.y_0);
+        x.set_0(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX1() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_1(3,5);
+        x.complex_mult_0_1();
+        assertEquals(3-10, x.x_1);
+        assertEquals(5+6, x.y_1);
         x.set_1(1,2);
     }
 }

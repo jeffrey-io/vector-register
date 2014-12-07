@@ -161,28 +161,28 @@ public class VectorRegister3 extends VectorRegister2 {
     }
 
     /** multiply via complex numbers the 0 and 2 together and store the result to the 0 vector */
-    public void complex_mult2_0() {
+    public void complex_mult_2_0() {
         final double t = x_0 * x_2 - y_0 * y_2;
         y_0 = x_0 * y_2 + y_0 * x_2;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 2 together and store the result to the 1 vector */
-    public void complex_mult2_1() {
+    public void complex_mult_2_1() {
         final double t = x_1 * x_2 - y_1 * y_2;
         y_1 = x_1 * y_2 + y_1 * x_2;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 0 together and store the result to the 2 vector */
-    public void complex_mult0_2() {
+    public void complex_mult_0_2() {
         final double t = x_2 * x_0 - y_2 * y_0;
         y_2 = x_2 * y_0 + y_2 * x_0;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 2 and 1 together and store the result to the 2 vector */
-    public void complex_mult1_2() {
+    public void complex_mult_1_2() {
         final double t = x_2 * x_1 - y_2 * y_1;
         y_2 = x_2 * y_1 + y_2 * x_1;
         x_2 = t;

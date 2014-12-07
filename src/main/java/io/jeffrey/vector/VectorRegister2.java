@@ -179,14 +179,14 @@ public class VectorRegister2 {
     }
 
     /** multiply via complex numbers the 0 and 1 together and store the result to the 0 vector */
-    public void complex_mult1_0() {
+    public void complex_mult_1_0() {
         final double t = x_0 * x_1 - y_0 * y_1;
         y_0 = x_0 * y_1 + y_0 * x_1;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 0 together and store the result to the 1 vector */
-    public void complex_mult0_1() {
+    public void complex_mult_0_1() {
         final double t = x_1 * x_0 - y_1 * y_0;
         y_1 = x_1 * y_0 + y_1 * x_0;
         x_1 = t;

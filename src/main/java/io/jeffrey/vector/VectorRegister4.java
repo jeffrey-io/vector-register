@@ -207,42 +207,42 @@ public class VectorRegister4 extends VectorRegister3 {
     }
 
     /** multiply via complex numbers the 0 and 3 together and store the result to the 0 vector */
-    public void complex_mult3_0() {
+    public void complex_mult_3_0() {
         final double t = x_0 * x_3 - y_0 * y_3;
         y_0 = x_0 * y_3 + y_0 * x_3;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 3 together and store the result to the 1 vector */
-    public void complex_mult3_1() {
+    public void complex_mult_3_1() {
         final double t = x_1 * x_3 - y_1 * y_3;
         y_1 = x_1 * y_3 + y_1 * x_3;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 3 together and store the result to the 2 vector */
-    public void complex_mult3_2() {
+    public void complex_mult_3_2() {
         final double t = x_2 * x_3 - y_2 * y_3;
         y_2 = x_2 * y_3 + y_2 * x_3;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 0 together and store the result to the 3 vector */
-    public void complex_mult0_3() {
+    public void complex_mult_0_3() {
         final double t = x_3 * x_0 - y_3 * y_0;
         y_3 = x_3 * y_0 + y_3 * x_0;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 3 and 1 together and store the result to the 3 vector */
-    public void complex_mult1_3() {
+    public void complex_mult_1_3() {
         final double t = x_3 * x_1 - y_3 * y_1;
         y_3 = x_3 * y_1 + y_3 * x_1;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 3 and 2 together and store the result to the 3 vector */
-    public void complex_mult2_3() {
+    public void complex_mult_2_3() {
         final double t = x_3 * x_2 - y_3 * y_2;
         y_3 = x_3 * y_2 + y_3 * x_2;
         x_3 = t;

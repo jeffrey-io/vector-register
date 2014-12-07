@@ -301,6 +301,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_0_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_0_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_0_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -312,6 +316,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_1_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_1_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_1_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -323,6 +331,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_2_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_2_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_2_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -334,6 +346,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_3_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_3_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_3_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -345,6 +361,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_4_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_4_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_4_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -356,6 +376,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_5_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_5_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_5_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -367,6 +391,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_6_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_6_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_6_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -378,6 +406,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_7_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_7_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_7_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -389,6 +421,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_8_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_8_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_8_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -400,6 +436,10 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_9_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_9_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_9_11());
         x.set_11(1,2);
         x.set_11(3,5);
         x.mult_11_by(4);
@@ -411,6 +451,93 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.add_10_to_11();
         assertEquals(7, x.x_11);
         assertEquals(12, x.y_11);
+        x.sub_10_from_11();
+        assertEquals(6, x.x_11);
+        assertEquals(10, x.y_11);
+        assertEquals(6+2*10,x.dot_10_11());
+        x.set_11(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_11() throws Exception {
+        final VectorRegisterC x = new VectorRegisterC();
+        x.set_11(3,5);
+        assertEquals(3, x.x_11);
+        assertEquals(5, x.y_11);
+        x.conjugate_11();
+        assertEquals(3, x.x_11);
+        assertEquals(-5, x.y_11);
+    }
+
+    @Test
+    public void testCOMPLEX11() throws Exception {
+        final VectorRegisterC x = new VectorRegisterC();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_5(1,2);
+        x.set_6(1,2);
+        x.set_7(1,2);
+        x.set_8(1,2);
+        x.set_9(1,2);
+        x.set_10(1,2);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_0_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_1_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_2_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_3_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_4_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_5_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_6_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_7_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_8_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_9_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
+        x.set_11(1,2);
+        x.set_11(3,5);
+        x.complex_mult_10_11();
+        assertEquals(3-10, x.x_11);
+        assertEquals(5+6, x.y_11);
         x.set_11(1,2);
     }
 }

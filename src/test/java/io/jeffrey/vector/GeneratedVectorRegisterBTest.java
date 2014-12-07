@@ -285,6 +285,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_0_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_0_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_0_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -296,6 +300,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_1_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_1_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_1_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -307,6 +315,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_2_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_2_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_2_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -318,6 +330,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_3_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_3_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_3_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -329,6 +345,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_4_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_4_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_4_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -340,6 +360,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_5_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_5_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_5_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -351,6 +375,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_6_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_6_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_6_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -362,6 +390,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_7_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_7_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_7_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -373,6 +405,10 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_8_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_8_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_8_10());
         x.set_10(1,2);
         x.set_10(3,5);
         x.mult_10_by(4);
@@ -384,6 +420,87 @@ public class GeneratedVectorRegisterBTest extends CommonVectorTestingBase {
         x.add_9_to_10();
         assertEquals(7, x.x_10);
         assertEquals(12, x.y_10);
+        x.sub_9_from_10();
+        assertEquals(6, x.x_10);
+        assertEquals(10, x.y_10);
+        assertEquals(6+2*10,x.dot_9_10());
+        x.set_10(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_10() throws Exception {
+        final VectorRegisterB x = new VectorRegisterB();
+        x.set_10(3,5);
+        assertEquals(3, x.x_10);
+        assertEquals(5, x.y_10);
+        x.conjugate_10();
+        assertEquals(3, x.x_10);
+        assertEquals(-5, x.y_10);
+    }
+
+    @Test
+    public void testCOMPLEX10() throws Exception {
+        final VectorRegisterB x = new VectorRegisterB();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_5(1,2);
+        x.set_6(1,2);
+        x.set_7(1,2);
+        x.set_8(1,2);
+        x.set_9(1,2);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_0_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_1_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_2_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_3_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_4_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_5_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_6_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_7_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_8_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
+        x.set_10(1,2);
+        x.set_10(3,5);
+        x.complex_mult_9_10();
+        assertEquals(3-10, x.x_10);
+        assertEquals(5+6, x.y_10);
         x.set_10(1,2);
     }
 }

@@ -94,7 +94,11 @@ public class VectorAlgebraFunctions extends VectorSourcePrintStream {
                     println("x.add_", s(j), "_to_", s(k), "();");
                     println("assertEquals(7, x.x_", s(k), ");");
                     println("assertEquals(12, x.y_", s(k), ");");
-                    
+                    println("x.sub_", s(j), "_from_", s(k), "();");
+                    println("assertEquals(6, x.x_", s(k), ");");
+                    println("assertEquals(10, x.y_", s(k), ");");
+                    println("assertEquals(6+2*10,x.dot_", s(j), "_", s(k), "());");
+
                     println("x.set_", s(k), "(1,2);");
                 }
                 endTest();

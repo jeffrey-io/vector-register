@@ -437,112 +437,112 @@ public class VectorRegister9 extends VectorRegister8 {
     }
 
     /** multiply via complex numbers the 0 and 8 together and store the result to the 0 vector */
-    public void complex_mult8_0() {
+    public void complex_mult_8_0() {
         final double t = x_0 * x_8 - y_0 * y_8;
         y_0 = x_0 * y_8 + y_0 * x_8;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 8 together and store the result to the 1 vector */
-    public void complex_mult8_1() {
+    public void complex_mult_8_1() {
         final double t = x_1 * x_8 - y_1 * y_8;
         y_1 = x_1 * y_8 + y_1 * x_8;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 8 together and store the result to the 2 vector */
-    public void complex_mult8_2() {
+    public void complex_mult_8_2() {
         final double t = x_2 * x_8 - y_2 * y_8;
         y_2 = x_2 * y_8 + y_2 * x_8;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 8 together and store the result to the 3 vector */
-    public void complex_mult8_3() {
+    public void complex_mult_8_3() {
         final double t = x_3 * x_8 - y_3 * y_8;
         y_3 = x_3 * y_8 + y_3 * x_8;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 8 together and store the result to the 4 vector */
-    public void complex_mult8_4() {
+    public void complex_mult_8_4() {
         final double t = x_4 * x_8 - y_4 * y_8;
         y_4 = x_4 * y_8 + y_4 * x_8;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 8 together and store the result to the 5 vector */
-    public void complex_mult8_5() {
+    public void complex_mult_8_5() {
         final double t = x_5 * x_8 - y_5 * y_8;
         y_5 = x_5 * y_8 + y_5 * x_8;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 8 together and store the result to the 6 vector */
-    public void complex_mult8_6() {
+    public void complex_mult_8_6() {
         final double t = x_6 * x_8 - y_6 * y_8;
         y_6 = x_6 * y_8 + y_6 * x_8;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 7 and 8 together and store the result to the 7 vector */
-    public void complex_mult8_7() {
+    public void complex_mult_8_7() {
         final double t = x_7 * x_8 - y_7 * y_8;
         y_7 = x_7 * y_8 + y_7 * x_8;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 8 and 0 together and store the result to the 8 vector */
-    public void complex_mult0_8() {
+    public void complex_mult_0_8() {
         final double t = x_8 * x_0 - y_8 * y_0;
         y_8 = x_8 * y_0 + y_8 * x_0;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 8 and 1 together and store the result to the 8 vector */
-    public void complex_mult1_8() {
+    public void complex_mult_1_8() {
         final double t = x_8 * x_1 - y_8 * y_1;
         y_8 = x_8 * y_1 + y_8 * x_1;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 8 and 2 together and store the result to the 8 vector */
-    public void complex_mult2_8() {
+    public void complex_mult_2_8() {
         final double t = x_8 * x_2 - y_8 * y_2;
         y_8 = x_8 * y_2 + y_8 * x_2;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 8 and 3 together and store the result to the 8 vector */
-    public void complex_mult3_8() {
+    public void complex_mult_3_8() {
         final double t = x_8 * x_3 - y_8 * y_3;
         y_8 = x_8 * y_3 + y_8 * x_3;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 8 and 4 together and store the result to the 8 vector */
-    public void complex_mult4_8() {
+    public void complex_mult_4_8() {
         final double t = x_8 * x_4 - y_8 * y_4;
         y_8 = x_8 * y_4 + y_8 * x_4;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 8 and 5 together and store the result to the 8 vector */
-    public void complex_mult5_8() {
+    public void complex_mult_5_8() {
         final double t = x_8 * x_5 - y_8 * y_5;
         y_8 = x_8 * y_5 + y_8 * x_5;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 8 and 6 together and store the result to the 8 vector */
-    public void complex_mult6_8() {
+    public void complex_mult_6_8() {
         final double t = x_8 * x_6 - y_8 * y_6;
         y_8 = x_8 * y_6 + y_8 * x_6;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 8 and 7 together and store the result to the 8 vector */
-    public void complex_mult7_8() {
+    public void complex_mult_7_8() {
         final double t = x_8 * x_7 - y_8 * y_7;
         y_8 = x_8 * y_7 + y_8 * x_7;
         x_8 = t;

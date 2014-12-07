@@ -253,6 +253,10 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_0_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_0_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_0_8());
         x.set_8(1,2);
         x.set_8(3,5);
         x.mult_8_by(4);
@@ -264,6 +268,10 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_1_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_1_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_1_8());
         x.set_8(1,2);
         x.set_8(3,5);
         x.mult_8_by(4);
@@ -275,6 +283,10 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_2_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_2_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_2_8());
         x.set_8(1,2);
         x.set_8(3,5);
         x.mult_8_by(4);
@@ -286,6 +298,10 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_3_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_3_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_3_8());
         x.set_8(1,2);
         x.set_8(3,5);
         x.mult_8_by(4);
@@ -297,6 +313,10 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_4_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_4_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_4_8());
         x.set_8(1,2);
         x.set_8(3,5);
         x.mult_8_by(4);
@@ -308,6 +328,10 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_5_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_5_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_5_8());
         x.set_8(1,2);
         x.set_8(3,5);
         x.mult_8_by(4);
@@ -319,6 +343,10 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_6_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_6_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_6_8());
         x.set_8(1,2);
         x.set_8(3,5);
         x.mult_8_by(4);
@@ -330,6 +358,75 @@ public class GeneratedVectorRegister9Test extends CommonVectorTestingBase {
         x.add_7_to_8();
         assertEquals(7, x.x_8);
         assertEquals(12, x.y_8);
+        x.sub_7_from_8();
+        assertEquals(6, x.x_8);
+        assertEquals(10, x.y_8);
+        assertEquals(6+2*10,x.dot_7_8());
+        x.set_8(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_8() throws Exception {
+        final VectorRegister9 x = new VectorRegister9();
+        x.set_8(3,5);
+        assertEquals(3, x.x_8);
+        assertEquals(5, x.y_8);
+        x.conjugate_8();
+        assertEquals(3, x.x_8);
+        assertEquals(-5, x.y_8);
+    }
+
+    @Test
+    public void testCOMPLEX8() throws Exception {
+        final VectorRegister9 x = new VectorRegister9();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_5(1,2);
+        x.set_6(1,2);
+        x.set_7(1,2);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_0_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_1_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_2_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_3_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_4_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_5_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_6_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
+        x.set_8(1,2);
+        x.set_8(3,5);
+        x.complex_mult_7_8();
+        assertEquals(3-10, x.x_8);
+        assertEquals(5+6, x.y_8);
         x.set_8(1,2);
     }
 }

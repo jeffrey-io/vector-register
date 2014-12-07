@@ -299,70 +299,70 @@ public class VectorRegister6 extends VectorRegister5 {
     }
 
     /** multiply via complex numbers the 0 and 5 together and store the result to the 0 vector */
-    public void complex_mult5_0() {
+    public void complex_mult_5_0() {
         final double t = x_0 * x_5 - y_0 * y_5;
         y_0 = x_0 * y_5 + y_0 * x_5;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 5 together and store the result to the 1 vector */
-    public void complex_mult5_1() {
+    public void complex_mult_5_1() {
         final double t = x_1 * x_5 - y_1 * y_5;
         y_1 = x_1 * y_5 + y_1 * x_5;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 5 together and store the result to the 2 vector */
-    public void complex_mult5_2() {
+    public void complex_mult_5_2() {
         final double t = x_2 * x_5 - y_2 * y_5;
         y_2 = x_2 * y_5 + y_2 * x_5;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 5 together and store the result to the 3 vector */
-    public void complex_mult5_3() {
+    public void complex_mult_5_3() {
         final double t = x_3 * x_5 - y_3 * y_5;
         y_3 = x_3 * y_5 + y_3 * x_5;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 5 together and store the result to the 4 vector */
-    public void complex_mult5_4() {
+    public void complex_mult_5_4() {
         final double t = x_4 * x_5 - y_4 * y_5;
         y_4 = x_4 * y_5 + y_4 * x_5;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 0 together and store the result to the 5 vector */
-    public void complex_mult0_5() {
+    public void complex_mult_0_5() {
         final double t = x_5 * x_0 - y_5 * y_0;
         y_5 = x_5 * y_0 + y_5 * x_0;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 5 and 1 together and store the result to the 5 vector */
-    public void complex_mult1_5() {
+    public void complex_mult_1_5() {
         final double t = x_5 * x_1 - y_5 * y_1;
         y_5 = x_5 * y_1 + y_5 * x_1;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 5 and 2 together and store the result to the 5 vector */
-    public void complex_mult2_5() {
+    public void complex_mult_2_5() {
         final double t = x_5 * x_2 - y_5 * y_2;
         y_5 = x_5 * y_2 + y_5 * x_2;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 5 and 3 together and store the result to the 5 vector */
-    public void complex_mult3_5() {
+    public void complex_mult_3_5() {
         final double t = x_5 * x_3 - y_5 * y_3;
         y_5 = x_5 * y_3 + y_5 * x_3;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 5 and 4 together and store the result to the 5 vector */
-    public void complex_mult4_5() {
+    public void complex_mult_4_5() {
         final double t = x_5 * x_4 - y_5 * y_4;
         y_5 = x_5 * y_4 + y_5 * x_4;
         x_5 = t;

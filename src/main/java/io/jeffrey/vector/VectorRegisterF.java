@@ -713,196 +713,196 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** multiply via complex numbers the 0 and 14 together and store the result to the 0 vector */
-    public void complex_mult14_0() {
+    public void complex_mult_14_0() {
         final double t = x_0 * x_14 - y_0 * y_14;
         y_0 = x_0 * y_14 + y_0 * x_14;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 14 together and store the result to the 1 vector */
-    public void complex_mult14_1() {
+    public void complex_mult_14_1() {
         final double t = x_1 * x_14 - y_1 * y_14;
         y_1 = x_1 * y_14 + y_1 * x_14;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 14 together and store the result to the 2 vector */
-    public void complex_mult14_2() {
+    public void complex_mult_14_2() {
         final double t = x_2 * x_14 - y_2 * y_14;
         y_2 = x_2 * y_14 + y_2 * x_14;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 14 together and store the result to the 3 vector */
-    public void complex_mult14_3() {
+    public void complex_mult_14_3() {
         final double t = x_3 * x_14 - y_3 * y_14;
         y_3 = x_3 * y_14 + y_3 * x_14;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 14 together and store the result to the 4 vector */
-    public void complex_mult14_4() {
+    public void complex_mult_14_4() {
         final double t = x_4 * x_14 - y_4 * y_14;
         y_4 = x_4 * y_14 + y_4 * x_14;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 14 together and store the result to the 5 vector */
-    public void complex_mult14_5() {
+    public void complex_mult_14_5() {
         final double t = x_5 * x_14 - y_5 * y_14;
         y_5 = x_5 * y_14 + y_5 * x_14;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 14 together and store the result to the 6 vector */
-    public void complex_mult14_6() {
+    public void complex_mult_14_6() {
         final double t = x_6 * x_14 - y_6 * y_14;
         y_6 = x_6 * y_14 + y_6 * x_14;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 7 and 14 together and store the result to the 7 vector */
-    public void complex_mult14_7() {
+    public void complex_mult_14_7() {
         final double t = x_7 * x_14 - y_7 * y_14;
         y_7 = x_7 * y_14 + y_7 * x_14;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 8 and 14 together and store the result to the 8 vector */
-    public void complex_mult14_8() {
+    public void complex_mult_14_8() {
         final double t = x_8 * x_14 - y_8 * y_14;
         y_8 = x_8 * y_14 + y_8 * x_14;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 9 and 14 together and store the result to the 9 vector */
-    public void complex_mult14_9() {
+    public void complex_mult_14_9() {
         final double t = x_9 * x_14 - y_9 * y_14;
         y_9 = x_9 * y_14 + y_9 * x_14;
         x_9 = t;
     }
 
     /** multiply via complex numbers the 10 and 14 together and store the result to the 10 vector */
-    public void complex_mult14_10() {
+    public void complex_mult_14_10() {
         final double t = x_10 * x_14 - y_10 * y_14;
         y_10 = x_10 * y_14 + y_10 * x_14;
         x_10 = t;
     }
 
     /** multiply via complex numbers the 11 and 14 together and store the result to the 11 vector */
-    public void complex_mult14_11() {
+    public void complex_mult_14_11() {
         final double t = x_11 * x_14 - y_11 * y_14;
         y_11 = x_11 * y_14 + y_11 * x_14;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 12 and 14 together and store the result to the 12 vector */
-    public void complex_mult14_12() {
+    public void complex_mult_14_12() {
         final double t = x_12 * x_14 - y_12 * y_14;
         y_12 = x_12 * y_14 + y_12 * x_14;
         x_12 = t;
     }
 
     /** multiply via complex numbers the 13 and 14 together and store the result to the 13 vector */
-    public void complex_mult14_13() {
+    public void complex_mult_14_13() {
         final double t = x_13 * x_14 - y_13 * y_14;
         y_13 = x_13 * y_14 + y_13 * x_14;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 14 and 0 together and store the result to the 14 vector */
-    public void complex_mult0_14() {
+    public void complex_mult_0_14() {
         final double t = x_14 * x_0 - y_14 * y_0;
         y_14 = x_14 * y_0 + y_14 * x_0;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 1 together and store the result to the 14 vector */
-    public void complex_mult1_14() {
+    public void complex_mult_1_14() {
         final double t = x_14 * x_1 - y_14 * y_1;
         y_14 = x_14 * y_1 + y_14 * x_1;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 2 together and store the result to the 14 vector */
-    public void complex_mult2_14() {
+    public void complex_mult_2_14() {
         final double t = x_14 * x_2 - y_14 * y_2;
         y_14 = x_14 * y_2 + y_14 * x_2;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 3 together and store the result to the 14 vector */
-    public void complex_mult3_14() {
+    public void complex_mult_3_14() {
         final double t = x_14 * x_3 - y_14 * y_3;
         y_14 = x_14 * y_3 + y_14 * x_3;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 4 together and store the result to the 14 vector */
-    public void complex_mult4_14() {
+    public void complex_mult_4_14() {
         final double t = x_14 * x_4 - y_14 * y_4;
         y_14 = x_14 * y_4 + y_14 * x_4;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 5 together and store the result to the 14 vector */
-    public void complex_mult5_14() {
+    public void complex_mult_5_14() {
         final double t = x_14 * x_5 - y_14 * y_5;
         y_14 = x_14 * y_5 + y_14 * x_5;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 6 together and store the result to the 14 vector */
-    public void complex_mult6_14() {
+    public void complex_mult_6_14() {
         final double t = x_14 * x_6 - y_14 * y_6;
         y_14 = x_14 * y_6 + y_14 * x_6;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 7 together and store the result to the 14 vector */
-    public void complex_mult7_14() {
+    public void complex_mult_7_14() {
         final double t = x_14 * x_7 - y_14 * y_7;
         y_14 = x_14 * y_7 + y_14 * x_7;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 8 together and store the result to the 14 vector */
-    public void complex_mult8_14() {
+    public void complex_mult_8_14() {
         final double t = x_14 * x_8 - y_14 * y_8;
         y_14 = x_14 * y_8 + y_14 * x_8;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 9 together and store the result to the 14 vector */
-    public void complex_mult9_14() {
+    public void complex_mult_9_14() {
         final double t = x_14 * x_9 - y_14 * y_9;
         y_14 = x_14 * y_9 + y_14 * x_9;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 10 together and store the result to the 14 vector */
-    public void complex_mult10_14() {
+    public void complex_mult_10_14() {
         final double t = x_14 * x_10 - y_14 * y_10;
         y_14 = x_14 * y_10 + y_14 * x_10;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 11 together and store the result to the 14 vector */
-    public void complex_mult11_14() {
+    public void complex_mult_11_14() {
         final double t = x_14 * x_11 - y_14 * y_11;
         y_14 = x_14 * y_11 + y_14 * x_11;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 12 together and store the result to the 14 vector */
-    public void complex_mult12_14() {
+    public void complex_mult_12_14() {
         final double t = x_14 * x_12 - y_14 * y_12;
         y_14 = x_14 * y_12 + y_14 * x_12;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 13 together and store the result to the 14 vector */
-    public void complex_mult13_14() {
+    public void complex_mult_13_14() {
         final double t = x_14 * x_13 - y_14 * y_13;
         y_14 = x_14 * y_13 + y_14 * x_13;
         x_14 = t;

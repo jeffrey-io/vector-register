@@ -221,6 +221,10 @@ public class GeneratedVectorRegister7Test extends CommonVectorTestingBase {
         x.add_0_to_6();
         assertEquals(7, x.x_6);
         assertEquals(12, x.y_6);
+        x.sub_0_from_6();
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        assertEquals(6+2*10,x.dot_0_6());
         x.set_6(1,2);
         x.set_6(3,5);
         x.mult_6_by(4);
@@ -232,6 +236,10 @@ public class GeneratedVectorRegister7Test extends CommonVectorTestingBase {
         x.add_1_to_6();
         assertEquals(7, x.x_6);
         assertEquals(12, x.y_6);
+        x.sub_1_from_6();
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        assertEquals(6+2*10,x.dot_1_6());
         x.set_6(1,2);
         x.set_6(3,5);
         x.mult_6_by(4);
@@ -243,6 +251,10 @@ public class GeneratedVectorRegister7Test extends CommonVectorTestingBase {
         x.add_2_to_6();
         assertEquals(7, x.x_6);
         assertEquals(12, x.y_6);
+        x.sub_2_from_6();
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        assertEquals(6+2*10,x.dot_2_6());
         x.set_6(1,2);
         x.set_6(3,5);
         x.mult_6_by(4);
@@ -254,6 +266,10 @@ public class GeneratedVectorRegister7Test extends CommonVectorTestingBase {
         x.add_3_to_6();
         assertEquals(7, x.x_6);
         assertEquals(12, x.y_6);
+        x.sub_3_from_6();
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        assertEquals(6+2*10,x.dot_3_6());
         x.set_6(1,2);
         x.set_6(3,5);
         x.mult_6_by(4);
@@ -265,6 +281,10 @@ public class GeneratedVectorRegister7Test extends CommonVectorTestingBase {
         x.add_4_to_6();
         assertEquals(7, x.x_6);
         assertEquals(12, x.y_6);
+        x.sub_4_from_6();
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        assertEquals(6+2*10,x.dot_4_6());
         x.set_6(1,2);
         x.set_6(3,5);
         x.mult_6_by(4);
@@ -276,6 +296,63 @@ public class GeneratedVectorRegister7Test extends CommonVectorTestingBase {
         x.add_5_to_6();
         assertEquals(7, x.x_6);
         assertEquals(12, x.y_6);
+        x.sub_5_from_6();
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        assertEquals(6+2*10,x.dot_5_6());
+        x.set_6(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_6() throws Exception {
+        final VectorRegister7 x = new VectorRegister7();
+        x.set_6(3,5);
+        assertEquals(3, x.x_6);
+        assertEquals(5, x.y_6);
+        x.conjugate_6();
+        assertEquals(3, x.x_6);
+        assertEquals(-5, x.y_6);
+    }
+
+    @Test
+    public void testCOMPLEX6() throws Exception {
+        final VectorRegister7 x = new VectorRegister7();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_5(1,2);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.complex_mult_0_6();
+        assertEquals(3-10, x.x_6);
+        assertEquals(5+6, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.complex_mult_1_6();
+        assertEquals(3-10, x.x_6);
+        assertEquals(5+6, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.complex_mult_2_6();
+        assertEquals(3-10, x.x_6);
+        assertEquals(5+6, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.complex_mult_3_6();
+        assertEquals(3-10, x.x_6);
+        assertEquals(5+6, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.complex_mult_4_6();
+        assertEquals(3-10, x.x_6);
+        assertEquals(5+6, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.complex_mult_5_6();
+        assertEquals(3-10, x.x_6);
+        assertEquals(5+6, x.y_6);
         x.set_6(1,2);
     }
 }

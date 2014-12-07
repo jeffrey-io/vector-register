@@ -173,6 +173,10 @@ public class GeneratedVectorRegister4Test extends CommonVectorTestingBase {
         x.add_0_to_3();
         assertEquals(7, x.x_3);
         assertEquals(12, x.y_3);
+        x.sub_0_from_3();
+        assertEquals(6, x.x_3);
+        assertEquals(10, x.y_3);
+        assertEquals(6+2*10,x.dot_0_3());
         x.set_3(1,2);
         x.set_3(3,5);
         x.mult_3_by(4);
@@ -184,6 +188,10 @@ public class GeneratedVectorRegister4Test extends CommonVectorTestingBase {
         x.add_1_to_3();
         assertEquals(7, x.x_3);
         assertEquals(12, x.y_3);
+        x.sub_1_from_3();
+        assertEquals(6, x.x_3);
+        assertEquals(10, x.y_3);
+        assertEquals(6+2*10,x.dot_1_3());
         x.set_3(1,2);
         x.set_3(3,5);
         x.mult_3_by(4);
@@ -195,6 +203,45 @@ public class GeneratedVectorRegister4Test extends CommonVectorTestingBase {
         x.add_2_to_3();
         assertEquals(7, x.x_3);
         assertEquals(12, x.y_3);
+        x.sub_2_from_3();
+        assertEquals(6, x.x_3);
+        assertEquals(10, x.y_3);
+        assertEquals(6+2*10,x.dot_2_3());
+        x.set_3(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_3() throws Exception {
+        final VectorRegister4 x = new VectorRegister4();
+        x.set_3(3,5);
+        assertEquals(3, x.x_3);
+        assertEquals(5, x.y_3);
+        x.conjugate_3();
+        assertEquals(3, x.x_3);
+        assertEquals(-5, x.y_3);
+    }
+
+    @Test
+    public void testCOMPLEX3() throws Exception {
+        final VectorRegister4 x = new VectorRegister4();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_3(3,5);
+        x.complex_mult_0_3();
+        assertEquals(3-10, x.x_3);
+        assertEquals(5+6, x.y_3);
+        x.set_3(1,2);
+        x.set_3(3,5);
+        x.complex_mult_1_3();
+        assertEquals(3-10, x.x_3);
+        assertEquals(5+6, x.y_3);
+        x.set_3(1,2);
+        x.set_3(3,5);
+        x.complex_mult_2_3();
+        assertEquals(3-10, x.x_3);
+        assertEquals(5+6, x.y_3);
         x.set_3(1,2);
     }
 }

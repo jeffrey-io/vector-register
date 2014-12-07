@@ -1,6 +1,7 @@
 package io.jeffrey.vector.compiler;
 
 import io.jeffrey.vector.compiler.functions.AngleFunctions;
+import io.jeffrey.vector.compiler.functions.ComplexAlgebra;
 import io.jeffrey.vector.compiler.functions.Copiers;
 import io.jeffrey.vector.compiler.functions.Extractors;
 import io.jeffrey.vector.compiler.functions.Setters;
@@ -25,6 +26,7 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         components.add(new Extractors(out, N, definedFunctions));
         components.add(new AngleFunctions(out, N, definedFunctions));
         components.add(new VectorAlgebraFunctions(out, N, definedFunctions));
+        components.add(new ComplexAlgebra(out, N, definedFunctions));
     }
 
     /**
@@ -52,28 +54,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         untab();
         println("}");
         untab();
-    }
-
-    private void writeComplexMultiply() {
-        for (int k = 0; k < N; k++) {
-            for (int j = 0; j < N; j++) {
-                if (k == j)
-                    continue;
-                if (start("complex_mult_", "_", s(j), "_", s(k))) {
-                    println();
-                    tab();
-                    println("/** multiply via complex numbers the " + k + " and " + j + " together and store the result to the " + k + " vector */");
-                    println("public void complex_mult", s(j), "_", s(k), "() {");
-                    tab();
-                    println("final double t = ", atX(k), " * ", atX(j), " - ", atY(k), " * ", atY(j), ";");
-                    println(atY(k), " = ", atX(k), " * ", atY(j), " + ", atY(k), " * ", atX(j), ";");
-                    println(atX(k), " = t;");
-                    untab();
-                    println("}");
-                    untab();
-                }
-            }
-        }
     }
 
     private void writeMatrixMath() {
@@ -127,22 +107,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
                     println("}");
                     untab();
                 }
-            }
-        }
-    }
-
-    private void writeConj() {
-        for (int k = 0; k < N; k++) {
-            if (start("conjugate_", "_", s(k))) {
-                println();
-                tab();
-                println("/** treat vector " + k + " as a complex number and conjugate it */");
-                println("public void conjugate_", s(k), "() {");
-                tab();
-                println(atY(k), " *= -1;");
-                untab();
-                println("}");
-                untab();
             }
         }
     }
@@ -225,9 +189,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         for (VectorSourcePrintStream vsps : components) {
             vsps.writeSource();
         }
-
-        writeConj();
-        writeComplexMultiply();
 
         writeLengths();
         writeNormalizers();

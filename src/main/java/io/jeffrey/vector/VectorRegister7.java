@@ -345,84 +345,84 @@ public class VectorRegister7 extends VectorRegister6 {
     }
 
     /** multiply via complex numbers the 0 and 6 together and store the result to the 0 vector */
-    public void complex_mult6_0() {
+    public void complex_mult_6_0() {
         final double t = x_0 * x_6 - y_0 * y_6;
         y_0 = x_0 * y_6 + y_0 * x_6;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 6 together and store the result to the 1 vector */
-    public void complex_mult6_1() {
+    public void complex_mult_6_1() {
         final double t = x_1 * x_6 - y_1 * y_6;
         y_1 = x_1 * y_6 + y_1 * x_6;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 6 together and store the result to the 2 vector */
-    public void complex_mult6_2() {
+    public void complex_mult_6_2() {
         final double t = x_2 * x_6 - y_2 * y_6;
         y_2 = x_2 * y_6 + y_2 * x_6;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 6 together and store the result to the 3 vector */
-    public void complex_mult6_3() {
+    public void complex_mult_6_3() {
         final double t = x_3 * x_6 - y_3 * y_6;
         y_3 = x_3 * y_6 + y_3 * x_6;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 6 together and store the result to the 4 vector */
-    public void complex_mult6_4() {
+    public void complex_mult_6_4() {
         final double t = x_4 * x_6 - y_4 * y_6;
         y_4 = x_4 * y_6 + y_4 * x_6;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 6 together and store the result to the 5 vector */
-    public void complex_mult6_5() {
+    public void complex_mult_6_5() {
         final double t = x_5 * x_6 - y_5 * y_6;
         y_5 = x_5 * y_6 + y_5 * x_6;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 0 together and store the result to the 6 vector */
-    public void complex_mult0_6() {
+    public void complex_mult_0_6() {
         final double t = x_6 * x_0 - y_6 * y_0;
         y_6 = x_6 * y_0 + y_6 * x_0;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 6 and 1 together and store the result to the 6 vector */
-    public void complex_mult1_6() {
+    public void complex_mult_1_6() {
         final double t = x_6 * x_1 - y_6 * y_1;
         y_6 = x_6 * y_1 + y_6 * x_1;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 6 and 2 together and store the result to the 6 vector */
-    public void complex_mult2_6() {
+    public void complex_mult_2_6() {
         final double t = x_6 * x_2 - y_6 * y_2;
         y_6 = x_6 * y_2 + y_6 * x_2;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 6 and 3 together and store the result to the 6 vector */
-    public void complex_mult3_6() {
+    public void complex_mult_3_6() {
         final double t = x_6 * x_3 - y_6 * y_3;
         y_6 = x_6 * y_3 + y_6 * x_3;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 6 and 4 together and store the result to the 6 vector */
-    public void complex_mult4_6() {
+    public void complex_mult_4_6() {
         final double t = x_6 * x_4 - y_6 * y_4;
         y_6 = x_6 * y_4 + y_6 * x_4;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 6 and 5 together and store the result to the 6 vector */
-    public void complex_mult5_6() {
+    public void complex_mult_5_6() {
         final double t = x_6 * x_5 - y_6 * y_5;
         y_6 = x_6 * y_5 + y_6 * x_5;
         x_6 = t;

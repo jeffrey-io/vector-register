@@ -205,6 +205,10 @@ public class GeneratedVectorRegister6Test extends CommonVectorTestingBase {
         x.add_0_to_5();
         assertEquals(7, x.x_5);
         assertEquals(12, x.y_5);
+        x.sub_0_from_5();
+        assertEquals(6, x.x_5);
+        assertEquals(10, x.y_5);
+        assertEquals(6+2*10,x.dot_0_5());
         x.set_5(1,2);
         x.set_5(3,5);
         x.mult_5_by(4);
@@ -216,6 +220,10 @@ public class GeneratedVectorRegister6Test extends CommonVectorTestingBase {
         x.add_1_to_5();
         assertEquals(7, x.x_5);
         assertEquals(12, x.y_5);
+        x.sub_1_from_5();
+        assertEquals(6, x.x_5);
+        assertEquals(10, x.y_5);
+        assertEquals(6+2*10,x.dot_1_5());
         x.set_5(1,2);
         x.set_5(3,5);
         x.mult_5_by(4);
@@ -227,6 +235,10 @@ public class GeneratedVectorRegister6Test extends CommonVectorTestingBase {
         x.add_2_to_5();
         assertEquals(7, x.x_5);
         assertEquals(12, x.y_5);
+        x.sub_2_from_5();
+        assertEquals(6, x.x_5);
+        assertEquals(10, x.y_5);
+        assertEquals(6+2*10,x.dot_2_5());
         x.set_5(1,2);
         x.set_5(3,5);
         x.mult_5_by(4);
@@ -238,6 +250,10 @@ public class GeneratedVectorRegister6Test extends CommonVectorTestingBase {
         x.add_3_to_5();
         assertEquals(7, x.x_5);
         assertEquals(12, x.y_5);
+        x.sub_3_from_5();
+        assertEquals(6, x.x_5);
+        assertEquals(10, x.y_5);
+        assertEquals(6+2*10,x.dot_3_5());
         x.set_5(1,2);
         x.set_5(3,5);
         x.mult_5_by(4);
@@ -249,6 +265,57 @@ public class GeneratedVectorRegister6Test extends CommonVectorTestingBase {
         x.add_4_to_5();
         assertEquals(7, x.x_5);
         assertEquals(12, x.y_5);
+        x.sub_4_from_5();
+        assertEquals(6, x.x_5);
+        assertEquals(10, x.y_5);
+        assertEquals(6+2*10,x.dot_4_5());
+        x.set_5(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_5() throws Exception {
+        final VectorRegister6 x = new VectorRegister6();
+        x.set_5(3,5);
+        assertEquals(3, x.x_5);
+        assertEquals(5, x.y_5);
+        x.conjugate_5();
+        assertEquals(3, x.x_5);
+        assertEquals(-5, x.y_5);
+    }
+
+    @Test
+    public void testCOMPLEX5() throws Exception {
+        final VectorRegister6 x = new VectorRegister6();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_5(1,2);
+        x.set_5(3,5);
+        x.complex_mult_0_5();
+        assertEquals(3-10, x.x_5);
+        assertEquals(5+6, x.y_5);
+        x.set_5(1,2);
+        x.set_5(3,5);
+        x.complex_mult_1_5();
+        assertEquals(3-10, x.x_5);
+        assertEquals(5+6, x.y_5);
+        x.set_5(1,2);
+        x.set_5(3,5);
+        x.complex_mult_2_5();
+        assertEquals(3-10, x.x_5);
+        assertEquals(5+6, x.y_5);
+        x.set_5(1,2);
+        x.set_5(3,5);
+        x.complex_mult_3_5();
+        assertEquals(3-10, x.x_5);
+        assertEquals(5+6, x.y_5);
+        x.set_5(1,2);
+        x.set_5(3,5);
+        x.complex_mult_4_5();
+        assertEquals(3-10, x.x_5);
+        assertEquals(5+6, x.y_5);
         x.set_5(1,2);
     }
 }

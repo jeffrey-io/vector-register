@@ -269,6 +269,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_0_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_0_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_0_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -280,6 +284,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_1_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_1_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_1_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -291,6 +299,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_2_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_2_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_2_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -302,6 +314,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_3_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_3_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_3_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -313,6 +329,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_4_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_4_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_4_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -324,6 +344,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_5_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_5_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_5_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -335,6 +359,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_6_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_6_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_6_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -346,6 +374,10 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_7_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_7_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_7_9());
         x.set_9(1,2);
         x.set_9(3,5);
         x.mult_9_by(4);
@@ -357,6 +389,81 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.add_8_to_9();
         assertEquals(7, x.x_9);
         assertEquals(12, x.y_9);
+        x.sub_8_from_9();
+        assertEquals(6, x.x_9);
+        assertEquals(10, x.y_9);
+        assertEquals(6+2*10,x.dot_8_9());
+        x.set_9(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_CONJ_9() throws Exception {
+        final VectorRegisterA x = new VectorRegisterA();
+        x.set_9(3,5);
+        assertEquals(3, x.x_9);
+        assertEquals(5, x.y_9);
+        x.conjugate_9();
+        assertEquals(3, x.x_9);
+        assertEquals(-5, x.y_9);
+    }
+
+    @Test
+    public void testCOMPLEX9() throws Exception {
+        final VectorRegisterA x = new VectorRegisterA();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_5(1,2);
+        x.set_6(1,2);
+        x.set_7(1,2);
+        x.set_8(1,2);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_0_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_1_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_2_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_3_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_4_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_5_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_6_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_7_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
+        x.set_9(1,2);
+        x.set_9(3,5);
+        x.complex_mult_8_9();
+        assertEquals(3-10, x.x_9);
+        assertEquals(5+6, x.y_9);
         x.set_9(1,2);
     }
 }

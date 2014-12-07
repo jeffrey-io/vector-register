@@ -667,182 +667,182 @@ public class VectorRegisterE extends VectorRegisterD {
     }
 
     /** multiply via complex numbers the 0 and 13 together and store the result to the 0 vector */
-    public void complex_mult13_0() {
+    public void complex_mult_13_0() {
         final double t = x_0 * x_13 - y_0 * y_13;
         y_0 = x_0 * y_13 + y_0 * x_13;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 13 together and store the result to the 1 vector */
-    public void complex_mult13_1() {
+    public void complex_mult_13_1() {
         final double t = x_1 * x_13 - y_1 * y_13;
         y_1 = x_1 * y_13 + y_1 * x_13;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 13 together and store the result to the 2 vector */
-    public void complex_mult13_2() {
+    public void complex_mult_13_2() {
         final double t = x_2 * x_13 - y_2 * y_13;
         y_2 = x_2 * y_13 + y_2 * x_13;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 13 together and store the result to the 3 vector */
-    public void complex_mult13_3() {
+    public void complex_mult_13_3() {
         final double t = x_3 * x_13 - y_3 * y_13;
         y_3 = x_3 * y_13 + y_3 * x_13;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 13 together and store the result to the 4 vector */
-    public void complex_mult13_4() {
+    public void complex_mult_13_4() {
         final double t = x_4 * x_13 - y_4 * y_13;
         y_4 = x_4 * y_13 + y_4 * x_13;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 13 together and store the result to the 5 vector */
-    public void complex_mult13_5() {
+    public void complex_mult_13_5() {
         final double t = x_5 * x_13 - y_5 * y_13;
         y_5 = x_5 * y_13 + y_5 * x_13;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 13 together and store the result to the 6 vector */
-    public void complex_mult13_6() {
+    public void complex_mult_13_6() {
         final double t = x_6 * x_13 - y_6 * y_13;
         y_6 = x_6 * y_13 + y_6 * x_13;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 7 and 13 together and store the result to the 7 vector */
-    public void complex_mult13_7() {
+    public void complex_mult_13_7() {
         final double t = x_7 * x_13 - y_7 * y_13;
         y_7 = x_7 * y_13 + y_7 * x_13;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 8 and 13 together and store the result to the 8 vector */
-    public void complex_mult13_8() {
+    public void complex_mult_13_8() {
         final double t = x_8 * x_13 - y_8 * y_13;
         y_8 = x_8 * y_13 + y_8 * x_13;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 9 and 13 together and store the result to the 9 vector */
-    public void complex_mult13_9() {
+    public void complex_mult_13_9() {
         final double t = x_9 * x_13 - y_9 * y_13;
         y_9 = x_9 * y_13 + y_9 * x_13;
         x_9 = t;
     }
 
     /** multiply via complex numbers the 10 and 13 together and store the result to the 10 vector */
-    public void complex_mult13_10() {
+    public void complex_mult_13_10() {
         final double t = x_10 * x_13 - y_10 * y_13;
         y_10 = x_10 * y_13 + y_10 * x_13;
         x_10 = t;
     }
 
     /** multiply via complex numbers the 11 and 13 together and store the result to the 11 vector */
-    public void complex_mult13_11() {
+    public void complex_mult_13_11() {
         final double t = x_11 * x_13 - y_11 * y_13;
         y_11 = x_11 * y_13 + y_11 * x_13;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 12 and 13 together and store the result to the 12 vector */
-    public void complex_mult13_12() {
+    public void complex_mult_13_12() {
         final double t = x_12 * x_13 - y_12 * y_13;
         y_12 = x_12 * y_13 + y_12 * x_13;
         x_12 = t;
     }
 
     /** multiply via complex numbers the 13 and 0 together and store the result to the 13 vector */
-    public void complex_mult0_13() {
+    public void complex_mult_0_13() {
         final double t = x_13 * x_0 - y_13 * y_0;
         y_13 = x_13 * y_0 + y_13 * x_0;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 1 together and store the result to the 13 vector */
-    public void complex_mult1_13() {
+    public void complex_mult_1_13() {
         final double t = x_13 * x_1 - y_13 * y_1;
         y_13 = x_13 * y_1 + y_13 * x_1;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 2 together and store the result to the 13 vector */
-    public void complex_mult2_13() {
+    public void complex_mult_2_13() {
         final double t = x_13 * x_2 - y_13 * y_2;
         y_13 = x_13 * y_2 + y_13 * x_2;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 3 together and store the result to the 13 vector */
-    public void complex_mult3_13() {
+    public void complex_mult_3_13() {
         final double t = x_13 * x_3 - y_13 * y_3;
         y_13 = x_13 * y_3 + y_13 * x_3;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 4 together and store the result to the 13 vector */
-    public void complex_mult4_13() {
+    public void complex_mult_4_13() {
         final double t = x_13 * x_4 - y_13 * y_4;
         y_13 = x_13 * y_4 + y_13 * x_4;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 5 together and store the result to the 13 vector */
-    public void complex_mult5_13() {
+    public void complex_mult_5_13() {
         final double t = x_13 * x_5 - y_13 * y_5;
         y_13 = x_13 * y_5 + y_13 * x_5;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 6 together and store the result to the 13 vector */
-    public void complex_mult6_13() {
+    public void complex_mult_6_13() {
         final double t = x_13 * x_6 - y_13 * y_6;
         y_13 = x_13 * y_6 + y_13 * x_6;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 7 together and store the result to the 13 vector */
-    public void complex_mult7_13() {
+    public void complex_mult_7_13() {
         final double t = x_13 * x_7 - y_13 * y_7;
         y_13 = x_13 * y_7 + y_13 * x_7;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 8 together and store the result to the 13 vector */
-    public void complex_mult8_13() {
+    public void complex_mult_8_13() {
         final double t = x_13 * x_8 - y_13 * y_8;
         y_13 = x_13 * y_8 + y_13 * x_8;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 9 together and store the result to the 13 vector */
-    public void complex_mult9_13() {
+    public void complex_mult_9_13() {
         final double t = x_13 * x_9 - y_13 * y_9;
         y_13 = x_13 * y_9 + y_13 * x_9;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 10 together and store the result to the 13 vector */
-    public void complex_mult10_13() {
+    public void complex_mult_10_13() {
         final double t = x_13 * x_10 - y_13 * y_10;
         y_13 = x_13 * y_10 + y_13 * x_10;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 11 together and store the result to the 13 vector */
-    public void complex_mult11_13() {
+    public void complex_mult_11_13() {
         final double t = x_13 * x_11 - y_13 * y_11;
         y_13 = x_13 * y_11 + y_13 * x_11;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 13 and 12 together and store the result to the 13 vector */
-    public void complex_mult12_13() {
+    public void complex_mult_12_13() {
         final double t = x_13 * x_12 - y_13 * y_12;
         y_13 = x_13 * y_12 + y_13 * x_12;
         x_13 = t;

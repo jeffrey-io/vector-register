@@ -575,154 +575,154 @@ public class VectorRegisterC extends VectorRegisterB {
     }
 
     /** multiply via complex numbers the 0 and 11 together and store the result to the 0 vector */
-    public void complex_mult11_0() {
+    public void complex_mult_11_0() {
         final double t = x_0 * x_11 - y_0 * y_11;
         y_0 = x_0 * y_11 + y_0 * x_11;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 11 together and store the result to the 1 vector */
-    public void complex_mult11_1() {
+    public void complex_mult_11_1() {
         final double t = x_1 * x_11 - y_1 * y_11;
         y_1 = x_1 * y_11 + y_1 * x_11;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 11 together and store the result to the 2 vector */
-    public void complex_mult11_2() {
+    public void complex_mult_11_2() {
         final double t = x_2 * x_11 - y_2 * y_11;
         y_2 = x_2 * y_11 + y_2 * x_11;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 11 together and store the result to the 3 vector */
-    public void complex_mult11_3() {
+    public void complex_mult_11_3() {
         final double t = x_3 * x_11 - y_3 * y_11;
         y_3 = x_3 * y_11 + y_3 * x_11;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 11 together and store the result to the 4 vector */
-    public void complex_mult11_4() {
+    public void complex_mult_11_4() {
         final double t = x_4 * x_11 - y_4 * y_11;
         y_4 = x_4 * y_11 + y_4 * x_11;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 11 together and store the result to the 5 vector */
-    public void complex_mult11_5() {
+    public void complex_mult_11_5() {
         final double t = x_5 * x_11 - y_5 * y_11;
         y_5 = x_5 * y_11 + y_5 * x_11;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 11 together and store the result to the 6 vector */
-    public void complex_mult11_6() {
+    public void complex_mult_11_6() {
         final double t = x_6 * x_11 - y_6 * y_11;
         y_6 = x_6 * y_11 + y_6 * x_11;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 7 and 11 together and store the result to the 7 vector */
-    public void complex_mult11_7() {
+    public void complex_mult_11_7() {
         final double t = x_7 * x_11 - y_7 * y_11;
         y_7 = x_7 * y_11 + y_7 * x_11;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 8 and 11 together and store the result to the 8 vector */
-    public void complex_mult11_8() {
+    public void complex_mult_11_8() {
         final double t = x_8 * x_11 - y_8 * y_11;
         y_8 = x_8 * y_11 + y_8 * x_11;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 9 and 11 together and store the result to the 9 vector */
-    public void complex_mult11_9() {
+    public void complex_mult_11_9() {
         final double t = x_9 * x_11 - y_9 * y_11;
         y_9 = x_9 * y_11 + y_9 * x_11;
         x_9 = t;
     }
 
     /** multiply via complex numbers the 10 and 11 together and store the result to the 10 vector */
-    public void complex_mult11_10() {
+    public void complex_mult_11_10() {
         final double t = x_10 * x_11 - y_10 * y_11;
         y_10 = x_10 * y_11 + y_10 * x_11;
         x_10 = t;
     }
 
     /** multiply via complex numbers the 11 and 0 together and store the result to the 11 vector */
-    public void complex_mult0_11() {
+    public void complex_mult_0_11() {
         final double t = x_11 * x_0 - y_11 * y_0;
         y_11 = x_11 * y_0 + y_11 * x_0;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 1 together and store the result to the 11 vector */
-    public void complex_mult1_11() {
+    public void complex_mult_1_11() {
         final double t = x_11 * x_1 - y_11 * y_1;
         y_11 = x_11 * y_1 + y_11 * x_1;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 2 together and store the result to the 11 vector */
-    public void complex_mult2_11() {
+    public void complex_mult_2_11() {
         final double t = x_11 * x_2 - y_11 * y_2;
         y_11 = x_11 * y_2 + y_11 * x_2;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 3 together and store the result to the 11 vector */
-    public void complex_mult3_11() {
+    public void complex_mult_3_11() {
         final double t = x_11 * x_3 - y_11 * y_3;
         y_11 = x_11 * y_3 + y_11 * x_3;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 4 together and store the result to the 11 vector */
-    public void complex_mult4_11() {
+    public void complex_mult_4_11() {
         final double t = x_11 * x_4 - y_11 * y_4;
         y_11 = x_11 * y_4 + y_11 * x_4;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 5 together and store the result to the 11 vector */
-    public void complex_mult5_11() {
+    public void complex_mult_5_11() {
         final double t = x_11 * x_5 - y_11 * y_5;
         y_11 = x_11 * y_5 + y_11 * x_5;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 6 together and store the result to the 11 vector */
-    public void complex_mult6_11() {
+    public void complex_mult_6_11() {
         final double t = x_11 * x_6 - y_11 * y_6;
         y_11 = x_11 * y_6 + y_11 * x_6;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 7 together and store the result to the 11 vector */
-    public void complex_mult7_11() {
+    public void complex_mult_7_11() {
         final double t = x_11 * x_7 - y_11 * y_7;
         y_11 = x_11 * y_7 + y_11 * x_7;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 8 together and store the result to the 11 vector */
-    public void complex_mult8_11() {
+    public void complex_mult_8_11() {
         final double t = x_11 * x_8 - y_11 * y_8;
         y_11 = x_11 * y_8 + y_11 * x_8;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 9 together and store the result to the 11 vector */
-    public void complex_mult9_11() {
+    public void complex_mult_9_11() {
         final double t = x_11 * x_9 - y_11 * y_9;
         y_11 = x_11 * y_9 + y_11 * x_9;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 11 and 10 together and store the result to the 11 vector */
-    public void complex_mult10_11() {
+    public void complex_mult_10_11() {
         final double t = x_11 * x_10 - y_11 * y_10;
         y_11 = x_11 * y_10 + y_11 * x_10;
         x_11 = t;
