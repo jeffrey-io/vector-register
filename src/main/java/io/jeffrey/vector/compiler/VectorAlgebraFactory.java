@@ -4,6 +4,7 @@ import io.jeffrey.vector.compiler.functions.AngleFunctions;
 import io.jeffrey.vector.compiler.functions.ComplexAlgebra;
 import io.jeffrey.vector.compiler.functions.Copiers;
 import io.jeffrey.vector.compiler.functions.Extractors;
+import io.jeffrey.vector.compiler.functions.Pythagorean;
 import io.jeffrey.vector.compiler.functions.Setters;
 import io.jeffrey.vector.compiler.functions.VectorAlgebraFunctions;
 import io.jeffrey.vector.compiler.functions.ZeroFunctions;
@@ -27,6 +28,7 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         components.add(new AngleFunctions(out, N, definedFunctions));
         components.add(new VectorAlgebraFunctions(out, N, definedFunctions));
         components.add(new ComplexAlgebra(out, N, definedFunctions));
+        components.add(new Pythagorean(out, N, definedFunctions));
     }
 
     /**
@@ -111,53 +113,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         }
     }
 
-    private void writeLengths() {
-        for (int k = 0; k < N; k++) {
-            if (start("length_", "_", s(k))) {
-                println();
-                tab();
-                println("/** compute and return the length of vector " + k + " */");
-                println("public double length_", s(k), "() {");
-                tab();
-                println("double d = 0.0;");
-                println("d += ", atX(k), " * ", atX(k), ";");
-                println("d += ", atY(k), " * ", atY(k), ";");
-                println("return Math.sqrt(d);");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
-    private void writeNormalizers() {
-        for (int k = 0; k < N; k++) {
-            if (start("normalize_", "_", s(k))) {
-
-                println();
-                tab();
-                println("/** normalize the " + k + "-vector if it is not the origin */");
-                println("public boolean normalize_", s(k), "() {");
-                tab();
-                println("double d = 0.0;");
-                println("d += ", atX(k), " * ", atX(k), ";");
-                println("d += ", atY(k), " * ", atY(k), ";");
-                println("if (Math.abs(d) < ZERO_LIMIT)");
-                tab();
-                println("return false;");
-                untab();
-                println("d = Math.sqrt(d);");
-                println("d = 1.0 / d;");
-                println(atX(k), " *= d;");
-                println(atY(k), " *= d;");
-                println("return true;");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
     private void writeSetMatrix() {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
@@ -189,10 +144,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         for (VectorSourcePrintStream vsps : components) {
             vsps.writeSource();
         }
-
-        writeLengths();
-        writeNormalizers();
-
         writeSetMatrix();
         writeMatrixMath();
         writeMatrixInverse();

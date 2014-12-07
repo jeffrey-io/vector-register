@@ -328,4 +328,26 @@ public class GeneratedVectorRegister2Test extends CommonVectorTestingBase {
         assertEquals(5+6, x.y_1);
         x.set_1(1,2);
     }
+
+    @Test
+    public void testPYTHAGOREAN_0() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_0(3,5);
+        assertEquals(Math.sqrt(3*3+5*5), x.length_0());
+        x.normalize_0();
+        assertEquals(1, x.length_0());
+        assertEquals(3/Math.sqrt(3*3+5*5), x.x_0);
+        assertEquals(5/Math.sqrt(3*3+5*5), x.y_0);
+    }
+
+    @Test
+    public void testPYTHAGOREAN_1() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_1(3,5);
+        assertEquals(Math.sqrt(3*3+5*5), x.length_1());
+        x.normalize_1();
+        assertEquals(1, x.length_1());
+        assertEquals(3/Math.sqrt(3*3+5*5), x.x_1);
+        assertEquals(5/Math.sqrt(3*3+5*5), x.y_1);
+    }
 }
