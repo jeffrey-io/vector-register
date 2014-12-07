@@ -98,6 +98,27 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
     }
 
     @Test
+    public void testIS_ZERO_9() throws Exception {
+        final VectorRegisterA x = new VectorRegisterA();
+        x.set_9(3,5);
+        assertEquals(3, x.x_9);
+        assertEquals(5, x.y_9);
+        Assert.assertFalse(x.is_9_zero());
+        x.set_9(0,5);
+        assertEquals(0, x.x_9);
+        assertEquals(5, x.y_9);
+        Assert.assertFalse(x.is_9_zero());
+        x.set_9(3,0);
+        assertEquals(3, x.x_9);
+        assertEquals(0, x.y_9);
+        Assert.assertFalse(x.is_9_zero());
+        x.set_9(0,0);
+        assertEquals(0, x.x_9);
+        assertEquals(0, x.y_9);
+        Assert.assertTrue(x.is_9_zero());
+    }
+
+    @Test
     public void testCOPY_9() throws Exception {
         final VectorRegisterA x = new VectorRegisterA();
         x.set_0(1,2);
@@ -199,26 +220,5 @@ public class GeneratedVectorRegisterATest extends CommonVectorTestingBase {
         x.inject_9(data, 8);
         assertEquals(8, x.x_9);
         assertEquals(9, x.y_9);
-    }
-
-    @Test
-    public void testIS_ZERO_9() throws Exception {
-        final VectorRegisterA x = new VectorRegisterA();
-        x.set_9(3,5);
-        assertEquals(3, x.x_9);
-        assertEquals(5, x.y_9);
-        Assert.assertFalse(x.is_9_zero());
-        x.set_9(0,5);
-        assertEquals(0, x.x_9);
-        assertEquals(5, x.y_9);
-        Assert.assertFalse(x.is_9_zero());
-        x.set_9(3,0);
-        assertEquals(3, x.x_9);
-        assertEquals(0, x.y_9);
-        Assert.assertFalse(x.is_9_zero());
-        x.set_9(0,0);
-        assertEquals(0, x.x_9);
-        assertEquals(0, x.y_9);
-        Assert.assertTrue(x.is_9_zero());
     }
 }

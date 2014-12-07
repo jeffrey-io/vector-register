@@ -21,6 +21,13 @@ public class VectorRegister5 extends VectorRegister4 {
         y_4 = 0.0;
     }
 
+    /** is the 4-vector the origin */
+    public boolean is_4_zero() {
+        if (Math.abs(x_4) < ZERO_LIMIT && Math.abs(y_4) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 4 vector into the 0 vector */
     public void copy_from_4_to_0() {
         x_0 = x_4;
@@ -79,16 +86,6 @@ public class VectorRegister5 extends VectorRegister4 {
     public void inject_4(final double[] input, final int offset) {
         x_4 = input[offset + 0];
         y_4 = input[offset + 1];
-    }
-
-    /** is the 4-vector the origin */
-    public boolean is_4_zero() {
-        double d = 0.0;
-        d += x_4 * x_4;
-        d += y_4 * y_4;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 4 vector */

@@ -2,10 +2,8 @@ package io.jeffrey.vector.compiler;
 
 import io.jeffrey.vector.compiler.functions.Copiers;
 import io.jeffrey.vector.compiler.functions.Extractors;
-import io.jeffrey.vector.compiler.functions.Injectors;
-import io.jeffrey.vector.compiler.functions.IsZero;
 import io.jeffrey.vector.compiler.functions.Setters;
-import io.jeffrey.vector.compiler.functions.Zeros;
+import io.jeffrey.vector.compiler.functions.ZeroFunctions;
 
 import java.io.File;
 import java.io.PrintStream;
@@ -20,11 +18,9 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         super(out, N, definedFunctions);
         this.components = new ArrayList<VectorSourcePrintStream>();
         components.add(new Setters(out, N, definedFunctions));
-        components.add(new Zeros(out, N, definedFunctions));
+        components.add(new ZeroFunctions(out, N, definedFunctions));
         components.add(new Copiers(out, N, definedFunctions));
         components.add(new Extractors(out, N, definedFunctions));
-        components.add(new Injectors(out, N, definedFunctions));
-        components.add(new IsZero(out, N, definedFunctions));
     }
 
     /**

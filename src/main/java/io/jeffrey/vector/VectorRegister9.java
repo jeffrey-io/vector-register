@@ -21,6 +21,13 @@ public class VectorRegister9 extends VectorRegister8 {
         y_8 = 0.0;
     }
 
+    /** is the 8-vector the origin */
+    public boolean is_8_zero() {
+        if (Math.abs(x_8) < ZERO_LIMIT && Math.abs(y_8) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 8 vector into the 0 vector */
     public void copy_from_8_to_0() {
         x_0 = x_8;
@@ -127,16 +134,6 @@ public class VectorRegister9 extends VectorRegister8 {
     public void inject_8(final double[] input, final int offset) {
         x_8 = input[offset + 0];
         y_8 = input[offset + 1];
-    }
-
-    /** is the 8-vector the origin */
-    public boolean is_8_zero() {
-        double d = 0.0;
-        d += x_8 * x_8;
-        d += y_8 * y_8;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 8 vector */

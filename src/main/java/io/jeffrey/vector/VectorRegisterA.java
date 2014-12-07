@@ -21,6 +21,13 @@ public class VectorRegisterA extends VectorRegister9 {
         y_9 = 0.0;
     }
 
+    /** is the 9-vector the origin */
+    public boolean is_9_zero() {
+        if (Math.abs(x_9) < ZERO_LIMIT && Math.abs(y_9) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 9 vector into the 0 vector */
     public void copy_from_9_to_0() {
         x_0 = x_9;
@@ -139,16 +146,6 @@ public class VectorRegisterA extends VectorRegister9 {
     public void inject_9(final double[] input, final int offset) {
         x_9 = input[offset + 0];
         y_9 = input[offset + 1];
-    }
-
-    /** is the 9-vector the origin */
-    public boolean is_9_zero() {
-        double d = 0.0;
-        d += x_9 * x_9;
-        d += y_9 * y_9;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 9 vector */

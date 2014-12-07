@@ -21,6 +21,13 @@ public class VectorRegister8 extends VectorRegister7 {
         y_7 = 0.0;
     }
 
+    /** is the 7-vector the origin */
+    public boolean is_7_zero() {
+        if (Math.abs(x_7) < ZERO_LIMIT && Math.abs(y_7) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 7 vector into the 0 vector */
     public void copy_from_7_to_0() {
         x_0 = x_7;
@@ -115,16 +122,6 @@ public class VectorRegister8 extends VectorRegister7 {
     public void inject_7(final double[] input, final int offset) {
         x_7 = input[offset + 0];
         y_7 = input[offset + 1];
-    }
-
-    /** is the 7-vector the origin */
-    public boolean is_7_zero() {
-        double d = 0.0;
-        d += x_7 * x_7;
-        d += y_7 * y_7;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 7 vector */

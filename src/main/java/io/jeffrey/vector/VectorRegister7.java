@@ -21,6 +21,13 @@ public class VectorRegister7 extends VectorRegister6 {
         y_6 = 0.0;
     }
 
+    /** is the 6-vector the origin */
+    public boolean is_6_zero() {
+        if (Math.abs(x_6) < ZERO_LIMIT && Math.abs(y_6) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 6 vector into the 0 vector */
     public void copy_from_6_to_0() {
         x_0 = x_6;
@@ -103,16 +110,6 @@ public class VectorRegister7 extends VectorRegister6 {
     public void inject_6(final double[] input, final int offset) {
         x_6 = input[offset + 0];
         y_6 = input[offset + 1];
-    }
-
-    /** is the 6-vector the origin */
-    public boolean is_6_zero() {
-        double d = 0.0;
-        d += x_6 * x_6;
-        d += y_6 * y_6;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 6 vector */

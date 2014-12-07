@@ -38,6 +38,20 @@ public class VectorRegister2 {
         y_1 = 0.0;
     }
 
+    /** is the 0-vector the origin */
+    public boolean is_0_zero() {
+        if (Math.abs(x_0) < ZERO_LIMIT && Math.abs(y_0) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
+    /** is the 1-vector the origin */
+    public boolean is_1_zero() {
+        if (Math.abs(x_1) < ZERO_LIMIT && Math.abs(y_1) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 1 vector into the 0 vector */
     public void copy_from_1_to_0() {
         x_0 = x_1;
@@ -72,26 +86,6 @@ public class VectorRegister2 {
     public void inject_1(final double[] input, final int offset) {
         x_1 = input[offset + 0];
         y_1 = input[offset + 1];
-    }
-
-    /** is the 0-vector the origin */
-    public boolean is_0_zero() {
-        double d = 0.0;
-        d += x_0 * x_0;
-        d += y_0 * y_0;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
-    }
-
-    /** is the 1-vector the origin */
-    public boolean is_1_zero() {
-        double d = 0.0;
-        d += x_1 * x_1;
-        d += y_1 * y_1;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 0 vector */

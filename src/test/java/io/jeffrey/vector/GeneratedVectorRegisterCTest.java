@@ -114,6 +114,27 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
     }
 
     @Test
+    public void testIS_ZERO_11() throws Exception {
+        final VectorRegisterC x = new VectorRegisterC();
+        x.set_11(3,5);
+        assertEquals(3, x.x_11);
+        assertEquals(5, x.y_11);
+        Assert.assertFalse(x.is_11_zero());
+        x.set_11(0,5);
+        assertEquals(0, x.x_11);
+        assertEquals(5, x.y_11);
+        Assert.assertFalse(x.is_11_zero());
+        x.set_11(3,0);
+        assertEquals(3, x.x_11);
+        assertEquals(0, x.y_11);
+        Assert.assertFalse(x.is_11_zero());
+        x.set_11(0,0);
+        assertEquals(0, x.x_11);
+        assertEquals(0, x.y_11);
+        Assert.assertTrue(x.is_11_zero());
+    }
+
+    @Test
     public void testCOPY_11() throws Exception {
         final VectorRegisterC x = new VectorRegisterC();
         x.set_0(1,2);
@@ -229,26 +250,5 @@ public class GeneratedVectorRegisterCTest extends CommonVectorTestingBase {
         x.inject_11(data, 8);
         assertEquals(8, x.x_11);
         assertEquals(9, x.y_11);
-    }
-
-    @Test
-    public void testIS_ZERO_11() throws Exception {
-        final VectorRegisterC x = new VectorRegisterC();
-        x.set_11(3,5);
-        assertEquals(3, x.x_11);
-        assertEquals(5, x.y_11);
-        Assert.assertFalse(x.is_11_zero());
-        x.set_11(0,5);
-        assertEquals(0, x.x_11);
-        assertEquals(5, x.y_11);
-        Assert.assertFalse(x.is_11_zero());
-        x.set_11(3,0);
-        assertEquals(3, x.x_11);
-        assertEquals(0, x.y_11);
-        Assert.assertFalse(x.is_11_zero());
-        x.set_11(0,0);
-        assertEquals(0, x.x_11);
-        assertEquals(0, x.y_11);
-        Assert.assertTrue(x.is_11_zero());
     }
 }

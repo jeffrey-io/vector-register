@@ -21,6 +21,13 @@ public class VectorRegisterD extends VectorRegisterC {
         y_12 = 0.0;
     }
 
+    /** is the 12-vector the origin */
+    public boolean is_12_zero() {
+        if (Math.abs(x_12) < ZERO_LIMIT && Math.abs(y_12) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 12 vector into the 0 vector */
     public void copy_from_12_to_0() {
         x_0 = x_12;
@@ -175,16 +182,6 @@ public class VectorRegisterD extends VectorRegisterC {
     public void inject_12(final double[] input, final int offset) {
         x_12 = input[offset + 0];
         y_12 = input[offset + 1];
-    }
-
-    /** is the 12-vector the origin */
-    public boolean is_12_zero() {
-        double d = 0.0;
-        d += x_12 * x_12;
-        d += y_12 * y_12;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 12 vector */

@@ -130,6 +130,27 @@ public class GeneratedVectorRegisterETest extends CommonVectorTestingBase {
     }
 
     @Test
+    public void testIS_ZERO_13() throws Exception {
+        final VectorRegisterE x = new VectorRegisterE();
+        x.set_13(3,5);
+        assertEquals(3, x.x_13);
+        assertEquals(5, x.y_13);
+        Assert.assertFalse(x.is_13_zero());
+        x.set_13(0,5);
+        assertEquals(0, x.x_13);
+        assertEquals(5, x.y_13);
+        Assert.assertFalse(x.is_13_zero());
+        x.set_13(3,0);
+        assertEquals(3, x.x_13);
+        assertEquals(0, x.y_13);
+        Assert.assertFalse(x.is_13_zero());
+        x.set_13(0,0);
+        assertEquals(0, x.x_13);
+        assertEquals(0, x.y_13);
+        Assert.assertTrue(x.is_13_zero());
+    }
+
+    @Test
     public void testCOPY_13() throws Exception {
         final VectorRegisterE x = new VectorRegisterE();
         x.set_0(1,2);
@@ -259,26 +280,5 @@ public class GeneratedVectorRegisterETest extends CommonVectorTestingBase {
         x.inject_13(data, 8);
         assertEquals(8, x.x_13);
         assertEquals(9, x.y_13);
-    }
-
-    @Test
-    public void testIS_ZERO_13() throws Exception {
-        final VectorRegisterE x = new VectorRegisterE();
-        x.set_13(3,5);
-        assertEquals(3, x.x_13);
-        assertEquals(5, x.y_13);
-        Assert.assertFalse(x.is_13_zero());
-        x.set_13(0,5);
-        assertEquals(0, x.x_13);
-        assertEquals(5, x.y_13);
-        Assert.assertFalse(x.is_13_zero());
-        x.set_13(3,0);
-        assertEquals(3, x.x_13);
-        assertEquals(0, x.y_13);
-        Assert.assertFalse(x.is_13_zero());
-        x.set_13(0,0);
-        assertEquals(0, x.x_13);
-        assertEquals(0, x.y_13);
-        Assert.assertTrue(x.is_13_zero());
     }
 }

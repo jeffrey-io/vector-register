@@ -21,6 +21,13 @@ public class VectorRegisterE extends VectorRegisterD {
         y_13 = 0.0;
     }
 
+    /** is the 13-vector the origin */
+    public boolean is_13_zero() {
+        if (Math.abs(x_13) < ZERO_LIMIT && Math.abs(y_13) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 13 vector into the 0 vector */
     public void copy_from_13_to_0() {
         x_0 = x_13;
@@ -187,16 +194,6 @@ public class VectorRegisterE extends VectorRegisterD {
     public void inject_13(final double[] input, final int offset) {
         x_13 = input[offset + 0];
         y_13 = input[offset + 1];
-    }
-
-    /** is the 13-vector the origin */
-    public boolean is_13_zero() {
-        double d = 0.0;
-        d += x_13 * x_13;
-        d += y_13 * y_13;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 13 vector */

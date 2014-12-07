@@ -21,6 +21,13 @@ public class VectorRegisterB extends VectorRegisterA {
         y_10 = 0.0;
     }
 
+    /** is the 10-vector the origin */
+    public boolean is_10_zero() {
+        if (Math.abs(x_10) < ZERO_LIMIT && Math.abs(y_10) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 10 vector into the 0 vector */
     public void copy_from_10_to_0() {
         x_0 = x_10;
@@ -151,16 +158,6 @@ public class VectorRegisterB extends VectorRegisterA {
     public void inject_10(final double[] input, final int offset) {
         x_10 = input[offset + 0];
         y_10 = input[offset + 1];
-    }
-
-    /** is the 10-vector the origin */
-    public boolean is_10_zero() {
-        double d = 0.0;
-        d += x_10 * x_10;
-        d += y_10 * y_10;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 10 vector */

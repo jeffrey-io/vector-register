@@ -58,6 +58,27 @@ public class GeneratedVectorRegister5Test extends CommonVectorTestingBase {
     }
 
     @Test
+    public void testIS_ZERO_4() throws Exception {
+        final VectorRegister5 x = new VectorRegister5();
+        x.set_4(3,5);
+        assertEquals(3, x.x_4);
+        assertEquals(5, x.y_4);
+        Assert.assertFalse(x.is_4_zero());
+        x.set_4(0,5);
+        assertEquals(0, x.x_4);
+        assertEquals(5, x.y_4);
+        Assert.assertFalse(x.is_4_zero());
+        x.set_4(3,0);
+        assertEquals(3, x.x_4);
+        assertEquals(0, x.y_4);
+        Assert.assertFalse(x.is_4_zero());
+        x.set_4(0,0);
+        assertEquals(0, x.x_4);
+        assertEquals(0, x.y_4);
+        Assert.assertTrue(x.is_4_zero());
+    }
+
+    @Test
     public void testCOPY_4() throws Exception {
         final VectorRegister5 x = new VectorRegister5();
         x.set_0(1,2);
@@ -124,26 +145,5 @@ public class GeneratedVectorRegister5Test extends CommonVectorTestingBase {
         x.inject_4(data, 8);
         assertEquals(8, x.x_4);
         assertEquals(9, x.y_4);
-    }
-
-    @Test
-    public void testIS_ZERO_4() throws Exception {
-        final VectorRegister5 x = new VectorRegister5();
-        x.set_4(3,5);
-        assertEquals(3, x.x_4);
-        assertEquals(5, x.y_4);
-        Assert.assertFalse(x.is_4_zero());
-        x.set_4(0,5);
-        assertEquals(0, x.x_4);
-        assertEquals(5, x.y_4);
-        Assert.assertFalse(x.is_4_zero());
-        x.set_4(3,0);
-        assertEquals(3, x.x_4);
-        assertEquals(0, x.y_4);
-        Assert.assertFalse(x.is_4_zero());
-        x.set_4(0,0);
-        assertEquals(0, x.x_4);
-        assertEquals(0, x.y_4);
-        Assert.assertTrue(x.is_4_zero());
     }
 }

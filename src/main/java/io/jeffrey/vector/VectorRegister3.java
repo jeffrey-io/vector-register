@@ -21,6 +21,13 @@ public class VectorRegister3 extends VectorRegister2 {
         y_2 = 0.0;
     }
 
+    /** is the 2-vector the origin */
+    public boolean is_2_zero() {
+        if (Math.abs(x_2) < ZERO_LIMIT && Math.abs(y_2) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 2 vector into the 0 vector */
     public void copy_from_2_to_0() {
         x_0 = x_2;
@@ -55,16 +62,6 @@ public class VectorRegister3 extends VectorRegister2 {
     public void inject_2(final double[] input, final int offset) {
         x_2 = input[offset + 0];
         y_2 = input[offset + 1];
-    }
-
-    /** is the 2-vector the origin */
-    public boolean is_2_zero() {
-        double d = 0.0;
-        d += x_2 * x_2;
-        d += y_2 * y_2;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 2 vector */

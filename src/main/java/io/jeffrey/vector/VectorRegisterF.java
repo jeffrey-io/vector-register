@@ -21,6 +21,13 @@ public class VectorRegisterF extends VectorRegisterE {
         y_14 = 0.0;
     }
 
+    /** is the 14-vector the origin */
+    public boolean is_14_zero() {
+        if (Math.abs(x_14) < ZERO_LIMIT && Math.abs(y_14) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 14 vector into the 0 vector */
     public void copy_from_14_to_0() {
         x_0 = x_14;
@@ -199,16 +206,6 @@ public class VectorRegisterF extends VectorRegisterE {
     public void inject_14(final double[] input, final int offset) {
         x_14 = input[offset + 0];
         y_14 = input[offset + 1];
-    }
-
-    /** is the 14-vector the origin */
-    public boolean is_14_zero() {
-        double d = 0.0;
-        d += x_14 * x_14;
-        d += y_14 * y_14;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 14 vector */

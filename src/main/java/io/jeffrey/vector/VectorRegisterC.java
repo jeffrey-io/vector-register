@@ -21,6 +21,13 @@ public class VectorRegisterC extends VectorRegisterB {
         y_11 = 0.0;
     }
 
+    /** is the 11-vector the origin */
+    public boolean is_11_zero() {
+        if (Math.abs(x_11) < ZERO_LIMIT && Math.abs(y_11) < ZERO_LIMIT)
+            return true;
+        return false;
+    }
+
     /** copy the 11 vector into the 0 vector */
     public void copy_from_11_to_0() {
         x_0 = x_11;
@@ -163,16 +170,6 @@ public class VectorRegisterC extends VectorRegisterB {
     public void inject_11(final double[] input, final int offset) {
         x_11 = input[offset + 0];
         y_11 = input[offset + 1];
-    }
-
-    /** is the 11-vector the origin */
-    public boolean is_11_zero() {
-        double d = 0.0;
-        d += x_11 * x_11;
-        d += y_11 * y_11;
-        if (Math.abs(d) < ZERO_LIMIT)
-            return true;
-        return false;
     }
 
     /** return the angle (via atan2) of the 11 vector */

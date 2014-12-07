@@ -42,6 +42,27 @@ public class GeneratedVectorRegister3Test extends CommonVectorTestingBase {
     }
 
     @Test
+    public void testIS_ZERO_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_2(3,5);
+        assertEquals(3, x.x_2);
+        assertEquals(5, x.y_2);
+        Assert.assertFalse(x.is_2_zero());
+        x.set_2(0,5);
+        assertEquals(0, x.x_2);
+        assertEquals(5, x.y_2);
+        Assert.assertFalse(x.is_2_zero());
+        x.set_2(3,0);
+        assertEquals(3, x.x_2);
+        assertEquals(0, x.y_2);
+        Assert.assertFalse(x.is_2_zero());
+        x.set_2(0,0);
+        assertEquals(0, x.x_2);
+        assertEquals(0, x.y_2);
+        Assert.assertTrue(x.is_2_zero());
+    }
+
+    @Test
     public void testCOPY_2() throws Exception {
         final VectorRegister3 x = new VectorRegister3();
         x.set_0(1,2);
@@ -94,26 +115,5 @@ public class GeneratedVectorRegister3Test extends CommonVectorTestingBase {
         x.inject_2(data, 8);
         assertEquals(8, x.x_2);
         assertEquals(9, x.y_2);
-    }
-
-    @Test
-    public void testIS_ZERO_2() throws Exception {
-        final VectorRegister3 x = new VectorRegister3();
-        x.set_2(3,5);
-        assertEquals(3, x.x_2);
-        assertEquals(5, x.y_2);
-        Assert.assertFalse(x.is_2_zero());
-        x.set_2(0,5);
-        assertEquals(0, x.x_2);
-        assertEquals(5, x.y_2);
-        Assert.assertFalse(x.is_2_zero());
-        x.set_2(3,0);
-        assertEquals(3, x.x_2);
-        assertEquals(0, x.y_2);
-        Assert.assertFalse(x.is_2_zero());
-        x.set_2(0,0);
-        assertEquals(0, x.x_2);
-        assertEquals(0, x.y_2);
-        Assert.assertTrue(x.is_2_zero());
     }
 }
