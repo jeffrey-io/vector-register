@@ -4,67 +4,10 @@ import java.io.File;
 import java.io.PrintStream;
 import java.util.HashSet;
 
-public class VectorAlgebraFactory {
-    private static final String TAB = "    ";
-    private final PrintStream   output;
-    private final int           N;
-    private int                 tabbing;
-
-    private static final String hexify(int X) {
-        return Integer.toHexString(X).toUpperCase();
-    }
-
-    private final HashSet<String> definedFunctions;
+public class VectorAlgebraFactory extends VectorSourcePrintStream {
 
     private VectorAlgebraFactory(PrintStream out, int N, HashSet<String> definedFunctions) {
-        this.output = out;
-        this.N = N;
-        this.tabbing = 0;
-        this.definedFunctions = definedFunctions;
-    }
-
-    private boolean start(String... functionNameParts) {
-        StringBuilder fn = new StringBuilder();
-        for (String p : functionNameParts)
-            fn.append(p);
-        String functionName = fn.toString();
-        if (definedFunctions.contains(functionName))
-            return false;
-        definedFunctions.add(functionName);
-        return true;
-    }
-
-    private void tab() {
-        this.tabbing++;
-    }
-
-    private void untab() {
-        this.tabbing--;
-    }
-
-    private void println(String... values) {
-        if (values.length == 0) {
-            output.println();
-            return;
-        }
-        for (int k = 0; k < tabbing; k++)
-            output.print(TAB);
-        for (String value : values) {
-            output.print(value);
-        }
-        output.println();
-    }
-
-    private String s(int x) {
-        return Integer.toString(x);
-    }
-
-    private String atX(int k) {
-        return "x_" + k;
-    }
-
-    private String atY(int k) {
-        return "y_" + k;
+        super(out, N, definedFunctions);
     }
 
     /**
@@ -120,7 +63,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** extract the " + k + "-vector into the given output array starting at the given offset */");
-                println("public void extract_", s(k), "(final double[] output, int offset) {");
+                println("public void extract_", s(k), "(final double[] output, final int offset) {");
                 tab();
                 println("output[offset + 0] = ", atX(k), ";");
                 println("output[offset + 1] = ", atY(k), ";");
@@ -137,7 +80,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** inject the given input starting at the given offset into the " + k + "-vector */");
-                println("public void inject_", s(k), "(final double[] input, int offset) {");
+                println("public void inject_", s(k), "(final double[] input, final int offset) {");
                 tab();
                 println(atX(k), " = input[offset + 0];");
                 println(atY(k), " = input[offset + 1];");
@@ -154,7 +97,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** set the " + k + "-vector to the given (x,y) */");
-                println("public void set_", s(k), "(double x, double y) {");
+                println("public void set_", s(k), "(final double x, final double y) {");
                 tab();
                 println(atX(k), " = x;");
                 println(atY(k), " = y;");
@@ -217,7 +160,7 @@ public class VectorAlgebraFactory {
                     println("/** multiply via complex numbers the " + k + " and " + j + " together and store the result to the " + k + " vector */");
                     println("public void complex_mult", s(j), "_", s(k), "() {");
                     tab();
-                    println("double t = ", atX(k), " * ", atX(j), " - ", atY(k), " * ", atY(j), ";");
+                    println("final double t = ", atX(k), " * ", atX(j), " - ", atY(k), " * ", atY(j), ";");
                     println(atY(k), " = ", atX(k), " * ", atY(j), " + ", atY(k), " * ", atX(j), ";");
                     println(atX(k), " = t;");
                     untab();
@@ -261,7 +204,7 @@ public class VectorAlgebraFactory {
                         println("/** transform the " + v + " vector by the matrixed formed by the " + k + " and " + j + " vectors as columns */");
                         println("public void transform_" + v + "_by_" + k + "_" + j + "() {");
                         tab();
-                        println("double t = ", atX(k), " * ", atX(v), " + ", atX(j), " * ", atY(v), ";");
+                        println("final double t = ", atX(k), " * ", atX(v), " + ", atX(j), " * ", atY(v), ";");
                         println(atY(v), " = ", atY(k), " * ", atX(v), " + ", atY(j), " * ", atY(v), ";");
                         println(atX(v), " = t;");
                         untab();
@@ -284,7 +227,7 @@ public class VectorAlgebraFactory {
                     println("/** invert the 2x2 matrix formed by vector " + k + " and vector " + j + " where the vectors are columns */");
                     println("public boolean invert_" + k + "_" + j + "() {");
                     tab();
-                    println("double t = ", atX(k), ";");
+                    println("final double t = ", atX(k), ";");
                     println("double invdet = ", atX(k), " * ", atY(j), " - ", atY(k), " * ", atX(j), ";");
                     println("if (Math.abs(invdet) < ZERO_LIMIT)");
                     tab();
@@ -429,7 +372,7 @@ public class VectorAlgebraFactory {
                 println();
                 tab();
                 println("/** set the ", s(k), " vector to the complex number corresponding to the given angle */");
-                println("public void set_", s(k), "_by_angle(double theta) {");
+                println("public void set_", s(k), "_by_angle(final double theta) {");
                 tab();
                 println(atX(k), " = Math.cos(theta);");
                 println(atY(k), " = Math.sin(theta);");
@@ -463,7 +406,7 @@ public class VectorAlgebraFactory {
         }
     }
 
-    private void write() {
+    private void writeSource() {
         writeFieldsAndConstructor();
         writeSetters();
         writeZeros();
@@ -504,7 +447,7 @@ public class VectorAlgebraFactory {
                     println("/** transpose the matrix formed by vector " + k + " and vector " + j + " where the vectors are columns */");
                     println("public void transpose_" + k + "_" + j + "() {");
                     tab();
-                    println("double t = ", atY(k), ";");
+                    println("final double t = ", atY(k), ";");
                     println(atY(k), " = ", atX(j), ";");
                     println(atX(j), " = t;");
                     untab();
@@ -531,7 +474,7 @@ public class VectorAlgebraFactory {
                 if (r == 2) {
                     output.println(TAB + "protected static final double ZERO_LIMIT = " + Math.pow(0.5, 64) + ";");
                 }
-                new VectorAlgebraFactory(output, r, definedFunctions).write();
+                new VectorAlgebraFactory(output, r, definedFunctions).writeSource();
                 output.println("}");
                 output.flush();
             } finally {

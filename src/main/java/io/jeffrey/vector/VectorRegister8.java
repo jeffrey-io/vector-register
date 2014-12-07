@@ -10,7 +10,7 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** set the 7-vector to the given (x,y) */
-    public void set_7(double x, double y) {
+    public void set_7(final double x, final double y) {
         x_7 = x;
         y_7 = y;
     }
@@ -106,13 +106,13 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** extract the 7-vector into the given output array starting at the given offset */
-    public void extract_7(final double[] output, int offset) {
+    public void extract_7(final double[] output, final int offset) {
         output[offset + 0] = x_7;
         output[offset + 1] = y_7;
     }
 
     /** inject the given input starting at the given offset into the 7-vector */
-    public void inject_7(final double[] input, int offset) {
+    public void inject_7(final double[] input, final int offset) {
         x_7 = input[offset + 0];
         y_7 = input[offset + 1];
     }
@@ -133,7 +133,7 @@ public class VectorRegister8 extends VectorRegister7 {
     }
 
     /** set the 7 vector to the complex number corresponding to the given angle */
-    public void set_7_by_angle(double theta) {
+    public void set_7_by_angle(final double theta) {
         x_7 = Math.cos(theta);
         y_7 = Math.sin(theta);
     }
@@ -395,98 +395,98 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** multiply via complex numbers the 0 and 7 together and store the result to the 0 vector */
     public void complex_mult7_0() {
-        double t = x_0 * x_7 - y_0 * y_7;
+        final double t = x_0 * x_7 - y_0 * y_7;
         y_0 = x_0 * y_7 + y_0 * x_7;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 7 together and store the result to the 1 vector */
     public void complex_mult7_1() {
-        double t = x_1 * x_7 - y_1 * y_7;
+        final double t = x_1 * x_7 - y_1 * y_7;
         y_1 = x_1 * y_7 + y_1 * x_7;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 7 together and store the result to the 2 vector */
     public void complex_mult7_2() {
-        double t = x_2 * x_7 - y_2 * y_7;
+        final double t = x_2 * x_7 - y_2 * y_7;
         y_2 = x_2 * y_7 + y_2 * x_7;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 7 together and store the result to the 3 vector */
     public void complex_mult7_3() {
-        double t = x_3 * x_7 - y_3 * y_7;
+        final double t = x_3 * x_7 - y_3 * y_7;
         y_3 = x_3 * y_7 + y_3 * x_7;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 7 together and store the result to the 4 vector */
     public void complex_mult7_4() {
-        double t = x_4 * x_7 - y_4 * y_7;
+        final double t = x_4 * x_7 - y_4 * y_7;
         y_4 = x_4 * y_7 + y_4 * x_7;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 7 together and store the result to the 5 vector */
     public void complex_mult7_5() {
-        double t = x_5 * x_7 - y_5 * y_7;
+        final double t = x_5 * x_7 - y_5 * y_7;
         y_5 = x_5 * y_7 + y_5 * x_7;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 7 together and store the result to the 6 vector */
     public void complex_mult7_6() {
-        double t = x_6 * x_7 - y_6 * y_7;
+        final double t = x_6 * x_7 - y_6 * y_7;
         y_6 = x_6 * y_7 + y_6 * x_7;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 7 and 0 together and store the result to the 7 vector */
     public void complex_mult0_7() {
-        double t = x_7 * x_0 - y_7 * y_0;
+        final double t = x_7 * x_0 - y_7 * y_0;
         y_7 = x_7 * y_0 + y_7 * x_0;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 1 together and store the result to the 7 vector */
     public void complex_mult1_7() {
-        double t = x_7 * x_1 - y_7 * y_1;
+        final double t = x_7 * x_1 - y_7 * y_1;
         y_7 = x_7 * y_1 + y_7 * x_1;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 2 together and store the result to the 7 vector */
     public void complex_mult2_7() {
-        double t = x_7 * x_2 - y_7 * y_2;
+        final double t = x_7 * x_2 - y_7 * y_2;
         y_7 = x_7 * y_2 + y_7 * x_2;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 3 together and store the result to the 7 vector */
     public void complex_mult3_7() {
-        double t = x_7 * x_3 - y_7 * y_3;
+        final double t = x_7 * x_3 - y_7 * y_3;
         y_7 = x_7 * y_3 + y_7 * x_3;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 4 together and store the result to the 7 vector */
     public void complex_mult4_7() {
-        double t = x_7 * x_4 - y_7 * y_4;
+        final double t = x_7 * x_4 - y_7 * y_4;
         y_7 = x_7 * y_4 + y_7 * x_4;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 5 together and store the result to the 7 vector */
     public void complex_mult5_7() {
-        double t = x_7 * x_5 - y_7 * y_5;
+        final double t = x_7 * x_5 - y_7 * y_5;
         y_7 = x_7 * y_5 + y_7 * x_5;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 7 and 6 together and store the result to the 7 vector */
     public void complex_mult6_7() {
-        double t = x_7 * x_6 - y_7 * y_6;
+        final double t = x_7 * x_6 - y_7 * y_6;
         y_7 = x_7 * y_6 + y_7 * x_6;
         x_7 = t;
     }
@@ -627,889 +627,889 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** transform the 7 vector by the matrixed formed by the 0 and 1 vectors as columns */
     public void transform_7_by_0_1() {
-        double t = x_0 * x_7 + x_1 * y_7;
+        final double t = x_0 * x_7 + x_1 * y_7;
         y_7 = y_0 * x_7 + y_1 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 0 and 2 vectors as columns */
     public void transform_7_by_0_2() {
-        double t = x_0 * x_7 + x_2 * y_7;
+        final double t = x_0 * x_7 + x_2 * y_7;
         y_7 = y_0 * x_7 + y_2 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 0 and 3 vectors as columns */
     public void transform_7_by_0_3() {
-        double t = x_0 * x_7 + x_3 * y_7;
+        final double t = x_0 * x_7 + x_3 * y_7;
         y_7 = y_0 * x_7 + y_3 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 0 and 4 vectors as columns */
     public void transform_7_by_0_4() {
-        double t = x_0 * x_7 + x_4 * y_7;
+        final double t = x_0 * x_7 + x_4 * y_7;
         y_7 = y_0 * x_7 + y_4 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 0 and 5 vectors as columns */
     public void transform_7_by_0_5() {
-        double t = x_0 * x_7 + x_5 * y_7;
+        final double t = x_0 * x_7 + x_5 * y_7;
         y_7 = y_0 * x_7 + y_5 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 0 and 6 vectors as columns */
     public void transform_7_by_0_6() {
-        double t = x_0 * x_7 + x_6 * y_7;
+        final double t = x_0 * x_7 + x_6 * y_7;
         y_7 = y_0 * x_7 + y_6 * y_7;
         x_7 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 0 and 7 vectors as columns */
     public void transform_1_by_0_7() {
-        double t = x_0 * x_1 + x_7 * y_1;
+        final double t = x_0 * x_1 + x_7 * y_1;
         y_1 = y_0 * x_1 + y_7 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 0 and 7 vectors as columns */
     public void transform_2_by_0_7() {
-        double t = x_0 * x_2 + x_7 * y_2;
+        final double t = x_0 * x_2 + x_7 * y_2;
         y_2 = y_0 * x_2 + y_7 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 0 and 7 vectors as columns */
     public void transform_3_by_0_7() {
-        double t = x_0 * x_3 + x_7 * y_3;
+        final double t = x_0 * x_3 + x_7 * y_3;
         y_3 = y_0 * x_3 + y_7 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 0 and 7 vectors as columns */
     public void transform_4_by_0_7() {
-        double t = x_0 * x_4 + x_7 * y_4;
+        final double t = x_0 * x_4 + x_7 * y_4;
         y_4 = y_0 * x_4 + y_7 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 0 and 7 vectors as columns */
     public void transform_5_by_0_7() {
-        double t = x_0 * x_5 + x_7 * y_5;
+        final double t = x_0 * x_5 + x_7 * y_5;
         y_5 = y_0 * x_5 + y_7 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 0 and 7 vectors as columns */
     public void transform_6_by_0_7() {
-        double t = x_0 * x_6 + x_7 * y_6;
+        final double t = x_0 * x_6 + x_7 * y_6;
         y_6 = y_0 * x_6 + y_7 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 1 and 0 vectors as columns */
     public void transform_7_by_1_0() {
-        double t = x_1 * x_7 + x_0 * y_7;
+        final double t = x_1 * x_7 + x_0 * y_7;
         y_7 = y_1 * x_7 + y_0 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 1 and 2 vectors as columns */
     public void transform_7_by_1_2() {
-        double t = x_1 * x_7 + x_2 * y_7;
+        final double t = x_1 * x_7 + x_2 * y_7;
         y_7 = y_1 * x_7 + y_2 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 1 and 3 vectors as columns */
     public void transform_7_by_1_3() {
-        double t = x_1 * x_7 + x_3 * y_7;
+        final double t = x_1 * x_7 + x_3 * y_7;
         y_7 = y_1 * x_7 + y_3 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 1 and 4 vectors as columns */
     public void transform_7_by_1_4() {
-        double t = x_1 * x_7 + x_4 * y_7;
+        final double t = x_1 * x_7 + x_4 * y_7;
         y_7 = y_1 * x_7 + y_4 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 1 and 5 vectors as columns */
     public void transform_7_by_1_5() {
-        double t = x_1 * x_7 + x_5 * y_7;
+        final double t = x_1 * x_7 + x_5 * y_7;
         y_7 = y_1 * x_7 + y_5 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 1 and 6 vectors as columns */
     public void transform_7_by_1_6() {
-        double t = x_1 * x_7 + x_6 * y_7;
+        final double t = x_1 * x_7 + x_6 * y_7;
         y_7 = y_1 * x_7 + y_6 * y_7;
         x_7 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 1 and 7 vectors as columns */
     public void transform_0_by_1_7() {
-        double t = x_1 * x_0 + x_7 * y_0;
+        final double t = x_1 * x_0 + x_7 * y_0;
         y_0 = y_1 * x_0 + y_7 * y_0;
         x_0 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 1 and 7 vectors as columns */
     public void transform_2_by_1_7() {
-        double t = x_1 * x_2 + x_7 * y_2;
+        final double t = x_1 * x_2 + x_7 * y_2;
         y_2 = y_1 * x_2 + y_7 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 1 and 7 vectors as columns */
     public void transform_3_by_1_7() {
-        double t = x_1 * x_3 + x_7 * y_3;
+        final double t = x_1 * x_3 + x_7 * y_3;
         y_3 = y_1 * x_3 + y_7 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 1 and 7 vectors as columns */
     public void transform_4_by_1_7() {
-        double t = x_1 * x_4 + x_7 * y_4;
+        final double t = x_1 * x_4 + x_7 * y_4;
         y_4 = y_1 * x_4 + y_7 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 1 and 7 vectors as columns */
     public void transform_5_by_1_7() {
-        double t = x_1 * x_5 + x_7 * y_5;
+        final double t = x_1 * x_5 + x_7 * y_5;
         y_5 = y_1 * x_5 + y_7 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 1 and 7 vectors as columns */
     public void transform_6_by_1_7() {
-        double t = x_1 * x_6 + x_7 * y_6;
+        final double t = x_1 * x_6 + x_7 * y_6;
         y_6 = y_1 * x_6 + y_7 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 2 and 0 vectors as columns */
     public void transform_7_by_2_0() {
-        double t = x_2 * x_7 + x_0 * y_7;
+        final double t = x_2 * x_7 + x_0 * y_7;
         y_7 = y_2 * x_7 + y_0 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 2 and 1 vectors as columns */
     public void transform_7_by_2_1() {
-        double t = x_2 * x_7 + x_1 * y_7;
+        final double t = x_2 * x_7 + x_1 * y_7;
         y_7 = y_2 * x_7 + y_1 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 2 and 3 vectors as columns */
     public void transform_7_by_2_3() {
-        double t = x_2 * x_7 + x_3 * y_7;
+        final double t = x_2 * x_7 + x_3 * y_7;
         y_7 = y_2 * x_7 + y_3 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 2 and 4 vectors as columns */
     public void transform_7_by_2_4() {
-        double t = x_2 * x_7 + x_4 * y_7;
+        final double t = x_2 * x_7 + x_4 * y_7;
         y_7 = y_2 * x_7 + y_4 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 2 and 5 vectors as columns */
     public void transform_7_by_2_5() {
-        double t = x_2 * x_7 + x_5 * y_7;
+        final double t = x_2 * x_7 + x_5 * y_7;
         y_7 = y_2 * x_7 + y_5 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 2 and 6 vectors as columns */
     public void transform_7_by_2_6() {
-        double t = x_2 * x_7 + x_6 * y_7;
+        final double t = x_2 * x_7 + x_6 * y_7;
         y_7 = y_2 * x_7 + y_6 * y_7;
         x_7 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 2 and 7 vectors as columns */
     public void transform_0_by_2_7() {
-        double t = x_2 * x_0 + x_7 * y_0;
+        final double t = x_2 * x_0 + x_7 * y_0;
         y_0 = y_2 * x_0 + y_7 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 2 and 7 vectors as columns */
     public void transform_1_by_2_7() {
-        double t = x_2 * x_1 + x_7 * y_1;
+        final double t = x_2 * x_1 + x_7 * y_1;
         y_1 = y_2 * x_1 + y_7 * y_1;
         x_1 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 2 and 7 vectors as columns */
     public void transform_3_by_2_7() {
-        double t = x_2 * x_3 + x_7 * y_3;
+        final double t = x_2 * x_3 + x_7 * y_3;
         y_3 = y_2 * x_3 + y_7 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 2 and 7 vectors as columns */
     public void transform_4_by_2_7() {
-        double t = x_2 * x_4 + x_7 * y_4;
+        final double t = x_2 * x_4 + x_7 * y_4;
         y_4 = y_2 * x_4 + y_7 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 2 and 7 vectors as columns */
     public void transform_5_by_2_7() {
-        double t = x_2 * x_5 + x_7 * y_5;
+        final double t = x_2 * x_5 + x_7 * y_5;
         y_5 = y_2 * x_5 + y_7 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 2 and 7 vectors as columns */
     public void transform_6_by_2_7() {
-        double t = x_2 * x_6 + x_7 * y_6;
+        final double t = x_2 * x_6 + x_7 * y_6;
         y_6 = y_2 * x_6 + y_7 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 3 and 0 vectors as columns */
     public void transform_7_by_3_0() {
-        double t = x_3 * x_7 + x_0 * y_7;
+        final double t = x_3 * x_7 + x_0 * y_7;
         y_7 = y_3 * x_7 + y_0 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 3 and 1 vectors as columns */
     public void transform_7_by_3_1() {
-        double t = x_3 * x_7 + x_1 * y_7;
+        final double t = x_3 * x_7 + x_1 * y_7;
         y_7 = y_3 * x_7 + y_1 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 3 and 2 vectors as columns */
     public void transform_7_by_3_2() {
-        double t = x_3 * x_7 + x_2 * y_7;
+        final double t = x_3 * x_7 + x_2 * y_7;
         y_7 = y_3 * x_7 + y_2 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 3 and 4 vectors as columns */
     public void transform_7_by_3_4() {
-        double t = x_3 * x_7 + x_4 * y_7;
+        final double t = x_3 * x_7 + x_4 * y_7;
         y_7 = y_3 * x_7 + y_4 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 3 and 5 vectors as columns */
     public void transform_7_by_3_5() {
-        double t = x_3 * x_7 + x_5 * y_7;
+        final double t = x_3 * x_7 + x_5 * y_7;
         y_7 = y_3 * x_7 + y_5 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 3 and 6 vectors as columns */
     public void transform_7_by_3_6() {
-        double t = x_3 * x_7 + x_6 * y_7;
+        final double t = x_3 * x_7 + x_6 * y_7;
         y_7 = y_3 * x_7 + y_6 * y_7;
         x_7 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 3 and 7 vectors as columns */
     public void transform_0_by_3_7() {
-        double t = x_3 * x_0 + x_7 * y_0;
+        final double t = x_3 * x_0 + x_7 * y_0;
         y_0 = y_3 * x_0 + y_7 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 3 and 7 vectors as columns */
     public void transform_1_by_3_7() {
-        double t = x_3 * x_1 + x_7 * y_1;
+        final double t = x_3 * x_1 + x_7 * y_1;
         y_1 = y_3 * x_1 + y_7 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 3 and 7 vectors as columns */
     public void transform_2_by_3_7() {
-        double t = x_3 * x_2 + x_7 * y_2;
+        final double t = x_3 * x_2 + x_7 * y_2;
         y_2 = y_3 * x_2 + y_7 * y_2;
         x_2 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 3 and 7 vectors as columns */
     public void transform_4_by_3_7() {
-        double t = x_3 * x_4 + x_7 * y_4;
+        final double t = x_3 * x_4 + x_7 * y_4;
         y_4 = y_3 * x_4 + y_7 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 3 and 7 vectors as columns */
     public void transform_5_by_3_7() {
-        double t = x_3 * x_5 + x_7 * y_5;
+        final double t = x_3 * x_5 + x_7 * y_5;
         y_5 = y_3 * x_5 + y_7 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 3 and 7 vectors as columns */
     public void transform_6_by_3_7() {
-        double t = x_3 * x_6 + x_7 * y_6;
+        final double t = x_3 * x_6 + x_7 * y_6;
         y_6 = y_3 * x_6 + y_7 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 4 and 0 vectors as columns */
     public void transform_7_by_4_0() {
-        double t = x_4 * x_7 + x_0 * y_7;
+        final double t = x_4 * x_7 + x_0 * y_7;
         y_7 = y_4 * x_7 + y_0 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 4 and 1 vectors as columns */
     public void transform_7_by_4_1() {
-        double t = x_4 * x_7 + x_1 * y_7;
+        final double t = x_4 * x_7 + x_1 * y_7;
         y_7 = y_4 * x_7 + y_1 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 4 and 2 vectors as columns */
     public void transform_7_by_4_2() {
-        double t = x_4 * x_7 + x_2 * y_7;
+        final double t = x_4 * x_7 + x_2 * y_7;
         y_7 = y_4 * x_7 + y_2 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 4 and 3 vectors as columns */
     public void transform_7_by_4_3() {
-        double t = x_4 * x_7 + x_3 * y_7;
+        final double t = x_4 * x_7 + x_3 * y_7;
         y_7 = y_4 * x_7 + y_3 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 4 and 5 vectors as columns */
     public void transform_7_by_4_5() {
-        double t = x_4 * x_7 + x_5 * y_7;
+        final double t = x_4 * x_7 + x_5 * y_7;
         y_7 = y_4 * x_7 + y_5 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 4 and 6 vectors as columns */
     public void transform_7_by_4_6() {
-        double t = x_4 * x_7 + x_6 * y_7;
+        final double t = x_4 * x_7 + x_6 * y_7;
         y_7 = y_4 * x_7 + y_6 * y_7;
         x_7 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 4 and 7 vectors as columns */
     public void transform_0_by_4_7() {
-        double t = x_4 * x_0 + x_7 * y_0;
+        final double t = x_4 * x_0 + x_7 * y_0;
         y_0 = y_4 * x_0 + y_7 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 4 and 7 vectors as columns */
     public void transform_1_by_4_7() {
-        double t = x_4 * x_1 + x_7 * y_1;
+        final double t = x_4 * x_1 + x_7 * y_1;
         y_1 = y_4 * x_1 + y_7 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 4 and 7 vectors as columns */
     public void transform_2_by_4_7() {
-        double t = x_4 * x_2 + x_7 * y_2;
+        final double t = x_4 * x_2 + x_7 * y_2;
         y_2 = y_4 * x_2 + y_7 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 4 and 7 vectors as columns */
     public void transform_3_by_4_7() {
-        double t = x_4 * x_3 + x_7 * y_3;
+        final double t = x_4 * x_3 + x_7 * y_3;
         y_3 = y_4 * x_3 + y_7 * y_3;
         x_3 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 4 and 7 vectors as columns */
     public void transform_5_by_4_7() {
-        double t = x_4 * x_5 + x_7 * y_5;
+        final double t = x_4 * x_5 + x_7 * y_5;
         y_5 = y_4 * x_5 + y_7 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 4 and 7 vectors as columns */
     public void transform_6_by_4_7() {
-        double t = x_4 * x_6 + x_7 * y_6;
+        final double t = x_4 * x_6 + x_7 * y_6;
         y_6 = y_4 * x_6 + y_7 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 5 and 0 vectors as columns */
     public void transform_7_by_5_0() {
-        double t = x_5 * x_7 + x_0 * y_7;
+        final double t = x_5 * x_7 + x_0 * y_7;
         y_7 = y_5 * x_7 + y_0 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 5 and 1 vectors as columns */
     public void transform_7_by_5_1() {
-        double t = x_5 * x_7 + x_1 * y_7;
+        final double t = x_5 * x_7 + x_1 * y_7;
         y_7 = y_5 * x_7 + y_1 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 5 and 2 vectors as columns */
     public void transform_7_by_5_2() {
-        double t = x_5 * x_7 + x_2 * y_7;
+        final double t = x_5 * x_7 + x_2 * y_7;
         y_7 = y_5 * x_7 + y_2 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 5 and 3 vectors as columns */
     public void transform_7_by_5_3() {
-        double t = x_5 * x_7 + x_3 * y_7;
+        final double t = x_5 * x_7 + x_3 * y_7;
         y_7 = y_5 * x_7 + y_3 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 5 and 4 vectors as columns */
     public void transform_7_by_5_4() {
-        double t = x_5 * x_7 + x_4 * y_7;
+        final double t = x_5 * x_7 + x_4 * y_7;
         y_7 = y_5 * x_7 + y_4 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 5 and 6 vectors as columns */
     public void transform_7_by_5_6() {
-        double t = x_5 * x_7 + x_6 * y_7;
+        final double t = x_5 * x_7 + x_6 * y_7;
         y_7 = y_5 * x_7 + y_6 * y_7;
         x_7 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 5 and 7 vectors as columns */
     public void transform_0_by_5_7() {
-        double t = x_5 * x_0 + x_7 * y_0;
+        final double t = x_5 * x_0 + x_7 * y_0;
         y_0 = y_5 * x_0 + y_7 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 5 and 7 vectors as columns */
     public void transform_1_by_5_7() {
-        double t = x_5 * x_1 + x_7 * y_1;
+        final double t = x_5 * x_1 + x_7 * y_1;
         y_1 = y_5 * x_1 + y_7 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 5 and 7 vectors as columns */
     public void transform_2_by_5_7() {
-        double t = x_5 * x_2 + x_7 * y_2;
+        final double t = x_5 * x_2 + x_7 * y_2;
         y_2 = y_5 * x_2 + y_7 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 5 and 7 vectors as columns */
     public void transform_3_by_5_7() {
-        double t = x_5 * x_3 + x_7 * y_3;
+        final double t = x_5 * x_3 + x_7 * y_3;
         y_3 = y_5 * x_3 + y_7 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 5 and 7 vectors as columns */
     public void transform_4_by_5_7() {
-        double t = x_5 * x_4 + x_7 * y_4;
+        final double t = x_5 * x_4 + x_7 * y_4;
         y_4 = y_5 * x_4 + y_7 * y_4;
         x_4 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 5 and 7 vectors as columns */
     public void transform_6_by_5_7() {
-        double t = x_5 * x_6 + x_7 * y_6;
+        final double t = x_5 * x_6 + x_7 * y_6;
         y_6 = y_5 * x_6 + y_7 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 6 and 0 vectors as columns */
     public void transform_7_by_6_0() {
-        double t = x_6 * x_7 + x_0 * y_7;
+        final double t = x_6 * x_7 + x_0 * y_7;
         y_7 = y_6 * x_7 + y_0 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 6 and 1 vectors as columns */
     public void transform_7_by_6_1() {
-        double t = x_6 * x_7 + x_1 * y_7;
+        final double t = x_6 * x_7 + x_1 * y_7;
         y_7 = y_6 * x_7 + y_1 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 6 and 2 vectors as columns */
     public void transform_7_by_6_2() {
-        double t = x_6 * x_7 + x_2 * y_7;
+        final double t = x_6 * x_7 + x_2 * y_7;
         y_7 = y_6 * x_7 + y_2 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 6 and 3 vectors as columns */
     public void transform_7_by_6_3() {
-        double t = x_6 * x_7 + x_3 * y_7;
+        final double t = x_6 * x_7 + x_3 * y_7;
         y_7 = y_6 * x_7 + y_3 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 6 and 4 vectors as columns */
     public void transform_7_by_6_4() {
-        double t = x_6 * x_7 + x_4 * y_7;
+        final double t = x_6 * x_7 + x_4 * y_7;
         y_7 = y_6 * x_7 + y_4 * y_7;
         x_7 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 6 and 5 vectors as columns */
     public void transform_7_by_6_5() {
-        double t = x_6 * x_7 + x_5 * y_7;
+        final double t = x_6 * x_7 + x_5 * y_7;
         y_7 = y_6 * x_7 + y_5 * y_7;
         x_7 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 6 and 7 vectors as columns */
     public void transform_0_by_6_7() {
-        double t = x_6 * x_0 + x_7 * y_0;
+        final double t = x_6 * x_0 + x_7 * y_0;
         y_0 = y_6 * x_0 + y_7 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 6 and 7 vectors as columns */
     public void transform_1_by_6_7() {
-        double t = x_6 * x_1 + x_7 * y_1;
+        final double t = x_6 * x_1 + x_7 * y_1;
         y_1 = y_6 * x_1 + y_7 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 6 and 7 vectors as columns */
     public void transform_2_by_6_7() {
-        double t = x_6 * x_2 + x_7 * y_2;
+        final double t = x_6 * x_2 + x_7 * y_2;
         y_2 = y_6 * x_2 + y_7 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 6 and 7 vectors as columns */
     public void transform_3_by_6_7() {
-        double t = x_6 * x_3 + x_7 * y_3;
+        final double t = x_6 * x_3 + x_7 * y_3;
         y_3 = y_6 * x_3 + y_7 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 6 and 7 vectors as columns */
     public void transform_4_by_6_7() {
-        double t = x_6 * x_4 + x_7 * y_4;
+        final double t = x_6 * x_4 + x_7 * y_4;
         y_4 = y_6 * x_4 + y_7 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 6 and 7 vectors as columns */
     public void transform_5_by_6_7() {
-        double t = x_6 * x_5 + x_7 * y_5;
+        final double t = x_6 * x_5 + x_7 * y_5;
         y_5 = y_6 * x_5 + y_7 * y_5;
         x_5 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 7 and 0 vectors as columns */
     public void transform_1_by_7_0() {
-        double t = x_7 * x_1 + x_0 * y_1;
+        final double t = x_7 * x_1 + x_0 * y_1;
         y_1 = y_7 * x_1 + y_0 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 7 and 0 vectors as columns */
     public void transform_2_by_7_0() {
-        double t = x_7 * x_2 + x_0 * y_2;
+        final double t = x_7 * x_2 + x_0 * y_2;
         y_2 = y_7 * x_2 + y_0 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 7 and 0 vectors as columns */
     public void transform_3_by_7_0() {
-        double t = x_7 * x_3 + x_0 * y_3;
+        final double t = x_7 * x_3 + x_0 * y_3;
         y_3 = y_7 * x_3 + y_0 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 7 and 0 vectors as columns */
     public void transform_4_by_7_0() {
-        double t = x_7 * x_4 + x_0 * y_4;
+        final double t = x_7 * x_4 + x_0 * y_4;
         y_4 = y_7 * x_4 + y_0 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 7 and 0 vectors as columns */
     public void transform_5_by_7_0() {
-        double t = x_7 * x_5 + x_0 * y_5;
+        final double t = x_7 * x_5 + x_0 * y_5;
         y_5 = y_7 * x_5 + y_0 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 7 and 0 vectors as columns */
     public void transform_6_by_7_0() {
-        double t = x_7 * x_6 + x_0 * y_6;
+        final double t = x_7 * x_6 + x_0 * y_6;
         y_6 = y_7 * x_6 + y_0 * y_6;
         x_6 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 7 and 1 vectors as columns */
     public void transform_0_by_7_1() {
-        double t = x_7 * x_0 + x_1 * y_0;
+        final double t = x_7 * x_0 + x_1 * y_0;
         y_0 = y_7 * x_0 + y_1 * y_0;
         x_0 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 7 and 1 vectors as columns */
     public void transform_2_by_7_1() {
-        double t = x_7 * x_2 + x_1 * y_2;
+        final double t = x_7 * x_2 + x_1 * y_2;
         y_2 = y_7 * x_2 + y_1 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 7 and 1 vectors as columns */
     public void transform_3_by_7_1() {
-        double t = x_7 * x_3 + x_1 * y_3;
+        final double t = x_7 * x_3 + x_1 * y_3;
         y_3 = y_7 * x_3 + y_1 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 7 and 1 vectors as columns */
     public void transform_4_by_7_1() {
-        double t = x_7 * x_4 + x_1 * y_4;
+        final double t = x_7 * x_4 + x_1 * y_4;
         y_4 = y_7 * x_4 + y_1 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 7 and 1 vectors as columns */
     public void transform_5_by_7_1() {
-        double t = x_7 * x_5 + x_1 * y_5;
+        final double t = x_7 * x_5 + x_1 * y_5;
         y_5 = y_7 * x_5 + y_1 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 7 and 1 vectors as columns */
     public void transform_6_by_7_1() {
-        double t = x_7 * x_6 + x_1 * y_6;
+        final double t = x_7 * x_6 + x_1 * y_6;
         y_6 = y_7 * x_6 + y_1 * y_6;
         x_6 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 7 and 2 vectors as columns */
     public void transform_0_by_7_2() {
-        double t = x_7 * x_0 + x_2 * y_0;
+        final double t = x_7 * x_0 + x_2 * y_0;
         y_0 = y_7 * x_0 + y_2 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 7 and 2 vectors as columns */
     public void transform_1_by_7_2() {
-        double t = x_7 * x_1 + x_2 * y_1;
+        final double t = x_7 * x_1 + x_2 * y_1;
         y_1 = y_7 * x_1 + y_2 * y_1;
         x_1 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 7 and 2 vectors as columns */
     public void transform_3_by_7_2() {
-        double t = x_7 * x_3 + x_2 * y_3;
+        final double t = x_7 * x_3 + x_2 * y_3;
         y_3 = y_7 * x_3 + y_2 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 7 and 2 vectors as columns */
     public void transform_4_by_7_2() {
-        double t = x_7 * x_4 + x_2 * y_4;
+        final double t = x_7 * x_4 + x_2 * y_4;
         y_4 = y_7 * x_4 + y_2 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 7 and 2 vectors as columns */
     public void transform_5_by_7_2() {
-        double t = x_7 * x_5 + x_2 * y_5;
+        final double t = x_7 * x_5 + x_2 * y_5;
         y_5 = y_7 * x_5 + y_2 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 7 and 2 vectors as columns */
     public void transform_6_by_7_2() {
-        double t = x_7 * x_6 + x_2 * y_6;
+        final double t = x_7 * x_6 + x_2 * y_6;
         y_6 = y_7 * x_6 + y_2 * y_6;
         x_6 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 7 and 3 vectors as columns */
     public void transform_0_by_7_3() {
-        double t = x_7 * x_0 + x_3 * y_0;
+        final double t = x_7 * x_0 + x_3 * y_0;
         y_0 = y_7 * x_0 + y_3 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 7 and 3 vectors as columns */
     public void transform_1_by_7_3() {
-        double t = x_7 * x_1 + x_3 * y_1;
+        final double t = x_7 * x_1 + x_3 * y_1;
         y_1 = y_7 * x_1 + y_3 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 7 and 3 vectors as columns */
     public void transform_2_by_7_3() {
-        double t = x_7 * x_2 + x_3 * y_2;
+        final double t = x_7 * x_2 + x_3 * y_2;
         y_2 = y_7 * x_2 + y_3 * y_2;
         x_2 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 7 and 3 vectors as columns */
     public void transform_4_by_7_3() {
-        double t = x_7 * x_4 + x_3 * y_4;
+        final double t = x_7 * x_4 + x_3 * y_4;
         y_4 = y_7 * x_4 + y_3 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 7 and 3 vectors as columns */
     public void transform_5_by_7_3() {
-        double t = x_7 * x_5 + x_3 * y_5;
+        final double t = x_7 * x_5 + x_3 * y_5;
         y_5 = y_7 * x_5 + y_3 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 7 and 3 vectors as columns */
     public void transform_6_by_7_3() {
-        double t = x_7 * x_6 + x_3 * y_6;
+        final double t = x_7 * x_6 + x_3 * y_6;
         y_6 = y_7 * x_6 + y_3 * y_6;
         x_6 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 7 and 4 vectors as columns */
     public void transform_0_by_7_4() {
-        double t = x_7 * x_0 + x_4 * y_0;
+        final double t = x_7 * x_0 + x_4 * y_0;
         y_0 = y_7 * x_0 + y_4 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 7 and 4 vectors as columns */
     public void transform_1_by_7_4() {
-        double t = x_7 * x_1 + x_4 * y_1;
+        final double t = x_7 * x_1 + x_4 * y_1;
         y_1 = y_7 * x_1 + y_4 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 7 and 4 vectors as columns */
     public void transform_2_by_7_4() {
-        double t = x_7 * x_2 + x_4 * y_2;
+        final double t = x_7 * x_2 + x_4 * y_2;
         y_2 = y_7 * x_2 + y_4 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 7 and 4 vectors as columns */
     public void transform_3_by_7_4() {
-        double t = x_7 * x_3 + x_4 * y_3;
+        final double t = x_7 * x_3 + x_4 * y_3;
         y_3 = y_7 * x_3 + y_4 * y_3;
         x_3 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 7 and 4 vectors as columns */
     public void transform_5_by_7_4() {
-        double t = x_7 * x_5 + x_4 * y_5;
+        final double t = x_7 * x_5 + x_4 * y_5;
         y_5 = y_7 * x_5 + y_4 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 7 and 4 vectors as columns */
     public void transform_6_by_7_4() {
-        double t = x_7 * x_6 + x_4 * y_6;
+        final double t = x_7 * x_6 + x_4 * y_6;
         y_6 = y_7 * x_6 + y_4 * y_6;
         x_6 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 7 and 5 vectors as columns */
     public void transform_0_by_7_5() {
-        double t = x_7 * x_0 + x_5 * y_0;
+        final double t = x_7 * x_0 + x_5 * y_0;
         y_0 = y_7 * x_0 + y_5 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 7 and 5 vectors as columns */
     public void transform_1_by_7_5() {
-        double t = x_7 * x_1 + x_5 * y_1;
+        final double t = x_7 * x_1 + x_5 * y_1;
         y_1 = y_7 * x_1 + y_5 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 7 and 5 vectors as columns */
     public void transform_2_by_7_5() {
-        double t = x_7 * x_2 + x_5 * y_2;
+        final double t = x_7 * x_2 + x_5 * y_2;
         y_2 = y_7 * x_2 + y_5 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 7 and 5 vectors as columns */
     public void transform_3_by_7_5() {
-        double t = x_7 * x_3 + x_5 * y_3;
+        final double t = x_7 * x_3 + x_5 * y_3;
         y_3 = y_7 * x_3 + y_5 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 7 and 5 vectors as columns */
     public void transform_4_by_7_5() {
-        double t = x_7 * x_4 + x_5 * y_4;
+        final double t = x_7 * x_4 + x_5 * y_4;
         y_4 = y_7 * x_4 + y_5 * y_4;
         x_4 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 7 and 5 vectors as columns */
     public void transform_6_by_7_5() {
-        double t = x_7 * x_6 + x_5 * y_6;
+        final double t = x_7 * x_6 + x_5 * y_6;
         y_6 = y_7 * x_6 + y_5 * y_6;
         x_6 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 7 and 6 vectors as columns */
     public void transform_0_by_7_6() {
-        double t = x_7 * x_0 + x_6 * y_0;
+        final double t = x_7 * x_0 + x_6 * y_0;
         y_0 = y_7 * x_0 + y_6 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 7 and 6 vectors as columns */
     public void transform_1_by_7_6() {
-        double t = x_7 * x_1 + x_6 * y_1;
+        final double t = x_7 * x_1 + x_6 * y_1;
         y_1 = y_7 * x_1 + y_6 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 7 and 6 vectors as columns */
     public void transform_2_by_7_6() {
-        double t = x_7 * x_2 + x_6 * y_2;
+        final double t = x_7 * x_2 + x_6 * y_2;
         y_2 = y_7 * x_2 + y_6 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 7 and 6 vectors as columns */
     public void transform_3_by_7_6() {
-        double t = x_7 * x_3 + x_6 * y_3;
+        final double t = x_7 * x_3 + x_6 * y_3;
         y_3 = y_7 * x_3 + y_6 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 7 and 6 vectors as columns */
     public void transform_4_by_7_6() {
-        double t = x_7 * x_4 + x_6 * y_4;
+        final double t = x_7 * x_4 + x_6 * y_4;
         y_4 = y_7 * x_4 + y_6 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 7 and 6 vectors as columns */
     public void transform_5_by_7_6() {
-        double t = x_7 * x_5 + x_6 * y_5;
+        final double t = x_7 * x_5 + x_6 * y_5;
         y_5 = y_7 * x_5 + y_6 * y_5;
         x_5 = t;
     }
 
     /** invert the 2x2 matrix formed by vector 0 and vector 7 where the vectors are columns */
     public boolean invert_0_7() {
-        double t = x_0;
+        final double t = x_0;
         double invdet = x_0 * y_7 - y_0 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1523,7 +1523,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 1 and vector 7 where the vectors are columns */
     public boolean invert_1_7() {
-        double t = x_1;
+        final double t = x_1;
         double invdet = x_1 * y_7 - y_1 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1537,7 +1537,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 2 and vector 7 where the vectors are columns */
     public boolean invert_2_7() {
-        double t = x_2;
+        final double t = x_2;
         double invdet = x_2 * y_7 - y_2 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1551,7 +1551,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 3 and vector 7 where the vectors are columns */
     public boolean invert_3_7() {
-        double t = x_3;
+        final double t = x_3;
         double invdet = x_3 * y_7 - y_3 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1565,7 +1565,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 4 and vector 7 where the vectors are columns */
     public boolean invert_4_7() {
-        double t = x_4;
+        final double t = x_4;
         double invdet = x_4 * y_7 - y_4 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1579,7 +1579,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 5 and vector 7 where the vectors are columns */
     public boolean invert_5_7() {
-        double t = x_5;
+        final double t = x_5;
         double invdet = x_5 * y_7 - y_5 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1593,7 +1593,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 6 and vector 7 where the vectors are columns */
     public boolean invert_6_7() {
-        double t = x_6;
+        final double t = x_6;
         double invdet = x_6 * y_7 - y_6 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1607,7 +1607,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 0 where the vectors are columns */
     public boolean invert_7_0() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_0 - y_7 * x_0;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1621,7 +1621,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 1 where the vectors are columns */
     public boolean invert_7_1() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_1 - y_7 * x_1;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1635,7 +1635,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 2 where the vectors are columns */
     public boolean invert_7_2() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_2 - y_7 * x_2;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1649,7 +1649,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 3 where the vectors are columns */
     public boolean invert_7_3() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_3 - y_7 * x_3;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1663,7 +1663,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 4 where the vectors are columns */
     public boolean invert_7_4() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_4 - y_7 * x_4;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1677,7 +1677,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 5 where the vectors are columns */
     public boolean invert_7_5() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_5 - y_7 * x_5;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1691,7 +1691,7 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 6 where the vectors are columns */
     public boolean invert_7_6() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_6 - y_7 * x_6;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -1705,98 +1705,98 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** transpose the matrix formed by vector 0 and vector 7 where the vectors are columns */
     public void transpose_0_7() {
-        double t = y_0;
+        final double t = y_0;
         y_0 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 1 and vector 7 where the vectors are columns */
     public void transpose_1_7() {
-        double t = y_1;
+        final double t = y_1;
         y_1 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 2 and vector 7 where the vectors are columns */
     public void transpose_2_7() {
-        double t = y_2;
+        final double t = y_2;
         y_2 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 3 and vector 7 where the vectors are columns */
     public void transpose_3_7() {
-        double t = y_3;
+        final double t = y_3;
         y_3 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 4 and vector 7 where the vectors are columns */
     public void transpose_4_7() {
-        double t = y_4;
+        final double t = y_4;
         y_4 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 5 and vector 7 where the vectors are columns */
     public void transpose_5_7() {
-        double t = y_5;
+        final double t = y_5;
         y_5 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 6 and vector 7 where the vectors are columns */
     public void transpose_6_7() {
-        double t = y_6;
+        final double t = y_6;
         y_6 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 0 where the vectors are columns */
     public void transpose_7_0() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_0;
         x_0 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 1 where the vectors are columns */
     public void transpose_7_1() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_1;
         x_1 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 2 where the vectors are columns */
     public void transpose_7_2() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_2;
         x_2 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 3 where the vectors are columns */
     public void transpose_7_3() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_3;
         x_3 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 4 where the vectors are columns */
     public void transpose_7_4() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_4;
         x_4 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 5 where the vectors are columns */
     public void transpose_7_5() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_5;
         x_5 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 6 where the vectors are columns */
     public void transpose_7_6() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_6;
         x_6 = t;
     }

@@ -10,7 +10,7 @@ public class VectorRegister5 extends VectorRegister4 {
     }
 
     /** set the 4-vector to the given (x,y) */
-    public void set_4(double x, double y) {
+    public void set_4(final double x, final double y) {
         x_4 = x;
         y_4 = y;
     }
@@ -70,13 +70,13 @@ public class VectorRegister5 extends VectorRegister4 {
     }
 
     /** extract the 4-vector into the given output array starting at the given offset */
-    public void extract_4(final double[] output, int offset) {
+    public void extract_4(final double[] output, final int offset) {
         output[offset + 0] = x_4;
         output[offset + 1] = y_4;
     }
 
     /** inject the given input starting at the given offset into the 4-vector */
-    public void inject_4(final double[] input, int offset) {
+    public void inject_4(final double[] input, final int offset) {
         x_4 = input[offset + 0];
         y_4 = input[offset + 1];
     }
@@ -97,7 +97,7 @@ public class VectorRegister5 extends VectorRegister4 {
     }
 
     /** set the 4 vector to the complex number corresponding to the given angle */
-    public void set_4_by_angle(double theta) {
+    public void set_4_by_angle(final double theta) {
         x_4 = Math.cos(theta);
         y_4 = Math.sin(theta);
     }
@@ -257,56 +257,56 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** multiply via complex numbers the 0 and 4 together and store the result to the 0 vector */
     public void complex_mult4_0() {
-        double t = x_0 * x_4 - y_0 * y_4;
+        final double t = x_0 * x_4 - y_0 * y_4;
         y_0 = x_0 * y_4 + y_0 * x_4;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 4 together and store the result to the 1 vector */
     public void complex_mult4_1() {
-        double t = x_1 * x_4 - y_1 * y_4;
+        final double t = x_1 * x_4 - y_1 * y_4;
         y_1 = x_1 * y_4 + y_1 * x_4;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 4 together and store the result to the 2 vector */
     public void complex_mult4_2() {
-        double t = x_2 * x_4 - y_2 * y_4;
+        final double t = x_2 * x_4 - y_2 * y_4;
         y_2 = x_2 * y_4 + y_2 * x_4;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 4 together and store the result to the 3 vector */
     public void complex_mult4_3() {
-        double t = x_3 * x_4 - y_3 * y_4;
+        final double t = x_3 * x_4 - y_3 * y_4;
         y_3 = x_3 * y_4 + y_3 * x_4;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 0 together and store the result to the 4 vector */
     public void complex_mult0_4() {
-        double t = x_4 * x_0 - y_4 * y_0;
+        final double t = x_4 * x_0 - y_4 * y_0;
         y_4 = x_4 * y_0 + y_4 * x_0;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 4 and 1 together and store the result to the 4 vector */
     public void complex_mult1_4() {
-        double t = x_4 * x_1 - y_4 * y_1;
+        final double t = x_4 * x_1 - y_4 * y_1;
         y_4 = x_4 * y_1 + y_4 * x_1;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 4 and 2 together and store the result to the 4 vector */
     public void complex_mult2_4() {
-        double t = x_4 * x_2 - y_4 * y_2;
+        final double t = x_4 * x_2 - y_4 * y_2;
         y_4 = x_4 * y_2 + y_4 * x_2;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 4 and 3 together and store the result to the 4 vector */
     public void complex_mult3_4() {
-        double t = x_4 * x_3 - y_4 * y_3;
+        final double t = x_4 * x_3 - y_4 * y_3;
         y_4 = x_4 * y_3 + y_4 * x_3;
         x_4 = t;
     }
@@ -399,259 +399,259 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** transform the 4 vector by the matrixed formed by the 0 and 1 vectors as columns */
     public void transform_4_by_0_1() {
-        double t = x_0 * x_4 + x_1 * y_4;
+        final double t = x_0 * x_4 + x_1 * y_4;
         y_4 = y_0 * x_4 + y_1 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 0 and 2 vectors as columns */
     public void transform_4_by_0_2() {
-        double t = x_0 * x_4 + x_2 * y_4;
+        final double t = x_0 * x_4 + x_2 * y_4;
         y_4 = y_0 * x_4 + y_2 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 0 and 3 vectors as columns */
     public void transform_4_by_0_3() {
-        double t = x_0 * x_4 + x_3 * y_4;
+        final double t = x_0 * x_4 + x_3 * y_4;
         y_4 = y_0 * x_4 + y_3 * y_4;
         x_4 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 0 and 4 vectors as columns */
     public void transform_1_by_0_4() {
-        double t = x_0 * x_1 + x_4 * y_1;
+        final double t = x_0 * x_1 + x_4 * y_1;
         y_1 = y_0 * x_1 + y_4 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 0 and 4 vectors as columns */
     public void transform_2_by_0_4() {
-        double t = x_0 * x_2 + x_4 * y_2;
+        final double t = x_0 * x_2 + x_4 * y_2;
         y_2 = y_0 * x_2 + y_4 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 0 and 4 vectors as columns */
     public void transform_3_by_0_4() {
-        double t = x_0 * x_3 + x_4 * y_3;
+        final double t = x_0 * x_3 + x_4 * y_3;
         y_3 = y_0 * x_3 + y_4 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 1 and 0 vectors as columns */
     public void transform_4_by_1_0() {
-        double t = x_1 * x_4 + x_0 * y_4;
+        final double t = x_1 * x_4 + x_0 * y_4;
         y_4 = y_1 * x_4 + y_0 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 1 and 2 vectors as columns */
     public void transform_4_by_1_2() {
-        double t = x_1 * x_4 + x_2 * y_4;
+        final double t = x_1 * x_4 + x_2 * y_4;
         y_4 = y_1 * x_4 + y_2 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 1 and 3 vectors as columns */
     public void transform_4_by_1_3() {
-        double t = x_1 * x_4 + x_3 * y_4;
+        final double t = x_1 * x_4 + x_3 * y_4;
         y_4 = y_1 * x_4 + y_3 * y_4;
         x_4 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 1 and 4 vectors as columns */
     public void transform_0_by_1_4() {
-        double t = x_1 * x_0 + x_4 * y_0;
+        final double t = x_1 * x_0 + x_4 * y_0;
         y_0 = y_1 * x_0 + y_4 * y_0;
         x_0 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 1 and 4 vectors as columns */
     public void transform_2_by_1_4() {
-        double t = x_1 * x_2 + x_4 * y_2;
+        final double t = x_1 * x_2 + x_4 * y_2;
         y_2 = y_1 * x_2 + y_4 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 1 and 4 vectors as columns */
     public void transform_3_by_1_4() {
-        double t = x_1 * x_3 + x_4 * y_3;
+        final double t = x_1 * x_3 + x_4 * y_3;
         y_3 = y_1 * x_3 + y_4 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 2 and 0 vectors as columns */
     public void transform_4_by_2_0() {
-        double t = x_2 * x_4 + x_0 * y_4;
+        final double t = x_2 * x_4 + x_0 * y_4;
         y_4 = y_2 * x_4 + y_0 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 2 and 1 vectors as columns */
     public void transform_4_by_2_1() {
-        double t = x_2 * x_4 + x_1 * y_4;
+        final double t = x_2 * x_4 + x_1 * y_4;
         y_4 = y_2 * x_4 + y_1 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 2 and 3 vectors as columns */
     public void transform_4_by_2_3() {
-        double t = x_2 * x_4 + x_3 * y_4;
+        final double t = x_2 * x_4 + x_3 * y_4;
         y_4 = y_2 * x_4 + y_3 * y_4;
         x_4 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 2 and 4 vectors as columns */
     public void transform_0_by_2_4() {
-        double t = x_2 * x_0 + x_4 * y_0;
+        final double t = x_2 * x_0 + x_4 * y_0;
         y_0 = y_2 * x_0 + y_4 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 2 and 4 vectors as columns */
     public void transform_1_by_2_4() {
-        double t = x_2 * x_1 + x_4 * y_1;
+        final double t = x_2 * x_1 + x_4 * y_1;
         y_1 = y_2 * x_1 + y_4 * y_1;
         x_1 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 2 and 4 vectors as columns */
     public void transform_3_by_2_4() {
-        double t = x_2 * x_3 + x_4 * y_3;
+        final double t = x_2 * x_3 + x_4 * y_3;
         y_3 = y_2 * x_3 + y_4 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 3 and 0 vectors as columns */
     public void transform_4_by_3_0() {
-        double t = x_3 * x_4 + x_0 * y_4;
+        final double t = x_3 * x_4 + x_0 * y_4;
         y_4 = y_3 * x_4 + y_0 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 3 and 1 vectors as columns */
     public void transform_4_by_3_1() {
-        double t = x_3 * x_4 + x_1 * y_4;
+        final double t = x_3 * x_4 + x_1 * y_4;
         y_4 = y_3 * x_4 + y_1 * y_4;
         x_4 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 3 and 2 vectors as columns */
     public void transform_4_by_3_2() {
-        double t = x_3 * x_4 + x_2 * y_4;
+        final double t = x_3 * x_4 + x_2 * y_4;
         y_4 = y_3 * x_4 + y_2 * y_4;
         x_4 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 3 and 4 vectors as columns */
     public void transform_0_by_3_4() {
-        double t = x_3 * x_0 + x_4 * y_0;
+        final double t = x_3 * x_0 + x_4 * y_0;
         y_0 = y_3 * x_0 + y_4 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 3 and 4 vectors as columns */
     public void transform_1_by_3_4() {
-        double t = x_3 * x_1 + x_4 * y_1;
+        final double t = x_3 * x_1 + x_4 * y_1;
         y_1 = y_3 * x_1 + y_4 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 3 and 4 vectors as columns */
     public void transform_2_by_3_4() {
-        double t = x_3 * x_2 + x_4 * y_2;
+        final double t = x_3 * x_2 + x_4 * y_2;
         y_2 = y_3 * x_2 + y_4 * y_2;
         x_2 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 4 and 0 vectors as columns */
     public void transform_1_by_4_0() {
-        double t = x_4 * x_1 + x_0 * y_1;
+        final double t = x_4 * x_1 + x_0 * y_1;
         y_1 = y_4 * x_1 + y_0 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 4 and 0 vectors as columns */
     public void transform_2_by_4_0() {
-        double t = x_4 * x_2 + x_0 * y_2;
+        final double t = x_4 * x_2 + x_0 * y_2;
         y_2 = y_4 * x_2 + y_0 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 4 and 0 vectors as columns */
     public void transform_3_by_4_0() {
-        double t = x_4 * x_3 + x_0 * y_3;
+        final double t = x_4 * x_3 + x_0 * y_3;
         y_3 = y_4 * x_3 + y_0 * y_3;
         x_3 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 4 and 1 vectors as columns */
     public void transform_0_by_4_1() {
-        double t = x_4 * x_0 + x_1 * y_0;
+        final double t = x_4 * x_0 + x_1 * y_0;
         y_0 = y_4 * x_0 + y_1 * y_0;
         x_0 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 4 and 1 vectors as columns */
     public void transform_2_by_4_1() {
-        double t = x_4 * x_2 + x_1 * y_2;
+        final double t = x_4 * x_2 + x_1 * y_2;
         y_2 = y_4 * x_2 + y_1 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 4 and 1 vectors as columns */
     public void transform_3_by_4_1() {
-        double t = x_4 * x_3 + x_1 * y_3;
+        final double t = x_4 * x_3 + x_1 * y_3;
         y_3 = y_4 * x_3 + y_1 * y_3;
         x_3 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 4 and 2 vectors as columns */
     public void transform_0_by_4_2() {
-        double t = x_4 * x_0 + x_2 * y_0;
+        final double t = x_4 * x_0 + x_2 * y_0;
         y_0 = y_4 * x_0 + y_2 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 4 and 2 vectors as columns */
     public void transform_1_by_4_2() {
-        double t = x_4 * x_1 + x_2 * y_1;
+        final double t = x_4 * x_1 + x_2 * y_1;
         y_1 = y_4 * x_1 + y_2 * y_1;
         x_1 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 4 and 2 vectors as columns */
     public void transform_3_by_4_2() {
-        double t = x_4 * x_3 + x_2 * y_3;
+        final double t = x_4 * x_3 + x_2 * y_3;
         y_3 = y_4 * x_3 + y_2 * y_3;
         x_3 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 4 and 3 vectors as columns */
     public void transform_0_by_4_3() {
-        double t = x_4 * x_0 + x_3 * y_0;
+        final double t = x_4 * x_0 + x_3 * y_0;
         y_0 = y_4 * x_0 + y_3 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 4 and 3 vectors as columns */
     public void transform_1_by_4_3() {
-        double t = x_4 * x_1 + x_3 * y_1;
+        final double t = x_4 * x_1 + x_3 * y_1;
         y_1 = y_4 * x_1 + y_3 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 4 and 3 vectors as columns */
     public void transform_2_by_4_3() {
-        double t = x_4 * x_2 + x_3 * y_2;
+        final double t = x_4 * x_2 + x_3 * y_2;
         y_2 = y_4 * x_2 + y_3 * y_2;
         x_2 = t;
     }
 
     /** invert the 2x2 matrix formed by vector 0 and vector 4 where the vectors are columns */
     public boolean invert_0_4() {
-        double t = x_0;
+        final double t = x_0;
         double invdet = x_0 * y_4 - y_0 * x_4;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -665,7 +665,7 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** invert the 2x2 matrix formed by vector 1 and vector 4 where the vectors are columns */
     public boolean invert_1_4() {
-        double t = x_1;
+        final double t = x_1;
         double invdet = x_1 * y_4 - y_1 * x_4;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -679,7 +679,7 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** invert the 2x2 matrix formed by vector 2 and vector 4 where the vectors are columns */
     public boolean invert_2_4() {
-        double t = x_2;
+        final double t = x_2;
         double invdet = x_2 * y_4 - y_2 * x_4;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -693,7 +693,7 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** invert the 2x2 matrix formed by vector 3 and vector 4 where the vectors are columns */
     public boolean invert_3_4() {
-        double t = x_3;
+        final double t = x_3;
         double invdet = x_3 * y_4 - y_3 * x_4;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -707,7 +707,7 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** invert the 2x2 matrix formed by vector 4 and vector 0 where the vectors are columns */
     public boolean invert_4_0() {
-        double t = x_4;
+        final double t = x_4;
         double invdet = x_4 * y_0 - y_4 * x_0;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -721,7 +721,7 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** invert the 2x2 matrix formed by vector 4 and vector 1 where the vectors are columns */
     public boolean invert_4_1() {
-        double t = x_4;
+        final double t = x_4;
         double invdet = x_4 * y_1 - y_4 * x_1;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -735,7 +735,7 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** invert the 2x2 matrix formed by vector 4 and vector 2 where the vectors are columns */
     public boolean invert_4_2() {
-        double t = x_4;
+        final double t = x_4;
         double invdet = x_4 * y_2 - y_4 * x_2;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -749,7 +749,7 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** invert the 2x2 matrix formed by vector 4 and vector 3 where the vectors are columns */
     public boolean invert_4_3() {
-        double t = x_4;
+        final double t = x_4;
         double invdet = x_4 * y_3 - y_4 * x_3;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -763,56 +763,56 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** transpose the matrix formed by vector 0 and vector 4 where the vectors are columns */
     public void transpose_0_4() {
-        double t = y_0;
+        final double t = y_0;
         y_0 = x_4;
         x_4 = t;
     }
 
     /** transpose the matrix formed by vector 1 and vector 4 where the vectors are columns */
     public void transpose_1_4() {
-        double t = y_1;
+        final double t = y_1;
         y_1 = x_4;
         x_4 = t;
     }
 
     /** transpose the matrix formed by vector 2 and vector 4 where the vectors are columns */
     public void transpose_2_4() {
-        double t = y_2;
+        final double t = y_2;
         y_2 = x_4;
         x_4 = t;
     }
 
     /** transpose the matrix formed by vector 3 and vector 4 where the vectors are columns */
     public void transpose_3_4() {
-        double t = y_3;
+        final double t = y_3;
         y_3 = x_4;
         x_4 = t;
     }
 
     /** transpose the matrix formed by vector 4 and vector 0 where the vectors are columns */
     public void transpose_4_0() {
-        double t = y_4;
+        final double t = y_4;
         y_4 = x_0;
         x_0 = t;
     }
 
     /** transpose the matrix formed by vector 4 and vector 1 where the vectors are columns */
     public void transpose_4_1() {
-        double t = y_4;
+        final double t = y_4;
         y_4 = x_1;
         x_1 = t;
     }
 
     /** transpose the matrix formed by vector 4 and vector 2 where the vectors are columns */
     public void transpose_4_2() {
-        double t = y_4;
+        final double t = y_4;
         y_4 = x_2;
         x_2 = t;
     }
 
     /** transpose the matrix formed by vector 4 and vector 3 where the vectors are columns */
     public void transpose_4_3() {
-        double t = y_4;
+        final double t = y_4;
         y_4 = x_3;
         x_3 = t;
     }

@@ -3,13 +3,13 @@ package io.jeffrey.vector;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class VectorRegisterFTests {
+public class VectorRegisterFTest {
 
-    private void assertZero(double x) {
+    private static void assertZero(double x) {
         Assert.assertTrue(Math.abs(x) < 5.421010862427522E-20);
     }
 
-    private void assertEquals(double x, double y) {
+    private static void assertEquals(double x, double y) {
         assertZero(x - y);
     }
 

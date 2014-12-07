@@ -15,13 +15,13 @@ public class VectorRegister2 {
     }
 
     /** set the 0-vector to the given (x,y) */
-    public void set_0(double x, double y) {
+    public void set_0(final double x, final double y) {
         x_0 = x;
         y_0 = y;
     }
 
     /** set the 1-vector to the given (x,y) */
-    public void set_1(double x, double y) {
+    public void set_1(final double x, final double y) {
         x_1 = x;
         y_1 = y;
     }
@@ -51,25 +51,25 @@ public class VectorRegister2 {
     }
 
     /** extract the 0-vector into the given output array starting at the given offset */
-    public void extract_0(final double[] output, int offset) {
+    public void extract_0(final double[] output, final int offset) {
         output[offset + 0] = x_0;
         output[offset + 1] = y_0;
     }
 
     /** extract the 1-vector into the given output array starting at the given offset */
-    public void extract_1(final double[] output, int offset) {
+    public void extract_1(final double[] output, final int offset) {
         output[offset + 0] = x_1;
         output[offset + 1] = y_1;
     }
 
     /** inject the given input starting at the given offset into the 0-vector */
-    public void inject_0(final double[] input, int offset) {
+    public void inject_0(final double[] input, final int offset) {
         x_0 = input[offset + 0];
         y_0 = input[offset + 1];
     }
 
     /** inject the given input starting at the given offset into the 1-vector */
-    public void inject_1(final double[] input, int offset) {
+    public void inject_1(final double[] input, final int offset) {
         x_1 = input[offset + 0];
         y_1 = input[offset + 1];
     }
@@ -105,13 +105,13 @@ public class VectorRegister2 {
     }
 
     /** set the 0 vector to the complex number corresponding to the given angle */
-    public void set_0_by_angle(double theta) {
+    public void set_0_by_angle(final double theta) {
         x_0 = Math.cos(theta);
         y_0 = Math.sin(theta);
     }
 
     /** set the 1 vector to the complex number corresponding to the given angle */
-    public void set_1_by_angle(double theta) {
+    public void set_1_by_angle(final double theta) {
         x_1 = Math.cos(theta);
         y_1 = Math.sin(theta);
     }
@@ -186,14 +186,14 @@ public class VectorRegister2 {
 
     /** multiply via complex numbers the 0 and 1 together and store the result to the 0 vector */
     public void complex_mult1_0() {
-        double t = x_0 * x_1 - y_0 * y_1;
+        final double t = x_0 * x_1 - y_0 * y_1;
         y_0 = x_0 * y_1 + y_0 * x_1;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 0 together and store the result to the 1 vector */
     public void complex_mult0_1() {
-        double t = x_1 * x_0 - y_1 * y_0;
+        final double t = x_1 * x_0 - y_1 * y_0;
         y_1 = x_1 * y_0 + y_1 * x_0;
         x_1 = t;
     }
@@ -260,7 +260,7 @@ public class VectorRegister2 {
 
     /** invert the 2x2 matrix formed by vector 0 and vector 1 where the vectors are columns */
     public boolean invert_0_1() {
-        double t = x_0;
+        final double t = x_0;
         double invdet = x_0 * y_1 - y_0 * x_1;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -274,7 +274,7 @@ public class VectorRegister2 {
 
     /** invert the 2x2 matrix formed by vector 1 and vector 0 where the vectors are columns */
     public boolean invert_1_0() {
-        double t = x_1;
+        final double t = x_1;
         double invdet = x_1 * y_0 - y_1 * x_0;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -288,14 +288,14 @@ public class VectorRegister2 {
 
     /** transpose the matrix formed by vector 0 and vector 1 where the vectors are columns */
     public void transpose_0_1() {
-        double t = y_0;
+        final double t = y_0;
         y_0 = x_1;
         x_1 = t;
     }
 
     /** transpose the matrix formed by vector 1 and vector 0 where the vectors are columns */
     public void transpose_1_0() {
-        double t = y_1;
+        final double t = y_1;
         y_1 = x_0;
         x_0 = t;
     }

@@ -10,7 +10,7 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** set the 14-vector to the given (x,y) */
-    public void set_14(double x, double y) {
+    public void set_14(final double x, final double y) {
         x_14 = x;
         y_14 = y;
     }
@@ -190,13 +190,13 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** extract the 14-vector into the given output array starting at the given offset */
-    public void extract_14(final double[] output, int offset) {
+    public void extract_14(final double[] output, final int offset) {
         output[offset + 0] = x_14;
         output[offset + 1] = y_14;
     }
 
     /** inject the given input starting at the given offset into the 14-vector */
-    public void inject_14(final double[] input, int offset) {
+    public void inject_14(final double[] input, final int offset) {
         x_14 = input[offset + 0];
         y_14 = input[offset + 1];
     }
@@ -217,7 +217,7 @@ public class VectorRegisterF extends VectorRegisterE {
     }
 
     /** set the 14 vector to the complex number corresponding to the given angle */
-    public void set_14_by_angle(double theta) {
+    public void set_14_by_angle(final double theta) {
         x_14 = Math.cos(theta);
         y_14 = Math.sin(theta);
     }
@@ -717,196 +717,196 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** multiply via complex numbers the 0 and 14 together and store the result to the 0 vector */
     public void complex_mult14_0() {
-        double t = x_0 * x_14 - y_0 * y_14;
+        final double t = x_0 * x_14 - y_0 * y_14;
         y_0 = x_0 * y_14 + y_0 * x_14;
         x_0 = t;
     }
 
     /** multiply via complex numbers the 1 and 14 together and store the result to the 1 vector */
     public void complex_mult14_1() {
-        double t = x_1 * x_14 - y_1 * y_14;
+        final double t = x_1 * x_14 - y_1 * y_14;
         y_1 = x_1 * y_14 + y_1 * x_14;
         x_1 = t;
     }
 
     /** multiply via complex numbers the 2 and 14 together and store the result to the 2 vector */
     public void complex_mult14_2() {
-        double t = x_2 * x_14 - y_2 * y_14;
+        final double t = x_2 * x_14 - y_2 * y_14;
         y_2 = x_2 * y_14 + y_2 * x_14;
         x_2 = t;
     }
 
     /** multiply via complex numbers the 3 and 14 together and store the result to the 3 vector */
     public void complex_mult14_3() {
-        double t = x_3 * x_14 - y_3 * y_14;
+        final double t = x_3 * x_14 - y_3 * y_14;
         y_3 = x_3 * y_14 + y_3 * x_14;
         x_3 = t;
     }
 
     /** multiply via complex numbers the 4 and 14 together and store the result to the 4 vector */
     public void complex_mult14_4() {
-        double t = x_4 * x_14 - y_4 * y_14;
+        final double t = x_4 * x_14 - y_4 * y_14;
         y_4 = x_4 * y_14 + y_4 * x_14;
         x_4 = t;
     }
 
     /** multiply via complex numbers the 5 and 14 together and store the result to the 5 vector */
     public void complex_mult14_5() {
-        double t = x_5 * x_14 - y_5 * y_14;
+        final double t = x_5 * x_14 - y_5 * y_14;
         y_5 = x_5 * y_14 + y_5 * x_14;
         x_5 = t;
     }
 
     /** multiply via complex numbers the 6 and 14 together and store the result to the 6 vector */
     public void complex_mult14_6() {
-        double t = x_6 * x_14 - y_6 * y_14;
+        final double t = x_6 * x_14 - y_6 * y_14;
         y_6 = x_6 * y_14 + y_6 * x_14;
         x_6 = t;
     }
 
     /** multiply via complex numbers the 7 and 14 together and store the result to the 7 vector */
     public void complex_mult14_7() {
-        double t = x_7 * x_14 - y_7 * y_14;
+        final double t = x_7 * x_14 - y_7 * y_14;
         y_7 = x_7 * y_14 + y_7 * x_14;
         x_7 = t;
     }
 
     /** multiply via complex numbers the 8 and 14 together and store the result to the 8 vector */
     public void complex_mult14_8() {
-        double t = x_8 * x_14 - y_8 * y_14;
+        final double t = x_8 * x_14 - y_8 * y_14;
         y_8 = x_8 * y_14 + y_8 * x_14;
         x_8 = t;
     }
 
     /** multiply via complex numbers the 9 and 14 together and store the result to the 9 vector */
     public void complex_mult14_9() {
-        double t = x_9 * x_14 - y_9 * y_14;
+        final double t = x_9 * x_14 - y_9 * y_14;
         y_9 = x_9 * y_14 + y_9 * x_14;
         x_9 = t;
     }
 
     /** multiply via complex numbers the 10 and 14 together and store the result to the 10 vector */
     public void complex_mult14_10() {
-        double t = x_10 * x_14 - y_10 * y_14;
+        final double t = x_10 * x_14 - y_10 * y_14;
         y_10 = x_10 * y_14 + y_10 * x_14;
         x_10 = t;
     }
 
     /** multiply via complex numbers the 11 and 14 together and store the result to the 11 vector */
     public void complex_mult14_11() {
-        double t = x_11 * x_14 - y_11 * y_14;
+        final double t = x_11 * x_14 - y_11 * y_14;
         y_11 = x_11 * y_14 + y_11 * x_14;
         x_11 = t;
     }
 
     /** multiply via complex numbers the 12 and 14 together and store the result to the 12 vector */
     public void complex_mult14_12() {
-        double t = x_12 * x_14 - y_12 * y_14;
+        final double t = x_12 * x_14 - y_12 * y_14;
         y_12 = x_12 * y_14 + y_12 * x_14;
         x_12 = t;
     }
 
     /** multiply via complex numbers the 13 and 14 together and store the result to the 13 vector */
     public void complex_mult14_13() {
-        double t = x_13 * x_14 - y_13 * y_14;
+        final double t = x_13 * x_14 - y_13 * y_14;
         y_13 = x_13 * y_14 + y_13 * x_14;
         x_13 = t;
     }
 
     /** multiply via complex numbers the 14 and 0 together and store the result to the 14 vector */
     public void complex_mult0_14() {
-        double t = x_14 * x_0 - y_14 * y_0;
+        final double t = x_14 * x_0 - y_14 * y_0;
         y_14 = x_14 * y_0 + y_14 * x_0;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 1 together and store the result to the 14 vector */
     public void complex_mult1_14() {
-        double t = x_14 * x_1 - y_14 * y_1;
+        final double t = x_14 * x_1 - y_14 * y_1;
         y_14 = x_14 * y_1 + y_14 * x_1;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 2 together and store the result to the 14 vector */
     public void complex_mult2_14() {
-        double t = x_14 * x_2 - y_14 * y_2;
+        final double t = x_14 * x_2 - y_14 * y_2;
         y_14 = x_14 * y_2 + y_14 * x_2;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 3 together and store the result to the 14 vector */
     public void complex_mult3_14() {
-        double t = x_14 * x_3 - y_14 * y_3;
+        final double t = x_14 * x_3 - y_14 * y_3;
         y_14 = x_14 * y_3 + y_14 * x_3;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 4 together and store the result to the 14 vector */
     public void complex_mult4_14() {
-        double t = x_14 * x_4 - y_14 * y_4;
+        final double t = x_14 * x_4 - y_14 * y_4;
         y_14 = x_14 * y_4 + y_14 * x_4;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 5 together and store the result to the 14 vector */
     public void complex_mult5_14() {
-        double t = x_14 * x_5 - y_14 * y_5;
+        final double t = x_14 * x_5 - y_14 * y_5;
         y_14 = x_14 * y_5 + y_14 * x_5;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 6 together and store the result to the 14 vector */
     public void complex_mult6_14() {
-        double t = x_14 * x_6 - y_14 * y_6;
+        final double t = x_14 * x_6 - y_14 * y_6;
         y_14 = x_14 * y_6 + y_14 * x_6;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 7 together and store the result to the 14 vector */
     public void complex_mult7_14() {
-        double t = x_14 * x_7 - y_14 * y_7;
+        final double t = x_14 * x_7 - y_14 * y_7;
         y_14 = x_14 * y_7 + y_14 * x_7;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 8 together and store the result to the 14 vector */
     public void complex_mult8_14() {
-        double t = x_14 * x_8 - y_14 * y_8;
+        final double t = x_14 * x_8 - y_14 * y_8;
         y_14 = x_14 * y_8 + y_14 * x_8;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 9 together and store the result to the 14 vector */
     public void complex_mult9_14() {
-        double t = x_14 * x_9 - y_14 * y_9;
+        final double t = x_14 * x_9 - y_14 * y_9;
         y_14 = x_14 * y_9 + y_14 * x_9;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 10 together and store the result to the 14 vector */
     public void complex_mult10_14() {
-        double t = x_14 * x_10 - y_14 * y_10;
+        final double t = x_14 * x_10 - y_14 * y_10;
         y_14 = x_14 * y_10 + y_14 * x_10;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 11 together and store the result to the 14 vector */
     public void complex_mult11_14() {
-        double t = x_14 * x_11 - y_14 * y_11;
+        final double t = x_14 * x_11 - y_14 * y_11;
         y_14 = x_14 * y_11 + y_14 * x_11;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 12 together and store the result to the 14 vector */
     public void complex_mult12_14() {
-        double t = x_14 * x_12 - y_14 * y_12;
+        final double t = x_14 * x_12 - y_14 * y_12;
         y_14 = x_14 * y_12 + y_14 * x_12;
         x_14 = t;
     }
 
     /** multiply via complex numbers the 14 and 13 together and store the result to the 14 vector */
     public void complex_mult13_14() {
-        double t = x_14 * x_13 - y_14 * y_13;
+        final double t = x_14 * x_13 - y_14 * y_13;
         y_14 = x_14 * y_13 + y_14 * x_13;
         x_14 = t;
     }
@@ -1159,3829 +1159,3829 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** transform the 14 vector by the matrixed formed by the 0 and 1 vectors as columns */
     public void transform_14_by_0_1() {
-        double t = x_0 * x_14 + x_1 * y_14;
+        final double t = x_0 * x_14 + x_1 * y_14;
         y_14 = y_0 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 2 vectors as columns */
     public void transform_14_by_0_2() {
-        double t = x_0 * x_14 + x_2 * y_14;
+        final double t = x_0 * x_14 + x_2 * y_14;
         y_14 = y_0 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 3 vectors as columns */
     public void transform_14_by_0_3() {
-        double t = x_0 * x_14 + x_3 * y_14;
+        final double t = x_0 * x_14 + x_3 * y_14;
         y_14 = y_0 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 4 vectors as columns */
     public void transform_14_by_0_4() {
-        double t = x_0 * x_14 + x_4 * y_14;
+        final double t = x_0 * x_14 + x_4 * y_14;
         y_14 = y_0 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 5 vectors as columns */
     public void transform_14_by_0_5() {
-        double t = x_0 * x_14 + x_5 * y_14;
+        final double t = x_0 * x_14 + x_5 * y_14;
         y_14 = y_0 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 6 vectors as columns */
     public void transform_14_by_0_6() {
-        double t = x_0 * x_14 + x_6 * y_14;
+        final double t = x_0 * x_14 + x_6 * y_14;
         y_14 = y_0 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 7 vectors as columns */
     public void transform_14_by_0_7() {
-        double t = x_0 * x_14 + x_7 * y_14;
+        final double t = x_0 * x_14 + x_7 * y_14;
         y_14 = y_0 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 8 vectors as columns */
     public void transform_14_by_0_8() {
-        double t = x_0 * x_14 + x_8 * y_14;
+        final double t = x_0 * x_14 + x_8 * y_14;
         y_14 = y_0 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 9 vectors as columns */
     public void transform_14_by_0_9() {
-        double t = x_0 * x_14 + x_9 * y_14;
+        final double t = x_0 * x_14 + x_9 * y_14;
         y_14 = y_0 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 10 vectors as columns */
     public void transform_14_by_0_10() {
-        double t = x_0 * x_14 + x_10 * y_14;
+        final double t = x_0 * x_14 + x_10 * y_14;
         y_14 = y_0 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 11 vectors as columns */
     public void transform_14_by_0_11() {
-        double t = x_0 * x_14 + x_11 * y_14;
+        final double t = x_0 * x_14 + x_11 * y_14;
         y_14 = y_0 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 12 vectors as columns */
     public void transform_14_by_0_12() {
-        double t = x_0 * x_14 + x_12 * y_14;
+        final double t = x_0 * x_14 + x_12 * y_14;
         y_14 = y_0 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 0 and 13 vectors as columns */
     public void transform_14_by_0_13() {
-        double t = x_0 * x_14 + x_13 * y_14;
+        final double t = x_0 * x_14 + x_13 * y_14;
         y_14 = y_0 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_1_by_0_14() {
-        double t = x_0 * x_1 + x_14 * y_1;
+        final double t = x_0 * x_1 + x_14 * y_1;
         y_1 = y_0 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_2_by_0_14() {
-        double t = x_0 * x_2 + x_14 * y_2;
+        final double t = x_0 * x_2 + x_14 * y_2;
         y_2 = y_0 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_3_by_0_14() {
-        double t = x_0 * x_3 + x_14 * y_3;
+        final double t = x_0 * x_3 + x_14 * y_3;
         y_3 = y_0 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_4_by_0_14() {
-        double t = x_0 * x_4 + x_14 * y_4;
+        final double t = x_0 * x_4 + x_14 * y_4;
         y_4 = y_0 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_5_by_0_14() {
-        double t = x_0 * x_5 + x_14 * y_5;
+        final double t = x_0 * x_5 + x_14 * y_5;
         y_5 = y_0 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_6_by_0_14() {
-        double t = x_0 * x_6 + x_14 * y_6;
+        final double t = x_0 * x_6 + x_14 * y_6;
         y_6 = y_0 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_7_by_0_14() {
-        double t = x_0 * x_7 + x_14 * y_7;
+        final double t = x_0 * x_7 + x_14 * y_7;
         y_7 = y_0 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_8_by_0_14() {
-        double t = x_0 * x_8 + x_14 * y_8;
+        final double t = x_0 * x_8 + x_14 * y_8;
         y_8 = y_0 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_9_by_0_14() {
-        double t = x_0 * x_9 + x_14 * y_9;
+        final double t = x_0 * x_9 + x_14 * y_9;
         y_9 = y_0 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_10_by_0_14() {
-        double t = x_0 * x_10 + x_14 * y_10;
+        final double t = x_0 * x_10 + x_14 * y_10;
         y_10 = y_0 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_11_by_0_14() {
-        double t = x_0 * x_11 + x_14 * y_11;
+        final double t = x_0 * x_11 + x_14 * y_11;
         y_11 = y_0 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_12_by_0_14() {
-        double t = x_0 * x_12 + x_14 * y_12;
+        final double t = x_0 * x_12 + x_14 * y_12;
         y_12 = y_0 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 0 and 14 vectors as columns */
     public void transform_13_by_0_14() {
-        double t = x_0 * x_13 + x_14 * y_13;
+        final double t = x_0 * x_13 + x_14 * y_13;
         y_13 = y_0 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 0 vectors as columns */
     public void transform_14_by_1_0() {
-        double t = x_1 * x_14 + x_0 * y_14;
+        final double t = x_1 * x_14 + x_0 * y_14;
         y_14 = y_1 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 2 vectors as columns */
     public void transform_14_by_1_2() {
-        double t = x_1 * x_14 + x_2 * y_14;
+        final double t = x_1 * x_14 + x_2 * y_14;
         y_14 = y_1 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 3 vectors as columns */
     public void transform_14_by_1_3() {
-        double t = x_1 * x_14 + x_3 * y_14;
+        final double t = x_1 * x_14 + x_3 * y_14;
         y_14 = y_1 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 4 vectors as columns */
     public void transform_14_by_1_4() {
-        double t = x_1 * x_14 + x_4 * y_14;
+        final double t = x_1 * x_14 + x_4 * y_14;
         y_14 = y_1 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 5 vectors as columns */
     public void transform_14_by_1_5() {
-        double t = x_1 * x_14 + x_5 * y_14;
+        final double t = x_1 * x_14 + x_5 * y_14;
         y_14 = y_1 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 6 vectors as columns */
     public void transform_14_by_1_6() {
-        double t = x_1 * x_14 + x_6 * y_14;
+        final double t = x_1 * x_14 + x_6 * y_14;
         y_14 = y_1 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 7 vectors as columns */
     public void transform_14_by_1_7() {
-        double t = x_1 * x_14 + x_7 * y_14;
+        final double t = x_1 * x_14 + x_7 * y_14;
         y_14 = y_1 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 8 vectors as columns */
     public void transform_14_by_1_8() {
-        double t = x_1 * x_14 + x_8 * y_14;
+        final double t = x_1 * x_14 + x_8 * y_14;
         y_14 = y_1 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 9 vectors as columns */
     public void transform_14_by_1_9() {
-        double t = x_1 * x_14 + x_9 * y_14;
+        final double t = x_1 * x_14 + x_9 * y_14;
         y_14 = y_1 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 10 vectors as columns */
     public void transform_14_by_1_10() {
-        double t = x_1 * x_14 + x_10 * y_14;
+        final double t = x_1 * x_14 + x_10 * y_14;
         y_14 = y_1 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 11 vectors as columns */
     public void transform_14_by_1_11() {
-        double t = x_1 * x_14 + x_11 * y_14;
+        final double t = x_1 * x_14 + x_11 * y_14;
         y_14 = y_1 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 12 vectors as columns */
     public void transform_14_by_1_12() {
-        double t = x_1 * x_14 + x_12 * y_14;
+        final double t = x_1 * x_14 + x_12 * y_14;
         y_14 = y_1 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 1 and 13 vectors as columns */
     public void transform_14_by_1_13() {
-        double t = x_1 * x_14 + x_13 * y_14;
+        final double t = x_1 * x_14 + x_13 * y_14;
         y_14 = y_1 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_0_by_1_14() {
-        double t = x_1 * x_0 + x_14 * y_0;
+        final double t = x_1 * x_0 + x_14 * y_0;
         y_0 = y_1 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_2_by_1_14() {
-        double t = x_1 * x_2 + x_14 * y_2;
+        final double t = x_1 * x_2 + x_14 * y_2;
         y_2 = y_1 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_3_by_1_14() {
-        double t = x_1 * x_3 + x_14 * y_3;
+        final double t = x_1 * x_3 + x_14 * y_3;
         y_3 = y_1 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_4_by_1_14() {
-        double t = x_1 * x_4 + x_14 * y_4;
+        final double t = x_1 * x_4 + x_14 * y_4;
         y_4 = y_1 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_5_by_1_14() {
-        double t = x_1 * x_5 + x_14 * y_5;
+        final double t = x_1 * x_5 + x_14 * y_5;
         y_5 = y_1 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_6_by_1_14() {
-        double t = x_1 * x_6 + x_14 * y_6;
+        final double t = x_1 * x_6 + x_14 * y_6;
         y_6 = y_1 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_7_by_1_14() {
-        double t = x_1 * x_7 + x_14 * y_7;
+        final double t = x_1 * x_7 + x_14 * y_7;
         y_7 = y_1 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_8_by_1_14() {
-        double t = x_1 * x_8 + x_14 * y_8;
+        final double t = x_1 * x_8 + x_14 * y_8;
         y_8 = y_1 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_9_by_1_14() {
-        double t = x_1 * x_9 + x_14 * y_9;
+        final double t = x_1 * x_9 + x_14 * y_9;
         y_9 = y_1 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_10_by_1_14() {
-        double t = x_1 * x_10 + x_14 * y_10;
+        final double t = x_1 * x_10 + x_14 * y_10;
         y_10 = y_1 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_11_by_1_14() {
-        double t = x_1 * x_11 + x_14 * y_11;
+        final double t = x_1 * x_11 + x_14 * y_11;
         y_11 = y_1 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_12_by_1_14() {
-        double t = x_1 * x_12 + x_14 * y_12;
+        final double t = x_1 * x_12 + x_14 * y_12;
         y_12 = y_1 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 1 and 14 vectors as columns */
     public void transform_13_by_1_14() {
-        double t = x_1 * x_13 + x_14 * y_13;
+        final double t = x_1 * x_13 + x_14 * y_13;
         y_13 = y_1 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 0 vectors as columns */
     public void transform_14_by_2_0() {
-        double t = x_2 * x_14 + x_0 * y_14;
+        final double t = x_2 * x_14 + x_0 * y_14;
         y_14 = y_2 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 1 vectors as columns */
     public void transform_14_by_2_1() {
-        double t = x_2 * x_14 + x_1 * y_14;
+        final double t = x_2 * x_14 + x_1 * y_14;
         y_14 = y_2 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 3 vectors as columns */
     public void transform_14_by_2_3() {
-        double t = x_2 * x_14 + x_3 * y_14;
+        final double t = x_2 * x_14 + x_3 * y_14;
         y_14 = y_2 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 4 vectors as columns */
     public void transform_14_by_2_4() {
-        double t = x_2 * x_14 + x_4 * y_14;
+        final double t = x_2 * x_14 + x_4 * y_14;
         y_14 = y_2 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 5 vectors as columns */
     public void transform_14_by_2_5() {
-        double t = x_2 * x_14 + x_5 * y_14;
+        final double t = x_2 * x_14 + x_5 * y_14;
         y_14 = y_2 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 6 vectors as columns */
     public void transform_14_by_2_6() {
-        double t = x_2 * x_14 + x_6 * y_14;
+        final double t = x_2 * x_14 + x_6 * y_14;
         y_14 = y_2 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 7 vectors as columns */
     public void transform_14_by_2_7() {
-        double t = x_2 * x_14 + x_7 * y_14;
+        final double t = x_2 * x_14 + x_7 * y_14;
         y_14 = y_2 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 8 vectors as columns */
     public void transform_14_by_2_8() {
-        double t = x_2 * x_14 + x_8 * y_14;
+        final double t = x_2 * x_14 + x_8 * y_14;
         y_14 = y_2 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 9 vectors as columns */
     public void transform_14_by_2_9() {
-        double t = x_2 * x_14 + x_9 * y_14;
+        final double t = x_2 * x_14 + x_9 * y_14;
         y_14 = y_2 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 10 vectors as columns */
     public void transform_14_by_2_10() {
-        double t = x_2 * x_14 + x_10 * y_14;
+        final double t = x_2 * x_14 + x_10 * y_14;
         y_14 = y_2 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 11 vectors as columns */
     public void transform_14_by_2_11() {
-        double t = x_2 * x_14 + x_11 * y_14;
+        final double t = x_2 * x_14 + x_11 * y_14;
         y_14 = y_2 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 12 vectors as columns */
     public void transform_14_by_2_12() {
-        double t = x_2 * x_14 + x_12 * y_14;
+        final double t = x_2 * x_14 + x_12 * y_14;
         y_14 = y_2 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 2 and 13 vectors as columns */
     public void transform_14_by_2_13() {
-        double t = x_2 * x_14 + x_13 * y_14;
+        final double t = x_2 * x_14 + x_13 * y_14;
         y_14 = y_2 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_0_by_2_14() {
-        double t = x_2 * x_0 + x_14 * y_0;
+        final double t = x_2 * x_0 + x_14 * y_0;
         y_0 = y_2 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_1_by_2_14() {
-        double t = x_2 * x_1 + x_14 * y_1;
+        final double t = x_2 * x_1 + x_14 * y_1;
         y_1 = y_2 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_3_by_2_14() {
-        double t = x_2 * x_3 + x_14 * y_3;
+        final double t = x_2 * x_3 + x_14 * y_3;
         y_3 = y_2 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_4_by_2_14() {
-        double t = x_2 * x_4 + x_14 * y_4;
+        final double t = x_2 * x_4 + x_14 * y_4;
         y_4 = y_2 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_5_by_2_14() {
-        double t = x_2 * x_5 + x_14 * y_5;
+        final double t = x_2 * x_5 + x_14 * y_5;
         y_5 = y_2 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_6_by_2_14() {
-        double t = x_2 * x_6 + x_14 * y_6;
+        final double t = x_2 * x_6 + x_14 * y_6;
         y_6 = y_2 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_7_by_2_14() {
-        double t = x_2 * x_7 + x_14 * y_7;
+        final double t = x_2 * x_7 + x_14 * y_7;
         y_7 = y_2 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_8_by_2_14() {
-        double t = x_2 * x_8 + x_14 * y_8;
+        final double t = x_2 * x_8 + x_14 * y_8;
         y_8 = y_2 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_9_by_2_14() {
-        double t = x_2 * x_9 + x_14 * y_9;
+        final double t = x_2 * x_9 + x_14 * y_9;
         y_9 = y_2 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_10_by_2_14() {
-        double t = x_2 * x_10 + x_14 * y_10;
+        final double t = x_2 * x_10 + x_14 * y_10;
         y_10 = y_2 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_11_by_2_14() {
-        double t = x_2 * x_11 + x_14 * y_11;
+        final double t = x_2 * x_11 + x_14 * y_11;
         y_11 = y_2 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_12_by_2_14() {
-        double t = x_2 * x_12 + x_14 * y_12;
+        final double t = x_2 * x_12 + x_14 * y_12;
         y_12 = y_2 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 2 and 14 vectors as columns */
     public void transform_13_by_2_14() {
-        double t = x_2 * x_13 + x_14 * y_13;
+        final double t = x_2 * x_13 + x_14 * y_13;
         y_13 = y_2 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 0 vectors as columns */
     public void transform_14_by_3_0() {
-        double t = x_3 * x_14 + x_0 * y_14;
+        final double t = x_3 * x_14 + x_0 * y_14;
         y_14 = y_3 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 1 vectors as columns */
     public void transform_14_by_3_1() {
-        double t = x_3 * x_14 + x_1 * y_14;
+        final double t = x_3 * x_14 + x_1 * y_14;
         y_14 = y_3 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 2 vectors as columns */
     public void transform_14_by_3_2() {
-        double t = x_3 * x_14 + x_2 * y_14;
+        final double t = x_3 * x_14 + x_2 * y_14;
         y_14 = y_3 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 4 vectors as columns */
     public void transform_14_by_3_4() {
-        double t = x_3 * x_14 + x_4 * y_14;
+        final double t = x_3 * x_14 + x_4 * y_14;
         y_14 = y_3 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 5 vectors as columns */
     public void transform_14_by_3_5() {
-        double t = x_3 * x_14 + x_5 * y_14;
+        final double t = x_3 * x_14 + x_5 * y_14;
         y_14 = y_3 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 6 vectors as columns */
     public void transform_14_by_3_6() {
-        double t = x_3 * x_14 + x_6 * y_14;
+        final double t = x_3 * x_14 + x_6 * y_14;
         y_14 = y_3 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 7 vectors as columns */
     public void transform_14_by_3_7() {
-        double t = x_3 * x_14 + x_7 * y_14;
+        final double t = x_3 * x_14 + x_7 * y_14;
         y_14 = y_3 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 8 vectors as columns */
     public void transform_14_by_3_8() {
-        double t = x_3 * x_14 + x_8 * y_14;
+        final double t = x_3 * x_14 + x_8 * y_14;
         y_14 = y_3 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 9 vectors as columns */
     public void transform_14_by_3_9() {
-        double t = x_3 * x_14 + x_9 * y_14;
+        final double t = x_3 * x_14 + x_9 * y_14;
         y_14 = y_3 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 10 vectors as columns */
     public void transform_14_by_3_10() {
-        double t = x_3 * x_14 + x_10 * y_14;
+        final double t = x_3 * x_14 + x_10 * y_14;
         y_14 = y_3 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 11 vectors as columns */
     public void transform_14_by_3_11() {
-        double t = x_3 * x_14 + x_11 * y_14;
+        final double t = x_3 * x_14 + x_11 * y_14;
         y_14 = y_3 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 12 vectors as columns */
     public void transform_14_by_3_12() {
-        double t = x_3 * x_14 + x_12 * y_14;
+        final double t = x_3 * x_14 + x_12 * y_14;
         y_14 = y_3 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 3 and 13 vectors as columns */
     public void transform_14_by_3_13() {
-        double t = x_3 * x_14 + x_13 * y_14;
+        final double t = x_3 * x_14 + x_13 * y_14;
         y_14 = y_3 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_0_by_3_14() {
-        double t = x_3 * x_0 + x_14 * y_0;
+        final double t = x_3 * x_0 + x_14 * y_0;
         y_0 = y_3 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_1_by_3_14() {
-        double t = x_3 * x_1 + x_14 * y_1;
+        final double t = x_3 * x_1 + x_14 * y_1;
         y_1 = y_3 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_2_by_3_14() {
-        double t = x_3 * x_2 + x_14 * y_2;
+        final double t = x_3 * x_2 + x_14 * y_2;
         y_2 = y_3 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_4_by_3_14() {
-        double t = x_3 * x_4 + x_14 * y_4;
+        final double t = x_3 * x_4 + x_14 * y_4;
         y_4 = y_3 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_5_by_3_14() {
-        double t = x_3 * x_5 + x_14 * y_5;
+        final double t = x_3 * x_5 + x_14 * y_5;
         y_5 = y_3 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_6_by_3_14() {
-        double t = x_3 * x_6 + x_14 * y_6;
+        final double t = x_3 * x_6 + x_14 * y_6;
         y_6 = y_3 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_7_by_3_14() {
-        double t = x_3 * x_7 + x_14 * y_7;
+        final double t = x_3 * x_7 + x_14 * y_7;
         y_7 = y_3 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_8_by_3_14() {
-        double t = x_3 * x_8 + x_14 * y_8;
+        final double t = x_3 * x_8 + x_14 * y_8;
         y_8 = y_3 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_9_by_3_14() {
-        double t = x_3 * x_9 + x_14 * y_9;
+        final double t = x_3 * x_9 + x_14 * y_9;
         y_9 = y_3 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_10_by_3_14() {
-        double t = x_3 * x_10 + x_14 * y_10;
+        final double t = x_3 * x_10 + x_14 * y_10;
         y_10 = y_3 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_11_by_3_14() {
-        double t = x_3 * x_11 + x_14 * y_11;
+        final double t = x_3 * x_11 + x_14 * y_11;
         y_11 = y_3 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_12_by_3_14() {
-        double t = x_3 * x_12 + x_14 * y_12;
+        final double t = x_3 * x_12 + x_14 * y_12;
         y_12 = y_3 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 3 and 14 vectors as columns */
     public void transform_13_by_3_14() {
-        double t = x_3 * x_13 + x_14 * y_13;
+        final double t = x_3 * x_13 + x_14 * y_13;
         y_13 = y_3 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 0 vectors as columns */
     public void transform_14_by_4_0() {
-        double t = x_4 * x_14 + x_0 * y_14;
+        final double t = x_4 * x_14 + x_0 * y_14;
         y_14 = y_4 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 1 vectors as columns */
     public void transform_14_by_4_1() {
-        double t = x_4 * x_14 + x_1 * y_14;
+        final double t = x_4 * x_14 + x_1 * y_14;
         y_14 = y_4 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 2 vectors as columns */
     public void transform_14_by_4_2() {
-        double t = x_4 * x_14 + x_2 * y_14;
+        final double t = x_4 * x_14 + x_2 * y_14;
         y_14 = y_4 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 3 vectors as columns */
     public void transform_14_by_4_3() {
-        double t = x_4 * x_14 + x_3 * y_14;
+        final double t = x_4 * x_14 + x_3 * y_14;
         y_14 = y_4 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 5 vectors as columns */
     public void transform_14_by_4_5() {
-        double t = x_4 * x_14 + x_5 * y_14;
+        final double t = x_4 * x_14 + x_5 * y_14;
         y_14 = y_4 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 6 vectors as columns */
     public void transform_14_by_4_6() {
-        double t = x_4 * x_14 + x_6 * y_14;
+        final double t = x_4 * x_14 + x_6 * y_14;
         y_14 = y_4 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 7 vectors as columns */
     public void transform_14_by_4_7() {
-        double t = x_4 * x_14 + x_7 * y_14;
+        final double t = x_4 * x_14 + x_7 * y_14;
         y_14 = y_4 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 8 vectors as columns */
     public void transform_14_by_4_8() {
-        double t = x_4 * x_14 + x_8 * y_14;
+        final double t = x_4 * x_14 + x_8 * y_14;
         y_14 = y_4 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 9 vectors as columns */
     public void transform_14_by_4_9() {
-        double t = x_4 * x_14 + x_9 * y_14;
+        final double t = x_4 * x_14 + x_9 * y_14;
         y_14 = y_4 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 10 vectors as columns */
     public void transform_14_by_4_10() {
-        double t = x_4 * x_14 + x_10 * y_14;
+        final double t = x_4 * x_14 + x_10 * y_14;
         y_14 = y_4 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 11 vectors as columns */
     public void transform_14_by_4_11() {
-        double t = x_4 * x_14 + x_11 * y_14;
+        final double t = x_4 * x_14 + x_11 * y_14;
         y_14 = y_4 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 12 vectors as columns */
     public void transform_14_by_4_12() {
-        double t = x_4 * x_14 + x_12 * y_14;
+        final double t = x_4 * x_14 + x_12 * y_14;
         y_14 = y_4 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 4 and 13 vectors as columns */
     public void transform_14_by_4_13() {
-        double t = x_4 * x_14 + x_13 * y_14;
+        final double t = x_4 * x_14 + x_13 * y_14;
         y_14 = y_4 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_0_by_4_14() {
-        double t = x_4 * x_0 + x_14 * y_0;
+        final double t = x_4 * x_0 + x_14 * y_0;
         y_0 = y_4 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_1_by_4_14() {
-        double t = x_4 * x_1 + x_14 * y_1;
+        final double t = x_4 * x_1 + x_14 * y_1;
         y_1 = y_4 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_2_by_4_14() {
-        double t = x_4 * x_2 + x_14 * y_2;
+        final double t = x_4 * x_2 + x_14 * y_2;
         y_2 = y_4 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_3_by_4_14() {
-        double t = x_4 * x_3 + x_14 * y_3;
+        final double t = x_4 * x_3 + x_14 * y_3;
         y_3 = y_4 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_5_by_4_14() {
-        double t = x_4 * x_5 + x_14 * y_5;
+        final double t = x_4 * x_5 + x_14 * y_5;
         y_5 = y_4 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_6_by_4_14() {
-        double t = x_4 * x_6 + x_14 * y_6;
+        final double t = x_4 * x_6 + x_14 * y_6;
         y_6 = y_4 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_7_by_4_14() {
-        double t = x_4 * x_7 + x_14 * y_7;
+        final double t = x_4 * x_7 + x_14 * y_7;
         y_7 = y_4 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_8_by_4_14() {
-        double t = x_4 * x_8 + x_14 * y_8;
+        final double t = x_4 * x_8 + x_14 * y_8;
         y_8 = y_4 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_9_by_4_14() {
-        double t = x_4 * x_9 + x_14 * y_9;
+        final double t = x_4 * x_9 + x_14 * y_9;
         y_9 = y_4 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_10_by_4_14() {
-        double t = x_4 * x_10 + x_14 * y_10;
+        final double t = x_4 * x_10 + x_14 * y_10;
         y_10 = y_4 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_11_by_4_14() {
-        double t = x_4 * x_11 + x_14 * y_11;
+        final double t = x_4 * x_11 + x_14 * y_11;
         y_11 = y_4 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_12_by_4_14() {
-        double t = x_4 * x_12 + x_14 * y_12;
+        final double t = x_4 * x_12 + x_14 * y_12;
         y_12 = y_4 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 4 and 14 vectors as columns */
     public void transform_13_by_4_14() {
-        double t = x_4 * x_13 + x_14 * y_13;
+        final double t = x_4 * x_13 + x_14 * y_13;
         y_13 = y_4 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 0 vectors as columns */
     public void transform_14_by_5_0() {
-        double t = x_5 * x_14 + x_0 * y_14;
+        final double t = x_5 * x_14 + x_0 * y_14;
         y_14 = y_5 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 1 vectors as columns */
     public void transform_14_by_5_1() {
-        double t = x_5 * x_14 + x_1 * y_14;
+        final double t = x_5 * x_14 + x_1 * y_14;
         y_14 = y_5 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 2 vectors as columns */
     public void transform_14_by_5_2() {
-        double t = x_5 * x_14 + x_2 * y_14;
+        final double t = x_5 * x_14 + x_2 * y_14;
         y_14 = y_5 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 3 vectors as columns */
     public void transform_14_by_5_3() {
-        double t = x_5 * x_14 + x_3 * y_14;
+        final double t = x_5 * x_14 + x_3 * y_14;
         y_14 = y_5 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 4 vectors as columns */
     public void transform_14_by_5_4() {
-        double t = x_5 * x_14 + x_4 * y_14;
+        final double t = x_5 * x_14 + x_4 * y_14;
         y_14 = y_5 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 6 vectors as columns */
     public void transform_14_by_5_6() {
-        double t = x_5 * x_14 + x_6 * y_14;
+        final double t = x_5 * x_14 + x_6 * y_14;
         y_14 = y_5 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 7 vectors as columns */
     public void transform_14_by_5_7() {
-        double t = x_5 * x_14 + x_7 * y_14;
+        final double t = x_5 * x_14 + x_7 * y_14;
         y_14 = y_5 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 8 vectors as columns */
     public void transform_14_by_5_8() {
-        double t = x_5 * x_14 + x_8 * y_14;
+        final double t = x_5 * x_14 + x_8 * y_14;
         y_14 = y_5 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 9 vectors as columns */
     public void transform_14_by_5_9() {
-        double t = x_5 * x_14 + x_9 * y_14;
+        final double t = x_5 * x_14 + x_9 * y_14;
         y_14 = y_5 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 10 vectors as columns */
     public void transform_14_by_5_10() {
-        double t = x_5 * x_14 + x_10 * y_14;
+        final double t = x_5 * x_14 + x_10 * y_14;
         y_14 = y_5 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 11 vectors as columns */
     public void transform_14_by_5_11() {
-        double t = x_5 * x_14 + x_11 * y_14;
+        final double t = x_5 * x_14 + x_11 * y_14;
         y_14 = y_5 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 12 vectors as columns */
     public void transform_14_by_5_12() {
-        double t = x_5 * x_14 + x_12 * y_14;
+        final double t = x_5 * x_14 + x_12 * y_14;
         y_14 = y_5 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 5 and 13 vectors as columns */
     public void transform_14_by_5_13() {
-        double t = x_5 * x_14 + x_13 * y_14;
+        final double t = x_5 * x_14 + x_13 * y_14;
         y_14 = y_5 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_0_by_5_14() {
-        double t = x_5 * x_0 + x_14 * y_0;
+        final double t = x_5 * x_0 + x_14 * y_0;
         y_0 = y_5 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_1_by_5_14() {
-        double t = x_5 * x_1 + x_14 * y_1;
+        final double t = x_5 * x_1 + x_14 * y_1;
         y_1 = y_5 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_2_by_5_14() {
-        double t = x_5 * x_2 + x_14 * y_2;
+        final double t = x_5 * x_2 + x_14 * y_2;
         y_2 = y_5 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_3_by_5_14() {
-        double t = x_5 * x_3 + x_14 * y_3;
+        final double t = x_5 * x_3 + x_14 * y_3;
         y_3 = y_5 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_4_by_5_14() {
-        double t = x_5 * x_4 + x_14 * y_4;
+        final double t = x_5 * x_4 + x_14 * y_4;
         y_4 = y_5 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_6_by_5_14() {
-        double t = x_5 * x_6 + x_14 * y_6;
+        final double t = x_5 * x_6 + x_14 * y_6;
         y_6 = y_5 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_7_by_5_14() {
-        double t = x_5 * x_7 + x_14 * y_7;
+        final double t = x_5 * x_7 + x_14 * y_7;
         y_7 = y_5 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_8_by_5_14() {
-        double t = x_5 * x_8 + x_14 * y_8;
+        final double t = x_5 * x_8 + x_14 * y_8;
         y_8 = y_5 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_9_by_5_14() {
-        double t = x_5 * x_9 + x_14 * y_9;
+        final double t = x_5 * x_9 + x_14 * y_9;
         y_9 = y_5 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_10_by_5_14() {
-        double t = x_5 * x_10 + x_14 * y_10;
+        final double t = x_5 * x_10 + x_14 * y_10;
         y_10 = y_5 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_11_by_5_14() {
-        double t = x_5 * x_11 + x_14 * y_11;
+        final double t = x_5 * x_11 + x_14 * y_11;
         y_11 = y_5 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_12_by_5_14() {
-        double t = x_5 * x_12 + x_14 * y_12;
+        final double t = x_5 * x_12 + x_14 * y_12;
         y_12 = y_5 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 5 and 14 vectors as columns */
     public void transform_13_by_5_14() {
-        double t = x_5 * x_13 + x_14 * y_13;
+        final double t = x_5 * x_13 + x_14 * y_13;
         y_13 = y_5 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 0 vectors as columns */
     public void transform_14_by_6_0() {
-        double t = x_6 * x_14 + x_0 * y_14;
+        final double t = x_6 * x_14 + x_0 * y_14;
         y_14 = y_6 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 1 vectors as columns */
     public void transform_14_by_6_1() {
-        double t = x_6 * x_14 + x_1 * y_14;
+        final double t = x_6 * x_14 + x_1 * y_14;
         y_14 = y_6 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 2 vectors as columns */
     public void transform_14_by_6_2() {
-        double t = x_6 * x_14 + x_2 * y_14;
+        final double t = x_6 * x_14 + x_2 * y_14;
         y_14 = y_6 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 3 vectors as columns */
     public void transform_14_by_6_3() {
-        double t = x_6 * x_14 + x_3 * y_14;
+        final double t = x_6 * x_14 + x_3 * y_14;
         y_14 = y_6 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 4 vectors as columns */
     public void transform_14_by_6_4() {
-        double t = x_6 * x_14 + x_4 * y_14;
+        final double t = x_6 * x_14 + x_4 * y_14;
         y_14 = y_6 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 5 vectors as columns */
     public void transform_14_by_6_5() {
-        double t = x_6 * x_14 + x_5 * y_14;
+        final double t = x_6 * x_14 + x_5 * y_14;
         y_14 = y_6 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 7 vectors as columns */
     public void transform_14_by_6_7() {
-        double t = x_6 * x_14 + x_7 * y_14;
+        final double t = x_6 * x_14 + x_7 * y_14;
         y_14 = y_6 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 8 vectors as columns */
     public void transform_14_by_6_8() {
-        double t = x_6 * x_14 + x_8 * y_14;
+        final double t = x_6 * x_14 + x_8 * y_14;
         y_14 = y_6 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 9 vectors as columns */
     public void transform_14_by_6_9() {
-        double t = x_6 * x_14 + x_9 * y_14;
+        final double t = x_6 * x_14 + x_9 * y_14;
         y_14 = y_6 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 10 vectors as columns */
     public void transform_14_by_6_10() {
-        double t = x_6 * x_14 + x_10 * y_14;
+        final double t = x_6 * x_14 + x_10 * y_14;
         y_14 = y_6 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 11 vectors as columns */
     public void transform_14_by_6_11() {
-        double t = x_6 * x_14 + x_11 * y_14;
+        final double t = x_6 * x_14 + x_11 * y_14;
         y_14 = y_6 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 12 vectors as columns */
     public void transform_14_by_6_12() {
-        double t = x_6 * x_14 + x_12 * y_14;
+        final double t = x_6 * x_14 + x_12 * y_14;
         y_14 = y_6 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 6 and 13 vectors as columns */
     public void transform_14_by_6_13() {
-        double t = x_6 * x_14 + x_13 * y_14;
+        final double t = x_6 * x_14 + x_13 * y_14;
         y_14 = y_6 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_0_by_6_14() {
-        double t = x_6 * x_0 + x_14 * y_0;
+        final double t = x_6 * x_0 + x_14 * y_0;
         y_0 = y_6 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_1_by_6_14() {
-        double t = x_6 * x_1 + x_14 * y_1;
+        final double t = x_6 * x_1 + x_14 * y_1;
         y_1 = y_6 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_2_by_6_14() {
-        double t = x_6 * x_2 + x_14 * y_2;
+        final double t = x_6 * x_2 + x_14 * y_2;
         y_2 = y_6 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_3_by_6_14() {
-        double t = x_6 * x_3 + x_14 * y_3;
+        final double t = x_6 * x_3 + x_14 * y_3;
         y_3 = y_6 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_4_by_6_14() {
-        double t = x_6 * x_4 + x_14 * y_4;
+        final double t = x_6 * x_4 + x_14 * y_4;
         y_4 = y_6 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_5_by_6_14() {
-        double t = x_6 * x_5 + x_14 * y_5;
+        final double t = x_6 * x_5 + x_14 * y_5;
         y_5 = y_6 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_7_by_6_14() {
-        double t = x_6 * x_7 + x_14 * y_7;
+        final double t = x_6 * x_7 + x_14 * y_7;
         y_7 = y_6 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_8_by_6_14() {
-        double t = x_6 * x_8 + x_14 * y_8;
+        final double t = x_6 * x_8 + x_14 * y_8;
         y_8 = y_6 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_9_by_6_14() {
-        double t = x_6 * x_9 + x_14 * y_9;
+        final double t = x_6 * x_9 + x_14 * y_9;
         y_9 = y_6 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_10_by_6_14() {
-        double t = x_6 * x_10 + x_14 * y_10;
+        final double t = x_6 * x_10 + x_14 * y_10;
         y_10 = y_6 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_11_by_6_14() {
-        double t = x_6 * x_11 + x_14 * y_11;
+        final double t = x_6 * x_11 + x_14 * y_11;
         y_11 = y_6 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_12_by_6_14() {
-        double t = x_6 * x_12 + x_14 * y_12;
+        final double t = x_6 * x_12 + x_14 * y_12;
         y_12 = y_6 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 6 and 14 vectors as columns */
     public void transform_13_by_6_14() {
-        double t = x_6 * x_13 + x_14 * y_13;
+        final double t = x_6 * x_13 + x_14 * y_13;
         y_13 = y_6 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 0 vectors as columns */
     public void transform_14_by_7_0() {
-        double t = x_7 * x_14 + x_0 * y_14;
+        final double t = x_7 * x_14 + x_0 * y_14;
         y_14 = y_7 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 1 vectors as columns */
     public void transform_14_by_7_1() {
-        double t = x_7 * x_14 + x_1 * y_14;
+        final double t = x_7 * x_14 + x_1 * y_14;
         y_14 = y_7 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 2 vectors as columns */
     public void transform_14_by_7_2() {
-        double t = x_7 * x_14 + x_2 * y_14;
+        final double t = x_7 * x_14 + x_2 * y_14;
         y_14 = y_7 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 3 vectors as columns */
     public void transform_14_by_7_3() {
-        double t = x_7 * x_14 + x_3 * y_14;
+        final double t = x_7 * x_14 + x_3 * y_14;
         y_14 = y_7 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 4 vectors as columns */
     public void transform_14_by_7_4() {
-        double t = x_7 * x_14 + x_4 * y_14;
+        final double t = x_7 * x_14 + x_4 * y_14;
         y_14 = y_7 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 5 vectors as columns */
     public void transform_14_by_7_5() {
-        double t = x_7 * x_14 + x_5 * y_14;
+        final double t = x_7 * x_14 + x_5 * y_14;
         y_14 = y_7 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 6 vectors as columns */
     public void transform_14_by_7_6() {
-        double t = x_7 * x_14 + x_6 * y_14;
+        final double t = x_7 * x_14 + x_6 * y_14;
         y_14 = y_7 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 8 vectors as columns */
     public void transform_14_by_7_8() {
-        double t = x_7 * x_14 + x_8 * y_14;
+        final double t = x_7 * x_14 + x_8 * y_14;
         y_14 = y_7 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 9 vectors as columns */
     public void transform_14_by_7_9() {
-        double t = x_7 * x_14 + x_9 * y_14;
+        final double t = x_7 * x_14 + x_9 * y_14;
         y_14 = y_7 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 10 vectors as columns */
     public void transform_14_by_7_10() {
-        double t = x_7 * x_14 + x_10 * y_14;
+        final double t = x_7 * x_14 + x_10 * y_14;
         y_14 = y_7 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 11 vectors as columns */
     public void transform_14_by_7_11() {
-        double t = x_7 * x_14 + x_11 * y_14;
+        final double t = x_7 * x_14 + x_11 * y_14;
         y_14 = y_7 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 12 vectors as columns */
     public void transform_14_by_7_12() {
-        double t = x_7 * x_14 + x_12 * y_14;
+        final double t = x_7 * x_14 + x_12 * y_14;
         y_14 = y_7 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 7 and 13 vectors as columns */
     public void transform_14_by_7_13() {
-        double t = x_7 * x_14 + x_13 * y_14;
+        final double t = x_7 * x_14 + x_13 * y_14;
         y_14 = y_7 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_0_by_7_14() {
-        double t = x_7 * x_0 + x_14 * y_0;
+        final double t = x_7 * x_0 + x_14 * y_0;
         y_0 = y_7 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_1_by_7_14() {
-        double t = x_7 * x_1 + x_14 * y_1;
+        final double t = x_7 * x_1 + x_14 * y_1;
         y_1 = y_7 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_2_by_7_14() {
-        double t = x_7 * x_2 + x_14 * y_2;
+        final double t = x_7 * x_2 + x_14 * y_2;
         y_2 = y_7 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_3_by_7_14() {
-        double t = x_7 * x_3 + x_14 * y_3;
+        final double t = x_7 * x_3 + x_14 * y_3;
         y_3 = y_7 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_4_by_7_14() {
-        double t = x_7 * x_4 + x_14 * y_4;
+        final double t = x_7 * x_4 + x_14 * y_4;
         y_4 = y_7 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_5_by_7_14() {
-        double t = x_7 * x_5 + x_14 * y_5;
+        final double t = x_7 * x_5 + x_14 * y_5;
         y_5 = y_7 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_6_by_7_14() {
-        double t = x_7 * x_6 + x_14 * y_6;
+        final double t = x_7 * x_6 + x_14 * y_6;
         y_6 = y_7 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_8_by_7_14() {
-        double t = x_7 * x_8 + x_14 * y_8;
+        final double t = x_7 * x_8 + x_14 * y_8;
         y_8 = y_7 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_9_by_7_14() {
-        double t = x_7 * x_9 + x_14 * y_9;
+        final double t = x_7 * x_9 + x_14 * y_9;
         y_9 = y_7 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_10_by_7_14() {
-        double t = x_7 * x_10 + x_14 * y_10;
+        final double t = x_7 * x_10 + x_14 * y_10;
         y_10 = y_7 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_11_by_7_14() {
-        double t = x_7 * x_11 + x_14 * y_11;
+        final double t = x_7 * x_11 + x_14 * y_11;
         y_11 = y_7 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_12_by_7_14() {
-        double t = x_7 * x_12 + x_14 * y_12;
+        final double t = x_7 * x_12 + x_14 * y_12;
         y_12 = y_7 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 7 and 14 vectors as columns */
     public void transform_13_by_7_14() {
-        double t = x_7 * x_13 + x_14 * y_13;
+        final double t = x_7 * x_13 + x_14 * y_13;
         y_13 = y_7 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 0 vectors as columns */
     public void transform_14_by_8_0() {
-        double t = x_8 * x_14 + x_0 * y_14;
+        final double t = x_8 * x_14 + x_0 * y_14;
         y_14 = y_8 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 1 vectors as columns */
     public void transform_14_by_8_1() {
-        double t = x_8 * x_14 + x_1 * y_14;
+        final double t = x_8 * x_14 + x_1 * y_14;
         y_14 = y_8 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 2 vectors as columns */
     public void transform_14_by_8_2() {
-        double t = x_8 * x_14 + x_2 * y_14;
+        final double t = x_8 * x_14 + x_2 * y_14;
         y_14 = y_8 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 3 vectors as columns */
     public void transform_14_by_8_3() {
-        double t = x_8 * x_14 + x_3 * y_14;
+        final double t = x_8 * x_14 + x_3 * y_14;
         y_14 = y_8 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 4 vectors as columns */
     public void transform_14_by_8_4() {
-        double t = x_8 * x_14 + x_4 * y_14;
+        final double t = x_8 * x_14 + x_4 * y_14;
         y_14 = y_8 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 5 vectors as columns */
     public void transform_14_by_8_5() {
-        double t = x_8 * x_14 + x_5 * y_14;
+        final double t = x_8 * x_14 + x_5 * y_14;
         y_14 = y_8 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 6 vectors as columns */
     public void transform_14_by_8_6() {
-        double t = x_8 * x_14 + x_6 * y_14;
+        final double t = x_8 * x_14 + x_6 * y_14;
         y_14 = y_8 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 7 vectors as columns */
     public void transform_14_by_8_7() {
-        double t = x_8 * x_14 + x_7 * y_14;
+        final double t = x_8 * x_14 + x_7 * y_14;
         y_14 = y_8 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 9 vectors as columns */
     public void transform_14_by_8_9() {
-        double t = x_8 * x_14 + x_9 * y_14;
+        final double t = x_8 * x_14 + x_9 * y_14;
         y_14 = y_8 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 10 vectors as columns */
     public void transform_14_by_8_10() {
-        double t = x_8 * x_14 + x_10 * y_14;
+        final double t = x_8 * x_14 + x_10 * y_14;
         y_14 = y_8 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 11 vectors as columns */
     public void transform_14_by_8_11() {
-        double t = x_8 * x_14 + x_11 * y_14;
+        final double t = x_8 * x_14 + x_11 * y_14;
         y_14 = y_8 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 12 vectors as columns */
     public void transform_14_by_8_12() {
-        double t = x_8 * x_14 + x_12 * y_14;
+        final double t = x_8 * x_14 + x_12 * y_14;
         y_14 = y_8 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 8 and 13 vectors as columns */
     public void transform_14_by_8_13() {
-        double t = x_8 * x_14 + x_13 * y_14;
+        final double t = x_8 * x_14 + x_13 * y_14;
         y_14 = y_8 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_0_by_8_14() {
-        double t = x_8 * x_0 + x_14 * y_0;
+        final double t = x_8 * x_0 + x_14 * y_0;
         y_0 = y_8 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_1_by_8_14() {
-        double t = x_8 * x_1 + x_14 * y_1;
+        final double t = x_8 * x_1 + x_14 * y_1;
         y_1 = y_8 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_2_by_8_14() {
-        double t = x_8 * x_2 + x_14 * y_2;
+        final double t = x_8 * x_2 + x_14 * y_2;
         y_2 = y_8 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_3_by_8_14() {
-        double t = x_8 * x_3 + x_14 * y_3;
+        final double t = x_8 * x_3 + x_14 * y_3;
         y_3 = y_8 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_4_by_8_14() {
-        double t = x_8 * x_4 + x_14 * y_4;
+        final double t = x_8 * x_4 + x_14 * y_4;
         y_4 = y_8 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_5_by_8_14() {
-        double t = x_8 * x_5 + x_14 * y_5;
+        final double t = x_8 * x_5 + x_14 * y_5;
         y_5 = y_8 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_6_by_8_14() {
-        double t = x_8 * x_6 + x_14 * y_6;
+        final double t = x_8 * x_6 + x_14 * y_6;
         y_6 = y_8 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_7_by_8_14() {
-        double t = x_8 * x_7 + x_14 * y_7;
+        final double t = x_8 * x_7 + x_14 * y_7;
         y_7 = y_8 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_9_by_8_14() {
-        double t = x_8 * x_9 + x_14 * y_9;
+        final double t = x_8 * x_9 + x_14 * y_9;
         y_9 = y_8 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_10_by_8_14() {
-        double t = x_8 * x_10 + x_14 * y_10;
+        final double t = x_8 * x_10 + x_14 * y_10;
         y_10 = y_8 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_11_by_8_14() {
-        double t = x_8 * x_11 + x_14 * y_11;
+        final double t = x_8 * x_11 + x_14 * y_11;
         y_11 = y_8 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_12_by_8_14() {
-        double t = x_8 * x_12 + x_14 * y_12;
+        final double t = x_8 * x_12 + x_14 * y_12;
         y_12 = y_8 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 8 and 14 vectors as columns */
     public void transform_13_by_8_14() {
-        double t = x_8 * x_13 + x_14 * y_13;
+        final double t = x_8 * x_13 + x_14 * y_13;
         y_13 = y_8 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 0 vectors as columns */
     public void transform_14_by_9_0() {
-        double t = x_9 * x_14 + x_0 * y_14;
+        final double t = x_9 * x_14 + x_0 * y_14;
         y_14 = y_9 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 1 vectors as columns */
     public void transform_14_by_9_1() {
-        double t = x_9 * x_14 + x_1 * y_14;
+        final double t = x_9 * x_14 + x_1 * y_14;
         y_14 = y_9 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 2 vectors as columns */
     public void transform_14_by_9_2() {
-        double t = x_9 * x_14 + x_2 * y_14;
+        final double t = x_9 * x_14 + x_2 * y_14;
         y_14 = y_9 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 3 vectors as columns */
     public void transform_14_by_9_3() {
-        double t = x_9 * x_14 + x_3 * y_14;
+        final double t = x_9 * x_14 + x_3 * y_14;
         y_14 = y_9 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 4 vectors as columns */
     public void transform_14_by_9_4() {
-        double t = x_9 * x_14 + x_4 * y_14;
+        final double t = x_9 * x_14 + x_4 * y_14;
         y_14 = y_9 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 5 vectors as columns */
     public void transform_14_by_9_5() {
-        double t = x_9 * x_14 + x_5 * y_14;
+        final double t = x_9 * x_14 + x_5 * y_14;
         y_14 = y_9 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 6 vectors as columns */
     public void transform_14_by_9_6() {
-        double t = x_9 * x_14 + x_6 * y_14;
+        final double t = x_9 * x_14 + x_6 * y_14;
         y_14 = y_9 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 7 vectors as columns */
     public void transform_14_by_9_7() {
-        double t = x_9 * x_14 + x_7 * y_14;
+        final double t = x_9 * x_14 + x_7 * y_14;
         y_14 = y_9 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 8 vectors as columns */
     public void transform_14_by_9_8() {
-        double t = x_9 * x_14 + x_8 * y_14;
+        final double t = x_9 * x_14 + x_8 * y_14;
         y_14 = y_9 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 10 vectors as columns */
     public void transform_14_by_9_10() {
-        double t = x_9 * x_14 + x_10 * y_14;
+        final double t = x_9 * x_14 + x_10 * y_14;
         y_14 = y_9 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 11 vectors as columns */
     public void transform_14_by_9_11() {
-        double t = x_9 * x_14 + x_11 * y_14;
+        final double t = x_9 * x_14 + x_11 * y_14;
         y_14 = y_9 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 12 vectors as columns */
     public void transform_14_by_9_12() {
-        double t = x_9 * x_14 + x_12 * y_14;
+        final double t = x_9 * x_14 + x_12 * y_14;
         y_14 = y_9 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 9 and 13 vectors as columns */
     public void transform_14_by_9_13() {
-        double t = x_9 * x_14 + x_13 * y_14;
+        final double t = x_9 * x_14 + x_13 * y_14;
         y_14 = y_9 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_0_by_9_14() {
-        double t = x_9 * x_0 + x_14 * y_0;
+        final double t = x_9 * x_0 + x_14 * y_0;
         y_0 = y_9 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_1_by_9_14() {
-        double t = x_9 * x_1 + x_14 * y_1;
+        final double t = x_9 * x_1 + x_14 * y_1;
         y_1 = y_9 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_2_by_9_14() {
-        double t = x_9 * x_2 + x_14 * y_2;
+        final double t = x_9 * x_2 + x_14 * y_2;
         y_2 = y_9 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_3_by_9_14() {
-        double t = x_9 * x_3 + x_14 * y_3;
+        final double t = x_9 * x_3 + x_14 * y_3;
         y_3 = y_9 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_4_by_9_14() {
-        double t = x_9 * x_4 + x_14 * y_4;
+        final double t = x_9 * x_4 + x_14 * y_4;
         y_4 = y_9 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_5_by_9_14() {
-        double t = x_9 * x_5 + x_14 * y_5;
+        final double t = x_9 * x_5 + x_14 * y_5;
         y_5 = y_9 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_6_by_9_14() {
-        double t = x_9 * x_6 + x_14 * y_6;
+        final double t = x_9 * x_6 + x_14 * y_6;
         y_6 = y_9 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_7_by_9_14() {
-        double t = x_9 * x_7 + x_14 * y_7;
+        final double t = x_9 * x_7 + x_14 * y_7;
         y_7 = y_9 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_8_by_9_14() {
-        double t = x_9 * x_8 + x_14 * y_8;
+        final double t = x_9 * x_8 + x_14 * y_8;
         y_8 = y_9 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_10_by_9_14() {
-        double t = x_9 * x_10 + x_14 * y_10;
+        final double t = x_9 * x_10 + x_14 * y_10;
         y_10 = y_9 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_11_by_9_14() {
-        double t = x_9 * x_11 + x_14 * y_11;
+        final double t = x_9 * x_11 + x_14 * y_11;
         y_11 = y_9 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_12_by_9_14() {
-        double t = x_9 * x_12 + x_14 * y_12;
+        final double t = x_9 * x_12 + x_14 * y_12;
         y_12 = y_9 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 9 and 14 vectors as columns */
     public void transform_13_by_9_14() {
-        double t = x_9 * x_13 + x_14 * y_13;
+        final double t = x_9 * x_13 + x_14 * y_13;
         y_13 = y_9 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 0 vectors as columns */
     public void transform_14_by_10_0() {
-        double t = x_10 * x_14 + x_0 * y_14;
+        final double t = x_10 * x_14 + x_0 * y_14;
         y_14 = y_10 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 1 vectors as columns */
     public void transform_14_by_10_1() {
-        double t = x_10 * x_14 + x_1 * y_14;
+        final double t = x_10 * x_14 + x_1 * y_14;
         y_14 = y_10 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 2 vectors as columns */
     public void transform_14_by_10_2() {
-        double t = x_10 * x_14 + x_2 * y_14;
+        final double t = x_10 * x_14 + x_2 * y_14;
         y_14 = y_10 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 3 vectors as columns */
     public void transform_14_by_10_3() {
-        double t = x_10 * x_14 + x_3 * y_14;
+        final double t = x_10 * x_14 + x_3 * y_14;
         y_14 = y_10 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 4 vectors as columns */
     public void transform_14_by_10_4() {
-        double t = x_10 * x_14 + x_4 * y_14;
+        final double t = x_10 * x_14 + x_4 * y_14;
         y_14 = y_10 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 5 vectors as columns */
     public void transform_14_by_10_5() {
-        double t = x_10 * x_14 + x_5 * y_14;
+        final double t = x_10 * x_14 + x_5 * y_14;
         y_14 = y_10 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 6 vectors as columns */
     public void transform_14_by_10_6() {
-        double t = x_10 * x_14 + x_6 * y_14;
+        final double t = x_10 * x_14 + x_6 * y_14;
         y_14 = y_10 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 7 vectors as columns */
     public void transform_14_by_10_7() {
-        double t = x_10 * x_14 + x_7 * y_14;
+        final double t = x_10 * x_14 + x_7 * y_14;
         y_14 = y_10 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 8 vectors as columns */
     public void transform_14_by_10_8() {
-        double t = x_10 * x_14 + x_8 * y_14;
+        final double t = x_10 * x_14 + x_8 * y_14;
         y_14 = y_10 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 9 vectors as columns */
     public void transform_14_by_10_9() {
-        double t = x_10 * x_14 + x_9 * y_14;
+        final double t = x_10 * x_14 + x_9 * y_14;
         y_14 = y_10 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 11 vectors as columns */
     public void transform_14_by_10_11() {
-        double t = x_10 * x_14 + x_11 * y_14;
+        final double t = x_10 * x_14 + x_11 * y_14;
         y_14 = y_10 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 12 vectors as columns */
     public void transform_14_by_10_12() {
-        double t = x_10 * x_14 + x_12 * y_14;
+        final double t = x_10 * x_14 + x_12 * y_14;
         y_14 = y_10 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 10 and 13 vectors as columns */
     public void transform_14_by_10_13() {
-        double t = x_10 * x_14 + x_13 * y_14;
+        final double t = x_10 * x_14 + x_13 * y_14;
         y_14 = y_10 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_0_by_10_14() {
-        double t = x_10 * x_0 + x_14 * y_0;
+        final double t = x_10 * x_0 + x_14 * y_0;
         y_0 = y_10 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_1_by_10_14() {
-        double t = x_10 * x_1 + x_14 * y_1;
+        final double t = x_10 * x_1 + x_14 * y_1;
         y_1 = y_10 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_2_by_10_14() {
-        double t = x_10 * x_2 + x_14 * y_2;
+        final double t = x_10 * x_2 + x_14 * y_2;
         y_2 = y_10 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_3_by_10_14() {
-        double t = x_10 * x_3 + x_14 * y_3;
+        final double t = x_10 * x_3 + x_14 * y_3;
         y_3 = y_10 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_4_by_10_14() {
-        double t = x_10 * x_4 + x_14 * y_4;
+        final double t = x_10 * x_4 + x_14 * y_4;
         y_4 = y_10 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_5_by_10_14() {
-        double t = x_10 * x_5 + x_14 * y_5;
+        final double t = x_10 * x_5 + x_14 * y_5;
         y_5 = y_10 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_6_by_10_14() {
-        double t = x_10 * x_6 + x_14 * y_6;
+        final double t = x_10 * x_6 + x_14 * y_6;
         y_6 = y_10 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_7_by_10_14() {
-        double t = x_10 * x_7 + x_14 * y_7;
+        final double t = x_10 * x_7 + x_14 * y_7;
         y_7 = y_10 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_8_by_10_14() {
-        double t = x_10 * x_8 + x_14 * y_8;
+        final double t = x_10 * x_8 + x_14 * y_8;
         y_8 = y_10 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_9_by_10_14() {
-        double t = x_10 * x_9 + x_14 * y_9;
+        final double t = x_10 * x_9 + x_14 * y_9;
         y_9 = y_10 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_11_by_10_14() {
-        double t = x_10 * x_11 + x_14 * y_11;
+        final double t = x_10 * x_11 + x_14 * y_11;
         y_11 = y_10 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_12_by_10_14() {
-        double t = x_10 * x_12 + x_14 * y_12;
+        final double t = x_10 * x_12 + x_14 * y_12;
         y_12 = y_10 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 10 and 14 vectors as columns */
     public void transform_13_by_10_14() {
-        double t = x_10 * x_13 + x_14 * y_13;
+        final double t = x_10 * x_13 + x_14 * y_13;
         y_13 = y_10 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 0 vectors as columns */
     public void transform_14_by_11_0() {
-        double t = x_11 * x_14 + x_0 * y_14;
+        final double t = x_11 * x_14 + x_0 * y_14;
         y_14 = y_11 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 1 vectors as columns */
     public void transform_14_by_11_1() {
-        double t = x_11 * x_14 + x_1 * y_14;
+        final double t = x_11 * x_14 + x_1 * y_14;
         y_14 = y_11 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 2 vectors as columns */
     public void transform_14_by_11_2() {
-        double t = x_11 * x_14 + x_2 * y_14;
+        final double t = x_11 * x_14 + x_2 * y_14;
         y_14 = y_11 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 3 vectors as columns */
     public void transform_14_by_11_3() {
-        double t = x_11 * x_14 + x_3 * y_14;
+        final double t = x_11 * x_14 + x_3 * y_14;
         y_14 = y_11 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 4 vectors as columns */
     public void transform_14_by_11_4() {
-        double t = x_11 * x_14 + x_4 * y_14;
+        final double t = x_11 * x_14 + x_4 * y_14;
         y_14 = y_11 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 5 vectors as columns */
     public void transform_14_by_11_5() {
-        double t = x_11 * x_14 + x_5 * y_14;
+        final double t = x_11 * x_14 + x_5 * y_14;
         y_14 = y_11 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 6 vectors as columns */
     public void transform_14_by_11_6() {
-        double t = x_11 * x_14 + x_6 * y_14;
+        final double t = x_11 * x_14 + x_6 * y_14;
         y_14 = y_11 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 7 vectors as columns */
     public void transform_14_by_11_7() {
-        double t = x_11 * x_14 + x_7 * y_14;
+        final double t = x_11 * x_14 + x_7 * y_14;
         y_14 = y_11 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 8 vectors as columns */
     public void transform_14_by_11_8() {
-        double t = x_11 * x_14 + x_8 * y_14;
+        final double t = x_11 * x_14 + x_8 * y_14;
         y_14 = y_11 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 9 vectors as columns */
     public void transform_14_by_11_9() {
-        double t = x_11 * x_14 + x_9 * y_14;
+        final double t = x_11 * x_14 + x_9 * y_14;
         y_14 = y_11 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 10 vectors as columns */
     public void transform_14_by_11_10() {
-        double t = x_11 * x_14 + x_10 * y_14;
+        final double t = x_11 * x_14 + x_10 * y_14;
         y_14 = y_11 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 12 vectors as columns */
     public void transform_14_by_11_12() {
-        double t = x_11 * x_14 + x_12 * y_14;
+        final double t = x_11 * x_14 + x_12 * y_14;
         y_14 = y_11 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 11 and 13 vectors as columns */
     public void transform_14_by_11_13() {
-        double t = x_11 * x_14 + x_13 * y_14;
+        final double t = x_11 * x_14 + x_13 * y_14;
         y_14 = y_11 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_0_by_11_14() {
-        double t = x_11 * x_0 + x_14 * y_0;
+        final double t = x_11 * x_0 + x_14 * y_0;
         y_0 = y_11 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_1_by_11_14() {
-        double t = x_11 * x_1 + x_14 * y_1;
+        final double t = x_11 * x_1 + x_14 * y_1;
         y_1 = y_11 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_2_by_11_14() {
-        double t = x_11 * x_2 + x_14 * y_2;
+        final double t = x_11 * x_2 + x_14 * y_2;
         y_2 = y_11 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_3_by_11_14() {
-        double t = x_11 * x_3 + x_14 * y_3;
+        final double t = x_11 * x_3 + x_14 * y_3;
         y_3 = y_11 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_4_by_11_14() {
-        double t = x_11 * x_4 + x_14 * y_4;
+        final double t = x_11 * x_4 + x_14 * y_4;
         y_4 = y_11 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_5_by_11_14() {
-        double t = x_11 * x_5 + x_14 * y_5;
+        final double t = x_11 * x_5 + x_14 * y_5;
         y_5 = y_11 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_6_by_11_14() {
-        double t = x_11 * x_6 + x_14 * y_6;
+        final double t = x_11 * x_6 + x_14 * y_6;
         y_6 = y_11 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_7_by_11_14() {
-        double t = x_11 * x_7 + x_14 * y_7;
+        final double t = x_11 * x_7 + x_14 * y_7;
         y_7 = y_11 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_8_by_11_14() {
-        double t = x_11 * x_8 + x_14 * y_8;
+        final double t = x_11 * x_8 + x_14 * y_8;
         y_8 = y_11 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_9_by_11_14() {
-        double t = x_11 * x_9 + x_14 * y_9;
+        final double t = x_11 * x_9 + x_14 * y_9;
         y_9 = y_11 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_10_by_11_14() {
-        double t = x_11 * x_10 + x_14 * y_10;
+        final double t = x_11 * x_10 + x_14 * y_10;
         y_10 = y_11 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_12_by_11_14() {
-        double t = x_11 * x_12 + x_14 * y_12;
+        final double t = x_11 * x_12 + x_14 * y_12;
         y_12 = y_11 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 11 and 14 vectors as columns */
     public void transform_13_by_11_14() {
-        double t = x_11 * x_13 + x_14 * y_13;
+        final double t = x_11 * x_13 + x_14 * y_13;
         y_13 = y_11 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 0 vectors as columns */
     public void transform_14_by_12_0() {
-        double t = x_12 * x_14 + x_0 * y_14;
+        final double t = x_12 * x_14 + x_0 * y_14;
         y_14 = y_12 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 1 vectors as columns */
     public void transform_14_by_12_1() {
-        double t = x_12 * x_14 + x_1 * y_14;
+        final double t = x_12 * x_14 + x_1 * y_14;
         y_14 = y_12 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 2 vectors as columns */
     public void transform_14_by_12_2() {
-        double t = x_12 * x_14 + x_2 * y_14;
+        final double t = x_12 * x_14 + x_2 * y_14;
         y_14 = y_12 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 3 vectors as columns */
     public void transform_14_by_12_3() {
-        double t = x_12 * x_14 + x_3 * y_14;
+        final double t = x_12 * x_14 + x_3 * y_14;
         y_14 = y_12 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 4 vectors as columns */
     public void transform_14_by_12_4() {
-        double t = x_12 * x_14 + x_4 * y_14;
+        final double t = x_12 * x_14 + x_4 * y_14;
         y_14 = y_12 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 5 vectors as columns */
     public void transform_14_by_12_5() {
-        double t = x_12 * x_14 + x_5 * y_14;
+        final double t = x_12 * x_14 + x_5 * y_14;
         y_14 = y_12 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 6 vectors as columns */
     public void transform_14_by_12_6() {
-        double t = x_12 * x_14 + x_6 * y_14;
+        final double t = x_12 * x_14 + x_6 * y_14;
         y_14 = y_12 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 7 vectors as columns */
     public void transform_14_by_12_7() {
-        double t = x_12 * x_14 + x_7 * y_14;
+        final double t = x_12 * x_14 + x_7 * y_14;
         y_14 = y_12 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 8 vectors as columns */
     public void transform_14_by_12_8() {
-        double t = x_12 * x_14 + x_8 * y_14;
+        final double t = x_12 * x_14 + x_8 * y_14;
         y_14 = y_12 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 9 vectors as columns */
     public void transform_14_by_12_9() {
-        double t = x_12 * x_14 + x_9 * y_14;
+        final double t = x_12 * x_14 + x_9 * y_14;
         y_14 = y_12 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 10 vectors as columns */
     public void transform_14_by_12_10() {
-        double t = x_12 * x_14 + x_10 * y_14;
+        final double t = x_12 * x_14 + x_10 * y_14;
         y_14 = y_12 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 11 vectors as columns */
     public void transform_14_by_12_11() {
-        double t = x_12 * x_14 + x_11 * y_14;
+        final double t = x_12 * x_14 + x_11 * y_14;
         y_14 = y_12 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 12 and 13 vectors as columns */
     public void transform_14_by_12_13() {
-        double t = x_12 * x_14 + x_13 * y_14;
+        final double t = x_12 * x_14 + x_13 * y_14;
         y_14 = y_12 * x_14 + y_13 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_0_by_12_14() {
-        double t = x_12 * x_0 + x_14 * y_0;
+        final double t = x_12 * x_0 + x_14 * y_0;
         y_0 = y_12 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_1_by_12_14() {
-        double t = x_12 * x_1 + x_14 * y_1;
+        final double t = x_12 * x_1 + x_14 * y_1;
         y_1 = y_12 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_2_by_12_14() {
-        double t = x_12 * x_2 + x_14 * y_2;
+        final double t = x_12 * x_2 + x_14 * y_2;
         y_2 = y_12 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_3_by_12_14() {
-        double t = x_12 * x_3 + x_14 * y_3;
+        final double t = x_12 * x_3 + x_14 * y_3;
         y_3 = y_12 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_4_by_12_14() {
-        double t = x_12 * x_4 + x_14 * y_4;
+        final double t = x_12 * x_4 + x_14 * y_4;
         y_4 = y_12 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_5_by_12_14() {
-        double t = x_12 * x_5 + x_14 * y_5;
+        final double t = x_12 * x_5 + x_14 * y_5;
         y_5 = y_12 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_6_by_12_14() {
-        double t = x_12 * x_6 + x_14 * y_6;
+        final double t = x_12 * x_6 + x_14 * y_6;
         y_6 = y_12 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_7_by_12_14() {
-        double t = x_12 * x_7 + x_14 * y_7;
+        final double t = x_12 * x_7 + x_14 * y_7;
         y_7 = y_12 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_8_by_12_14() {
-        double t = x_12 * x_8 + x_14 * y_8;
+        final double t = x_12 * x_8 + x_14 * y_8;
         y_8 = y_12 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_9_by_12_14() {
-        double t = x_12 * x_9 + x_14 * y_9;
+        final double t = x_12 * x_9 + x_14 * y_9;
         y_9 = y_12 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_10_by_12_14() {
-        double t = x_12 * x_10 + x_14 * y_10;
+        final double t = x_12 * x_10 + x_14 * y_10;
         y_10 = y_12 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_11_by_12_14() {
-        double t = x_12 * x_11 + x_14 * y_11;
+        final double t = x_12 * x_11 + x_14 * y_11;
         y_11 = y_12 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 12 and 14 vectors as columns */
     public void transform_13_by_12_14() {
-        double t = x_12 * x_13 + x_14 * y_13;
+        final double t = x_12 * x_13 + x_14 * y_13;
         y_13 = y_12 * x_13 + y_14 * y_13;
         x_13 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 0 vectors as columns */
     public void transform_14_by_13_0() {
-        double t = x_13 * x_14 + x_0 * y_14;
+        final double t = x_13 * x_14 + x_0 * y_14;
         y_14 = y_13 * x_14 + y_0 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 1 vectors as columns */
     public void transform_14_by_13_1() {
-        double t = x_13 * x_14 + x_1 * y_14;
+        final double t = x_13 * x_14 + x_1 * y_14;
         y_14 = y_13 * x_14 + y_1 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 2 vectors as columns */
     public void transform_14_by_13_2() {
-        double t = x_13 * x_14 + x_2 * y_14;
+        final double t = x_13 * x_14 + x_2 * y_14;
         y_14 = y_13 * x_14 + y_2 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 3 vectors as columns */
     public void transform_14_by_13_3() {
-        double t = x_13 * x_14 + x_3 * y_14;
+        final double t = x_13 * x_14 + x_3 * y_14;
         y_14 = y_13 * x_14 + y_3 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 4 vectors as columns */
     public void transform_14_by_13_4() {
-        double t = x_13 * x_14 + x_4 * y_14;
+        final double t = x_13 * x_14 + x_4 * y_14;
         y_14 = y_13 * x_14 + y_4 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 5 vectors as columns */
     public void transform_14_by_13_5() {
-        double t = x_13 * x_14 + x_5 * y_14;
+        final double t = x_13 * x_14 + x_5 * y_14;
         y_14 = y_13 * x_14 + y_5 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 6 vectors as columns */
     public void transform_14_by_13_6() {
-        double t = x_13 * x_14 + x_6 * y_14;
+        final double t = x_13 * x_14 + x_6 * y_14;
         y_14 = y_13 * x_14 + y_6 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 7 vectors as columns */
     public void transform_14_by_13_7() {
-        double t = x_13 * x_14 + x_7 * y_14;
+        final double t = x_13 * x_14 + x_7 * y_14;
         y_14 = y_13 * x_14 + y_7 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 8 vectors as columns */
     public void transform_14_by_13_8() {
-        double t = x_13 * x_14 + x_8 * y_14;
+        final double t = x_13 * x_14 + x_8 * y_14;
         y_14 = y_13 * x_14 + y_8 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 9 vectors as columns */
     public void transform_14_by_13_9() {
-        double t = x_13 * x_14 + x_9 * y_14;
+        final double t = x_13 * x_14 + x_9 * y_14;
         y_14 = y_13 * x_14 + y_9 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 10 vectors as columns */
     public void transform_14_by_13_10() {
-        double t = x_13 * x_14 + x_10 * y_14;
+        final double t = x_13 * x_14 + x_10 * y_14;
         y_14 = y_13 * x_14 + y_10 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 11 vectors as columns */
     public void transform_14_by_13_11() {
-        double t = x_13 * x_14 + x_11 * y_14;
+        final double t = x_13 * x_14 + x_11 * y_14;
         y_14 = y_13 * x_14 + y_11 * y_14;
         x_14 = t;
     }
 
     /** transform the 14 vector by the matrixed formed by the 13 and 12 vectors as columns */
     public void transform_14_by_13_12() {
-        double t = x_13 * x_14 + x_12 * y_14;
+        final double t = x_13 * x_14 + x_12 * y_14;
         y_14 = y_13 * x_14 + y_12 * y_14;
         x_14 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_0_by_13_14() {
-        double t = x_13 * x_0 + x_14 * y_0;
+        final double t = x_13 * x_0 + x_14 * y_0;
         y_0 = y_13 * x_0 + y_14 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_1_by_13_14() {
-        double t = x_13 * x_1 + x_14 * y_1;
+        final double t = x_13 * x_1 + x_14 * y_1;
         y_1 = y_13 * x_1 + y_14 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_2_by_13_14() {
-        double t = x_13 * x_2 + x_14 * y_2;
+        final double t = x_13 * x_2 + x_14 * y_2;
         y_2 = y_13 * x_2 + y_14 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_3_by_13_14() {
-        double t = x_13 * x_3 + x_14 * y_3;
+        final double t = x_13 * x_3 + x_14 * y_3;
         y_3 = y_13 * x_3 + y_14 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_4_by_13_14() {
-        double t = x_13 * x_4 + x_14 * y_4;
+        final double t = x_13 * x_4 + x_14 * y_4;
         y_4 = y_13 * x_4 + y_14 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_5_by_13_14() {
-        double t = x_13 * x_5 + x_14 * y_5;
+        final double t = x_13 * x_5 + x_14 * y_5;
         y_5 = y_13 * x_5 + y_14 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_6_by_13_14() {
-        double t = x_13 * x_6 + x_14 * y_6;
+        final double t = x_13 * x_6 + x_14 * y_6;
         y_6 = y_13 * x_6 + y_14 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_7_by_13_14() {
-        double t = x_13 * x_7 + x_14 * y_7;
+        final double t = x_13 * x_7 + x_14 * y_7;
         y_7 = y_13 * x_7 + y_14 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_8_by_13_14() {
-        double t = x_13 * x_8 + x_14 * y_8;
+        final double t = x_13 * x_8 + x_14 * y_8;
         y_8 = y_13 * x_8 + y_14 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_9_by_13_14() {
-        double t = x_13 * x_9 + x_14 * y_9;
+        final double t = x_13 * x_9 + x_14 * y_9;
         y_9 = y_13 * x_9 + y_14 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_10_by_13_14() {
-        double t = x_13 * x_10 + x_14 * y_10;
+        final double t = x_13 * x_10 + x_14 * y_10;
         y_10 = y_13 * x_10 + y_14 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_11_by_13_14() {
-        double t = x_13 * x_11 + x_14 * y_11;
+        final double t = x_13 * x_11 + x_14 * y_11;
         y_11 = y_13 * x_11 + y_14 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 13 and 14 vectors as columns */
     public void transform_12_by_13_14() {
-        double t = x_13 * x_12 + x_14 * y_12;
+        final double t = x_13 * x_12 + x_14 * y_12;
         y_12 = y_13 * x_12 + y_14 * y_12;
         x_12 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_1_by_14_0() {
-        double t = x_14 * x_1 + x_0 * y_1;
+        final double t = x_14 * x_1 + x_0 * y_1;
         y_1 = y_14 * x_1 + y_0 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_2_by_14_0() {
-        double t = x_14 * x_2 + x_0 * y_2;
+        final double t = x_14 * x_2 + x_0 * y_2;
         y_2 = y_14 * x_2 + y_0 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_3_by_14_0() {
-        double t = x_14 * x_3 + x_0 * y_3;
+        final double t = x_14 * x_3 + x_0 * y_3;
         y_3 = y_14 * x_3 + y_0 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_4_by_14_0() {
-        double t = x_14 * x_4 + x_0 * y_4;
+        final double t = x_14 * x_4 + x_0 * y_4;
         y_4 = y_14 * x_4 + y_0 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_5_by_14_0() {
-        double t = x_14 * x_5 + x_0 * y_5;
+        final double t = x_14 * x_5 + x_0 * y_5;
         y_5 = y_14 * x_5 + y_0 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_6_by_14_0() {
-        double t = x_14 * x_6 + x_0 * y_6;
+        final double t = x_14 * x_6 + x_0 * y_6;
         y_6 = y_14 * x_6 + y_0 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_7_by_14_0() {
-        double t = x_14 * x_7 + x_0 * y_7;
+        final double t = x_14 * x_7 + x_0 * y_7;
         y_7 = y_14 * x_7 + y_0 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_8_by_14_0() {
-        double t = x_14 * x_8 + x_0 * y_8;
+        final double t = x_14 * x_8 + x_0 * y_8;
         y_8 = y_14 * x_8 + y_0 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_9_by_14_0() {
-        double t = x_14 * x_9 + x_0 * y_9;
+        final double t = x_14 * x_9 + x_0 * y_9;
         y_9 = y_14 * x_9 + y_0 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_10_by_14_0() {
-        double t = x_14 * x_10 + x_0 * y_10;
+        final double t = x_14 * x_10 + x_0 * y_10;
         y_10 = y_14 * x_10 + y_0 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_11_by_14_0() {
-        double t = x_14 * x_11 + x_0 * y_11;
+        final double t = x_14 * x_11 + x_0 * y_11;
         y_11 = y_14 * x_11 + y_0 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_12_by_14_0() {
-        double t = x_14 * x_12 + x_0 * y_12;
+        final double t = x_14 * x_12 + x_0 * y_12;
         y_12 = y_14 * x_12 + y_0 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 0 vectors as columns */
     public void transform_13_by_14_0() {
-        double t = x_14 * x_13 + x_0 * y_13;
+        final double t = x_14 * x_13 + x_0 * y_13;
         y_13 = y_14 * x_13 + y_0 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_0_by_14_1() {
-        double t = x_14 * x_0 + x_1 * y_0;
+        final double t = x_14 * x_0 + x_1 * y_0;
         y_0 = y_14 * x_0 + y_1 * y_0;
         x_0 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_2_by_14_1() {
-        double t = x_14 * x_2 + x_1 * y_2;
+        final double t = x_14 * x_2 + x_1 * y_2;
         y_2 = y_14 * x_2 + y_1 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_3_by_14_1() {
-        double t = x_14 * x_3 + x_1 * y_3;
+        final double t = x_14 * x_3 + x_1 * y_3;
         y_3 = y_14 * x_3 + y_1 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_4_by_14_1() {
-        double t = x_14 * x_4 + x_1 * y_4;
+        final double t = x_14 * x_4 + x_1 * y_4;
         y_4 = y_14 * x_4 + y_1 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_5_by_14_1() {
-        double t = x_14 * x_5 + x_1 * y_5;
+        final double t = x_14 * x_5 + x_1 * y_5;
         y_5 = y_14 * x_5 + y_1 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_6_by_14_1() {
-        double t = x_14 * x_6 + x_1 * y_6;
+        final double t = x_14 * x_6 + x_1 * y_6;
         y_6 = y_14 * x_6 + y_1 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_7_by_14_1() {
-        double t = x_14 * x_7 + x_1 * y_7;
+        final double t = x_14 * x_7 + x_1 * y_7;
         y_7 = y_14 * x_7 + y_1 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_8_by_14_1() {
-        double t = x_14 * x_8 + x_1 * y_8;
+        final double t = x_14 * x_8 + x_1 * y_8;
         y_8 = y_14 * x_8 + y_1 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_9_by_14_1() {
-        double t = x_14 * x_9 + x_1 * y_9;
+        final double t = x_14 * x_9 + x_1 * y_9;
         y_9 = y_14 * x_9 + y_1 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_10_by_14_1() {
-        double t = x_14 * x_10 + x_1 * y_10;
+        final double t = x_14 * x_10 + x_1 * y_10;
         y_10 = y_14 * x_10 + y_1 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_11_by_14_1() {
-        double t = x_14 * x_11 + x_1 * y_11;
+        final double t = x_14 * x_11 + x_1 * y_11;
         y_11 = y_14 * x_11 + y_1 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_12_by_14_1() {
-        double t = x_14 * x_12 + x_1 * y_12;
+        final double t = x_14 * x_12 + x_1 * y_12;
         y_12 = y_14 * x_12 + y_1 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 1 vectors as columns */
     public void transform_13_by_14_1() {
-        double t = x_14 * x_13 + x_1 * y_13;
+        final double t = x_14 * x_13 + x_1 * y_13;
         y_13 = y_14 * x_13 + y_1 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_0_by_14_2() {
-        double t = x_14 * x_0 + x_2 * y_0;
+        final double t = x_14 * x_0 + x_2 * y_0;
         y_0 = y_14 * x_0 + y_2 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_1_by_14_2() {
-        double t = x_14 * x_1 + x_2 * y_1;
+        final double t = x_14 * x_1 + x_2 * y_1;
         y_1 = y_14 * x_1 + y_2 * y_1;
         x_1 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_3_by_14_2() {
-        double t = x_14 * x_3 + x_2 * y_3;
+        final double t = x_14 * x_3 + x_2 * y_3;
         y_3 = y_14 * x_3 + y_2 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_4_by_14_2() {
-        double t = x_14 * x_4 + x_2 * y_4;
+        final double t = x_14 * x_4 + x_2 * y_4;
         y_4 = y_14 * x_4 + y_2 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_5_by_14_2() {
-        double t = x_14 * x_5 + x_2 * y_5;
+        final double t = x_14 * x_5 + x_2 * y_5;
         y_5 = y_14 * x_5 + y_2 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_6_by_14_2() {
-        double t = x_14 * x_6 + x_2 * y_6;
+        final double t = x_14 * x_6 + x_2 * y_6;
         y_6 = y_14 * x_6 + y_2 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_7_by_14_2() {
-        double t = x_14 * x_7 + x_2 * y_7;
+        final double t = x_14 * x_7 + x_2 * y_7;
         y_7 = y_14 * x_7 + y_2 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_8_by_14_2() {
-        double t = x_14 * x_8 + x_2 * y_8;
+        final double t = x_14 * x_8 + x_2 * y_8;
         y_8 = y_14 * x_8 + y_2 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_9_by_14_2() {
-        double t = x_14 * x_9 + x_2 * y_9;
+        final double t = x_14 * x_9 + x_2 * y_9;
         y_9 = y_14 * x_9 + y_2 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_10_by_14_2() {
-        double t = x_14 * x_10 + x_2 * y_10;
+        final double t = x_14 * x_10 + x_2 * y_10;
         y_10 = y_14 * x_10 + y_2 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_11_by_14_2() {
-        double t = x_14 * x_11 + x_2 * y_11;
+        final double t = x_14 * x_11 + x_2 * y_11;
         y_11 = y_14 * x_11 + y_2 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_12_by_14_2() {
-        double t = x_14 * x_12 + x_2 * y_12;
+        final double t = x_14 * x_12 + x_2 * y_12;
         y_12 = y_14 * x_12 + y_2 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 2 vectors as columns */
     public void transform_13_by_14_2() {
-        double t = x_14 * x_13 + x_2 * y_13;
+        final double t = x_14 * x_13 + x_2 * y_13;
         y_13 = y_14 * x_13 + y_2 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_0_by_14_3() {
-        double t = x_14 * x_0 + x_3 * y_0;
+        final double t = x_14 * x_0 + x_3 * y_0;
         y_0 = y_14 * x_0 + y_3 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_1_by_14_3() {
-        double t = x_14 * x_1 + x_3 * y_1;
+        final double t = x_14 * x_1 + x_3 * y_1;
         y_1 = y_14 * x_1 + y_3 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_2_by_14_3() {
-        double t = x_14 * x_2 + x_3 * y_2;
+        final double t = x_14 * x_2 + x_3 * y_2;
         y_2 = y_14 * x_2 + y_3 * y_2;
         x_2 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_4_by_14_3() {
-        double t = x_14 * x_4 + x_3 * y_4;
+        final double t = x_14 * x_4 + x_3 * y_4;
         y_4 = y_14 * x_4 + y_3 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_5_by_14_3() {
-        double t = x_14 * x_5 + x_3 * y_5;
+        final double t = x_14 * x_5 + x_3 * y_5;
         y_5 = y_14 * x_5 + y_3 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_6_by_14_3() {
-        double t = x_14 * x_6 + x_3 * y_6;
+        final double t = x_14 * x_6 + x_3 * y_6;
         y_6 = y_14 * x_6 + y_3 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_7_by_14_3() {
-        double t = x_14 * x_7 + x_3 * y_7;
+        final double t = x_14 * x_7 + x_3 * y_7;
         y_7 = y_14 * x_7 + y_3 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_8_by_14_3() {
-        double t = x_14 * x_8 + x_3 * y_8;
+        final double t = x_14 * x_8 + x_3 * y_8;
         y_8 = y_14 * x_8 + y_3 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_9_by_14_3() {
-        double t = x_14 * x_9 + x_3 * y_9;
+        final double t = x_14 * x_9 + x_3 * y_9;
         y_9 = y_14 * x_9 + y_3 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_10_by_14_3() {
-        double t = x_14 * x_10 + x_3 * y_10;
+        final double t = x_14 * x_10 + x_3 * y_10;
         y_10 = y_14 * x_10 + y_3 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_11_by_14_3() {
-        double t = x_14 * x_11 + x_3 * y_11;
+        final double t = x_14 * x_11 + x_3 * y_11;
         y_11 = y_14 * x_11 + y_3 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_12_by_14_3() {
-        double t = x_14 * x_12 + x_3 * y_12;
+        final double t = x_14 * x_12 + x_3 * y_12;
         y_12 = y_14 * x_12 + y_3 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 3 vectors as columns */
     public void transform_13_by_14_3() {
-        double t = x_14 * x_13 + x_3 * y_13;
+        final double t = x_14 * x_13 + x_3 * y_13;
         y_13 = y_14 * x_13 + y_3 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_0_by_14_4() {
-        double t = x_14 * x_0 + x_4 * y_0;
+        final double t = x_14 * x_0 + x_4 * y_0;
         y_0 = y_14 * x_0 + y_4 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_1_by_14_4() {
-        double t = x_14 * x_1 + x_4 * y_1;
+        final double t = x_14 * x_1 + x_4 * y_1;
         y_1 = y_14 * x_1 + y_4 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_2_by_14_4() {
-        double t = x_14 * x_2 + x_4 * y_2;
+        final double t = x_14 * x_2 + x_4 * y_2;
         y_2 = y_14 * x_2 + y_4 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_3_by_14_4() {
-        double t = x_14 * x_3 + x_4 * y_3;
+        final double t = x_14 * x_3 + x_4 * y_3;
         y_3 = y_14 * x_3 + y_4 * y_3;
         x_3 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_5_by_14_4() {
-        double t = x_14 * x_5 + x_4 * y_5;
+        final double t = x_14 * x_5 + x_4 * y_5;
         y_5 = y_14 * x_5 + y_4 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_6_by_14_4() {
-        double t = x_14 * x_6 + x_4 * y_6;
+        final double t = x_14 * x_6 + x_4 * y_6;
         y_6 = y_14 * x_6 + y_4 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_7_by_14_4() {
-        double t = x_14 * x_7 + x_4 * y_7;
+        final double t = x_14 * x_7 + x_4 * y_7;
         y_7 = y_14 * x_7 + y_4 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_8_by_14_4() {
-        double t = x_14 * x_8 + x_4 * y_8;
+        final double t = x_14 * x_8 + x_4 * y_8;
         y_8 = y_14 * x_8 + y_4 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_9_by_14_4() {
-        double t = x_14 * x_9 + x_4 * y_9;
+        final double t = x_14 * x_9 + x_4 * y_9;
         y_9 = y_14 * x_9 + y_4 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_10_by_14_4() {
-        double t = x_14 * x_10 + x_4 * y_10;
+        final double t = x_14 * x_10 + x_4 * y_10;
         y_10 = y_14 * x_10 + y_4 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_11_by_14_4() {
-        double t = x_14 * x_11 + x_4 * y_11;
+        final double t = x_14 * x_11 + x_4 * y_11;
         y_11 = y_14 * x_11 + y_4 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_12_by_14_4() {
-        double t = x_14 * x_12 + x_4 * y_12;
+        final double t = x_14 * x_12 + x_4 * y_12;
         y_12 = y_14 * x_12 + y_4 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 4 vectors as columns */
     public void transform_13_by_14_4() {
-        double t = x_14 * x_13 + x_4 * y_13;
+        final double t = x_14 * x_13 + x_4 * y_13;
         y_13 = y_14 * x_13 + y_4 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_0_by_14_5() {
-        double t = x_14 * x_0 + x_5 * y_0;
+        final double t = x_14 * x_0 + x_5 * y_0;
         y_0 = y_14 * x_0 + y_5 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_1_by_14_5() {
-        double t = x_14 * x_1 + x_5 * y_1;
+        final double t = x_14 * x_1 + x_5 * y_1;
         y_1 = y_14 * x_1 + y_5 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_2_by_14_5() {
-        double t = x_14 * x_2 + x_5 * y_2;
+        final double t = x_14 * x_2 + x_5 * y_2;
         y_2 = y_14 * x_2 + y_5 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_3_by_14_5() {
-        double t = x_14 * x_3 + x_5 * y_3;
+        final double t = x_14 * x_3 + x_5 * y_3;
         y_3 = y_14 * x_3 + y_5 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_4_by_14_5() {
-        double t = x_14 * x_4 + x_5 * y_4;
+        final double t = x_14 * x_4 + x_5 * y_4;
         y_4 = y_14 * x_4 + y_5 * y_4;
         x_4 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_6_by_14_5() {
-        double t = x_14 * x_6 + x_5 * y_6;
+        final double t = x_14 * x_6 + x_5 * y_6;
         y_6 = y_14 * x_6 + y_5 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_7_by_14_5() {
-        double t = x_14 * x_7 + x_5 * y_7;
+        final double t = x_14 * x_7 + x_5 * y_7;
         y_7 = y_14 * x_7 + y_5 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_8_by_14_5() {
-        double t = x_14 * x_8 + x_5 * y_8;
+        final double t = x_14 * x_8 + x_5 * y_8;
         y_8 = y_14 * x_8 + y_5 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_9_by_14_5() {
-        double t = x_14 * x_9 + x_5 * y_9;
+        final double t = x_14 * x_9 + x_5 * y_9;
         y_9 = y_14 * x_9 + y_5 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_10_by_14_5() {
-        double t = x_14 * x_10 + x_5 * y_10;
+        final double t = x_14 * x_10 + x_5 * y_10;
         y_10 = y_14 * x_10 + y_5 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_11_by_14_5() {
-        double t = x_14 * x_11 + x_5 * y_11;
+        final double t = x_14 * x_11 + x_5 * y_11;
         y_11 = y_14 * x_11 + y_5 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_12_by_14_5() {
-        double t = x_14 * x_12 + x_5 * y_12;
+        final double t = x_14 * x_12 + x_5 * y_12;
         y_12 = y_14 * x_12 + y_5 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 5 vectors as columns */
     public void transform_13_by_14_5() {
-        double t = x_14 * x_13 + x_5 * y_13;
+        final double t = x_14 * x_13 + x_5 * y_13;
         y_13 = y_14 * x_13 + y_5 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_0_by_14_6() {
-        double t = x_14 * x_0 + x_6 * y_0;
+        final double t = x_14 * x_0 + x_6 * y_0;
         y_0 = y_14 * x_0 + y_6 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_1_by_14_6() {
-        double t = x_14 * x_1 + x_6 * y_1;
+        final double t = x_14 * x_1 + x_6 * y_1;
         y_1 = y_14 * x_1 + y_6 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_2_by_14_6() {
-        double t = x_14 * x_2 + x_6 * y_2;
+        final double t = x_14 * x_2 + x_6 * y_2;
         y_2 = y_14 * x_2 + y_6 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_3_by_14_6() {
-        double t = x_14 * x_3 + x_6 * y_3;
+        final double t = x_14 * x_3 + x_6 * y_3;
         y_3 = y_14 * x_3 + y_6 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_4_by_14_6() {
-        double t = x_14 * x_4 + x_6 * y_4;
+        final double t = x_14 * x_4 + x_6 * y_4;
         y_4 = y_14 * x_4 + y_6 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_5_by_14_6() {
-        double t = x_14 * x_5 + x_6 * y_5;
+        final double t = x_14 * x_5 + x_6 * y_5;
         y_5 = y_14 * x_5 + y_6 * y_5;
         x_5 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_7_by_14_6() {
-        double t = x_14 * x_7 + x_6 * y_7;
+        final double t = x_14 * x_7 + x_6 * y_7;
         y_7 = y_14 * x_7 + y_6 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_8_by_14_6() {
-        double t = x_14 * x_8 + x_6 * y_8;
+        final double t = x_14 * x_8 + x_6 * y_8;
         y_8 = y_14 * x_8 + y_6 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_9_by_14_6() {
-        double t = x_14 * x_9 + x_6 * y_9;
+        final double t = x_14 * x_9 + x_6 * y_9;
         y_9 = y_14 * x_9 + y_6 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_10_by_14_6() {
-        double t = x_14 * x_10 + x_6 * y_10;
+        final double t = x_14 * x_10 + x_6 * y_10;
         y_10 = y_14 * x_10 + y_6 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_11_by_14_6() {
-        double t = x_14 * x_11 + x_6 * y_11;
+        final double t = x_14 * x_11 + x_6 * y_11;
         y_11 = y_14 * x_11 + y_6 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_12_by_14_6() {
-        double t = x_14 * x_12 + x_6 * y_12;
+        final double t = x_14 * x_12 + x_6 * y_12;
         y_12 = y_14 * x_12 + y_6 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 6 vectors as columns */
     public void transform_13_by_14_6() {
-        double t = x_14 * x_13 + x_6 * y_13;
+        final double t = x_14 * x_13 + x_6 * y_13;
         y_13 = y_14 * x_13 + y_6 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_0_by_14_7() {
-        double t = x_14 * x_0 + x_7 * y_0;
+        final double t = x_14 * x_0 + x_7 * y_0;
         y_0 = y_14 * x_0 + y_7 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_1_by_14_7() {
-        double t = x_14 * x_1 + x_7 * y_1;
+        final double t = x_14 * x_1 + x_7 * y_1;
         y_1 = y_14 * x_1 + y_7 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_2_by_14_7() {
-        double t = x_14 * x_2 + x_7 * y_2;
+        final double t = x_14 * x_2 + x_7 * y_2;
         y_2 = y_14 * x_2 + y_7 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_3_by_14_7() {
-        double t = x_14 * x_3 + x_7 * y_3;
+        final double t = x_14 * x_3 + x_7 * y_3;
         y_3 = y_14 * x_3 + y_7 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_4_by_14_7() {
-        double t = x_14 * x_4 + x_7 * y_4;
+        final double t = x_14 * x_4 + x_7 * y_4;
         y_4 = y_14 * x_4 + y_7 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_5_by_14_7() {
-        double t = x_14 * x_5 + x_7 * y_5;
+        final double t = x_14 * x_5 + x_7 * y_5;
         y_5 = y_14 * x_5 + y_7 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_6_by_14_7() {
-        double t = x_14 * x_6 + x_7 * y_6;
+        final double t = x_14 * x_6 + x_7 * y_6;
         y_6 = y_14 * x_6 + y_7 * y_6;
         x_6 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_8_by_14_7() {
-        double t = x_14 * x_8 + x_7 * y_8;
+        final double t = x_14 * x_8 + x_7 * y_8;
         y_8 = y_14 * x_8 + y_7 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_9_by_14_7() {
-        double t = x_14 * x_9 + x_7 * y_9;
+        final double t = x_14 * x_9 + x_7 * y_9;
         y_9 = y_14 * x_9 + y_7 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_10_by_14_7() {
-        double t = x_14 * x_10 + x_7 * y_10;
+        final double t = x_14 * x_10 + x_7 * y_10;
         y_10 = y_14 * x_10 + y_7 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_11_by_14_7() {
-        double t = x_14 * x_11 + x_7 * y_11;
+        final double t = x_14 * x_11 + x_7 * y_11;
         y_11 = y_14 * x_11 + y_7 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_12_by_14_7() {
-        double t = x_14 * x_12 + x_7 * y_12;
+        final double t = x_14 * x_12 + x_7 * y_12;
         y_12 = y_14 * x_12 + y_7 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 7 vectors as columns */
     public void transform_13_by_14_7() {
-        double t = x_14 * x_13 + x_7 * y_13;
+        final double t = x_14 * x_13 + x_7 * y_13;
         y_13 = y_14 * x_13 + y_7 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_0_by_14_8() {
-        double t = x_14 * x_0 + x_8 * y_0;
+        final double t = x_14 * x_0 + x_8 * y_0;
         y_0 = y_14 * x_0 + y_8 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_1_by_14_8() {
-        double t = x_14 * x_1 + x_8 * y_1;
+        final double t = x_14 * x_1 + x_8 * y_1;
         y_1 = y_14 * x_1 + y_8 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_2_by_14_8() {
-        double t = x_14 * x_2 + x_8 * y_2;
+        final double t = x_14 * x_2 + x_8 * y_2;
         y_2 = y_14 * x_2 + y_8 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_3_by_14_8() {
-        double t = x_14 * x_3 + x_8 * y_3;
+        final double t = x_14 * x_3 + x_8 * y_3;
         y_3 = y_14 * x_3 + y_8 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_4_by_14_8() {
-        double t = x_14 * x_4 + x_8 * y_4;
+        final double t = x_14 * x_4 + x_8 * y_4;
         y_4 = y_14 * x_4 + y_8 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_5_by_14_8() {
-        double t = x_14 * x_5 + x_8 * y_5;
+        final double t = x_14 * x_5 + x_8 * y_5;
         y_5 = y_14 * x_5 + y_8 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_6_by_14_8() {
-        double t = x_14 * x_6 + x_8 * y_6;
+        final double t = x_14 * x_6 + x_8 * y_6;
         y_6 = y_14 * x_6 + y_8 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_7_by_14_8() {
-        double t = x_14 * x_7 + x_8 * y_7;
+        final double t = x_14 * x_7 + x_8 * y_7;
         y_7 = y_14 * x_7 + y_8 * y_7;
         x_7 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_9_by_14_8() {
-        double t = x_14 * x_9 + x_8 * y_9;
+        final double t = x_14 * x_9 + x_8 * y_9;
         y_9 = y_14 * x_9 + y_8 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_10_by_14_8() {
-        double t = x_14 * x_10 + x_8 * y_10;
+        final double t = x_14 * x_10 + x_8 * y_10;
         y_10 = y_14 * x_10 + y_8 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_11_by_14_8() {
-        double t = x_14 * x_11 + x_8 * y_11;
+        final double t = x_14 * x_11 + x_8 * y_11;
         y_11 = y_14 * x_11 + y_8 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_12_by_14_8() {
-        double t = x_14 * x_12 + x_8 * y_12;
+        final double t = x_14 * x_12 + x_8 * y_12;
         y_12 = y_14 * x_12 + y_8 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 8 vectors as columns */
     public void transform_13_by_14_8() {
-        double t = x_14 * x_13 + x_8 * y_13;
+        final double t = x_14 * x_13 + x_8 * y_13;
         y_13 = y_14 * x_13 + y_8 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_0_by_14_9() {
-        double t = x_14 * x_0 + x_9 * y_0;
+        final double t = x_14 * x_0 + x_9 * y_0;
         y_0 = y_14 * x_0 + y_9 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_1_by_14_9() {
-        double t = x_14 * x_1 + x_9 * y_1;
+        final double t = x_14 * x_1 + x_9 * y_1;
         y_1 = y_14 * x_1 + y_9 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_2_by_14_9() {
-        double t = x_14 * x_2 + x_9 * y_2;
+        final double t = x_14 * x_2 + x_9 * y_2;
         y_2 = y_14 * x_2 + y_9 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_3_by_14_9() {
-        double t = x_14 * x_3 + x_9 * y_3;
+        final double t = x_14 * x_3 + x_9 * y_3;
         y_3 = y_14 * x_3 + y_9 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_4_by_14_9() {
-        double t = x_14 * x_4 + x_9 * y_4;
+        final double t = x_14 * x_4 + x_9 * y_4;
         y_4 = y_14 * x_4 + y_9 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_5_by_14_9() {
-        double t = x_14 * x_5 + x_9 * y_5;
+        final double t = x_14 * x_5 + x_9 * y_5;
         y_5 = y_14 * x_5 + y_9 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_6_by_14_9() {
-        double t = x_14 * x_6 + x_9 * y_6;
+        final double t = x_14 * x_6 + x_9 * y_6;
         y_6 = y_14 * x_6 + y_9 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_7_by_14_9() {
-        double t = x_14 * x_7 + x_9 * y_7;
+        final double t = x_14 * x_7 + x_9 * y_7;
         y_7 = y_14 * x_7 + y_9 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_8_by_14_9() {
-        double t = x_14 * x_8 + x_9 * y_8;
+        final double t = x_14 * x_8 + x_9 * y_8;
         y_8 = y_14 * x_8 + y_9 * y_8;
         x_8 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_10_by_14_9() {
-        double t = x_14 * x_10 + x_9 * y_10;
+        final double t = x_14 * x_10 + x_9 * y_10;
         y_10 = y_14 * x_10 + y_9 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_11_by_14_9() {
-        double t = x_14 * x_11 + x_9 * y_11;
+        final double t = x_14 * x_11 + x_9 * y_11;
         y_11 = y_14 * x_11 + y_9 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_12_by_14_9() {
-        double t = x_14 * x_12 + x_9 * y_12;
+        final double t = x_14 * x_12 + x_9 * y_12;
         y_12 = y_14 * x_12 + y_9 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 9 vectors as columns */
     public void transform_13_by_14_9() {
-        double t = x_14 * x_13 + x_9 * y_13;
+        final double t = x_14 * x_13 + x_9 * y_13;
         y_13 = y_14 * x_13 + y_9 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_0_by_14_10() {
-        double t = x_14 * x_0 + x_10 * y_0;
+        final double t = x_14 * x_0 + x_10 * y_0;
         y_0 = y_14 * x_0 + y_10 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_1_by_14_10() {
-        double t = x_14 * x_1 + x_10 * y_1;
+        final double t = x_14 * x_1 + x_10 * y_1;
         y_1 = y_14 * x_1 + y_10 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_2_by_14_10() {
-        double t = x_14 * x_2 + x_10 * y_2;
+        final double t = x_14 * x_2 + x_10 * y_2;
         y_2 = y_14 * x_2 + y_10 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_3_by_14_10() {
-        double t = x_14 * x_3 + x_10 * y_3;
+        final double t = x_14 * x_3 + x_10 * y_3;
         y_3 = y_14 * x_3 + y_10 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_4_by_14_10() {
-        double t = x_14 * x_4 + x_10 * y_4;
+        final double t = x_14 * x_4 + x_10 * y_4;
         y_4 = y_14 * x_4 + y_10 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_5_by_14_10() {
-        double t = x_14 * x_5 + x_10 * y_5;
+        final double t = x_14 * x_5 + x_10 * y_5;
         y_5 = y_14 * x_5 + y_10 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_6_by_14_10() {
-        double t = x_14 * x_6 + x_10 * y_6;
+        final double t = x_14 * x_6 + x_10 * y_6;
         y_6 = y_14 * x_6 + y_10 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_7_by_14_10() {
-        double t = x_14 * x_7 + x_10 * y_7;
+        final double t = x_14 * x_7 + x_10 * y_7;
         y_7 = y_14 * x_7 + y_10 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_8_by_14_10() {
-        double t = x_14 * x_8 + x_10 * y_8;
+        final double t = x_14 * x_8 + x_10 * y_8;
         y_8 = y_14 * x_8 + y_10 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_9_by_14_10() {
-        double t = x_14 * x_9 + x_10 * y_9;
+        final double t = x_14 * x_9 + x_10 * y_9;
         y_9 = y_14 * x_9 + y_10 * y_9;
         x_9 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_11_by_14_10() {
-        double t = x_14 * x_11 + x_10 * y_11;
+        final double t = x_14 * x_11 + x_10 * y_11;
         y_11 = y_14 * x_11 + y_10 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_12_by_14_10() {
-        double t = x_14 * x_12 + x_10 * y_12;
+        final double t = x_14 * x_12 + x_10 * y_12;
         y_12 = y_14 * x_12 + y_10 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 10 vectors as columns */
     public void transform_13_by_14_10() {
-        double t = x_14 * x_13 + x_10 * y_13;
+        final double t = x_14 * x_13 + x_10 * y_13;
         y_13 = y_14 * x_13 + y_10 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_0_by_14_11() {
-        double t = x_14 * x_0 + x_11 * y_0;
+        final double t = x_14 * x_0 + x_11 * y_0;
         y_0 = y_14 * x_0 + y_11 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_1_by_14_11() {
-        double t = x_14 * x_1 + x_11 * y_1;
+        final double t = x_14 * x_1 + x_11 * y_1;
         y_1 = y_14 * x_1 + y_11 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_2_by_14_11() {
-        double t = x_14 * x_2 + x_11 * y_2;
+        final double t = x_14 * x_2 + x_11 * y_2;
         y_2 = y_14 * x_2 + y_11 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_3_by_14_11() {
-        double t = x_14 * x_3 + x_11 * y_3;
+        final double t = x_14 * x_3 + x_11 * y_3;
         y_3 = y_14 * x_3 + y_11 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_4_by_14_11() {
-        double t = x_14 * x_4 + x_11 * y_4;
+        final double t = x_14 * x_4 + x_11 * y_4;
         y_4 = y_14 * x_4 + y_11 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_5_by_14_11() {
-        double t = x_14 * x_5 + x_11 * y_5;
+        final double t = x_14 * x_5 + x_11 * y_5;
         y_5 = y_14 * x_5 + y_11 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_6_by_14_11() {
-        double t = x_14 * x_6 + x_11 * y_6;
+        final double t = x_14 * x_6 + x_11 * y_6;
         y_6 = y_14 * x_6 + y_11 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_7_by_14_11() {
-        double t = x_14 * x_7 + x_11 * y_7;
+        final double t = x_14 * x_7 + x_11 * y_7;
         y_7 = y_14 * x_7 + y_11 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_8_by_14_11() {
-        double t = x_14 * x_8 + x_11 * y_8;
+        final double t = x_14 * x_8 + x_11 * y_8;
         y_8 = y_14 * x_8 + y_11 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_9_by_14_11() {
-        double t = x_14 * x_9 + x_11 * y_9;
+        final double t = x_14 * x_9 + x_11 * y_9;
         y_9 = y_14 * x_9 + y_11 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_10_by_14_11() {
-        double t = x_14 * x_10 + x_11 * y_10;
+        final double t = x_14 * x_10 + x_11 * y_10;
         y_10 = y_14 * x_10 + y_11 * y_10;
         x_10 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_12_by_14_11() {
-        double t = x_14 * x_12 + x_11 * y_12;
+        final double t = x_14 * x_12 + x_11 * y_12;
         y_12 = y_14 * x_12 + y_11 * y_12;
         x_12 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 11 vectors as columns */
     public void transform_13_by_14_11() {
-        double t = x_14 * x_13 + x_11 * y_13;
+        final double t = x_14 * x_13 + x_11 * y_13;
         y_13 = y_14 * x_13 + y_11 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_0_by_14_12() {
-        double t = x_14 * x_0 + x_12 * y_0;
+        final double t = x_14 * x_0 + x_12 * y_0;
         y_0 = y_14 * x_0 + y_12 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_1_by_14_12() {
-        double t = x_14 * x_1 + x_12 * y_1;
+        final double t = x_14 * x_1 + x_12 * y_1;
         y_1 = y_14 * x_1 + y_12 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_2_by_14_12() {
-        double t = x_14 * x_2 + x_12 * y_2;
+        final double t = x_14 * x_2 + x_12 * y_2;
         y_2 = y_14 * x_2 + y_12 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_3_by_14_12() {
-        double t = x_14 * x_3 + x_12 * y_3;
+        final double t = x_14 * x_3 + x_12 * y_3;
         y_3 = y_14 * x_3 + y_12 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_4_by_14_12() {
-        double t = x_14 * x_4 + x_12 * y_4;
+        final double t = x_14 * x_4 + x_12 * y_4;
         y_4 = y_14 * x_4 + y_12 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_5_by_14_12() {
-        double t = x_14 * x_5 + x_12 * y_5;
+        final double t = x_14 * x_5 + x_12 * y_5;
         y_5 = y_14 * x_5 + y_12 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_6_by_14_12() {
-        double t = x_14 * x_6 + x_12 * y_6;
+        final double t = x_14 * x_6 + x_12 * y_6;
         y_6 = y_14 * x_6 + y_12 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_7_by_14_12() {
-        double t = x_14 * x_7 + x_12 * y_7;
+        final double t = x_14 * x_7 + x_12 * y_7;
         y_7 = y_14 * x_7 + y_12 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_8_by_14_12() {
-        double t = x_14 * x_8 + x_12 * y_8;
+        final double t = x_14 * x_8 + x_12 * y_8;
         y_8 = y_14 * x_8 + y_12 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_9_by_14_12() {
-        double t = x_14 * x_9 + x_12 * y_9;
+        final double t = x_14 * x_9 + x_12 * y_9;
         y_9 = y_14 * x_9 + y_12 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_10_by_14_12() {
-        double t = x_14 * x_10 + x_12 * y_10;
+        final double t = x_14 * x_10 + x_12 * y_10;
         y_10 = y_14 * x_10 + y_12 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_11_by_14_12() {
-        double t = x_14 * x_11 + x_12 * y_11;
+        final double t = x_14 * x_11 + x_12 * y_11;
         y_11 = y_14 * x_11 + y_12 * y_11;
         x_11 = t;
     }
 
     /** transform the 13 vector by the matrixed formed by the 14 and 12 vectors as columns */
     public void transform_13_by_14_12() {
-        double t = x_14 * x_13 + x_12 * y_13;
+        final double t = x_14 * x_13 + x_12 * y_13;
         y_13 = y_14 * x_13 + y_12 * y_13;
         x_13 = t;
     }
 
     /** transform the 0 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_0_by_14_13() {
-        double t = x_14 * x_0 + x_13 * y_0;
+        final double t = x_14 * x_0 + x_13 * y_0;
         y_0 = y_14 * x_0 + y_13 * y_0;
         x_0 = t;
     }
 
     /** transform the 1 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_1_by_14_13() {
-        double t = x_14 * x_1 + x_13 * y_1;
+        final double t = x_14 * x_1 + x_13 * y_1;
         y_1 = y_14 * x_1 + y_13 * y_1;
         x_1 = t;
     }
 
     /** transform the 2 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_2_by_14_13() {
-        double t = x_14 * x_2 + x_13 * y_2;
+        final double t = x_14 * x_2 + x_13 * y_2;
         y_2 = y_14 * x_2 + y_13 * y_2;
         x_2 = t;
     }
 
     /** transform the 3 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_3_by_14_13() {
-        double t = x_14 * x_3 + x_13 * y_3;
+        final double t = x_14 * x_3 + x_13 * y_3;
         y_3 = y_14 * x_3 + y_13 * y_3;
         x_3 = t;
     }
 
     /** transform the 4 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_4_by_14_13() {
-        double t = x_14 * x_4 + x_13 * y_4;
+        final double t = x_14 * x_4 + x_13 * y_4;
         y_4 = y_14 * x_4 + y_13 * y_4;
         x_4 = t;
     }
 
     /** transform the 5 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_5_by_14_13() {
-        double t = x_14 * x_5 + x_13 * y_5;
+        final double t = x_14 * x_5 + x_13 * y_5;
         y_5 = y_14 * x_5 + y_13 * y_5;
         x_5 = t;
     }
 
     /** transform the 6 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_6_by_14_13() {
-        double t = x_14 * x_6 + x_13 * y_6;
+        final double t = x_14 * x_6 + x_13 * y_6;
         y_6 = y_14 * x_6 + y_13 * y_6;
         x_6 = t;
     }
 
     /** transform the 7 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_7_by_14_13() {
-        double t = x_14 * x_7 + x_13 * y_7;
+        final double t = x_14 * x_7 + x_13 * y_7;
         y_7 = y_14 * x_7 + y_13 * y_7;
         x_7 = t;
     }
 
     /** transform the 8 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_8_by_14_13() {
-        double t = x_14 * x_8 + x_13 * y_8;
+        final double t = x_14 * x_8 + x_13 * y_8;
         y_8 = y_14 * x_8 + y_13 * y_8;
         x_8 = t;
     }
 
     /** transform the 9 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_9_by_14_13() {
-        double t = x_14 * x_9 + x_13 * y_9;
+        final double t = x_14 * x_9 + x_13 * y_9;
         y_9 = y_14 * x_9 + y_13 * y_9;
         x_9 = t;
     }
 
     /** transform the 10 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_10_by_14_13() {
-        double t = x_14 * x_10 + x_13 * y_10;
+        final double t = x_14 * x_10 + x_13 * y_10;
         y_10 = y_14 * x_10 + y_13 * y_10;
         x_10 = t;
     }
 
     /** transform the 11 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_11_by_14_13() {
-        double t = x_14 * x_11 + x_13 * y_11;
+        final double t = x_14 * x_11 + x_13 * y_11;
         y_11 = y_14 * x_11 + y_13 * y_11;
         x_11 = t;
     }
 
     /** transform the 12 vector by the matrixed formed by the 14 and 13 vectors as columns */
     public void transform_12_by_14_13() {
-        double t = x_14 * x_12 + x_13 * y_12;
+        final double t = x_14 * x_12 + x_13 * y_12;
         y_12 = y_14 * x_12 + y_13 * y_12;
         x_12 = t;
     }
 
     /** invert the 2x2 matrix formed by vector 0 and vector 14 where the vectors are columns */
     public boolean invert_0_14() {
-        double t = x_0;
+        final double t = x_0;
         double invdet = x_0 * y_14 - y_0 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -4995,7 +4995,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 1 and vector 14 where the vectors are columns */
     public boolean invert_1_14() {
-        double t = x_1;
+        final double t = x_1;
         double invdet = x_1 * y_14 - y_1 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5009,7 +5009,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 2 and vector 14 where the vectors are columns */
     public boolean invert_2_14() {
-        double t = x_2;
+        final double t = x_2;
         double invdet = x_2 * y_14 - y_2 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5023,7 +5023,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 3 and vector 14 where the vectors are columns */
     public boolean invert_3_14() {
-        double t = x_3;
+        final double t = x_3;
         double invdet = x_3 * y_14 - y_3 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5037,7 +5037,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 4 and vector 14 where the vectors are columns */
     public boolean invert_4_14() {
-        double t = x_4;
+        final double t = x_4;
         double invdet = x_4 * y_14 - y_4 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5051,7 +5051,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 5 and vector 14 where the vectors are columns */
     public boolean invert_5_14() {
-        double t = x_5;
+        final double t = x_5;
         double invdet = x_5 * y_14 - y_5 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5065,7 +5065,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 6 and vector 14 where the vectors are columns */
     public boolean invert_6_14() {
-        double t = x_6;
+        final double t = x_6;
         double invdet = x_6 * y_14 - y_6 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5079,7 +5079,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 7 and vector 14 where the vectors are columns */
     public boolean invert_7_14() {
-        double t = x_7;
+        final double t = x_7;
         double invdet = x_7 * y_14 - y_7 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5093,7 +5093,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 8 and vector 14 where the vectors are columns */
     public boolean invert_8_14() {
-        double t = x_8;
+        final double t = x_8;
         double invdet = x_8 * y_14 - y_8 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5107,7 +5107,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 9 and vector 14 where the vectors are columns */
     public boolean invert_9_14() {
-        double t = x_9;
+        final double t = x_9;
         double invdet = x_9 * y_14 - y_9 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5121,7 +5121,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 10 and vector 14 where the vectors are columns */
     public boolean invert_10_14() {
-        double t = x_10;
+        final double t = x_10;
         double invdet = x_10 * y_14 - y_10 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5135,7 +5135,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 11 and vector 14 where the vectors are columns */
     public boolean invert_11_14() {
-        double t = x_11;
+        final double t = x_11;
         double invdet = x_11 * y_14 - y_11 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5149,7 +5149,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 12 and vector 14 where the vectors are columns */
     public boolean invert_12_14() {
-        double t = x_12;
+        final double t = x_12;
         double invdet = x_12 * y_14 - y_12 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5163,7 +5163,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 13 and vector 14 where the vectors are columns */
     public boolean invert_13_14() {
-        double t = x_13;
+        final double t = x_13;
         double invdet = x_13 * y_14 - y_13 * x_14;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5177,7 +5177,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 0 where the vectors are columns */
     public boolean invert_14_0() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_0 - y_14 * x_0;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5191,7 +5191,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 1 where the vectors are columns */
     public boolean invert_14_1() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_1 - y_14 * x_1;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5205,7 +5205,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 2 where the vectors are columns */
     public boolean invert_14_2() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_2 - y_14 * x_2;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5219,7 +5219,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 3 where the vectors are columns */
     public boolean invert_14_3() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_3 - y_14 * x_3;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5233,7 +5233,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 4 where the vectors are columns */
     public boolean invert_14_4() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_4 - y_14 * x_4;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5247,7 +5247,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 5 where the vectors are columns */
     public boolean invert_14_5() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_5 - y_14 * x_5;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5261,7 +5261,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 6 where the vectors are columns */
     public boolean invert_14_6() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_6 - y_14 * x_6;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5275,7 +5275,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 7 where the vectors are columns */
     public boolean invert_14_7() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_7 - y_14 * x_7;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5289,7 +5289,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 8 where the vectors are columns */
     public boolean invert_14_8() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_8 - y_14 * x_8;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5303,7 +5303,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 9 where the vectors are columns */
     public boolean invert_14_9() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_9 - y_14 * x_9;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5317,7 +5317,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 10 where the vectors are columns */
     public boolean invert_14_10() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_10 - y_14 * x_10;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5331,7 +5331,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 11 where the vectors are columns */
     public boolean invert_14_11() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_11 - y_14 * x_11;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5345,7 +5345,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 12 where the vectors are columns */
     public boolean invert_14_12() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_12 - y_14 * x_12;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5359,7 +5359,7 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** invert the 2x2 matrix formed by vector 14 and vector 13 where the vectors are columns */
     public boolean invert_14_13() {
-        double t = x_14;
+        final double t = x_14;
         double invdet = x_14 * y_13 - y_14 * x_13;
         if (Math.abs(invdet) < ZERO_LIMIT)
             return false;
@@ -5373,196 +5373,196 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** transpose the matrix formed by vector 0 and vector 14 where the vectors are columns */
     public void transpose_0_14() {
-        double t = y_0;
+        final double t = y_0;
         y_0 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 1 and vector 14 where the vectors are columns */
     public void transpose_1_14() {
-        double t = y_1;
+        final double t = y_1;
         y_1 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 2 and vector 14 where the vectors are columns */
     public void transpose_2_14() {
-        double t = y_2;
+        final double t = y_2;
         y_2 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 3 and vector 14 where the vectors are columns */
     public void transpose_3_14() {
-        double t = y_3;
+        final double t = y_3;
         y_3 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 4 and vector 14 where the vectors are columns */
     public void transpose_4_14() {
-        double t = y_4;
+        final double t = y_4;
         y_4 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 5 and vector 14 where the vectors are columns */
     public void transpose_5_14() {
-        double t = y_5;
+        final double t = y_5;
         y_5 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 6 and vector 14 where the vectors are columns */
     public void transpose_6_14() {
-        double t = y_6;
+        final double t = y_6;
         y_6 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 7 and vector 14 where the vectors are columns */
     public void transpose_7_14() {
-        double t = y_7;
+        final double t = y_7;
         y_7 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 8 and vector 14 where the vectors are columns */
     public void transpose_8_14() {
-        double t = y_8;
+        final double t = y_8;
         y_8 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 9 and vector 14 where the vectors are columns */
     public void transpose_9_14() {
-        double t = y_9;
+        final double t = y_9;
         y_9 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 10 and vector 14 where the vectors are columns */
     public void transpose_10_14() {
-        double t = y_10;
+        final double t = y_10;
         y_10 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 11 and vector 14 where the vectors are columns */
     public void transpose_11_14() {
-        double t = y_11;
+        final double t = y_11;
         y_11 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 12 and vector 14 where the vectors are columns */
     public void transpose_12_14() {
-        double t = y_12;
+        final double t = y_12;
         y_12 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 13 and vector 14 where the vectors are columns */
     public void transpose_13_14() {
-        double t = y_13;
+        final double t = y_13;
         y_13 = x_14;
         x_14 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 0 where the vectors are columns */
     public void transpose_14_0() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_0;
         x_0 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 1 where the vectors are columns */
     public void transpose_14_1() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_1;
         x_1 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 2 where the vectors are columns */
     public void transpose_14_2() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_2;
         x_2 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 3 where the vectors are columns */
     public void transpose_14_3() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_3;
         x_3 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 4 where the vectors are columns */
     public void transpose_14_4() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_4;
         x_4 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 5 where the vectors are columns */
     public void transpose_14_5() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_5;
         x_5 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 6 where the vectors are columns */
     public void transpose_14_6() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_6;
         x_6 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 7 where the vectors are columns */
     public void transpose_14_7() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_7;
         x_7 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 8 where the vectors are columns */
     public void transpose_14_8() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_8;
         x_8 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 9 where the vectors are columns */
     public void transpose_14_9() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_9;
         x_9 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 10 where the vectors are columns */
     public void transpose_14_10() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_10;
         x_10 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 11 where the vectors are columns */
     public void transpose_14_11() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_11;
         x_11 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 12 where the vectors are columns */
     public void transpose_14_12() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_12;
         x_12 = t;
     }
 
     /** transpose the matrix formed by vector 14 and vector 13 where the vectors are columns */
     public void transpose_14_13() {
-        double t = y_14;
+        final double t = y_14;
         y_14 = x_13;
         x_13 = t;
     }
