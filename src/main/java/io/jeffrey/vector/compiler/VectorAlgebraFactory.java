@@ -1,6 +1,11 @@
 package io.jeffrey.vector.compiler;
 
+import io.jeffrey.vector.compiler.functions.Copiers;
+import io.jeffrey.vector.compiler.functions.Extractors;
+import io.jeffrey.vector.compiler.functions.Injectors;
+import io.jeffrey.vector.compiler.functions.IsZero;
 import io.jeffrey.vector.compiler.functions.Setters;
+import io.jeffrey.vector.compiler.functions.Zeros;
 
 import java.io.File;
 import java.io.PrintStream;
@@ -15,6 +20,11 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         super(out, N, definedFunctions);
         this.components = new ArrayList<VectorSourcePrintStream>();
         components.add(new Setters(out, N, definedFunctions));
+        components.add(new Zeros(out, N, definedFunctions));
+        components.add(new Copiers(out, N, definedFunctions));
+        components.add(new Extractors(out, N, definedFunctions));
+        components.add(new Injectors(out, N, definedFunctions));
+        components.add(new IsZero(out, N, definedFunctions));
     }
 
     /**
@@ -42,60 +52,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         untab();
         println("}");
         untab();
-    }
-
-    /**
-     * write out functions to zero out specific zeros
-     */
-    private void writeZeros() {
-        for (int k = 0; k < N; k++) {
-            if (start("zero_out_", s(k))) {
-                println();
-                tab();
-                println("/** set the " + k + "-vector to the (0,0) */");
-                println("public void zero_out_", s(k), "() {");
-                tab();
-                println(atX(k) + " = 0.0;");
-                println(atY(k) + " = 0.0;");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
-    private void writeExtractors() {
-        for (int k = 0; k < N; k++) {
-            if (start("extract", s(k))) {
-                println();
-                tab();
-                println("/** extract the " + k + "-vector into the given output array starting at the given offset */");
-                println("public void extract_", s(k), "(final double[] output, final int offset) {");
-                tab();
-                println("output[offset + 0] = ", atX(k), ";");
-                println("output[offset + 1] = ", atY(k), ";");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
-    private void writeInjectors() {
-        for (int k = 0; k < N; k++) {
-            if (start("inject", s(k))) {
-                println();
-                tab();
-                println("/** inject the given input starting at the given offset into the " + k + "-vector */");
-                println("public void inject_", s(k), "(final double[] input, final int offset) {");
-                tab();
-                println(atX(k), " = input[offset + 0];");
-                println(atY(k), " = input[offset + 1];");
-                untab();
-                println("}");
-                untab();
-            }
-        }
     }
 
     private void writeBinaryOp(String name, String op, String how, String docName) {
@@ -153,27 +109,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
                     println("final double t = ", atX(k), " * ", atX(j), " - ", atY(k), " * ", atY(j), ";");
                     println(atY(k), " = ", atX(k), " * ", atY(j), " + ", atY(k), " * ", atX(j), ";");
                     println(atX(k), " = t;");
-                    untab();
-                    println("}");
-                    untab();
-                }
-            }
-        }
-    }
-
-    private void writeCopies() {
-        for (int k = 0; k < N; k++) {
-            for (int j = 0; j < N; j++) {
-                if (k == j)
-                    continue;
-                if (start("copy_from_", s(j), "_to_", s(k))) {
-                    println();
-                    tab();
-                    println("/** copy the " + j + " vector into the " + k + " vector */");
-                    println("public void copy_from_", s(j), "_to_", s(k), "() {");
-                    tab();
-                    println(atX(k), " = ", atX(j), ";");
-                    println(atY(k), " = ", atY(j), ";");
                     untab();
                     println("}");
                     untab();
@@ -289,29 +224,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         }
     }
 
-    private void writeIsZero() {
-        for (int k = 0; k < N; k++) {
-            if (start("is_", s(k), "_zero")) {
-                println();
-                tab();
-                println("/** is the " + k + "-vector the origin */");
-                println("public boolean is_", s(k), "_zero() {");
-                tab();
-                println("double d = 0.0;");
-                println("d += ", atX(k), " * ", atX(k), ";");
-                println("d += ", atY(k), " * ", atY(k), ";");
-                println("if (Math.abs(d) < ZERO_LIMIT)");
-                tab();
-                println("return true;");
-                untab();
-                println("return false;");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
     private void writeNormalizers() {
         for (int k = 0; k < N; k++) {
             if (start("normalize_", "_", s(k))) {
@@ -405,12 +317,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
             vsps.writeSource();
         }
 
-        writeZeros();
-        writeCopies();
-        writeExtractors();
-        writeInjectors();
-        writeIsZero();
-
         writeAngleOf();
         writeSetByAngle();
 
@@ -486,7 +392,7 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
             try {
                 test.println("package io.jeffrey.vector;");
                 test.println();
-                //test.println("import org.junit.Assert;");
+                test.println("import org.junit.Assert;");
                 test.println("import org.junit.Test;");
                 test.println();
                 test.println("public class GeneratedVectorRegister" + hexify(r) + "Test extends CommonVectorTestingBase {");

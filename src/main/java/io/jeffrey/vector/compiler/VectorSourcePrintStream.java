@@ -14,7 +14,7 @@ public abstract class VectorSourcePrintStream {
         return Integer.toHexString(X).toUpperCase();
     }
 
-    protected VectorSourcePrintStream(PrintStream out, int N, HashSet<String> definedFunctions) {
+    public VectorSourcePrintStream(PrintStream out, int N, HashSet<String> definedFunctions) {
         this.output = out;
         this.N = N;
         this.tabbing = 0;
@@ -74,7 +74,7 @@ public abstract class VectorSourcePrintStream {
             tab();
             println();
             println("@Test");
-            println("public void test", name, "() throws Exception {");
+            println("public void test", name.toUpperCase(), "() throws Exception {");
             tab();
             return true;
         }
