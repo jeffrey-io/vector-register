@@ -1,8 +1,10 @@
 package io.jeffrey.vector.compiler;
 
+import io.jeffrey.vector.compiler.functions.AngleFunctions;
 import io.jeffrey.vector.compiler.functions.Copiers;
 import io.jeffrey.vector.compiler.functions.Extractors;
 import io.jeffrey.vector.compiler.functions.Setters;
+import io.jeffrey.vector.compiler.functions.VectorAlgebraFunctions;
 import io.jeffrey.vector.compiler.functions.ZeroFunctions;
 
 import java.io.File;
@@ -21,6 +23,8 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         components.add(new ZeroFunctions(out, N, definedFunctions));
         components.add(new Copiers(out, N, definedFunctions));
         components.add(new Extractors(out, N, definedFunctions));
+        components.add(new AngleFunctions(out, N, definedFunctions));
+        components.add(new VectorAlgebraFunctions(out, N, definedFunctions));
     }
 
     /**
@@ -48,47 +52,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         untab();
         println("}");
         untab();
-    }
-
-    private void writeBinaryOp(String name, String op, String how, String docName) {
-        for (int k = 0; k < N; k++) {
-            for (int j = 0; j < N; j++) {
-                if (k == j)
-                    continue;
-                if (start(name, "_", s(j), "_", how, "_" + s(k))) {
-                    println();
-                    tab();
-                    println("/** " + docName + " the " + k + " and " + j + " together and store the result to the " + k + " vector */");
-                    println("public void ", name, "_", s(j), "_", how, "_" + s(k), "() {");
-                    tab();
-                    println(atX(k), " ", op, "= ", atX(j), ";");
-                    println(atY(k), " ", op, "= ", atY(j), ";");
-                    untab();
-                    println("}");
-                    untab();
-                }
-            }
-        }
-    }
-
-    private void writeDotProduct() {
-        for (int k = 0; k < N; k++) {
-            for (int j = 0; j < N; j++) {
-                if (k == j)
-                    continue;
-                if (start("dot_", s(j), "_", s(k))) {
-                    println();
-                    tab();
-                    println("/** return the dot product between the " + k + " and " + j + " vectors */");
-                    println("public double ", "dot_", s(j), "_", s(k), "() {");
-                    tab();
-                    println("return ", atX(k), " * ", atX(j), " + ", atY(k), " * ", atY(j), ";");
-                    untab();
-                    println("}");
-                    untab();
-                }
-            }
-        }
     }
 
     private void writeComplexMultiply() {
@@ -168,23 +131,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         }
     }
 
-    private void writeScalarOp(String name, String op, String docName) {
-        for (int k = 0; k < N; k++) {
-            if (start(name, "_", s(k))) {
-                println();
-                tab();
-                println("/** " + docName + " vector " + k + " by the given scalar */");
-                println("public void ", name, "_", s(k), "_by(double s) {");
-                tab();
-                println(atX(k), " ", op, "= s;");
-                println(atY(k), " ", op, "= s;");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
     private void writeConj() {
         for (int k = 0; k < N; k++) {
             if (start("conjugate_", "_", s(k))) {
@@ -248,39 +194,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         }
     }
 
-    private void writeAngleOf() {
-        for (int k = 0; k < N; k++) {
-            if (start("angle_", s(k))) {
-                println();
-                tab();
-                println("/** return the angle (via atan2) of the ", s(k), " vector */");
-                println("public double angle_", s(k), "() {");
-                tab();
-                println("return Math.atan2(", atY(k), ", ", atX(k), ");");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
-    private void writeSetByAngle() {
-        for (int k = 0; k < N; k++) {
-            if (start("setByAngle", "_", s(k))) {
-                println();
-                tab();
-                println("/** set the ", s(k), " vector to the complex number corresponding to the given angle */");
-                println("public void set_", s(k), "_by_angle(final double theta) {");
-                tab();
-                println(atX(k), " = Math.cos(theta);");
-                println(atY(k), " = Math.sin(theta);");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
     private void writeSetMatrix() {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
@@ -312,15 +225,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         for (VectorSourcePrintStream vsps : components) {
             vsps.writeSource();
         }
-
-        writeAngleOf();
-        writeSetByAngle();
-
-        writeBinaryOp("add", "+", "to", "add");
-        writeBinaryOp("sub", "-", "from", "subtract");
-        writeScalarOp("mult", "*", "multiply");
-        writeScalarOp("div", "*", "divide");
-        writeDotProduct();
 
         writeConj();
         writeComplexMultiply();

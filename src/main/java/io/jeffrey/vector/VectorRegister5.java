@@ -203,8 +203,8 @@ public class VectorRegister5 extends VectorRegister4 {
 
     /** divide vector 4 by the given scalar */
     public void div_4_by(double s) {
-        x_4 *= s;
-        y_4 *= s;
+        x_4 /= s;
+        y_4 /= s;
     }
 
     /** return the dot product between the 0 and 4 vectors */

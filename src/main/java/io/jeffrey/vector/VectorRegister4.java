@@ -167,8 +167,8 @@ public class VectorRegister4 extends VectorRegister3 {
 
     /** divide vector 3 by the given scalar */
     public void div_3_by(double s) {
-        x_3 *= s;
-        y_3 *= s;
+        x_3 /= s;
+        y_3 /= s;
     }
 
     /** return the dot product between the 0 and 3 vectors */

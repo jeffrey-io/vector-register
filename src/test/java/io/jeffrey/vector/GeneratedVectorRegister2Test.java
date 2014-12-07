@@ -190,4 +190,88 @@ public class GeneratedVectorRegister2Test extends CommonVectorTestingBase {
         assertEquals(8, x.x_1);
         assertEquals(9, x.y_1);
     }
+
+    @Test
+    public void testANGLES_0() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_0_by_angle(0.5);
+        assertEquals(0.8775825618903728, x.x_0);
+        assertEquals(0.479425538604203, x.y_0);
+        x.set_0_by_angle(1.5);
+        assertEquals(0.0707372016677029, x.x_0);
+        assertEquals(0.9974949866040544, x.y_0);
+        x.set_0_by_angle(2.5);
+        assertEquals(-0.8011436155469337, x.x_0);
+        assertEquals(0.5984721441039564, x.y_0);
+        double u, v;
+        for(double theta = 0; theta < 7; theta += 0.1) {
+            x.set_0_by_angle(theta);
+            double omega = x.angle_0();
+            u = x.x_0;
+            v = x.y_0;
+            x.set_0_by_angle(omega);
+            assertEquals(u, x.x_0);
+            assertEquals(v, x.y_0);
+        }
+    }
+
+    @Test
+    public void testANGLES_1() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_1_by_angle(0.5);
+        assertEquals(0.8775825618903728, x.x_1);
+        assertEquals(0.479425538604203, x.y_1);
+        x.set_1_by_angle(1.5);
+        assertEquals(0.0707372016677029, x.x_1);
+        assertEquals(0.9974949866040544, x.y_1);
+        x.set_1_by_angle(2.5);
+        assertEquals(-0.8011436155469337, x.x_1);
+        assertEquals(0.5984721441039564, x.y_1);
+        double u, v;
+        for(double theta = 0; theta < 7; theta += 0.1) {
+            x.set_1_by_angle(theta);
+            double omega = x.angle_1();
+            u = x.x_1;
+            v = x.y_1;
+            x.set_1_by_angle(omega);
+            assertEquals(u, x.x_1);
+            assertEquals(v, x.y_1);
+        }
+    }
+
+    @Test
+    public void testALGEBRA0() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_0(3,5);
+        x.mult_0_by(4);
+        assertEquals(12, x.x_0);
+        assertEquals(20, x.y_0);
+        x.div_0_by(2);
+        assertEquals(6, x.x_0);
+        assertEquals(10, x.y_0);
+        x.add_1_to_0();
+        assertEquals(7, x.x_0);
+        assertEquals(12, x.y_0);
+        x.set_0(1,2);
+    }
+
+    @Test
+    public void testALGEBRA1() throws Exception {
+        final VectorRegister2 x = new VectorRegister2();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_1(3,5);
+        x.mult_1_by(4);
+        assertEquals(12, x.x_1);
+        assertEquals(20, x.y_1);
+        x.div_1_by(2);
+        assertEquals(6, x.x_1);
+        assertEquals(10, x.y_1);
+        x.add_0_to_1();
+        assertEquals(7, x.x_1);
+        assertEquals(12, x.y_1);
+        x.set_1(1,2);
+    }
 }

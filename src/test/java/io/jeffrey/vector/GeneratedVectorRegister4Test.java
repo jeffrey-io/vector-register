@@ -131,4 +131,70 @@ public class GeneratedVectorRegister4Test extends CommonVectorTestingBase {
         assertEquals(8, x.x_3);
         assertEquals(9, x.y_3);
     }
+
+    @Test
+    public void testANGLES_3() throws Exception {
+        final VectorRegister4 x = new VectorRegister4();
+        x.set_3_by_angle(0.5);
+        assertEquals(0.8775825618903728, x.x_3);
+        assertEquals(0.479425538604203, x.y_3);
+        x.set_3_by_angle(1.5);
+        assertEquals(0.0707372016677029, x.x_3);
+        assertEquals(0.9974949866040544, x.y_3);
+        x.set_3_by_angle(2.5);
+        assertEquals(-0.8011436155469337, x.x_3);
+        assertEquals(0.5984721441039564, x.y_3);
+        double u, v;
+        for(double theta = 0; theta < 7; theta += 0.1) {
+            x.set_3_by_angle(theta);
+            double omega = x.angle_3();
+            u = x.x_3;
+            v = x.y_3;
+            x.set_3_by_angle(omega);
+            assertEquals(u, x.x_3);
+            assertEquals(v, x.y_3);
+        }
+    }
+
+    @Test
+    public void testALGEBRA3() throws Exception {
+        final VectorRegister4 x = new VectorRegister4();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_3(3,5);
+        x.mult_3_by(4);
+        assertEquals(12, x.x_3);
+        assertEquals(20, x.y_3);
+        x.div_3_by(2);
+        assertEquals(6, x.x_3);
+        assertEquals(10, x.y_3);
+        x.add_0_to_3();
+        assertEquals(7, x.x_3);
+        assertEquals(12, x.y_3);
+        x.set_3(1,2);
+        x.set_3(3,5);
+        x.mult_3_by(4);
+        assertEquals(12, x.x_3);
+        assertEquals(20, x.y_3);
+        x.div_3_by(2);
+        assertEquals(6, x.x_3);
+        assertEquals(10, x.y_3);
+        x.add_1_to_3();
+        assertEquals(7, x.x_3);
+        assertEquals(12, x.y_3);
+        x.set_3(1,2);
+        x.set_3(3,5);
+        x.mult_3_by(4);
+        assertEquals(12, x.x_3);
+        assertEquals(20, x.y_3);
+        x.div_3_by(2);
+        assertEquals(6, x.x_3);
+        assertEquals(10, x.y_3);
+        x.add_2_to_3();
+        assertEquals(7, x.x_3);
+        assertEquals(12, x.y_3);
+        x.set_3(1,2);
+    }
 }

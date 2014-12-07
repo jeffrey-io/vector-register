@@ -148,14 +148,14 @@ public class VectorRegister2 {
 
     /** divide vector 0 by the given scalar */
     public void div_0_by(double s) {
-        x_0 *= s;
-        y_0 *= s;
+        x_0 /= s;
+        y_0 /= s;
     }
 
     /** divide vector 1 by the given scalar */
     public void div_1_by(double s) {
-        x_1 *= s;
-        y_1 *= s;
+        x_1 /= s;
+        y_1 /= s;
     }
 
     /** return the dot product between the 0 and 1 vectors */

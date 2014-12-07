@@ -419,8 +419,8 @@ public class VectorRegisterB extends VectorRegisterA {
 
     /** divide vector 10 by the given scalar */
     public void div_10_by(double s) {
-        x_10 *= s;
-        y_10 *= s;
+        x_10 /= s;
+        y_10 /= s;
     }
 
     /** return the dot product between the 0 and 10 vectors */

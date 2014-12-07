@@ -311,8 +311,8 @@ public class VectorRegister8 extends VectorRegister7 {
 
     /** divide vector 7 by the given scalar */
     public void div_7_by(double s) {
-        x_7 *= s;
-        y_7 *= s;
+        x_7 /= s;
+        y_7 /= s;
     }
 
     /** return the dot product between the 0 and 7 vectors */

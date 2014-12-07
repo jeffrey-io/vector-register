@@ -239,8 +239,8 @@ public class VectorRegister6 extends VectorRegister5 {
 
     /** divide vector 5 by the given scalar */
     public void div_5_by(double s) {
-        x_5 *= s;
-        y_5 *= s;
+        x_5 /= s;
+        y_5 /= s;
     }
 
     /** return the dot product between the 0 and 5 vectors */

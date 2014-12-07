@@ -275,8 +275,8 @@ public class VectorRegister7 extends VectorRegister6 {
 
     /** divide vector 6 by the given scalar */
     public void div_6_by(double s) {
-        x_6 *= s;
-        y_6 *= s;
+        x_6 /= s;
+        y_6 /= s;
     }
 
     /** return the dot product between the 0 and 6 vectors */

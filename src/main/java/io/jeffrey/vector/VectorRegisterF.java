@@ -563,8 +563,8 @@ public class VectorRegisterF extends VectorRegisterE {
 
     /** divide vector 14 by the given scalar */
     public void div_14_by(double s) {
-        x_14 *= s;
-        y_14 *= s;
+        x_14 /= s;
+        y_14 /= s;
     }
 
     /** return the dot product between the 0 and 14 vectors */

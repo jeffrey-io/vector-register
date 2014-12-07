@@ -383,8 +383,8 @@ public class VectorRegisterA extends VectorRegister9 {
 
     /** divide vector 9 by the given scalar */
     public void div_9_by(double s) {
-        x_9 *= s;
-        y_9 *= s;
+        x_9 /= s;
+        y_9 /= s;
     }
 
     /** return the dot product between the 0 and 9 vectors */

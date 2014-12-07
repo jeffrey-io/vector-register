@@ -527,8 +527,8 @@ public class VectorRegisterE extends VectorRegisterD {
 
     /** divide vector 13 by the given scalar */
     public void div_13_by(double s) {
-        x_13 *= s;
-        y_13 *= s;
+        x_13 /= s;
+        y_13 /= s;
     }
 
     /** return the dot product between the 0 and 13 vectors */

@@ -146,4 +146,82 @@ public class GeneratedVectorRegister5Test extends CommonVectorTestingBase {
         assertEquals(8, x.x_4);
         assertEquals(9, x.y_4);
     }
+
+    @Test
+    public void testANGLES_4() throws Exception {
+        final VectorRegister5 x = new VectorRegister5();
+        x.set_4_by_angle(0.5);
+        assertEquals(0.8775825618903728, x.x_4);
+        assertEquals(0.479425538604203, x.y_4);
+        x.set_4_by_angle(1.5);
+        assertEquals(0.0707372016677029, x.x_4);
+        assertEquals(0.9974949866040544, x.y_4);
+        x.set_4_by_angle(2.5);
+        assertEquals(-0.8011436155469337, x.x_4);
+        assertEquals(0.5984721441039564, x.y_4);
+        double u, v;
+        for(double theta = 0; theta < 7; theta += 0.1) {
+            x.set_4_by_angle(theta);
+            double omega = x.angle_4();
+            u = x.x_4;
+            v = x.y_4;
+            x.set_4_by_angle(omega);
+            assertEquals(u, x.x_4);
+            assertEquals(v, x.y_4);
+        }
+    }
+
+    @Test
+    public void testALGEBRA4() throws Exception {
+        final VectorRegister5 x = new VectorRegister5();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.mult_4_by(4);
+        assertEquals(12, x.x_4);
+        assertEquals(20, x.y_4);
+        x.div_4_by(2);
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        x.add_0_to_4();
+        assertEquals(7, x.x_4);
+        assertEquals(12, x.y_4);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.mult_4_by(4);
+        assertEquals(12, x.x_4);
+        assertEquals(20, x.y_4);
+        x.div_4_by(2);
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        x.add_1_to_4();
+        assertEquals(7, x.x_4);
+        assertEquals(12, x.y_4);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.mult_4_by(4);
+        assertEquals(12, x.x_4);
+        assertEquals(20, x.y_4);
+        x.div_4_by(2);
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        x.add_2_to_4();
+        assertEquals(7, x.x_4);
+        assertEquals(12, x.y_4);
+        x.set_4(1,2);
+        x.set_4(3,5);
+        x.mult_4_by(4);
+        assertEquals(12, x.x_4);
+        assertEquals(20, x.y_4);
+        x.div_4_by(2);
+        assertEquals(6, x.x_4);
+        assertEquals(10, x.y_4);
+        x.add_3_to_4();
+        assertEquals(7, x.x_4);
+        assertEquals(12, x.y_4);
+        x.set_4(1,2);
+    }
 }

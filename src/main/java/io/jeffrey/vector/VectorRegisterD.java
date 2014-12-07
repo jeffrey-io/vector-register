@@ -491,8 +491,8 @@ public class VectorRegisterD extends VectorRegisterC {
 
     /** divide vector 12 by the given scalar */
     public void div_12_by(double s) {
-        x_12 *= s;
-        y_12 *= s;
+        x_12 /= s;
+        y_12 /= s;
     }
 
     /** return the dot product between the 0 and 12 vectors */

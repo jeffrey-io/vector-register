@@ -455,8 +455,8 @@ public class VectorRegisterC extends VectorRegisterB {
 
     /** divide vector 11 by the given scalar */
     public void div_11_by(double s) {
-        x_11 *= s;
-        y_11 *= s;
+        x_11 /= s;
+        y_11 /= s;
     }
 
     /** return the dot product between the 0 and 11 vectors */

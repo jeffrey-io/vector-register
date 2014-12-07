@@ -57,6 +57,10 @@ public abstract class VectorSourcePrintStream {
         return Integer.toString(x);
     }
 
+    protected String s(double x) {
+        return Double.toString(x);
+    }
+
     protected String atX(int k) {
         return "x_" + k;
     }

@@ -176,4 +176,106 @@ public class GeneratedVectorRegister7Test extends CommonVectorTestingBase {
         assertEquals(8, x.x_6);
         assertEquals(9, x.y_6);
     }
+
+    @Test
+    public void testANGLES_6() throws Exception {
+        final VectorRegister7 x = new VectorRegister7();
+        x.set_6_by_angle(0.5);
+        assertEquals(0.8775825618903728, x.x_6);
+        assertEquals(0.479425538604203, x.y_6);
+        x.set_6_by_angle(1.5);
+        assertEquals(0.0707372016677029, x.x_6);
+        assertEquals(0.9974949866040544, x.y_6);
+        x.set_6_by_angle(2.5);
+        assertEquals(-0.8011436155469337, x.x_6);
+        assertEquals(0.5984721441039564, x.y_6);
+        double u, v;
+        for(double theta = 0; theta < 7; theta += 0.1) {
+            x.set_6_by_angle(theta);
+            double omega = x.angle_6();
+            u = x.x_6;
+            v = x.y_6;
+            x.set_6_by_angle(omega);
+            assertEquals(u, x.x_6);
+            assertEquals(v, x.y_6);
+        }
+    }
+
+    @Test
+    public void testALGEBRA6() throws Exception {
+        final VectorRegister7 x = new VectorRegister7();
+        x.set_0(1,2);
+        x.set_1(1,2);
+        x.set_2(1,2);
+        x.set_3(1,2);
+        x.set_4(1,2);
+        x.set_5(1,2);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.mult_6_by(4);
+        assertEquals(12, x.x_6);
+        assertEquals(20, x.y_6);
+        x.div_6_by(2);
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        x.add_0_to_6();
+        assertEquals(7, x.x_6);
+        assertEquals(12, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.mult_6_by(4);
+        assertEquals(12, x.x_6);
+        assertEquals(20, x.y_6);
+        x.div_6_by(2);
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        x.add_1_to_6();
+        assertEquals(7, x.x_6);
+        assertEquals(12, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.mult_6_by(4);
+        assertEquals(12, x.x_6);
+        assertEquals(20, x.y_6);
+        x.div_6_by(2);
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        x.add_2_to_6();
+        assertEquals(7, x.x_6);
+        assertEquals(12, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.mult_6_by(4);
+        assertEquals(12, x.x_6);
+        assertEquals(20, x.y_6);
+        x.div_6_by(2);
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        x.add_3_to_6();
+        assertEquals(7, x.x_6);
+        assertEquals(12, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.mult_6_by(4);
+        assertEquals(12, x.x_6);
+        assertEquals(20, x.y_6);
+        x.div_6_by(2);
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        x.add_4_to_6();
+        assertEquals(7, x.x_6);
+        assertEquals(12, x.y_6);
+        x.set_6(1,2);
+        x.set_6(3,5);
+        x.mult_6_by(4);
+        assertEquals(12, x.x_6);
+        assertEquals(20, x.y_6);
+        x.div_6_by(2);
+        assertEquals(6, x.x_6);
+        assertEquals(10, x.y_6);
+        x.add_5_to_6();
+        assertEquals(7, x.x_6);
+        assertEquals(12, x.y_6);
+        x.set_6(1,2);
+    }
 }
