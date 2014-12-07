@@ -1,5 +1,6 @@
 package io.jeffrey.vector;
 
+/** a register bank that contains 2 vectors along with all possible operations */
 public class VectorRegister2 {
     protected static final double ZERO_LIMIT = 5.421010862427522E-20;
     public double                 x_0;

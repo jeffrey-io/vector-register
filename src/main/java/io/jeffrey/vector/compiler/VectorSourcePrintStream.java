@@ -10,7 +10,7 @@ public abstract class VectorSourcePrintStream {
     private int                   tabbing;
     private final HashSet<String> definedFunctions;
 
-    protected static final String hexify(int X) {
+    public static final String hexify(int X) {
         return Integer.toHexString(X).toUpperCase();
     }
 

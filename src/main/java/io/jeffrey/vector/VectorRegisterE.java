@@ -1,5 +1,6 @@
 package io.jeffrey.vector;
 
+/** a register bank that contains 14 vectors along with all possible operations */
 public class VectorRegisterE extends VectorRegisterD {
     public double x_13;
     public double y_13;
