@@ -3774,6 +3774,126 @@ public class VectorRegisterD extends VectorRegisterC {
         x_10 = t;
     }
 
+    /** find the determinate of the 2x2 matrix formed by vector 0 and vector 12 where the vectors are columns */
+    public double det_0_12() {
+        return x_0 * y_12 - y_0 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 1 and vector 12 where the vectors are columns */
+    public double det_1_12() {
+        return x_1 * y_12 - y_1 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 2 and vector 12 where the vectors are columns */
+    public double det_2_12() {
+        return x_2 * y_12 - y_2 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 3 and vector 12 where the vectors are columns */
+    public double det_3_12() {
+        return x_3 * y_12 - y_3 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 4 and vector 12 where the vectors are columns */
+    public double det_4_12() {
+        return x_4 * y_12 - y_4 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 5 and vector 12 where the vectors are columns */
+    public double det_5_12() {
+        return x_5 * y_12 - y_5 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 6 and vector 12 where the vectors are columns */
+    public double det_6_12() {
+        return x_6 * y_12 - y_6 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 7 and vector 12 where the vectors are columns */
+    public double det_7_12() {
+        return x_7 * y_12 - y_7 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 12 where the vectors are columns */
+    public double det_8_12() {
+        return x_8 * y_12 - y_8 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 9 and vector 12 where the vectors are columns */
+    public double det_9_12() {
+        return x_9 * y_12 - y_9 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 10 and vector 12 where the vectors are columns */
+    public double det_10_12() {
+        return x_10 * y_12 - y_10 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 11 and vector 12 where the vectors are columns */
+    public double det_11_12() {
+        return x_11 * y_12 - y_11 * x_12;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 0 where the vectors are columns */
+    public double det_12_0() {
+        return x_12 * y_0 - y_12 * x_0;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 1 where the vectors are columns */
+    public double det_12_1() {
+        return x_12 * y_1 - y_12 * x_1;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 2 where the vectors are columns */
+    public double det_12_2() {
+        return x_12 * y_2 - y_12 * x_2;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 3 where the vectors are columns */
+    public double det_12_3() {
+        return x_12 * y_3 - y_12 * x_3;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 4 where the vectors are columns */
+    public double det_12_4() {
+        return x_12 * y_4 - y_12 * x_4;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 5 where the vectors are columns */
+    public double det_12_5() {
+        return x_12 * y_5 - y_12 * x_5;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 6 where the vectors are columns */
+    public double det_12_6() {
+        return x_12 * y_6 - y_12 * x_6;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 7 where the vectors are columns */
+    public double det_12_7() {
+        return x_12 * y_7 - y_12 * x_7;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 8 where the vectors are columns */
+    public double det_12_8() {
+        return x_12 * y_8 - y_12 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 9 where the vectors are columns */
+    public double det_12_9() {
+        return x_12 * y_9 - y_12 * x_9;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 10 where the vectors are columns */
+    public double det_12_10() {
+        return x_12 * y_10 - y_12 * x_10;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 12 and vector 11 where the vectors are columns */
+    public double det_12_11() {
+        return x_12 * y_11 - y_12 * x_11;
+    }
+
     /** invert the 2x2 matrix formed by vector 0 and vector 12 where the vectors are columns */
     public boolean invert_0_12() {
         final double t = x_0;

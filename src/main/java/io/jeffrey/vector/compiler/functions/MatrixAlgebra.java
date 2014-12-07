@@ -58,6 +58,23 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
             for (int j = 0; j < N; j++) {
                 if (k == j)
                     continue;
+                if (start("det_" + k + "_" + j)) {
+                    println();
+                    tab();
+                    println("/** find the determinate of the 2x2 matrix formed by vector " + k + " and vector " + j + " where the vectors are columns */");
+                    println("public double det_" + k + "_" + j + "() {");
+                    tab();
+                    println("return ", atX(k), " * ", atY(j), " - ", atY(k), " * ", atX(j), ";");
+                    untab();
+                    println("}");
+                    untab();
+                }
+            }
+        }
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < N; j++) {
+                if (k == j)
+                    continue;
                 if (start("invert_" + k + "_" + j)) {
                     println();
                     tab();
@@ -105,6 +122,70 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
 
     @Override
     protected void writeTest() {
+
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < N; j++) {
+                if (j == k)
+                    continue;
+                if (startTest("matrix_" + k + "_" + j)) {
+                    createNewVector("x", N);
+                    println("x.set_matrix_", s(k), "_", s(j), "(1,3,2,4);");
+                    println("assertEquals(1, x.x_", s(k), ");");
+                    println("assertEquals(3, x.y_", s(k), ");");
+                    println("assertEquals(2, x.x_", s(j), ");");
+                    println("assertEquals(4, x.y_", s(j), ");");
+                    println("assertEquals(1*4-2*3, x.det_", s(k), "_", s(j), "());");
+                    println("assertEquals(-(1*4-2*3), x.det_", s(j), "_", s(k), "());");
+                    for (int z = 0; z < N; z++) {
+                        if (z == j || z == k)
+                            continue;
+                        println("x.set_", s(z), "(-1,5);");
+                        println("x.transform_", s(z), "_by_", s(k), "_", s(j), "();");
+                        println("assertEquals(-1*1+5*2, x.x_", s(z), ");");
+                        println("assertEquals(-1*3+5*4, x.y_", s(z), ");");
+                    }
+                    println("Assert.assertTrue(x.invert_", s(k), "_", s(j), "());");
+
+                    println("assertEquals(-2, x.x_", s(k), ");");
+                    println("assertEquals(1.5, x.y_", s(k), ");");
+                    println("assertEquals(1, x.x_", s(j), ");");
+                    println("assertEquals(-2, x.y_", s(j), ");");
+                    println("x.transpose_", s(k), "_", s(j), "();");
+                    println("assertEquals(-2, x.x_", s(k), ");");
+                    println("assertEquals(1, x.y_", s(k), ");");
+                    println("assertEquals(1.5, x.x_", s(j), ");");
+                    println("assertEquals(-2, x.y_", s(j), ");");
+                    println("x.set_matrix_", s(k), "_", s(j), "(1,2,1,2);");
+                    println("Assert.assertFalse(x.invert_", s(k), "_", s(j), "());");
+                    println("assertEquals(0, x.det_", s(k), "_", s(j), "());");
+                    endTest();
+                }
+            }
+        }
+
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < N; j++) {
+                if (j == k)
+                    continue;
+                for (int z = 0; z < N; z++) {
+                    if (z == j || z == k)
+                        continue;
+                    if (startTest("matrix_transform_" + k + "_" + j + "_" + z)) {
+                        createNewVector("x", N);
+                        println("x.set_matrix_", s(k), "_", s(j), "(1,3,2,4);");
+                        println("assertEquals(1, x.x_", s(k), ");");
+                        println("assertEquals(3, x.y_", s(k), ");");
+                        println("assertEquals(2, x.x_", s(j), ");");
+                        println("assertEquals(4, x.y_", s(j), ");");
+                        println("x.set_", s(z), "(-1,5);");
+                        println("x.transform_", s(z), "_by_", s(k), "_", s(j), "();");
+                        println("assertEquals(-1*1+5*2, x.x_", s(z), ");");
+                        println("assertEquals(-1*3+5*4, x.y_", s(z), ");");
+                        endTest();
+                    }
+                }
+            }
+        }
     }
 
 }

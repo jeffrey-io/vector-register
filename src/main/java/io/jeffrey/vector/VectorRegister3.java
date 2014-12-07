@@ -284,6 +284,26 @@ public class VectorRegister3 extends VectorRegister2 {
         x_0 = t;
     }
 
+    /** find the determinate of the 2x2 matrix formed by vector 0 and vector 2 where the vectors are columns */
+    public double det_0_2() {
+        return x_0 * y_2 - y_0 * x_2;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 1 and vector 2 where the vectors are columns */
+    public double det_1_2() {
+        return x_1 * y_2 - y_1 * x_2;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 2 and vector 0 where the vectors are columns */
+    public double det_2_0() {
+        return x_2 * y_0 - y_2 * x_0;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 2 and vector 1 where the vectors are columns */
+    public double det_2_1() {
+        return x_2 * y_1 - y_2 * x_1;
+    }
+
     /** invert the 2x2 matrix formed by vector 0 and vector 2 where the vectors are columns */
     public boolean invert_0_2() {
         final double t = x_0;

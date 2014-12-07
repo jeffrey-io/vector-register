@@ -63,18 +63,46 @@ public class GeneratedVectorRegister3Test extends CommonVectorTestingBase {
     }
 
     @Test
-    public void testCOPY_2() throws Exception {
+    public void testCOPY_0_2() throws Exception {
         final VectorRegister3 x = new VectorRegister3();
-        x.set_0(1,2);
-        x.set_1(1,2);
+        x.set_0(3,5);
         x.set_2(1,2);
+        assertEquals(3, x.x_0);
+        assertEquals(5, x.y_0);
+        x.copy_from_2_to_0();
+        assertEquals(1, x.x_0);
+        assertEquals(2, x.y_0);
+    }
+
+    @Test
+    public void testCOPY_1_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_1(3,5);
+        x.set_2(1,2);
+        assertEquals(3, x.x_1);
+        assertEquals(5, x.y_1);
+        x.copy_from_2_to_1();
+        assertEquals(1, x.x_1);
+        assertEquals(2, x.y_1);
+    }
+
+    @Test
+    public void testCOPY_2_0() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
         x.set_2(3,5);
+        x.set_0(1,2);
         assertEquals(3, x.x_2);
         assertEquals(5, x.y_2);
         x.copy_from_0_to_2();
         assertEquals(1, x.x_2);
         assertEquals(2, x.y_2);
+    }
+
+    @Test
+    public void testCOPY_2_1() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
         x.set_2(3,5);
+        x.set_1(1,2);
         assertEquals(3, x.x_2);
         assertEquals(5, x.y_2);
         x.copy_from_1_to_2();
@@ -142,11 +170,51 @@ public class GeneratedVectorRegister3Test extends CommonVectorTestingBase {
     }
 
     @Test
-    public void testALGEBRA2() throws Exception {
+    public void testALGEBRA_0_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_2(1,2);
+        x.set_0(3,5);
+        x.mult_0_by(4);
+        assertEquals(12, x.x_0);
+        assertEquals(20, x.y_0);
+        x.div_0_by(2);
+        assertEquals(6, x.x_0);
+        assertEquals(10, x.y_0);
+        x.add_2_to_0();
+        assertEquals(7, x.x_0);
+        assertEquals(12, x.y_0);
+        x.sub_2_from_0();
+        assertEquals(6, x.x_0);
+        assertEquals(10, x.y_0);
+        assertEquals(6+2*10,x.dot_2_0());
+        x.set_0(1,2);
+    }
+
+    @Test
+    public void testALGEBRA_1_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_2(1,2);
+        x.set_1(3,5);
+        x.mult_1_by(4);
+        assertEquals(12, x.x_1);
+        assertEquals(20, x.y_1);
+        x.div_1_by(2);
+        assertEquals(6, x.x_1);
+        assertEquals(10, x.y_1);
+        x.add_2_to_1();
+        assertEquals(7, x.x_1);
+        assertEquals(12, x.y_1);
+        x.sub_2_from_1();
+        assertEquals(6, x.x_1);
+        assertEquals(10, x.y_1);
+        assertEquals(6+2*10,x.dot_2_1());
+        x.set_1(1,2);
+    }
+
+    @Test
+    public void testALGEBRA_2_0() throws Exception {
         final VectorRegister3 x = new VectorRegister3();
         x.set_0(1,2);
-        x.set_1(1,2);
-        x.set_2(1,2);
         x.set_2(3,5);
         x.mult_2_by(4);
         assertEquals(12, x.x_2);
@@ -162,6 +230,12 @@ public class GeneratedVectorRegister3Test extends CommonVectorTestingBase {
         assertEquals(10, x.y_2);
         assertEquals(6+2*10,x.dot_0_2());
         x.set_2(1,2);
+    }
+
+    @Test
+    public void testALGEBRA_2_1() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_1(1,2);
         x.set_2(3,5);
         x.mult_2_by(4);
         assertEquals(12, x.x_2);
@@ -191,21 +265,43 @@ public class GeneratedVectorRegister3Test extends CommonVectorTestingBase {
     }
 
     @Test
-    public void testCOMPLEX2() throws Exception {
+    public void testCOMPLEX_0_2() throws Exception {
         final VectorRegister3 x = new VectorRegister3();
-        x.set_0(1,2);
-        x.set_1(1,2);
+        x.set_0(3,5);
         x.set_2(1,2);
+        x.complex_mult_2_0();
+        assertEquals(3-10, x.x_0);
+        assertEquals(5+6, x.y_0);
+    }
+
+    @Test
+    public void testCOMPLEX_1_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_1(3,5);
+        x.set_2(1,2);
+        x.complex_mult_2_1();
+        assertEquals(3-10, x.x_1);
+        assertEquals(5+6, x.y_1);
+    }
+
+    @Test
+    public void testCOMPLEX_2_0() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
         x.set_2(3,5);
+        x.set_0(1,2);
         x.complex_mult_0_2();
         assertEquals(3-10, x.x_2);
         assertEquals(5+6, x.y_2);
-        x.set_2(1,2);
+    }
+
+    @Test
+    public void testCOMPLEX_2_1() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
         x.set_2(3,5);
+        x.set_1(1,2);
         x.complex_mult_1_2();
         assertEquals(3-10, x.x_2);
         assertEquals(5+6, x.y_2);
-        x.set_2(1,2);
     }
 
     @Test
@@ -213,9 +309,211 @@ public class GeneratedVectorRegister3Test extends CommonVectorTestingBase {
         final VectorRegister3 x = new VectorRegister3();
         x.set_2(3,5);
         assertEquals(Math.sqrt(3*3+5*5), x.length_2());
-        x.normalize_2();
+        Assert.assertTrue(x.normalize_2());
         assertEquals(1, x.length_2());
         assertEquals(3/Math.sqrt(3*3+5*5), x.x_2);
         assertEquals(5/Math.sqrt(3*3+5*5), x.y_2);
+        x.set_2(0,0);
+        Assert.assertFalse(x.normalize_2());
+    }
+
+    @Test
+    public void testMATRIX_0_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_0_2(1,3,2,4);
+        assertEquals(1, x.x_0);
+        assertEquals(3, x.y_0);
+        assertEquals(2, x.x_2);
+        assertEquals(4, x.y_2);
+        assertEquals(1*4-2*3, x.det_0_2());
+        assertEquals(-(1*4-2*3), x.det_2_0());
+        x.set_1(-1,5);
+        x.transform_1_by_0_2();
+        assertEquals(-1*1+5*2, x.x_1);
+        assertEquals(-1*3+5*4, x.y_1);
+        Assert.assertTrue(x.invert_0_2());
+        assertEquals(-2, x.x_0);
+        assertEquals(1.5, x.y_0);
+        assertEquals(1, x.x_2);
+        assertEquals(-2, x.y_2);
+        x.transpose_0_2();
+        assertEquals(-2, x.x_0);
+        assertEquals(1, x.y_0);
+        assertEquals(1.5, x.x_2);
+        assertEquals(-2, x.y_2);
+        x.set_matrix_0_2(1,2,1,2);
+        Assert.assertFalse(x.invert_0_2());
+        assertEquals(0, x.det_0_2());
+    }
+
+    @Test
+    public void testMATRIX_1_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_1_2(1,3,2,4);
+        assertEquals(1, x.x_1);
+        assertEquals(3, x.y_1);
+        assertEquals(2, x.x_2);
+        assertEquals(4, x.y_2);
+        assertEquals(1*4-2*3, x.det_1_2());
+        assertEquals(-(1*4-2*3), x.det_2_1());
+        x.set_0(-1,5);
+        x.transform_0_by_1_2();
+        assertEquals(-1*1+5*2, x.x_0);
+        assertEquals(-1*3+5*4, x.y_0);
+        Assert.assertTrue(x.invert_1_2());
+        assertEquals(-2, x.x_1);
+        assertEquals(1.5, x.y_1);
+        assertEquals(1, x.x_2);
+        assertEquals(-2, x.y_2);
+        x.transpose_1_2();
+        assertEquals(-2, x.x_1);
+        assertEquals(1, x.y_1);
+        assertEquals(1.5, x.x_2);
+        assertEquals(-2, x.y_2);
+        x.set_matrix_1_2(1,2,1,2);
+        Assert.assertFalse(x.invert_1_2());
+        assertEquals(0, x.det_1_2());
+    }
+
+    @Test
+    public void testMATRIX_2_0() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_2_0(1,3,2,4);
+        assertEquals(1, x.x_2);
+        assertEquals(3, x.y_2);
+        assertEquals(2, x.x_0);
+        assertEquals(4, x.y_0);
+        assertEquals(1*4-2*3, x.det_2_0());
+        assertEquals(-(1*4-2*3), x.det_0_2());
+        x.set_1(-1,5);
+        x.transform_1_by_2_0();
+        assertEquals(-1*1+5*2, x.x_1);
+        assertEquals(-1*3+5*4, x.y_1);
+        Assert.assertTrue(x.invert_2_0());
+        assertEquals(-2, x.x_2);
+        assertEquals(1.5, x.y_2);
+        assertEquals(1, x.x_0);
+        assertEquals(-2, x.y_0);
+        x.transpose_2_0();
+        assertEquals(-2, x.x_2);
+        assertEquals(1, x.y_2);
+        assertEquals(1.5, x.x_0);
+        assertEquals(-2, x.y_0);
+        x.set_matrix_2_0(1,2,1,2);
+        Assert.assertFalse(x.invert_2_0());
+        assertEquals(0, x.det_2_0());
+    }
+
+    @Test
+    public void testMATRIX_2_1() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_2_1(1,3,2,4);
+        assertEquals(1, x.x_2);
+        assertEquals(3, x.y_2);
+        assertEquals(2, x.x_1);
+        assertEquals(4, x.y_1);
+        assertEquals(1*4-2*3, x.det_2_1());
+        assertEquals(-(1*4-2*3), x.det_1_2());
+        x.set_0(-1,5);
+        x.transform_0_by_2_1();
+        assertEquals(-1*1+5*2, x.x_0);
+        assertEquals(-1*3+5*4, x.y_0);
+        Assert.assertTrue(x.invert_2_1());
+        assertEquals(-2, x.x_2);
+        assertEquals(1.5, x.y_2);
+        assertEquals(1, x.x_1);
+        assertEquals(-2, x.y_1);
+        x.transpose_2_1();
+        assertEquals(-2, x.x_2);
+        assertEquals(1, x.y_2);
+        assertEquals(1.5, x.x_1);
+        assertEquals(-2, x.y_1);
+        x.set_matrix_2_1(1,2,1,2);
+        Assert.assertFalse(x.invert_2_1());
+        assertEquals(0, x.det_2_1());
+    }
+
+    @Test
+    public void testMATRIX_TRANSFORM_0_1_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_0_1(1,3,2,4);
+        assertEquals(1, x.x_0);
+        assertEquals(3, x.y_0);
+        assertEquals(2, x.x_1);
+        assertEquals(4, x.y_1);
+        x.set_2(-1,5);
+        x.transform_2_by_0_1();
+        assertEquals(-1*1+5*2, x.x_2);
+        assertEquals(-1*3+5*4, x.y_2);
+    }
+
+    @Test
+    public void testMATRIX_TRANSFORM_0_2_1() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_0_2(1,3,2,4);
+        assertEquals(1, x.x_0);
+        assertEquals(3, x.y_0);
+        assertEquals(2, x.x_2);
+        assertEquals(4, x.y_2);
+        x.set_1(-1,5);
+        x.transform_1_by_0_2();
+        assertEquals(-1*1+5*2, x.x_1);
+        assertEquals(-1*3+5*4, x.y_1);
+    }
+
+    @Test
+    public void testMATRIX_TRANSFORM_1_0_2() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_1_0(1,3,2,4);
+        assertEquals(1, x.x_1);
+        assertEquals(3, x.y_1);
+        assertEquals(2, x.x_0);
+        assertEquals(4, x.y_0);
+        x.set_2(-1,5);
+        x.transform_2_by_1_0();
+        assertEquals(-1*1+5*2, x.x_2);
+        assertEquals(-1*3+5*4, x.y_2);
+    }
+
+    @Test
+    public void testMATRIX_TRANSFORM_1_2_0() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_1_2(1,3,2,4);
+        assertEquals(1, x.x_1);
+        assertEquals(3, x.y_1);
+        assertEquals(2, x.x_2);
+        assertEquals(4, x.y_2);
+        x.set_0(-1,5);
+        x.transform_0_by_1_2();
+        assertEquals(-1*1+5*2, x.x_0);
+        assertEquals(-1*3+5*4, x.y_0);
+    }
+
+    @Test
+    public void testMATRIX_TRANSFORM_2_0_1() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_2_0(1,3,2,4);
+        assertEquals(1, x.x_2);
+        assertEquals(3, x.y_2);
+        assertEquals(2, x.x_0);
+        assertEquals(4, x.y_0);
+        x.set_1(-1,5);
+        x.transform_1_by_2_0();
+        assertEquals(-1*1+5*2, x.x_1);
+        assertEquals(-1*3+5*4, x.y_1);
+    }
+
+    @Test
+    public void testMATRIX_TRANSFORM_2_1_0() throws Exception {
+        final VectorRegister3 x = new VectorRegister3();
+        x.set_matrix_2_1(1,3,2,4);
+        assertEquals(1, x.x_2);
+        assertEquals(3, x.y_2);
+        assertEquals(2, x.x_1);
+        assertEquals(4, x.y_1);
+        x.set_0(-1,5);
+        x.transform_0_by_2_1();
+        assertEquals(-1*1+5*2, x.x_0);
+        assertEquals(-1*3+5*4, x.y_0);
     }
 }

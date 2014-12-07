@@ -1874,6 +1874,86 @@ public class VectorRegister9 extends VectorRegister8 {
         x_6 = t;
     }
 
+    /** find the determinate of the 2x2 matrix formed by vector 0 and vector 8 where the vectors are columns */
+    public double det_0_8() {
+        return x_0 * y_8 - y_0 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 1 and vector 8 where the vectors are columns */
+    public double det_1_8() {
+        return x_1 * y_8 - y_1 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 2 and vector 8 where the vectors are columns */
+    public double det_2_8() {
+        return x_2 * y_8 - y_2 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 3 and vector 8 where the vectors are columns */
+    public double det_3_8() {
+        return x_3 * y_8 - y_3 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 4 and vector 8 where the vectors are columns */
+    public double det_4_8() {
+        return x_4 * y_8 - y_4 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 5 and vector 8 where the vectors are columns */
+    public double det_5_8() {
+        return x_5 * y_8 - y_5 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 6 and vector 8 where the vectors are columns */
+    public double det_6_8() {
+        return x_6 * y_8 - y_6 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 7 and vector 8 where the vectors are columns */
+    public double det_7_8() {
+        return x_7 * y_8 - y_7 * x_8;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 0 where the vectors are columns */
+    public double det_8_0() {
+        return x_8 * y_0 - y_8 * x_0;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 1 where the vectors are columns */
+    public double det_8_1() {
+        return x_8 * y_1 - y_8 * x_1;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 2 where the vectors are columns */
+    public double det_8_2() {
+        return x_8 * y_2 - y_8 * x_2;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 3 where the vectors are columns */
+    public double det_8_3() {
+        return x_8 * y_3 - y_8 * x_3;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 4 where the vectors are columns */
+    public double det_8_4() {
+        return x_8 * y_4 - y_8 * x_4;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 5 where the vectors are columns */
+    public double det_8_5() {
+        return x_8 * y_5 - y_8 * x_5;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 6 where the vectors are columns */
+    public double det_8_6() {
+        return x_8 * y_6 - y_8 * x_6;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 8 and vector 7 where the vectors are columns */
+    public double det_8_7() {
+        return x_8 * y_7 - y_8 * x_7;
+    }
+
     /** invert the 2x2 matrix formed by vector 0 and vector 8 where the vectors are columns */
     public boolean invert_0_8() {
         final double t = x_0;

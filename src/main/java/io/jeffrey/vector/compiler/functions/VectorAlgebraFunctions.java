@@ -76,14 +76,12 @@ public class VectorAlgebraFunctions extends VectorSourcePrintStream {
     @Override
     protected void writeTest() {
         for (int k = 0; k < N; k++) {
-            if (startTest("algebra" + k)) {
-                createNewVector("x", N);
-                for (int z = 0; z < N; z++) {
-                    println("x.set_", s(z), "(1,2);");
-                }
-                for (int j = 0; j < N; j++) {
-                    if (j == k)
-                        continue;
+            for (int j = 0; j < N; j++) {
+                if (j == k)
+                    continue;
+                if (startTest("algebra_" + k + "_" + j)) {
+                    createNewVector("x", N);
+                    println("x.set_", s(j), "(1,2);");
                     println("x.set_", s(k), "(3,5);");
                     println("x.mult_", s(k), "_by(4);");
                     println("assertEquals(12, x.x_", s(k), ");");
@@ -98,10 +96,9 @@ public class VectorAlgebraFunctions extends VectorSourcePrintStream {
                     println("assertEquals(6, x.x_", s(k), ");");
                     println("assertEquals(10, x.y_", s(k), ");");
                     println("assertEquals(6+2*10,x.dot_", s(j), "_", s(k), "());");
-
                     println("x.set_", s(k), "(1,2);");
+                    endTest();
                 }
-                endTest();
             }
         }
     }
