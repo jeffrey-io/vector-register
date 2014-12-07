@@ -62,10 +62,12 @@ public class Pythagorean extends VectorSourcePrintStream {
                 createNewVector("x", N);
                 println("x.set_", s(k), "(3,5);");
                 println("assertEquals(Math.sqrt(3*3+5*5), x.length_", s(k), "());");
-                println("x.normalize_", s(k), "();");
+                println("Assert.assertTrue(x.normalize_", s(k), "());");
                 println("assertEquals(1, x.length_", s(k), "());");
                 println("assertEquals(3/Math.sqrt(3*3+5*5), x.x_", s(k), ");");
                 println("assertEquals(5/Math.sqrt(3*3+5*5), x.y_", s(k), ");");
+                println("x.set_", s(k), "(0,0);");
+                println("Assert.assertFalse(x.normalize_", s(k), "());");
                 
                 endTest();
             }

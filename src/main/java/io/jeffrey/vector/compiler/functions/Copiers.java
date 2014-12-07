@@ -36,21 +36,20 @@ public class Copiers extends VectorSourcePrintStream {
     protected void writeTest() {
 
         for (int k = 0; k < N; k++) {
-            if (startTest("copy_" + k)) {
-                createNewVector("x", N);
-                for (int z = 0; z < N; z++) {
-                    println("x.set_", s(z), "(1,2);");
-                }
-                for (int j = 0; j < N; j++) {
-                    if(j == k) continue;
+            for (int j = 0; j < N; j++) {
+                if (j == k)
+                    continue;
+                if (startTest("copy_" + k + "_" + j)) {
+                    createNewVector("x", N);
                     println("x.set_", s(k), "(3,5);");
+                    println("x.set_", s(j), "(1,2);");
                     println("assertEquals(3, x.x_", s(k), ");");
                     println("assertEquals(5, x.y_", s(k), ");");
                     println("x.copy_from_", s(j), "_to_", s(k), "();");
                     println("assertEquals(1, x.x_", s(k), ");");
                     println("assertEquals(2, x.y_", s(k), ");");
+                    endTest();
                 }
-                endTest();
             }
         }
     }

@@ -646,6 +646,46 @@ public class VectorRegister5 extends VectorRegister4 {
         x_2 = t;
     }
 
+    /** find the determinate of the 2x2 matrix formed by vector 0 and vector 4 where the vectors are columns */
+    public double det_0_4() {
+        return x_0 * y_4 - y_0 * x_4;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 1 and vector 4 where the vectors are columns */
+    public double det_1_4() {
+        return x_1 * y_4 - y_1 * x_4;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 2 and vector 4 where the vectors are columns */
+    public double det_2_4() {
+        return x_2 * y_4 - y_2 * x_4;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 3 and vector 4 where the vectors are columns */
+    public double det_3_4() {
+        return x_3 * y_4 - y_3 * x_4;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 4 and vector 0 where the vectors are columns */
+    public double det_4_0() {
+        return x_4 * y_0 - y_4 * x_0;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 4 and vector 1 where the vectors are columns */
+    public double det_4_1() {
+        return x_4 * y_1 - y_4 * x_1;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 4 and vector 2 where the vectors are columns */
+    public double det_4_2() {
+        return x_4 * y_2 - y_4 * x_2;
+    }
+
+    /** find the determinate of the 2x2 matrix formed by vector 4 and vector 3 where the vectors are columns */
+    public double det_4_3() {
+        return x_4 * y_3 - y_4 * x_3;
+    }
+
     /** invert the 2x2 matrix formed by vector 0 and vector 4 where the vectors are columns */
     public boolean invert_0_4() {
         final double t = x_0;

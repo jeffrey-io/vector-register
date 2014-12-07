@@ -60,23 +60,20 @@ public class ComplexAlgebra extends VectorSourcePrintStream {
                 endTest();
             }
         }
-        
+
         for (int k = 0; k < N; k++) {
-            if (startTest("complex" + k)) {
-                createNewVector("x", N);
-                for (int z = 0; z < N; z++) {
-                    println("x.set_", s(z), "(1,2);");
-                }
-                for (int j = 0; j < N; j++) {
-                    if (j == k)
-                        continue;
+            for (int j = 0; j < N; j++) {
+                if (j == k)
+                    continue;
+                if (startTest("complex_" + k + "_" + j)) {
+                    createNewVector("x", N);
                     println("x.set_", s(k), "(3,5);");
+                    println("x.set_", s(j), "(1,2);");
                     println("x.complex_mult_", s(j), "_", s(k), "();");
                     println("assertEquals(3-10, x.x_", s(k), ");");
                     println("assertEquals(5+6, x.y_", s(k), ");");
-                    println("x.set_", s(k), "(1,2);");
+                    endTest();
                 }
-                endTest();
             }
         }
     }
