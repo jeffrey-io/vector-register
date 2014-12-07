@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.jeffrey.gaming</groupId>
 	<artifactId>vector-register</artifactId>
-	<version>0.5-untested</version>
+	<version>0.9-beta</version>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
