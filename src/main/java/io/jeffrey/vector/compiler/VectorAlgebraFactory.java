@@ -1,13 +1,20 @@
 package io.jeffrey.vector.compiler;
 
+import io.jeffrey.vector.compiler.functions.Setters;
+
 import java.io.File;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class VectorAlgebraFactory extends VectorSourcePrintStream {
 
+    private final ArrayList<VectorSourcePrintStream> components;
+
     private VectorAlgebraFactory(PrintStream out, int N, HashSet<String> definedFunctions) {
         super(out, N, definedFunctions);
+        this.components = new ArrayList<VectorSourcePrintStream>();
+        components.add(new Setters(out, N, definedFunctions));
     }
 
     /**
@@ -84,23 +91,6 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
                 tab();
                 println(atX(k), " = input[offset + 0];");
                 println(atY(k), " = input[offset + 1];");
-                untab();
-                println("}");
-                untab();
-            }
-        }
-    }
-
-    private void writeSetters() {
-        for (int k = 0; k < N; k++) {
-            if (start("set", s(k))) {
-                println();
-                tab();
-                println("/** set the " + k + "-vector to the given (x,y) */");
-                println("public void set_", s(k), "(final double x, final double y) {");
-                tab();
-                println(atX(k), " = x;");
-                println(atY(k), " = y;");
                 untab();
                 println("}");
                 untab();
@@ -406,9 +396,15 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         }
     }
 
-    private void writeSource() {
+    @Override
+    protected void writeSource() {
+
         writeFieldsAndConstructor();
-        writeSetters();
+
+        for (VectorSourcePrintStream vsps : components) {
+            vsps.writeSource();
+        }
+
         writeZeros();
         writeCopies();
         writeExtractors();
@@ -434,6 +430,13 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         writeMatrixMath();
         writeMatrixInverse();
         writeMatrixTranspose();
+    }
+
+    @Override
+    protected void writeTest() {
+        for (VectorSourcePrintStream vsps : components) {
+            vsps.writeTest();
+        }
     }
 
     private void writeMatrixTranspose() {
@@ -465,20 +468,33 @@ public class VectorAlgebraFactory extends VectorSourcePrintStream {
         }
         HashSet<String> definedFunctions = new HashSet<String>();
         for (int r = 2; r <= 15; r++) {
-            File target = new File("./src/main/java/io/jeffrey/vector/VectorRegister" + hexify(r) + ".java");
-            PrintStream output = new PrintStream(target);
+            PrintStream source = new PrintStream(new File("./src/main/java/io/jeffrey/vector/VectorRegister" + hexify(r) + ".java"));
             try {
-                output.println("package io.jeffrey.vector;");
-                output.println("");
-                output.println("public class VectorRegister" + hexify(r) + (r > 2 ? (" extends VectorRegister" + hexify(r - 1)) : "") + " {");
+                source.println("package io.jeffrey.vector;");
+                source.println("");
+                source.println("public class VectorRegister" + hexify(r) + (r > 2 ? (" extends VectorRegister" + hexify(r - 1)) : "") + " {");
                 if (r == 2) {
-                    output.println(TAB + "protected static final double ZERO_LIMIT = " + Math.pow(0.5, 64) + ";");
+                    source.println(TAB + "protected static final double ZERO_LIMIT = " + Math.pow(0.5, 64) + ";");
                 }
-                new VectorAlgebraFactory(output, r, definedFunctions).writeSource();
-                output.println("}");
-                output.flush();
+                new VectorAlgebraFactory(source, r, definedFunctions).writeSource();
+                source.println("}");
+                source.flush();
             } finally {
-                output.close();
+                source.close();
+            }
+            PrintStream test = new PrintStream(new File("./src/test/java/io/jeffrey/vector/GeneratedVectorRegister" + hexify(r) + "Test.java"));
+            try {
+                test.println("package io.jeffrey.vector;");
+                test.println();
+                //test.println("import org.junit.Assert;");
+                test.println("import org.junit.Test;");
+                test.println();
+                test.println("public class GeneratedVectorRegister" + hexify(r) + "Test extends CommonVectorTestingBase {");
+                new VectorAlgebraFactory(test, r, definedFunctions).writeTest();
+                test.println("}");
+                test.flush();
+            } finally {
+                test.close();
             }
         }
     }

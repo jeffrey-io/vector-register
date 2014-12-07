@@ -64,4 +64,31 @@ public abstract class VectorSourcePrintStream {
     protected String atY(int k) {
         return "y_" + k;
     }
+
+    protected abstract void writeSource();
+
+    protected abstract void writeTest();
+
+    protected boolean startTest(String name) {
+        if (start(name)) {
+            tab();
+            println();
+            println("@Test");
+            println("public void test", name, "() throws Exception {");
+            tab();
+            return true;
+        }
+        return false;
+    }
+
+    protected void createNewVector(String name, int k) {
+        println("final VectorRegister", hexify(k), " ", name, " = new VectorRegister", hexify(k), "();");
+    }
+
+    protected void endTest() {
+        untab();
+        println("}");
+        untab();
+    }
+
 }

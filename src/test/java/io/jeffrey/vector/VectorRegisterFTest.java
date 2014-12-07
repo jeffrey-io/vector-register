@@ -3,15 +3,9 @@ package io.jeffrey.vector;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class VectorRegisterFTest {
+public class VectorRegisterFTest extends CommonVectorTestingBase {
 
-    private static void assertZero(double x) {
-        Assert.assertTrue(Math.abs(x) < 5.421010862427522E-20);
-    }
 
-    private static void assertEquals(double x, double y) {
-        assertZero(x - y);
-    }
 
     @Test
     public void testBasicIO() {
