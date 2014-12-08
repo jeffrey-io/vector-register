@@ -1,5 +1,6 @@
 package io.jeffrey.vector.math;
 
+import io.jeffrey.vector.VectorRegister2;
 import io.jeffrey.vector.VectorRegister3;
 
 /**
@@ -8,6 +9,26 @@ import io.jeffrey.vector.VectorRegister3;
  * @author jeffrey
  */
 public class Lines {
+    /**
+     * are the three vectors colinear when written as a line [V0],[V1],V[2]
+     * 
+     * @param reg
+     *            the register banks
+     * @param resultIfZeroLengthInvolved
+     *            if either the vectors touch each other (you either have a problem with your data, or you want to return true)
+     * @return are the three vectors colinear
+     */
+    public static boolean colinear_Destructive(VectorRegister3 reg, boolean resultIfZeroLengthInvolved) {
+        reg.sub_0_from_1();
+        reg.sub_0_from_2();
+        if (!reg.normalize_1()) {
+            return resultIfZeroLengthInvolved;
+        }
+        if (!reg.normalize_2()) {
+            return resultIfZeroLengthInvolved;
+        }
+        return Math.abs(1 - reg.dot_1_2()) < VectorRegister2.ZERO_LIMIT;
+    }
 
     /**
      * [V0] ------------[V0']-------------- [V1] 

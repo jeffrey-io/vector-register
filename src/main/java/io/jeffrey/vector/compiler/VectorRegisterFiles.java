@@ -39,7 +39,7 @@ public class VectorRegisterFiles extends VectorSourcePrintStream {
         println("/** a register bank that contains ", s(N), " vectors along with all possible operations */");
         println("public class VectorRegister" + hexify(N) + (N > 2 ? (" extends VectorRegister" + hexify(N - 1)) : "") + " {");
         if (N == 2) {
-            println(TAB + "protected static final double ZERO_LIMIT = " + Math.pow(0.5, 64) + ";");
+            println(TAB + "public static final double ZERO_LIMIT = 1E-14;");
         }
         tab();
         for (int k = N == 2 ? 0 : N - 1; k < N; k++) {

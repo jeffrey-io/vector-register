@@ -4,8 +4,48 @@ import io.jeffrey.vector.CommonVectorTestingBase;
 import io.jeffrey.vector.VectorRegister3;
 
 import org.junit.Test;
+import org.junit.Assert;
 
 public class LinesTest extends CommonVectorTestingBase {
+
+    @Test
+    public void testCoverage() {
+        new Lines();
+    }
+
+    @Test
+    public void testColinearYes() {
+        VectorRegister3 reg = new VectorRegister3();
+        reg.set_0(5, 5);
+        reg.set_1(10, 10);
+        reg.set_2(15, 15);
+        Assert.assertTrue(Lines.colinear_Destructive(reg, false));
+    }
+
+    @Test
+    public void testColinearNo() {
+        VectorRegister3 reg = new VectorRegister3();
+        reg.set_0(5, 5);
+        reg.set_1(10, 10);
+        reg.set_2(10, 15);
+        Assert.assertFalse(Lines.colinear_Destructive(reg, false));
+    }
+
+    @Test
+    public void testColinearDegenerative() {
+        VectorRegister3 reg = new VectorRegister3();
+        reg.set_0(5, 5);
+        reg.set_1(10, 10);
+        reg.set_2(5, 5);
+        Assert.assertFalse(Lines.colinear_Destructive(reg, false));
+        Assert.assertTrue(Lines.colinear_Destructive(reg, true));
+
+        reg.set_0(5, 5);
+        reg.set_1(5, 5);
+        reg.set_2(10, 10);
+        Assert.assertFalse(Lines.colinear_Destructive(reg, false));
+        Assert.assertTrue(Lines.colinear_Destructive(reg, true));
+    }
 
     @Test
     public void testScenario1Segment() {

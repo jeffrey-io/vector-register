@@ -2,7 +2,7 @@ package io.jeffrey.vector;
 
 /** a register bank that contains 2 vectors along with all possible operations */
 public class VectorRegister2 {
-    protected static final double ZERO_LIMIT = 5.421010862427522E-20;
+    public static final double ZERO_LIMIT = 1E-14;
     public double                 x_0;
     public double                 y_0;
     public double                 x_1;

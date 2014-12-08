@@ -6,9 +6,9 @@ import java.util.HashSet;
 
 public class VectorAlgebraFactory {
 
-    public static void make(File root) throws Exception {
+    public static void make(File root, int N) throws Exception {
         HashSet<String> definedFunctions = new HashSet<String>();
-        for (int r = 2; r <= 15; r++) {
+        for (int r = 2; r <= N; r++) {
             PrintStream source = new PrintStream(new File(root, "src/main/java/io/jeffrey/vector/VectorRegister" + VectorSourcePrintStream.hexify(r) + ".java"));
             try {
                 new VectorRegisterFiles(source, r, definedFunctions).writeSource();
@@ -31,6 +31,6 @@ public class VectorAlgebraFactory {
         if (!self.exists()) {
             throw new Exception("This is a hacked tool that requires you to run local to the src dir");
         }
-        make(new File("."));
+        make(new File("."), 15);
     }
 }
