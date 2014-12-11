@@ -1,13 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>io.jeffrey.gaming</groupId>
+	<groupId>jeffrey-io</groupId>
 	<artifactId>vector-register</artifactId>
 	<version>0.9-BETA</version>
 
 	<name>A 2D Vector Register</name>
 	<description>A very simple library that makes it easy to do two dimensional vector math using minimal heap without relying implicitly on escape analysis</description>
-	<url>http://jeffrey.io/vector-register</url>
+	<url>http://jeffrey.io/projects/vector-register</url>
+
+	<scm>
+		<url>https://github.com/jeffrey-io/vector-register</url>
+	</scm>
+	
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
