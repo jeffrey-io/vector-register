@@ -3,7 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.jeffrey.gaming</groupId>
 	<artifactId>vector-register</artifactId>
-	<version>0.9-beta</version>
+	<version>0.9-BETA</version>
+
+	<name>A 2D Vector Register</name>
+	<description>A very simple library that makes it easy to do two dimensional vector math using minimal heap without relying implicitly on escape analysis</description>
+	<url>http://jeffrey.io/vector-register</url>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -21,19 +32,6 @@
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>io.jeffrey.vector.benchmark.Bench</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -37,13 +37,13 @@ public class VectorRegisterFiles extends VectorSourcePrintStream {
         println("package io.jeffrey.vector;");
         println("");
         println("/** a register bank that contains ", s(N), " vectors along with all possible operations */");
-        println("public class VectorRegister" + hexify(N) + (N > 2 ? (" extends VectorRegister" + hexify(N - 1)) : "") + " {");
-        if (N == 2) {
+        println("public class VectorRegister" + hexify(N) + (N > 1 ? (" extends VectorRegister" + hexify(N - 1)) : "") + " {");
+        if (N == 1) {
             println(TAB + "public static final double ZERO_LIMIT = 1E-14;");
         }
         tab();
-        for (int k = N == 2 ? 0 : N - 1; k < N; k++) {
-            if (N == 2) {
+        for (int k = N - 1; k < N; k++) {
+            if (N == 1) {
                 println("public double                 " + atX(k) + ";");
                 println("public double                 " + atY(k) + ";");
             } else {

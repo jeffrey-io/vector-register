@@ -8,7 +8,7 @@ public class VectorAlgebraFactory {
 
     public static void make(File root, int N) throws Exception {
         HashSet<String> definedFunctions = new HashSet<String>();
-        for (int r = 2; r <= N; r++) {
+        for (int r = 1; r <= N; r++) {
             PrintStream source = new PrintStream(new File(root, "src/main/java/io/jeffrey/vector/VectorRegister" + VectorSourcePrintStream.hexify(r) + ".java"));
             try {
                 new VectorRegisterFiles(source, r, definedFunctions).writeSource();
