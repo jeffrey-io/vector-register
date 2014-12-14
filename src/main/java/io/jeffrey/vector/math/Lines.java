@@ -2,6 +2,7 @@ package io.jeffrey.vector.math;
 
 import io.jeffrey.vector.VectorRegister2;
 import io.jeffrey.vector.VectorRegister3;
+import io.jeffrey.vector.VectorRegister6;
 
 /**
  * Easy math around dealing with lines
@@ -9,6 +10,48 @@ import io.jeffrey.vector.VectorRegister3;
  * @author jeffrey
  */
 public class Lines {
+    /**
+     * 
+     *                    [V2] 
+     *                      | 
+     *                      |
+     *  [V0] ---------------*-------------- [V1]
+     *                      | 
+     *                      |
+     *                     [V3] 
+     */
+    public static boolean doLinesIntersect_Destructively(VectorRegister6 reg, boolean segments) {
+        // Solve:
+
+        // V0 * A + V1 * (1 - A) = V2 * B + V3 * ( 1 - B )
+        // (V0 - V1) * A + V1 = (V2 - V3) * B + V3
+        // (V0 - V1) * A - (V2 - V3) * B = V3 - V1
+        // --(V0 - V1) * A + -(V2 - V3) *B = -(V1 - V3)
+
+        // X = V0 - V1
+        // Y = V2 - V3
+        // Z = V1 - V3
+
+        // --X A + -Y B = -C --> -X A + Y B = C
+        reg.copy_from_0_to_4();
+        reg.copy_from_1_to_5();
+        reg.sub_1_from_0();
+        reg.mult_0_by(-1);
+        reg.sub_3_from_2();
+        reg.sub_3_from_1();
+        // V0 A + V2 B = V 1
+        if (reg.invert_0_2()) {
+            reg.transform_1_by_0_2();
+            reg.mult_4_by(reg.x_1);
+            reg.mult_5_by(1.0 - reg.x_1);
+            reg.add_5_to_4();
+            reg.copy_from_4_to_0();
+            return segments && (reg.x_1 >= 0 && reg.y_1 >= 0 && reg.x_1 + reg.y_1 <= 1) || !segments;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * are the three vectors colinear when written as a line [V0],[V1],V[2]
      * 
