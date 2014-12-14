@@ -1,20 +1,21 @@
 package io.jeffrey.vector.compiler.functions;
 
+import io.jeffrey.vector.compiler.VectorSourcePrintStream;
+
 import java.io.PrintStream;
 import java.util.HashSet;
 
-import io.jeffrey.vector.compiler.VectorSourcePrintStream;
-
 public class VectorAlgebraFunctions extends VectorSourcePrintStream {
-    public VectorAlgebraFunctions(PrintStream out, int N, HashSet<String> definedFunctions) {
+    public VectorAlgebraFunctions(final PrintStream out, final int N, final HashSet<String> definedFunctions) {
         super(out, N, definedFunctions);
     }
 
-    private void writeBinaryOp(String name, String op, String how, String docName) {
+    private void writeBinaryOp(final String name, final String op, final String how, final String docName) {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (k == j)
+                if (k == j) {
                     continue;
+                }
                 if (start(name, "_", s(j), "_", how, "_" + s(k))) {
                     println();
                     tab();
@@ -31,7 +32,7 @@ public class VectorAlgebraFunctions extends VectorSourcePrintStream {
         }
     }
 
-    private void writeScalarOp(String name, String op, String docName) {
+    private void writeScalarOp(final String name, final String op, final String docName) {
         for (int k = 0; k < N; k++) {
             if (start(name, "_", s(k))) {
                 println();
@@ -56,8 +57,9 @@ public class VectorAlgebraFunctions extends VectorSourcePrintStream {
         writeScalarOp("div", "/", "divide");
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (k == j)
+                if (k == j) {
                     continue;
+                }
                 if (start("dot_", s(j), "_", s(k))) {
                     println();
                     tab();
@@ -77,8 +79,9 @@ public class VectorAlgebraFunctions extends VectorSourcePrintStream {
     protected void writeTest() {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (j == k)
+                if (j == k) {
                     continue;
+                }
                 if (startTest("algebra_" + k + "_" + j)) {
                     createNewVector("x", N);
                     println("x.set_", s(j), "(1,2);");

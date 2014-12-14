@@ -1,13 +1,13 @@
 package io.jeffrey.vector.compiler.functions;
 
+import io.jeffrey.vector.compiler.VectorSourcePrintStream;
+
 import java.io.PrintStream;
 import java.util.HashSet;
 
-import io.jeffrey.vector.compiler.VectorSourcePrintStream;
-
 public class MatrixAlgebra extends VectorSourcePrintStream {
 
-    public MatrixAlgebra(PrintStream out, int N, HashSet<String> definedFunctions) {
+    public MatrixAlgebra(final PrintStream out, final int N, final HashSet<String> definedFunctions) {
         super(out, N, definedFunctions);
     }
 
@@ -15,8 +15,9 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
     protected void writeSource() {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (k == j)
+                if (k == j) {
                     continue;
+                }
                 if (start("writeMatrix", "_", s(k), "_", s(j))) {
                     println();
                     tab();
@@ -36,8 +37,9 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
                 for (int v = 0; v < N; v++) {
-                    if (k == j || j == v || v == k)
+                    if (k == j || j == v || v == k) {
                         continue;
+                    }
                     if (start("transform_" + v + "_by_" + k + "_" + j)) {
                         println();
                         tab();
@@ -56,8 +58,9 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
         }
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (k == j)
+                if (k == j) {
                     continue;
+                }
                 if (start("det_" + k + "_" + j)) {
                     println();
                     tab();
@@ -73,8 +76,9 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
         }
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (k == j)
+                if (k == j) {
                     continue;
+                }
                 if (start("invert_" + k + "_" + j)) {
                     println();
                     tab();
@@ -101,8 +105,9 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
         }
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (k == j)
+                if (k == j) {
                     continue;
+                }
                 if (start("transpose_" + k + "_" + j)) {
                     println();
                     tab();
@@ -125,8 +130,9 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
 
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (j == k)
+                if (j == k) {
                     continue;
+                }
                 if (startTest("matrix_" + k + "_" + j)) {
                     createNewVector("x", N);
                     println("x.set_matrix_", s(k), "_", s(j), "(1,3,2,4);");
@@ -137,8 +143,9 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
                     println("assertEquals(1*4-2*3, x.det_", s(k), "_", s(j), "());");
                     println("assertEquals(-(1*4-2*3), x.det_", s(j), "_", s(k), "());");
                     for (int z = 0; z < N; z++) {
-                        if (z == j || z == k)
+                        if (z == j || z == k) {
                             continue;
+                        }
                         println("x.set_", s(z), "(-1,5);");
                         println("x.transform_", s(z), "_by_", s(k), "_", s(j), "();");
                         println("assertEquals(-1*1+5*2, x.x_", s(z), ");");
@@ -165,11 +172,13 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
 
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (j == k)
+                if (j == k) {
                     continue;
+                }
                 for (int z = 0; z < N; z++) {
-                    if (z == j || z == k)
+                    if (z == j || z == k) {
                         continue;
+                    }
                     if (startTest("matrix_transform_" + k + "_" + j + "_" + z)) {
                         createNewVector("x", N);
                         println("x.set_matrix_", s(k), "_", s(j), "(1,3,2,4);");

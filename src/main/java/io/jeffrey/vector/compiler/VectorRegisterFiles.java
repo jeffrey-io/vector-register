@@ -18,9 +18,9 @@ public class VectorRegisterFiles extends VectorSourcePrintStream {
 
     private final ArrayList<VectorSourcePrintStream> components;
 
-    public VectorRegisterFiles(PrintStream out, int N, HashSet<String> definedFunctions) {
+    public VectorRegisterFiles(final PrintStream out, final int N, final HashSet<String> definedFunctions) {
         super(out, N, definedFunctions);
-        this.components = new ArrayList<VectorSourcePrintStream>();
+        components = new ArrayList<VectorSourcePrintStream>();
         components.add(new Setters(out, N, definedFunctions));
         components.add(new ZeroFunctions(out, N, definedFunctions));
         components.add(new Copiers(out, N, definedFunctions));
@@ -37,7 +37,7 @@ public class VectorRegisterFiles extends VectorSourcePrintStream {
         println("package io.jeffrey.vector;");
         println("");
         println("/** a register bank that contains ", s(N), " vectors along with all possible operations */");
-        println("public class VectorRegister" + hexify(N) + (N > 1 ? (" extends VectorRegister" + hexify(N - 1)) : "") + " {");
+        println("public class VectorRegister" + hexify(N) + (N > 1 ? " extends VectorRegister" + hexify(N - 1) : "") + " {");
         if (N == 1) {
             println(TAB + "public static final double ZERO_LIMIT = 1E-14;");
         }
@@ -62,7 +62,7 @@ public class VectorRegisterFiles extends VectorSourcePrintStream {
         untab();
         println("}");
         untab();
-        for (VectorSourcePrintStream vsps : components) {
+        for (final VectorSourcePrintStream vsps : components) {
             vsps.writeSource();
         }
         println("}");
@@ -76,7 +76,7 @@ public class VectorRegisterFiles extends VectorSourcePrintStream {
         println("import org.junit.Test;");
         println();
         println("public class GeneratedVectorRegister" + hexify(N) + "Test extends CommonVectorTestingBase {");
-        for (VectorSourcePrintStream vsps : components) {
+        for (final VectorSourcePrintStream vsps : components) {
             vsps.writeTest();
         }
         println("}");

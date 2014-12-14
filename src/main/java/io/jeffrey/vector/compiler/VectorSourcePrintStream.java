@@ -5,75 +5,78 @@ import java.util.HashSet;
 
 public abstract class VectorSourcePrintStream {
     protected static final String TAB = "    ";
-    private final PrintStream     output;
-    protected final int           N;
-    private int                   tabbing;
-    private final HashSet<String> definedFunctions;
 
-    public static final String hexify(int X) {
+    public static final String hexify(final int X) {
         return Integer.toHexString(X).toUpperCase();
     }
 
-    public VectorSourcePrintStream(PrintStream out, int N, HashSet<String> definedFunctions) {
-        this.output = out;
+    private final HashSet<String> definedFunctions;
+    protected final int           N;
+    private final PrintStream     output;
+
+    private int                   tabbing;
+
+    public VectorSourcePrintStream(final PrintStream out, final int N, final HashSet<String> definedFunctions) {
+        output = out;
         this.N = N;
-        this.tabbing = 0;
+        tabbing = 0;
         this.definedFunctions = definedFunctions;
     }
 
-    protected boolean start(String... functionNameParts) {
-        StringBuilder fn = new StringBuilder();
-        for (String p : functionNameParts)
-            fn.append(p);
-        String functionName = fn.toString();
-        if (definedFunctions.contains(functionName))
-            return false;
-        definedFunctions.add(functionName);
-        return true;
+    protected String atX(final int k) {
+        return "x_" + k;
     }
 
-    protected void tab() {
-        this.tabbing++;
+    protected String atY(final int k) {
+        return "y_" + k;
     }
 
-    protected void untab() {
-        this.tabbing--;
+    protected void createNewVector(final String name, final int k) {
+        println("final VectorRegister", hexify(k), " ", name, " = new VectorRegister", hexify(k), "();");
     }
 
-    protected void println(String... values) {
+    protected void endTest() {
+        untab();
+        println("}");
+        untab();
+    }
+
+    protected void println(final String... values) {
         if (values.length == 0) {
             output.println();
             return;
         }
-        for (int k = 0; k < tabbing; k++)
+        for (int k = 0; k < tabbing; k++) {
             output.print(TAB);
-        for (String value : values) {
+        }
+        for (final String value : values) {
             output.print(value);
         }
         output.println();
     }
 
-    protected String s(int x) {
-        return Integer.toString(x);
-    }
-
-    protected String s(double x) {
+    protected String s(final double x) {
         return Double.toString(x);
     }
 
-    protected String atX(int k) {
-        return "x_" + k;
+    protected String s(final int x) {
+        return Integer.toString(x);
     }
 
-    protected String atY(int k) {
-        return "y_" + k;
+    protected boolean start(final String... functionNameParts) {
+        final StringBuilder fn = new StringBuilder();
+        for (final String p : functionNameParts) {
+            fn.append(p);
+        }
+        final String functionName = fn.toString();
+        if (definedFunctions.contains(functionName)) {
+            return false;
+        }
+        definedFunctions.add(functionName);
+        return true;
     }
 
-    protected abstract void writeSource();
-
-    protected abstract void writeTest();
-
-    protected boolean startTest(String name) {
+    protected boolean startTest(final String name) {
         if (start(name)) {
             tab();
             println();
@@ -85,14 +88,16 @@ public abstract class VectorSourcePrintStream {
         return false;
     }
 
-    protected void createNewVector(String name, int k) {
-        println("final VectorRegister", hexify(k), " ", name, " = new VectorRegister", hexify(k), "();");
+    protected void tab() {
+        tabbing++;
     }
 
-    protected void endTest() {
-        untab();
-        println("}");
-        untab();
+    protected void untab() {
+        tabbing--;
     }
+
+    protected abstract void writeSource();
+
+    protected abstract void writeTest();
 
 }

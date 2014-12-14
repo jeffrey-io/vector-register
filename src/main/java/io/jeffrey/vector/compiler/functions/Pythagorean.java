@@ -1,13 +1,13 @@
 package io.jeffrey.vector.compiler.functions;
 
+import io.jeffrey.vector.compiler.VectorSourcePrintStream;
+
 import java.io.PrintStream;
 import java.util.HashSet;
 
-import io.jeffrey.vector.compiler.VectorSourcePrintStream;
-
 public class Pythagorean extends VectorSourcePrintStream {
 
-    public Pythagorean(PrintStream out, int N, HashSet<String> definedFunctions) {
+    public Pythagorean(final PrintStream out, final int N, final HashSet<String> definedFunctions) {
         super(out, N, definedFunctions);
     }
 
@@ -68,7 +68,7 @@ public class Pythagorean extends VectorSourcePrintStream {
                 println("assertEquals(5/Math.sqrt(3*3+5*5), x.y_", s(k), ");");
                 println("x.set_", s(k), "(0,0);");
                 println("Assert.assertFalse(x.normalize_", s(k), "());");
-                
+
                 endTest();
             }
         }

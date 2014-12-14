@@ -1,12 +1,12 @@
 package io.jeffrey.vector.compiler.functions;
 
+import io.jeffrey.vector.compiler.VectorSourcePrintStream;
+
 import java.io.PrintStream;
 import java.util.HashSet;
 
-import io.jeffrey.vector.compiler.VectorSourcePrintStream;
-
 public class Copiers extends VectorSourcePrintStream {
-    public Copiers(PrintStream out, int N, HashSet<String> definedFunctions) {
+    public Copiers(final PrintStream out, final int N, final HashSet<String> definedFunctions) {
         super(out, N, definedFunctions);
     }
 
@@ -14,8 +14,9 @@ public class Copiers extends VectorSourcePrintStream {
     protected void writeSource() {
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (k == j)
+                if (k == j) {
                     continue;
+                }
                 if (start("copy_from_", s(j), "_to_", s(k))) {
                     println();
                     tab();
@@ -37,8 +38,9 @@ public class Copiers extends VectorSourcePrintStream {
 
         for (int k = 0; k < N; k++) {
             for (int j = 0; j < N; j++) {
-                if (j == k)
+                if (j == k) {
                     continue;
+                }
                 if (startTest("copy_" + k + "_" + j)) {
                     createNewVector("x", N);
                     println("x.set_", s(k), "(3,5);");

@@ -1,13 +1,13 @@
 package io.jeffrey.vector.compiler.functions;
 
+import io.jeffrey.vector.compiler.VectorSourcePrintStream;
+
 import java.io.PrintStream;
 import java.util.HashSet;
 
-import io.jeffrey.vector.compiler.VectorSourcePrintStream;
-
 public class AngleFunctions extends VectorSourcePrintStream {
 
-    public AngleFunctions(PrintStream out, int N, HashSet<String> definedFunctions) {
+    public AngleFunctions(final PrintStream out, final int N, final HashSet<String> definedFunctions) {
         super(out, N, definedFunctions);
     }
 
