@@ -2,6 +2,11 @@ package io.jeffrey.vector.math;
 
 import io.jeffrey.vector.VectorRegister4;
 
+/**
+ * Math around dealing with triangles
+ * 
+ * @author jeffrey
+ */
 public class Triangles {
 
     /**

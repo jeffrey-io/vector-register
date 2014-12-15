@@ -20,7 +20,7 @@ public class Lines {
      *                      |
      *                     [V3] 
      */
-    public static boolean doLinesIntersect_Destructively(VectorRegister6 reg, boolean segments) {
+    public static boolean doLinesIntersect_Destructively(VectorRegister6 reg, boolean segmentA, boolean segmentB) {
         // Solve:
 
         // V0 * A + V1 * (1 - A) = V2 * B + V3 * ( 1 - B )
@@ -46,7 +46,9 @@ public class Lines {
             reg.mult_5_by(1.0 - reg.x_1);
             reg.add_5_to_4();
             reg.copy_from_4_to_0();
-            return segments && (reg.x_1 >= 0 && reg.y_1 >= 0 && reg.x_1 <= 1 && reg.y_1 <= 1) || !segments;
+            boolean checkA = segmentA && (reg.x_1 >= 0 && reg.x_1 <= 1) || !segmentA;
+            boolean checkB = segmentB && (reg.y_1 >= 0 && reg.y_1 <= 1) || !segmentB;
+            return checkA && checkB;
         } else {
             return false;
         }

@@ -68,14 +68,14 @@ public class LinesTest extends CommonVectorTestingBase {
         reg.set_1(1, 1);
         reg.set_2(1, 0);
         reg.set_3(0, 1);
-        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, true));
+        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, true, true));
         assertEquals(0.5, reg.x_0);
         assertEquals(0.5, reg.y_0);
         reg.set_0(0, 0);
         reg.set_1(1, 1.2);
         reg.set_2(1 + 0.2, 0.2);
         reg.set_3(0.2, 1);
-        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, true));
+        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, true, true));
         assertEquals(0.58, reg.x_0);
         assertEquals(0.696, reg.y_0);
 
@@ -83,28 +83,55 @@ public class LinesTest extends CommonVectorTestingBase {
         reg.set_1(1, 1.2);
         reg.set_2(0.6, 0.8);
         reg.set_3(0.2, 1);
-        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, true));
+        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, true, true));
 
         reg.set_0(0, 0);
         reg.set_1(1, 1.2);
         reg.set_2(0.6, 0.8);
         reg.set_3(0.2, 1);
 
-        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, false));
+        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, false, false));
         assertEquals(0.6470588235294118, reg.x_0);
         assertEquals(0.7764705882352941, reg.y_0);
         reg.set_0(5, 0);
         reg.set_1(6, 0);
         reg.set_2(0, 5);
         reg.set_3(0, 6);
-        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, false));
+        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, false, false));
         assertEquals(0.0, reg.x_0);
         assertEquals(0.0, reg.y_0);
         reg.set_0(5, 0);
         reg.set_1(6, 0);
         reg.set_2(0, 5);
         reg.set_3(0, 6);
-        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, true));
+        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, true, true));
+
+        reg.set_0(-1, 0);
+        reg.set_1(1, 0);
+        reg.set_2(0, 5);
+        reg.set_3(0, 6);
+        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, false, false));
+        assertEquals(0.0, reg.x_0);
+        assertEquals(0.0, reg.y_0);
+        reg.set_0(-1, 0);
+        reg.set_1(1, 0);
+        reg.set_2(0, 5);
+        reg.set_3(0, 6);
+        Assert.assertTrue(Lines.doLinesIntersect_Destructively(reg, true, false));
+        assertEquals(0.0, reg.x_0);
+        assertEquals(0.0, reg.y_0);
+        reg.set_0(-1, 0);
+        reg.set_1(1, 0);
+        reg.set_2(0, 5);
+        reg.set_3(0, 6);
+        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, false, true));
+        assertEquals(0.0, reg.x_0);
+        assertEquals(0.0, reg.y_0);
+        reg.set_0(-1, 0);
+        reg.set_1(1, 0);
+        reg.set_2(0, 5);
+        reg.set_3(0, 6);
+        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, true, true));
     }
 
     @Test
@@ -140,12 +167,12 @@ public class LinesTest extends CommonVectorTestingBase {
         reg.set_1(1, 1);
         reg.set_2(0 + 2, 0 + 2);
         reg.set_3(1 + 2, 1 + 2);
-        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, true));
+        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, true, true));
         reg.set_0(0, 0);
         reg.set_1(1, 1);
         reg.set_2(0 + 2, 0 + 2);
         reg.set_3(1 + 2, 1 + 2);
-        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, false));
+        Assert.assertFalse(Lines.doLinesIntersect_Destructively(reg, false, false));
     }
 
     @Test
