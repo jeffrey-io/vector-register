@@ -46,7 +46,7 @@ public class Lines {
             reg.mult_5_by(1.0 - reg.x_1);
             reg.add_5_to_4();
             reg.copy_from_4_to_0();
-            return segments && (reg.x_1 >= 0 && reg.y_1 >= 0 && reg.x_1 + reg.y_1 <= 1) || !segments;
+            return segments && (reg.x_1 >= 0 && reg.y_1 >= 0 && reg.x_1 <= 1 && reg.y_1 <= 1) || !segments;
         } else {
             return false;
         }
