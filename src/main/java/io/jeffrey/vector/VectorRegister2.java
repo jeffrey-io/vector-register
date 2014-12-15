@@ -188,8 +188,8 @@ public class VectorRegister2 extends VectorRegister1 {
         invdet = 1.0 / invdet;
         x_1 *= -1 * invdet;
         y_0 *= -1 * invdet;
-        x_0 *= y_1 * invdet;
-        y_1 *= t * invdet;
+        x_0 = y_1 * invdet;
+        y_1 = t * invdet;
         return true;
     }
 
@@ -202,8 +202,8 @@ public class VectorRegister2 extends VectorRegister1 {
         invdet = 1.0 / invdet;
         x_0 *= -1 * invdet;
         y_1 *= -1 * invdet;
-        x_1 *= y_0 * invdet;
-        y_0 *= t * invdet;
+        x_1 = y_0 * invdet;
+        y_0 = t * invdet;
         return true;
     }
 

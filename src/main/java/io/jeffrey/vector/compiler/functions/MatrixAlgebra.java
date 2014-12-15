@@ -94,8 +94,8 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
                     println("invdet = 1.0 / invdet;");
                     println(atX(j), " *= -1 * invdet;");
                     println(atY(k), " *= -1 * invdet;");
-                    println(atX(k), " *= ", atY(j), " * invdet;");
-                    println(atY(j), " *= t * invdet;");
+                    println(atX(k), " = ", atY(j), " * invdet;");
+                    println(atY(j), " = t * invdet;");
                     println("return true;");
                     untab();
                     println("}");
@@ -156,12 +156,12 @@ public class MatrixAlgebra extends VectorSourcePrintStream {
                     println("assertEquals(-2, x.x_", s(k), ");");
                     println("assertEquals(1.5, x.y_", s(k), ");");
                     println("assertEquals(1, x.x_", s(j), ");");
-                    println("assertEquals(-2, x.y_", s(j), ");");
+                    println("assertEquals(-0.5, x.y_", s(j), ");");
                     println("x.transpose_", s(k), "_", s(j), "();");
                     println("assertEquals(-2, x.x_", s(k), ");");
                     println("assertEquals(1, x.y_", s(k), ");");
                     println("assertEquals(1.5, x.x_", s(j), ");");
-                    println("assertEquals(-2, x.y_", s(j), ");");
+                    println("assertEquals(-0.5, x.y_", s(j), ");");
                     println("x.set_matrix_", s(k), "_", s(j), "(1,2,1,2);");
                     println("Assert.assertFalse(x.invert_", s(k), "_", s(j), "());");
                     println("assertEquals(0, x.det_", s(k), "_", s(j), "());");

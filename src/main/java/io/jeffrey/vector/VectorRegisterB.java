@@ -2850,8 +2850,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_0 *= -1 * invdet;
-        x_0 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_0 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2864,8 +2864,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_1 *= -1 * invdet;
-        x_1 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_1 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2878,8 +2878,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_2 *= -1 * invdet;
-        x_2 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_2 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2892,8 +2892,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_3 *= -1 * invdet;
-        x_3 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_3 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2906,8 +2906,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_4 *= -1 * invdet;
-        x_4 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_4 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2920,8 +2920,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_5 *= -1 * invdet;
-        x_5 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_5 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2934,8 +2934,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_6 *= -1 * invdet;
-        x_6 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_6 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2948,8 +2948,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_7 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2962,8 +2962,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_8 *= -1 * invdet;
-        x_8 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_8 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2976,8 +2976,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_10 *= -1 * invdet;
         y_9 *= -1 * invdet;
-        x_9 *= y_10 * invdet;
-        y_10 *= t * invdet;
+        x_9 = y_10 * invdet;
+        y_10 = t * invdet;
         return true;
     }
 
@@ -2990,8 +2990,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_0 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_0 * invdet;
-        y_0 *= t * invdet;
+        x_10 = y_0 * invdet;
+        y_0 = t * invdet;
         return true;
     }
 
@@ -3004,8 +3004,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_1 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_1 * invdet;
-        y_1 *= t * invdet;
+        x_10 = y_1 * invdet;
+        y_1 = t * invdet;
         return true;
     }
 
@@ -3018,8 +3018,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_2 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_2 * invdet;
-        y_2 *= t * invdet;
+        x_10 = y_2 * invdet;
+        y_2 = t * invdet;
         return true;
     }
 
@@ -3032,8 +3032,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_3 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_3 * invdet;
-        y_3 *= t * invdet;
+        x_10 = y_3 * invdet;
+        y_3 = t * invdet;
         return true;
     }
 
@@ -3046,8 +3046,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_4 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_4 * invdet;
-        y_4 *= t * invdet;
+        x_10 = y_4 * invdet;
+        y_4 = t * invdet;
         return true;
     }
 
@@ -3060,8 +3060,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_5 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_5 * invdet;
-        y_5 *= t * invdet;
+        x_10 = y_5 * invdet;
+        y_5 = t * invdet;
         return true;
     }
 
@@ -3074,8 +3074,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_6 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_6 * invdet;
-        y_6 *= t * invdet;
+        x_10 = y_6 * invdet;
+        y_6 = t * invdet;
         return true;
     }
 
@@ -3088,8 +3088,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_10 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -3102,8 +3102,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_8 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_8 * invdet;
-        y_8 *= t * invdet;
+        x_10 = y_8 * invdet;
+        y_8 = t * invdet;
         return true;
     }
 
@@ -3116,8 +3116,8 @@ public class VectorRegisterB extends VectorRegisterA {
         invdet = 1.0 / invdet;
         x_9 *= -1 * invdet;
         y_10 *= -1 * invdet;
-        x_10 *= y_9 * invdet;
-        y_9 *= t * invdet;
+        x_10 = y_9 * invdet;
+        y_9 = t * invdet;
         return true;
     }
 

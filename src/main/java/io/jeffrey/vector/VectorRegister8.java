@@ -1584,8 +1584,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_0 *= -1 * invdet;
-        x_0 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_0 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -1598,8 +1598,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_1 *= -1 * invdet;
-        x_1 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_1 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -1612,8 +1612,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_2 *= -1 * invdet;
-        x_2 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_2 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -1626,8 +1626,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_3 *= -1 * invdet;
-        x_3 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_3 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -1640,8 +1640,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_4 *= -1 * invdet;
-        x_4 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_4 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -1654,8 +1654,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_5 *= -1 * invdet;
-        x_5 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_5 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -1668,8 +1668,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_7 *= -1 * invdet;
         y_6 *= -1 * invdet;
-        x_6 *= y_7 * invdet;
-        y_7 *= t * invdet;
+        x_6 = y_7 * invdet;
+        y_7 = t * invdet;
         return true;
     }
 
@@ -1682,8 +1682,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_0 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_0 * invdet;
-        y_0 *= t * invdet;
+        x_7 = y_0 * invdet;
+        y_0 = t * invdet;
         return true;
     }
 
@@ -1696,8 +1696,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_1 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_1 * invdet;
-        y_1 *= t * invdet;
+        x_7 = y_1 * invdet;
+        y_1 = t * invdet;
         return true;
     }
 
@@ -1710,8 +1710,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_2 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_2 * invdet;
-        y_2 *= t * invdet;
+        x_7 = y_2 * invdet;
+        y_2 = t * invdet;
         return true;
     }
 
@@ -1724,8 +1724,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_3 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_3 * invdet;
-        y_3 *= t * invdet;
+        x_7 = y_3 * invdet;
+        y_3 = t * invdet;
         return true;
     }
 
@@ -1738,8 +1738,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_4 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_4 * invdet;
-        y_4 *= t * invdet;
+        x_7 = y_4 * invdet;
+        y_4 = t * invdet;
         return true;
     }
 
@@ -1752,8 +1752,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_5 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_5 * invdet;
-        y_5 *= t * invdet;
+        x_7 = y_5 * invdet;
+        y_5 = t * invdet;
         return true;
     }
 
@@ -1766,8 +1766,8 @@ public class VectorRegister8 extends VectorRegister7 {
         invdet = 1.0 / invdet;
         x_6 *= -1 * invdet;
         y_7 *= -1 * invdet;
-        x_7 *= y_6 * invdet;
-        y_6 *= t * invdet;
+        x_7 = y_6 * invdet;
+        y_6 = t * invdet;
         return true;
     }
 

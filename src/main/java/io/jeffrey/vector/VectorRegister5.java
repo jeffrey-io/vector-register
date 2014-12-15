@@ -696,8 +696,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_4 *= -1 * invdet;
         y_0 *= -1 * invdet;
-        x_0 *= y_4 * invdet;
-        y_4 *= t * invdet;
+        x_0 = y_4 * invdet;
+        y_4 = t * invdet;
         return true;
     }
 
@@ -710,8 +710,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_4 *= -1 * invdet;
         y_1 *= -1 * invdet;
-        x_1 *= y_4 * invdet;
-        y_4 *= t * invdet;
+        x_1 = y_4 * invdet;
+        y_4 = t * invdet;
         return true;
     }
 
@@ -724,8 +724,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_4 *= -1 * invdet;
         y_2 *= -1 * invdet;
-        x_2 *= y_4 * invdet;
-        y_4 *= t * invdet;
+        x_2 = y_4 * invdet;
+        y_4 = t * invdet;
         return true;
     }
 
@@ -738,8 +738,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_4 *= -1 * invdet;
         y_3 *= -1 * invdet;
-        x_3 *= y_4 * invdet;
-        y_4 *= t * invdet;
+        x_3 = y_4 * invdet;
+        y_4 = t * invdet;
         return true;
     }
 
@@ -752,8 +752,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_0 *= -1 * invdet;
         y_4 *= -1 * invdet;
-        x_4 *= y_0 * invdet;
-        y_0 *= t * invdet;
+        x_4 = y_0 * invdet;
+        y_0 = t * invdet;
         return true;
     }
 
@@ -766,8 +766,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_1 *= -1 * invdet;
         y_4 *= -1 * invdet;
-        x_4 *= y_1 * invdet;
-        y_1 *= t * invdet;
+        x_4 = y_1 * invdet;
+        y_1 = t * invdet;
         return true;
     }
 
@@ -780,8 +780,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_2 *= -1 * invdet;
         y_4 *= -1 * invdet;
-        x_4 *= y_2 * invdet;
-        y_2 *= t * invdet;
+        x_4 = y_2 * invdet;
+        y_2 = t * invdet;
         return true;
     }
 
@@ -794,8 +794,8 @@ public class VectorRegister5 extends VectorRegister4 {
         invdet = 1.0 / invdet;
         x_3 *= -1 * invdet;
         y_4 *= -1 * invdet;
-        x_4 *= y_3 * invdet;
-        y_3 *= t * invdet;
+        x_4 = y_3 * invdet;
+        y_3 = t * invdet;
         return true;
     }
 
