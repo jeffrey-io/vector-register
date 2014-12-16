@@ -8,15 +8,19 @@ import io.jeffrey.vector.VectorRegister6;
 public class Polygons {
 
     /**
-     * 
-     * @param x the x coordinate of the point to check
-     * @param y the y coordinate of the point to check
-     * @param coordinates the coordinates (x0, y0, x1, y1, ....) defining the polygon
-     * @param temp a temporary register where math can be done
+     *
+     * @param x
+     *            the x coordinate of the point to check
+     * @param y
+     *            the y coordinate of the point to check
+     * @param coordinates
+     *            the coordinates (x0, y0, x1, y1, ....) defining the polygon
+     * @param temp
+     *            a temporary register where math can be done
      * @return
      */
-    public static boolean pointIn(double x, double y, double[] coordinates, VectorRegister6 temp) {
-        int n = coordinates.length;
+    public static boolean pointIn(final double x, final double y, final double[] coordinates, final VectorRegister6 temp) {
+        final int n = coordinates.length;
         int count = 0;
         double m = coordinates[0];
         for (int k = 0; k < n; k++) {
