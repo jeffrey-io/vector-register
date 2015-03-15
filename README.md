@@ -1,6 +1,8 @@
 vector-register
 ===============
 
+*NOTICE:* This repository has been rolled up into https://github.com/jeffrey-io/world-bootstrap
+
 A library for doing vector math efficiently using Java. This is an unorthodox library that provides vector math.
 
 The orthodox method for doing vector math is to create libraries for Vector and Matrix classes. For instance, you would create some classes like so: 
